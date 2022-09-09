@@ -13,117 +13,14 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href=" https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/color_dark_solarized.css -c  https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/layout_toc.css" />
+  <link rel="stylesheet" href="../wiki_html/Css/include.css" />
   <script type="text/javascript" src="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/js_masonry_desandro.js"></script>
+  <p><link rel="stylesheet" href="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/color_dark_solarized.css"> <link rel="stylesheet" href="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/layout_toc.css"></p>
 </head>
 <body>
 <header id="title-block-header">
 <h1 class="title">Reverse_engineering &lt;- StackExchange top 100</h1>
 </header>
-<nav id="TOC" role="doc-toc">
-<ul>
-<li><a href="#is-there-any-disassembler-to-rival-ida-pro-score-311266-in-2015">1: Is there any disassembler to rival IDA Pro? (score <span>311266</span> in 2015)</a></li>
-<li><a href="#how-do-i-get-the-location-of-the-original-audiovideo-file-embedded-on-a-webpage-score-249455-in-2013">2: How do I get the location of the original audio/video file embedded on a webpage? (score <span>249455</span> in 2013)</a></li>
-<li><a href="#how-do-i-reverse-engineer-.so-files-found-in-android-apks-score-172692-in-2014">3: How do I reverse engineer .so files found in android APKs? (score <span>172692</span> in 2014)</a></li>
-<li><a href="#where-can-i-as-an-individual-get-malware-samples-to-analyze-score-110211-in-2013">4: Where can I, as an individual, get malware samples to analyze? (score <span>110211</span> in 2013)</a></li>
-<li><a href="#converting-assembly-code-to-c-score-106951-in-2014">5: Converting assembly code to c (score <span>106951</span> in 2014)</a></li>
-<li><a href="#possibilities-for-reverse-engineering-an-ipa-file-to-its-source-score-103842-in-2013">6: Possibilities for reverse engineering an ipa file to its source (score <span>103842</span> in 2013)</a></li>
-<li><a href="#what-is-a-good-java-decompiler-and-deobfuscator-score-98723-in-2013">7: What is a good Java decompiler and deobfuscator? (score <span>98723</span> in 2013)</a></li>
-<li><a href="#how-are-the-segment-registers-fs-gs-cs-ss-ds-es-used-in-linux-score-94077-in-2015">8: How are the segment registers (fs, gs, cs, ss, ds, es) used in Linux? (score <span>94077</span> in 2015)</a></li>
-<li><a href="#how-to-know-in-which-languagetechnology-program-.exe-is-written-score-94055-in-2014">9: How to know in which language/technology program (.exe) is written? (score <span>94055</span> in 2014)</a></li>
-<li><a href="#decent-gui-for-gdb-score-92096-in-2013">10: Decent GUI for GDB (score <span>92096</span> in 2013)</a></li>
-<li><a href="#how-to-deobfuscate-an-obfuscated-javascript-file-like-this-score-87501-in">11: How to deobfuscate an obfuscated javascript file like this? (score <span>87501</span> in )</a></li>
-<li><a href="#decompiling-iphone-app-score-79696-in-2015">12: Decompiling iPhone App (score <span>79696</span> in 2015)</a></li>
-<li><a href="#how-to-handle-stripped-binaries-with-gdb-no-source-no-symbols-and-gdb-only-shows-addresses-score-66463-in-2013">13: How to handle stripped binaries with GDB? No source, no symbols and GDB only shows addresses? (score <span>66463</span> in 2013)</a></li>
-<li><a href="#is-there-any-way-to-decompile-a-.net-assembly-or-program-score-63878-in-2013">14: Is there any way to decompile a .NET assembly or program? (score <span>63878</span> in 2013)</a></li>
-<li><a href="#analyzing-highly-obfuscated-javascript-score-63196-in">15: Analyzing highly obfuscated JavaScript (score <span>63196</span> in )</a></li>
-<li><a href="#translate-assembly-to-c-score-62329-in-2018">16: Translate ASSEMBLY to C (score <span>62329</span> in 2018)</a></li>
-<li><a href="#what-is-pltgot-score-61095-in-2013">17: What is PLT/GOT? (score <span>61095</span> in 2013)</a></li>
-<li><a href="#reversing-elf-64-bit-lsb-executable-x86-64-gdb-score-57319-in">18: Reversing ELF 64-bit LSB executable, x86-64 ,gdb (score <span>57319</span> in )</a></li>
-<li><a href="#how-to-obtain-x86-64-pseudocode-in-ida-pro-score-57124-in-2016">19: How to obtain x86-64 pseudocode in IDA Pro? (score <span>57124</span> in 2016)</a></li>
-<li><a href="#how-to-decompile-linux-.so-library-files-from-a-ms-windows-os-score-53501-in-2013">20: How to decompile Linux .so library files from a MS-Windows OS? (score <span>53501</span> in 2013)</a></li>
-<li><a href="#decompiling-.pyc-files-score-51248-in-2013">21: Decompiling .pyc files (score <span>51248</span> in 2013)</a></li>
-<li><a href="#how-do-i-extract-a-copy-of-an-unknown-firmware-from-a-hardware-device-score-50056-in">22: How do I extract a copy of an unknown firmware from a hardware device? (score <span>50056</span> in )</a></li>
-<li><a href="#how-do-you-reverse-engineer-an-exe-compiled-with-pyinstaller-score-49410-in-2013">23: How do you reverse engineer an EXE “compiled” with PyInstaller (score <span>49410</span> in 2013)</a></li>
-<li><a href="#how-do-i-acquire-softice-score-45604-in-2013">24: How do I acquire SoftICE? (score <span>45604</span> in 2013)</a></li>
-<li><a href="#how-can-i-decompile-my-dotnet-.exe-file-into-its-source-code-score-45227-in-2013">25: How can I decompile my (dot)NET .EXE file into its source code (score <span>45227</span> in 2013)</a></li>
-<li><a href="#how-does-one-reverse-engineer-a-swf-file-score-42513-in">26: How does one reverse engineer a SWF file? (score <span>42513</span> in )</a></li>
-<li><a href="#what-is-the-most-efficient-way-to-detect-and-to-break-xor-encryption-score-38115-in-2013">27: What is the most efficient way to detect and to break xor encryption? (score <span>38115</span> in 2013)</a></li>
-<li><a href="#how-to-decompile-an-exe-file-score-35702-in">28: How to decompile an exe file? (score <span>35702</span> in )</a></li>
-<li><a href="#sniffing-tcp-traffic-for-specific-process-using-wireshark-score-35644-in-2014">29: Sniffing TCP traffic for specific process using Wireshark (score <span>35644</span> in 2014)</a></li>
-<li><a href="#how-can-dll-injection-be-detected-score-34608-in-2017">30: How can DLL injection be detected? (score <span>34608</span> in 2017)</a></li>
-<li><a href="#what-is-dll-injection-and-how-is-it-used-for-reversing-score-34208-in-2013">31: What is DLL Injection and how is it used for reversing? (score <span>34208</span> in 2013)</a></li>
-<li><a href="#exe-to-c-source-code-decompiler-score-33173-in">32: EXE to C source code decompiler (score <span>33173</span> in )</a></li>
-<li><a href="#what-is-the-linux-equivalent-to-ollydbg-and-ida-pro-score-32989-in-2015">33: What is the linux equivalent to OllyDbg and Ida Pro? (score <span>32989</span> in 2015)</a></li>
-<li><a href="#how-could-i-change-an-instruction-in-ida-pro-score-31780-in-2014">34: How could I change an instruction in IDA Pro? (score <span>31780</span> in 2014)</a></li>
-<li><a href="#recover-source-code-for-c-.exe-score-30943-in">35: Recover source code for C# .exe (score <span>30943</span> in )</a></li>
-<li><a href="#decompiling-a-1990-dos-application-score-30782-in">36: Decompiling a 1990 DOS application (score <span>30782</span> in )</a></li>
-<li><a href="#modify-code-with-ilspy-score-30226-in">37: Modify code with ILSpy (score <span>30226</span> in )</a></li>
-<li><a href="#objdump---how-to-output-text-eg-ascii-strings-alongside-assembly-code-score-29918-in-2018">38: Objdump - How to output text (eg ASCII strings) alongside assembly code? (score <span>29918</span> in 2018)</a></li>
-<li><a href="#reverse-engineering-t-disk-barcodes-for-tassimo-coffee-makers-score-29680-in-2017">39: Reverse engineering T-Disk barcodes for Tassimo coffee makers (score <span>29680</span> in 2017)</a></li>
-<li><a href="#repackaging-apk-file-using-baksmali-and-smali-score-28672-in-2015">40: Repackaging APK file using baksmali and smali (score <span>28672</span> in 2015)</a></li>
-<li><a href="#how-to-get-video-url-from-embedded-link-in-twitter-score-28301-in-2017">41: How to get Video URL from embedded Link in Twitter (score <span>28301</span> in 2017)</a></li>
-<li><a href="#can-we-decompile-an-.exe-or-.dll-as-100-score-27907-in">42: Can we decompile an .exe or .dll as %100? (score <span>27907</span> in )</a></li>
-<li><a href="#is-reverse-engineering-and-using-parts-of-a-closed-source-application-legal-score-27869-in-2013">43: Is reverse engineering and using parts of a closed source application legal? (score <span>27869</span> in 2013)</a></li>
-<li><a href="#extracting-a-firmware-image-via-u-boot-score-27635-in">44: Extracting a firmware image via U-Boot (score <span>27635</span> in )</a></li>
-<li><a href="#how-do-i-add-functionality-to-an-existing-binary-executable-score-27420-in-2013">45: How do I add functionality to an existing binary executable? (score <span>27420</span> in 2013)</a></li>
-<li><a href="#decoding-new-jersey-drivers-license-codes-score-26992-in-2018">46: Decoding New Jersey Driver’s License Codes (score <span>26992</span> in 2018)</a></li>
-<li><a href="#get-the-function-prototypes-from-an-unknown-.dll-score-26713-in">47: Get the function prototypes from an unknown .dll (score <span>26713</span> in )</a></li>
-<li><a href="#reverse-engineering-a-visual-basic-p-code-binary-score-26249-in-2013">48: Reverse engineering a Visual Basic p-code binary (score <span>26249</span> in 2013)</a></li>
-<li><a href="#bypassing-copy-protection-in-microcontrollers-using-glitching-score-25480-in-2013">49: Bypassing copy protection in microcontrollers using glitching (score <span>25480</span> in 2013)</a></li>
-<li><a href="#cross-debugging-for-arm-mips-elf-with-qemutoolchain-score-25362-in-2017">50: Cross debugging for ARM / MIPS ELF with QEMU/toolchain (score <span>25362</span> in 2017)</a></li>
-<li><a href="#how-do-i-identify-and-use-jtag-score-25072-in-2013">51: How do I identify and use JTAG? (score <span>25072</span> in 2013)</a></li>
-<li><a href="#what-are-the-tools-use-for-reverse-engineering-android-apk-score-24992-in">52: What are the tools use for reverse engineering android apk? (score <span>24992</span> in )</a></li>
-<li><a href="#how-do-i-figure-out-what-is-burned-on-an-arduino-rom-score-24411-in-2013">53: How do I figure out what is burned on an Arduino ROM? (score <span>24411</span> in 2013)</a></li>
-<li><a href="#find-out-a-java-class-files-compiler-version-score-24126-in">54: Find out a Java class file’s compiler version (score <span>24126</span> in )</a></li>
-<li><a href="#how-can-i-set-a-breakpoint-for-a-button-click-score-24104-in-2013">55: How can I set a breakpoint for a button click? (score <span>24104</span> in 2013)</a></li>
-<li><a href="#are-there-any-ollydbg-anti-debuganti-anti-debug-plugins-what-work-with-windows-7-nt-6.x-score-23814-in">56: Are there any OllyDbg anti-debug/anti-anti-debug plugins what work with Windows 7 / NT 6.x? (score <span>23814</span> in )</a></li>
-<li><a href="#how-can-i-diff-two-x86-binaries-at-assembly-code-level-score-23589-in-2013">57: how can I diff two x86 binaries at assembly code level? (score <span>23589</span> in 2013)</a></li>
-<li><a href="#extract-files-from-a-bin-firmware-score-23396-in">58: Extract files from a bin firmware (score <span>23396</span> in )</a></li>
-<li><a href="#where-to-find-free-training-in-reverse-engineering-score-23332-in-2013">59: Where to find (free) training in reverse engineering? (score <span>23332</span> in 2013)</a></li>
-<li><a href="#difference-between-add-and-adds-in-arm-assembler-score-23244-in-2014">60: Difference between ‘add’ and ‘adds’ in ARM assembler? (score <span>23244</span> in 2014)</a></li>
-<li><a href="#what-is-the-meaning-of-movabs-in-gasx86-att-syntax-score-22975-in-2013">61: What is the meaning of movabs in gas/x86 AT&amp;T syntax? (score <span>22975</span> in 2013)</a></li>
-<li><a href="#how-to-dump-flash-memory-with-spi-score-22846-in">62: How to dump flash memory with SPI? (score <span>22846</span> in )</a></li>
-<li><a href="#how-do-i-analyze-a-.apk-file-and-understand-its-working-score-22796-in-2013">63: How do I analyze a .apk file and understand its working? (score <span>22796</span> in 2013)</a></li>
-<li><a href="#unpacking-upx-packed-possibly-scrambled-executable-score-22726-in">64: Unpacking UPX packed (possibly scrambled) executable (score <span>22726</span> in )</a></li>
-<li><a href="#how-to-debug-the-dll-of-an-exe-using-ida-pro-score-21918-in-2015">65: How to debug the DLL of an EXE using IDA Pro? (score <span>21918</span> in 2015)</a></li>
-<li><a href="#what-does-the-test-instruction-do-score-21170-in">66: What does the <code>TEST</code> instruction do (score <span>21170</span> in )</a></li>
-<li><a href="#crack-me-material-score-20908-in">67: Crack Me Material (score <span>20908</span> in )</a></li>
-<li><a href="#open-source-gui-tool-for-decomposing-a-pdf-score-20577-in-2013">68: Open source GUI tool for decomposing a PDF (score <span>20577</span> in 2013)</a></li>
-<li><a href="#convert-this-x86-asm-to-c-score-20404-in-2014">69: convert this x86 ASM to C? (score <span>20404</span> in 2014)</a></li>
-<li><a href="#how-to-detect-a-virtualized-environment-score-20313-in-2013">70: How to detect a virtualized environment? (score <span>20313</span> in 2013)</a></li>
-<li><a href="#what-does-the-assembly-instruction-repne-scas-byte-ptr-esedi-score-20181-in-2013">71: What does the assembly instruction ‘REPNE SCAS BYTE PTR ES:[EDI]’? (score <span>20181</span> in 2013)</a></li>
-<li><a href="#what-symbol-tables-stay-after-a-strip-in-elf-format-score-20149-in-2013">72: What symbol tables stay after a strip In ELF format? (score <span>20149</span> in 2013)</a></li>
-<li><a href="#determine-encryption-algorithm-score-20093-in-2013">73: Determine Encryption Algorithm (score <span>20093</span> in 2013)</a></li>
-<li><a href="#what-happens-when-a-dll-is-added-to-appinit_dll-score-20092-in-2013">74: What happens when a DLL is added to AppInit_DLL (score <span>20092</span> in 2013)</a></li>
-<li><a href="#ida-cannot-launch-debugger-for-64-bit-exe-files-score-19833-in">75: IDA cannot launch debugger for 64-bit exe files (score <span>19833</span> in )</a></li>
-<li><a href="#find-reference-to-string-in-radare2-score-19679-in">76: Find reference to string in radare2 (score <span>19679</span> in )</a></li>
-<li><a href="#try-to-deobfuscate-multi-layered-javascript-score-19348-in">77: Try to deobfuscate multi layered javascript (score <span>19348</span> in )</a></li>
-<li><a href="#unpacking-binaries-in-a-generic-way-score-18828-in-2016">78: Unpacking binaries in a generic way (score <span>18828</span> in 2016)</a></li>
-<li><a href="#what-does-mov-qword-ptr-dsrax18-r8-mean-score-18604-in-2017">79: What does mov qword ptr ds:[rax+18], r8 mean? (score <span>18604</span> in 2017)</a></li>
-<li><a href="#is-it-possible-to-extract-or-otherwise-edit-the-source-code-of-an-.exe-file-score-18368-in">80: Is it possible to extract or otherwise edit the source code of an .exe file? (score <span>18368</span> in )</a></li>
-<li><a href="#how-to-decompile-an-objective-c-static-library-for-ios-score-17333-in-2016">81: How to decompile an Objective-C static library (for iOS)? (score <span>17333</span> in 2016)</a></li>
-<li><a href="#debugging-third-party-android-apks-score-17324-in">82: Debugging third party android APKs (score <span>17324</span> in )</a></li>
-<li><a href="#looking-for-exported-symbols-in-a-dll-with-objdump-score-17293-in-2013">83: Looking for exported symbols in a DLL with objdump? (score <span>17293</span> in 2013)</a></li>
-<li><a href="#how-to-debug-like-gdb-with-radare2-score-17286-in-2019">84: How to debug (like gdb) with radare2? (score <span>17286</span> in 2019)</a></li>
-<li><a href="#convert-mips-assembly-code-to-c-score-17153-in-2014">85: Convert MIPS assembly code to C? (score <span>17153</span> in 2014)</a></li>
-<li><a href="#how-to-prevent-upx--d-on-an-upx-packed-executable-score-17003-in-2017">86: How to prevent “upx -d” on an UPX packed executable? (score <span>17003</span> in 2017)</a></li>
-<li><a href="#how-to-re-analyse-a-function-in-ida-pro-score-16977-in-2013">87: How to re-analyse a function in IDA Pro? (score <span>16977</span> in 2013)</a></li>
-<li><a href="#what-are-the-techniques-and-tools-to-obfuscate-python-programs-score-16875-in-2017">88: What are the techniques and tools to obfuscate Python programs? (score <span>16875</span> in 2017)</a></li>
-<li><a href="#bit-pseudocode-decompiler-score-16772-in-2014">89: 64 bit Pseudocode decompiler (score <span>16772</span> in 2014)</a></li>
-<li><a href="#get-jar-back-from-wrappedinto-exe-jar-score-16161-in-2014">90: Get jar back from wrapped(into exe) jar (score <span>16161</span> in 2014)</a></li>
-<li><a href="#what-is-a-flirt-signature-score-16045-in">91: What is a FLIRT signature? (score <span>16045</span> in )</a></li>
-<li><a href="#extract-text-data-from-a-compressedencrypted-.dat-file-score-15940-in-2015">92: Extract text data from a compressed/encrypted .DAT file (score <span>15940</span> in 2015)</a></li>
-<li><a href="#difference-between-dllmain-and-dllentrypoint-score-15788-in-2013">93: Difference between DllMain and DllEntryPoint (score <span>15788</span> in 2013)</a></li>
-<li><a href="#what-purpose-of-mov-espebp-score-15699-in-2014">94: What purpose of mov %esp,%ebp? (score <span>15699</span> in 2014)</a></li>
-<li><a href="#could-not-find-main-function-in-ida-pro-score-15581-in-2014">95: Could not find main function in IDA pro? (score <span>15581</span> in 2014)</a></li>
-<li><a href="#firmware-analysis-and-file-system-extraction-score-15418-in-2013">96: Firmware analysis and file system extraction? (score <span>15418</span> in 2013)</a></li>
-<li><a href="#recovering-.net-sources-into-full-blown-project-score-15109-in-2015">97: Recovering .NET sources into full blown project (score <span>15109</span> in 2015)</a></li>
-<li><a href="#how-can-i-make-ida-see-a-string-reference-score-15004-in">98: How can I make IDA see a string reference? (score <span>15004</span> in )</a></li>
-<li><a href="#freely-available-resource-hacking-applications-score-14888-in-2013">99: Freely available resource hacking applications (score <span>14888</span> in 2013)</a></li>
-<li><a href="#is-there-any-tool-for-decompiling-raw-binary-files-to-c-code-for-the-motorola-68000-processor-series-score-14672-in">100: Is there any tool for decompiling raw binary files to C code for the Motorola 68000 processor series? (score <span>14672</span> in )</a></li>
-</ul>
-</nav>
 <section class="level2">
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 <section id="is-there-any-disassembler-to-rival-ida-pro-score-311266-in-2015" class="level3">

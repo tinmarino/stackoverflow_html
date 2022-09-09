@@ -78,116 +78,14 @@
     code span.vs { color: #da4453; } /* VerbatimString */
     code span.wa { color: #da4453; } /* Warning */
   </style>
-  <link rel="stylesheet" href=" https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/color_dark_solarized.css -c  https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/layout_toc.css" />
+  <link rel="stylesheet" href="../wiki_html/Css/include.css" />
   <script type="text/javascript" src="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/js_masonry_desandro.js"></script>
+  <p><link rel="stylesheet" href="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/color_dark_solarized.css"> <link rel="stylesheet" href="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/layout_toc.css"></p>
 </head>
 <body>
 <header id="title-block-header">
 <h1 class="title">Regex &lt;- StackOverflow top 100</h1>
 </header>
-<nav id="TOC" role="doc-toc">
-<ul>
-<li><a href="#regular-expression-to-match-a-line-that-doesnt-contain-a-word-score-3113595-in-2019">1: Regular expression to match a line that doesn’t contain a word (score <span>3113595</span> in 2019)</a></li>
-<li><a href="#how-to-validate-an-email-address-in-javascript-score-2751724-in-2019">2: How to validate an email address in JavaScript (score <span>2751724</span> in 2019)</a></li>
-<li><a href="#regex-match-open-tags-except-xhtml-self-contained-tags-score-2669567-in-2012">3: RegEx match open tags except XHTML self-contained tags (score <span>2669567</span> in 2012)</a></li>
-<li><a href="#regular-expression-to-check-if-password-is-8-characters-including-1-uppercase-letter-1-special-character-alphanumeric-characters-score-1708893-in-2018">4: Regular expression to check if password is “8 characters including 1 uppercase letter, 1 special character, alphanumeric characters” (score <span>1708893</span> in 2018)</a></li>
-<li><a href="#match-the-path-of-a-url-minus-the-filename-extension-score-1259727-in-2014">5: Match the path of a URL, minus the filename extension (score <span>1259727</span> in 2014)</a></li>
-<li><a href="#how-to-validate-an-email-address-using-a-regular-expression-score-1146192-in-2018">6: How to validate an email address using a regular expression? (score <span>1146192</span> in 2018)</a></li>
-<li><a href="#regular-expression-for-alphanumeric-and-underscores-score-1010986-in">7: Regular Expression for alphanumeric and underscores (score <span>1010986</span> in )</a></li>
-<li><a href="#a-comprehensive-regex-for-phone-number-validation-score-876411-in-2017">8: A comprehensive regex for phone number validation (score <span>876411</span> in 2017)</a></li>
-<li><a href="#how-to-use-regular-expressions-regex-in-microsoft-excel-both-in-cell-and-loops-score-800567-in-2019">9: How to use Regular Expressions (Regex) in Microsoft Excel both in-cell and loops (score <span>800567</span> in 2019)</a></li>
-<li><a href="#remove-all-special-characters-from-a-string-score-720840-in-2017">11: Remove all special characters from a string (score <span>720840</span> in 2017)</a></li>
-<li><a href="#regex-for-numbers-only-score-719314-in-2019">12: Regex for numbers only (score <span>719314</span> in 2019)</a></li>
-<li><a href="#how-to-match-any-character-in-regular-expression-score-718409-in-2018">13: How to match “any character” in regular expression? (score <span>718409</span> in 2018)</a></li>
-<li><a href="#how-do-you-access-the-matched-groups-in-a-javascript-regular-expression-score-705906-in-2017">14: How do you access the matched groups in a JavaScript regular expression? (score <span>705906</span> in 2017)</a></li>
-<li><a href="#check-whether-a-string-matches-a-regex-in-js-score-700870-in-2017">15: Check whether a string matches a regex in JS (score <span>700870</span> in 2017)</a></li>
-<li><a href="#python-string.replace-regular-expression-score-696728-in-2019">16: Python string.replace regular expression (score <span>696728</span> in 2019)</a></li>
-<li><a href="#regex-that-accepts-only-numbers-0-9-and-no-characters-score-694263-in-2013">17: Regex that accepts only numbers (0-9) and NO characters (score <span>694263</span> in 2013)</a></li>
-<li><a href="#regular-expressions-is-there-an-and-operator-score-693174-in-2017">18: Regular Expressions: Is there an AND operator? (score <span>693174</span> in 2017)</a></li>
-<li><a href="#how-can-i-exclude-one-word-with-grep-score-679734-in-2015">19: How can I exclude one word with grep? (score <span>679734</span> in 2015)</a></li>
-<li><a href="#matching-a-space-in-regex-score-675660-in-2015">20: Matching a space in regex (score <span>675660</span> in 2015)</a></li>
-<li><a href="#how-do-you-use-a-variable-in-a-regular-expression-score-665330-in-2019">21: How do you use a variable in a regular expression? (score <span>665330</span> in 2019)</a></li>
-<li><a href="#what-is-a-non-capturing-group-in-regular-expressions-score-647385-in-2019">22: What is a non-capturing group in regular expressions? (score <span>647385</span> in 2019)</a></li>
-<li><a href="#using-string-format-to-show-decimal-up-to-2-places-or-simple-integer-score-641202-in-2017">23: Using String Format to show decimal up to 2 places or simple integer (score <span>641202</span> in 2017)</a></li>
-<li><a href="#regex-match-all-characters-between-two-strings-score-638223-in-2016">24: Regex Match all characters between two strings (score <span>638223</span> in 2016)</a></li>
-<li><a href="#regex-to-check-whether-a-string-contains-only-numbers-score-633360-in-2018">25: Regex to check whether a string contains only numbers (score <span>633360</span> in 2018)</a></li>
-<li><a href="#how-to-negate-specific-word-in-regex-score-626264-in-2016">26: How to negate specific word in regex? (score <span>626264</span> in 2016)</a></li>
-<li><a href="#regex-to-match-only-letters-score-623756-in-2018">27: Regex to match only letters (score <span>623756</span> in 2018)</a></li>
-<li><a href="#split-string-on-whitespace-in-python-score-603894-in-2015">28: Split string on whitespace in Python (score <span>603894</span> in 2015)</a></li>
-<li><a href="#simple-regular-expression-for-a-decimal-with-a-precision-of-2-score-593074-in-2012">29: Simple regular expression for a decimal with a precision of 2 (score <span>593074</span> in 2012)</a></li>
-<li><a href="#how-is-the-andor-operator-represented-as-in-regular-expressions-score-590059-in-2019">30: How is the AND/OR operator represented as in Regular Expressions? (score <span>590059</span> in 2019)</a></li>
-<li><a href="#how-to-match-anything-up-until-this-sequence-of-characters-in-a-regular-expression-score-570881-in">31: How to match “anything up until this sequence of characters” in a regular expression? (score <span>570881</span> in )</a></li>
-<li><a href="#how-to-extract-a-substring-using-regex-score-570678-in-2014">32: How to extract a substring using regex (score <span>570678</span> in 2014)</a></li>
-<li><a href="#regex-ignore-case-sensitivity-score-569767-in-2017">33: Regex: ignore case sensitivity (score <span>569767</span> in 2017)</a></li>
-<li><a href="#find-crlf-in-notepad-score-548272-in-2018">34: Find CRLF in Notepad++ (score <span>548272</span> in 2018)</a></li>
-<li><a href="#what-is-a-good-regular-expression-to-match-a-url-score-534454-in-2012">35: What is a good regular expression to match a URL? (score <span>534454</span> in 2012)</a></li>
-<li><a href="#regex-to-validate-date-format-ddmmyyyy-score-533749-in-2016">36: Regex to validate date format dd/mm/yyyy (score <span>533749</span> in 2016)</a></li>
-<li><a href="#replace-specific-characters-within-strings-score-524267-in-2019">37: Replace specific characters within strings (score <span>524267</span> in 2019)</a></li>
-<li><a href="#how-do-i-match-any-character-across-multiple-lines-in-a-regular-expression-score-520690-in-2015">38: How do I match any character across multiple lines in a regular expression? (score <span>520690</span> in 2015)</a></li>
-<li><a href="#regular-expression-to-stop-at-first-match-score-520377-in-2012">39: Regular expression to stop at first match (score <span>520377</span> in 2012)</a></li>
-<li><a href="#a-regular-expression-to-exclude-a-wordstring-score-515997-in-2010">40: A regular expression to exclude a word/string (score <span>515997</span> in 2010)</a></li>
-<li><a href="#regex-for-password-must-contain-at-least-eight-characters-at-least-one-number-and-both-lower-and-uppercase-letters-and-special-characters-score-498895-in-2017">41: Regex for password must contain at least eight characters, at least one number and both lower and uppercase letters and special characters (score <span>498895</span> in 2017)</a></li>
-<li><a href="#how-to-remove-all-line-breaks-from-a-string-score-487768-in-2018">42: How to remove all line breaks from a string (score <span>487768</span> in 2018)</a></li>
-<li><a href="#find-and-extract-a-number-from-a-string-score-480142-in-2015">43: Find and extract a number from a string (score <span>480142</span> in 2015)</a></li>
-<li><a href="#regular-expression-to-extract-text-between-square-brackets-score-478828-in-2010">44: Regular expression to extract text between square brackets (score <span>478828</span> in 2010)</a></li>
-<li><a href="#regular-expression-for-exact-match-of-a-string-score-476033-in-2019">45: Regular expression for exact match of a string (score <span>476033</span> in 2019)</a></li>
-<li><a href="#split-java-string-by-new-line-score-474015-in-2009">46: Split Java String by New Line (score <span>474015</span> in 2009)</a></li>
-<li><a href="#removing-empty-lines-in-notepad-score-472569-in-2014">47: Removing empty lines in Notepad++ (score <span>472569</span> in 2014)</a></li>
-<li><a href="#regular-expressions--match-anything-score-465260-in-2018">48: Regular Expressions- Match Anything (score <span>465260</span> in 2018)</a></li>
-<li><a href="#find-and-kill-a-process-in-one-line-using-bash-and-regex-score-456080-in-2010">49: Find and kill a process in one line using bash and regex (score <span>456080</span> in 2010)</a></li>
-<li><a href="#regex-matching-up-to-the-first-occurrence-of-a-character-score-447616-in-2013">50: Regex: matching up to the first occurrence of a character (score <span>447616</span> in 2013)</a></li>
-<li><a href="#check-if-string-matches-pattern-score-446271-in-2016">51: Check if string matches pattern (score <span>446271</span> in 2016)</a></li>
-<li><a href="#how-do-i-split-a-string-with-multiple-separators-in-javascript-score-442421-in-2015">52: How do I split a string with multiple separators in javascript? (score <span>442421</span> in 2015)</a></li>
-<li><a href="#how-to-count-string-occurrence-in-string-score-426426-in">53: How to count string occurrence in string? (score <span>426426</span> in )</a></li>
-<li><a href="#regular-expression-to-allow-spaces-between-words-score-425290-in-2019">54: Regular expression to allow spaces between words (score <span>425290</span> in 2019)</a></li>
-<li><a href="#validating-email-addresses-using-jquery-and-regex-score-422825-in-2017">55: Validating email addresses using jQuery and regex (score <span>422825</span> in 2017)</a></li>
-<li><a href="#remove-new-lines-from-string-and-replace-with-one-empty-space-score-421794-in-2019">56: Remove new lines from string and replace with one empty space (score <span>421794</span> in 2019)</a></li>
-<li><a href="#how-to-do-a-regular-expression-replace-in-mysql-score-412329-in-2017">57: How to do a regular expression replace in MySQL? (score <span>412329</span> in 2017)</a></li>
-<li><a href="#remove-all-special-characters-punctuation-and-spaces-from-string-score-410777-in-2015">58: Remove all special characters, punctuation and spaces from string (score <span>410777</span> in 2015)</a></li>
-<li><a href="#how-to-print-matched-regex-pattern-using-awk-score-406650-in-2018">59: How to print matched regex pattern using awk? (score <span>406650</span> in 2018)</a></li>
-<li><a href="#how-to-remove-special-characters-from-a-string-score-406020-in-2016">60: How to remove special characters from a string? (score <span>406020</span> in 2016)</a></li>
-<li><a href="#regex-to-test-if-string-begins-with-http-or-https-score-404032-in-2011">61: Regex to test if string begins with http:// or https:// (score <span>404032</span> in 2011)</a></li>
-<li><a href="#regex-email-validation-score-401797-in-2016">62: Regex Email validation (score <span>401797</span> in 2016)</a></li>
-<li><a href="#jquery-selector-regular-expressions-score-401188-in-2016">63: jQuery selector regular expressions (score <span>401188</span> in 2016)</a></li>
-<li><a href="#remove-all-special-characters-with-regexp-score-395465-in-2018">64: Remove all special characters with RegExp (score <span>395465</span> in 2018)</a></li>
-<li><a href="#regular-expression-to-find-a-string-included-between-two-characters-while-excluding-the-delimiters-score-395344-in-2018">65: Regular Expression to find a string included between two characters while EXCLUDING the delimiters (score <span>395344</span> in 2018)</a></li>
-<li><a href="#java-string-replace-using-regular-expressions-score-394664-in-2012">66: Java; String replace (using regular expressions)? (score <span>394664</span> in 2012)</a></li>
-<li><a href="#java-string-split-with-.-dot-score-387315-in-2019">67: Java string split with “.” (dot) (score <span>387315</span> in 2019)</a></li>
-<li><a href="#regular-expression-to-limit-number-of-characters-to-10-score-384603-in-2013">68: Regular expression to limit number of characters to 10 (score <span>384603</span> in 2013)</a></li>
-<li><a href="#regex-for-string-contains-score-381502-in-2016">69: Regex for string contains? (score <span>381502</span> in 2016)</a></li>
-<li><a href="#regex-to-replace-multiple-spaces-with-a-single-space-score-379298-in-2016">70: Regex to replace multiple spaces with a single space (score <span>379298</span> in 2016)</a></li>
-<li><a href="#test-if-characters-are-in-a-string-score-377400-in-2018">71: Test if characters are in a string (score <span>377400</span> in 2018)</a></li>
-<li><a href="#how-to-find-all-occurrences-of-a-substring-score-375838-in-2019">72: How to find all occurrences of a substring? (score <span>375838</span> in 2019)</a></li>
-<li><a href="#what-is-the-best-regular-expression-to-check-if-a-string-is-a-valid-url-score-372948-in-2016">73: What is the best regular expression to check if a string is a valid URL? (score <span>372948</span> in 2016)</a></li>
-<li><a href="#how-to-output-only-captured-groups-with-sed-score-372573-in-2019">74: How to output only captured groups with sed? (score <span>372573</span> in 2019)</a></li>
-<li><a href="#using-regex-in-sql-server-score-371450-in">75: Using RegEx in SQL Server (score <span>371450</span> in )</a></li>
-<li><a href="#regular-expression-to-match-a-word-or-its-prefix-score-365246-in-2018">76: Regular expression to match a word or its prefix (score <span>365246</span> in 2018)</a></li>
-<li><a href="#match-two-strings-in-one-line-with-grep-score-363844-in-2019">77: Match two strings in one line with grep (score <span>363844</span> in 2019)</a></li>
-<li><a href="#regex-match-everything-but-specific-pattern-score-359326-in-2019">78: Regex: match everything but specific pattern (score <span>359326</span> in 2019)</a></li>
-<li><a href="#regex---does-not-contain-certain-characters-score-353405-in-2019">79: Regex - Does not contain certain Characters (score <span>353405</span> in 2019)</a></li>
-<li><a href="#whitespace-matching-regex---java-score-352296-in-2014">80: Whitespace Matching Regex - Java (score <span>352296</span> in 2014)</a></li>
-<li><a href="#how-to-use-regex-with-find-command-score-351529-in-2011">81: How to use regex with find command? (score <span>351529</span> in 2011)</a></li>
-<li><a href="#php-string-contains-score-351294-in-2017">82: PHP string “contains” (score <span>351294</span> in 2017)</a></li>
-<li><a href="#regular-expression-to-match-every-new-line-character-inside-a-tag-score-350198-in-2015">83: Regular Expression to match every new line character () inside a <content> tag (score <span>350198</span> in 2015)</a></li>
-<li><a href="#regex-for-javascript-to-allow-only-alphanumeric-score-349473-in-2015">84: RegEx for Javascript to allow only alphanumeric (score <span>349473</span> in 2015)</a></li>
-<li><a href="#validate-phone-number-with-javascript-score-347886-in-2011">85: Validate phone number with JavaScript (score <span>347886</span> in 2011)</a></li>
-<li><a href="#javascript-regular-expression-email-validation-score-329940-in-2018">86: JavaScript Regular Expression Email Validation (score <span>329940</span> in 2018)</a></li>
-<li><a href="#how-do-i-remove-all-non-alphanumeric-characters-from-a-string-except-dash-score-329647-in-2014">87: How do I remove all non alphanumeric characters from a string except dash? (score <span>329647</span> in 2014)</a></li>
-<li><a href="#regular-expression-to-match-string-starting-with-stop-score-329414-in-2011">88: Regular Expression to match string starting with “stop” (score <span>329414</span> in 2011)</a></li>
-<li><a href="#regular-expression-to-match-only-alphabetic-characters-score-329002-in-2011">89: Regular Expression to match only alphabetic characters (score <span>329002</span> in 2011)</a></li>
-<li><a href="#regular-expression-to-match-dns-hostname-or-ip-address-score-322309-in-2014">90: Regular expression to match DNS hostname or IP Address? (score <span>322309</span> in 2014)</a></li>
-<li><a href="#what-regex-will-match-every-character-except-comma-or-semi-colon-score-320135-in-2009">91: What regex will match every character except comma ‘,’ or semi-colon ‘;’? (score <span>320135</span> in 2009)</a></li>
-<li><a href="#how-to-escape-regular-expression-special-characters-using-javascript-score-319153-in-2011">92: How to escape regular expression special characters using javascript? (score <span>319153</span> in 2011)</a></li>
-<li><a href="#regular-expression-to-get-a-string-between-two-strings-in-javascript-score-316875-in-2019">93: Regular expression to get a string between two strings in Javascript (score <span>316875</span> in 2019)</a></li>
-<li><a href="#use-string.split-with-multiple-delimiters-score-313325-in-2017">94: Use String.split() with multiple delimiters (score <span>313325</span> in 2017)</a></li>
-<li><a href="#regular-expression-to-match-balanced-parentheses-score-312134-in-2019">95: Regular expression to match balanced parentheses (score <span>312134</span> in 2019)</a></li>
-<li><a href="#regex-grabbing-values-between-quotation-marks-score-309597-in-2014">96: RegEx: Grabbing values between quotation marks (score <span>309597</span> in 2014)</a></li>
-<li><a href="#how-do-i-extract-text-that-lies-between-parentheses-round-brackets-score-307895-in-2015">97: How do I extract text that lies between parentheses (round brackets)? (score <span>307895</span> in 2015)</a></li>
-<li><a href="#jquery-validate-how-to-add-a-rule-for-regular-expression-validation-score-305989-in-2017">98: jQuery validate: How to add a rule for regular expression validation? (score <span>305989</span> in 2017)</a></li>
-<li><a href="#regular-expression-to-get-a-string-between-parentheses-in-javascript-score-305791-in-2018">99: Regular Expression to get a string between parentheses in Javascript (score <span>305791</span> in 2018)</a></li>
-<li><a href="#how-to-extract-img-src-title-and-alt-from-html-using-php-score-303789-in-2015">100: How to extract img src, title and alt from html using php? (score <span>303789</span> in 2015)</a></li>
-</ul>
-</nav>
 <section class="level2">
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 <section id="regular-expression-to-match-a-line-that-doesnt-contain-a-word-score-3113595-in-2019" class="level3">

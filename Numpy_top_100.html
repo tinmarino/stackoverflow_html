@@ -13,117 +13,14 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href=" https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/color_dark_solarized.css -c  https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/layout_toc.css" />
+  <link rel="stylesheet" href="../wiki_html/Css/include.css" />
   <script type="text/javascript" src="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/js_masonry_desandro.js"></script>
+  <p><link rel="stylesheet" href="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/color_dark_solarized.css"> <link rel="stylesheet" href="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/layout_toc.css"></p>
 </head>
 <body>
 <header id="title-block-header">
 <h1 class="title">Numpy &lt;- StackOverflow top 100</h1>
 </header>
-<nav id="TOC" role="doc-toc">
-<ul>
-<li><a href="#how-do-i-create-an-empty-arraymatrix-in-numpy-score-803995-in-2014">1: How do I create an empty array/matrix in NumPy? (score <span>803995</span> in 2014)</a></li>
-<li><a href="#convert-pandas-dataframe-to-numpy-array-score-765238-in-2019">2: Convert pandas dataframe to NumPy array (score <span>765238</span> in 2019)</a></li>
-<li><a href="#valueerror-setting-an-array-element-with-a-sequence-score-695400-in-2019">3: ValueError: setting an array element with a sequence (score <span>695400</span> in 2019)</a></li>
-<li><a href="#numpy-array-dimensions-score-684791-in-2018">4: Numpy array dimensions (score <span>684791</span> in 2018)</a></li>
-<li><a href="#how-can-the-euclidean-distance-be-calculated-with-numpy-score-614528-in-2018">5: How can the Euclidean distance be calculated with NumPy? (score <span>614528</span> in 2018)</a></li>
-<li><a href="#how-do-i-read-csv-data-into-a-record-array-in-numpy-score-609746-in-2018">6: How do I read CSV data into a record array in NumPy? (score <span>609746</span> in 2018)</a></li>
-<li><a href="#how-to-access-the-ith-column-of-a-numpy-multidimensional-array-score-607071-in-2017">7: How to access the ith column of a NumPy multidimensional array? (score <span>607071</span> in 2017)</a></li>
-<li><a href="#import-error-no-module-named-numpy-score-579767-in-2017">8: Import Error: No module named numpy (score <span>579767</span> in 2017)</a></li>
-<li><a href="#creating-a-pandas-dataframe-from-a-numpy-array-how-do-i-specify-the-index-column-and-column-headers-score-566365-in-2018">9: Creating a Pandas DataFrame from a Numpy array: How do I specify the index column and column headers? (score <span>566365</span> in 2018)</a></li>
-<li><a href="#combine-two-columns-of-text-in-dataframe-in-pandaspython-score-565423-in-2017">10: Combine two columns of text in dataframe in pandas/python (score <span>565423</span> in 2017)</a></li>
-<li><a href="#is-there-a-numpy-function-to-return-the-first-index-of-something-in-an-array-score-554833-in-2019">11: Is there a NumPy function to return the first index of something in an array? (score <span>554833</span> in 2019)</a></li>
-<li><a href="#list-to-array-conversion-to-use-ravel-function-score-548984-in-2019">12: List to array conversion to use ravel() function (score <span>548984</span> in 2019)</a></li>
-<li><a href="#dump-a-numpy-array-into-a-csv-file-score-539580-in-2012">13: Dump a NumPy array into a csv file (score <span>539580</span> in 2012)</a></li>
-<li><a href="#append-a-numpy-array-to-a-numpy-array-score-503527-in-2016">14: Append a NumPy array to a NumPy array (score <span>503527</span> in 2016)</a></li>
-<li><a href="#valueerror-the-truth-value-of-an-array-with-more-than-one-element-is-ambiguous.-use-a.any-or-a.all-score-475606-in-2019">15: ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all() (score <span>475606</span> in 2019)</a></li>
-<li><a href="#how-to-print-the-full-numpy-array-without-truncation-score-457227-in-2019">16: How to print the full NumPy array, without truncation? (score <span>457227</span> in 2019)</a></li>
-<li><a href="#stringio-in-python3-score-456612-in-2018">17: StringIO in Python3 (score <span>456612</span> in 2018)</a></li>
-<li><a href="#how-do-i-find-the-length-or-dimensions-size-of-a-numpy-matrix-in-python-score-449859-in-2014">18: How do I find the length (or dimensions, size) of a numpy matrix in python? (score <span>449859</span> in 2014)</a></li>
-<li><a href="#how-to-normalize-an-array-in-numpy-score-442096-in-2019">19: How to normalize an array in NumPy? (score <span>442096</span> in 2019)</a></li>
-<li><a href="#saving-a-numpy-array-as-an-image-score-433082-in-2009">20: Saving a Numpy array as an image (score <span>433082</span> in 2009)</a></li>
-<li><a href="#how-to-count-the-occurrence-of-certain-item-in-an-ndarray-in-python-score-403188-in-2018">21: How to count the occurrence of certain item in an ndarray in Python? (score <span>403188</span> in 2018)</a></li>
-<li><a href="#how-to-take-column-slices-of-dataframe-in-pandas-score-392251-in-2019">22: How to take column-slices of dataframe in pandas (score <span>392251</span> in 2019)</a></li>
-<li><a href="#how-to-remove-specific-elements-in-a-numpy-array-score-374737-in">23: How to remove specific elements in a numpy array (score <span>374737</span> in )</a></li>
-<li><a href="#initialize-a-numpy-array-score-371377-in-2016">24: initialize a numpy array (score <span>371377</span> in 2016)</a></li>
-<li><a href="#converting-numpy-array-into-python-list-structure-score-368802-in-2016">25: Converting NumPy array into Python List structure? (score <span>368802</span> in 2016)</a></li>
-<li><a href="#how-to-add-an-extra-column-to-a-numpy-array-score-365161-in-2018">26: How to add an extra column to a NumPy array (score <span>365161</span> in 2018)</a></li>
-<li><a href="#python-numpy-valueerror-operands-could-not-be-broadcast-together-with-shapes-score-361482-in-2019">27: python numpy ValueError: operands could not be broadcast together with shapes (score <span>361482</span> in 2019)</a></li>
-<li><a href="#numpy-matrix-vector-multiplication-score-359277-in-2016">28: numpy matrix vector multiplication (score <span>359277</span> in 2016)</a></li>
-<li><a href="#numpy---add-row-to-array-score-349056-in-2010">29: Numpy - add row to array (score <span>349056</span> in 2010)</a></li>
-<li><a href="#pandas-create-new-column-based-on-values-from-other-columns-apply-a-function-of-multiple-columns-row-wise-score-346548-in-2019">30: pandas create new column based on values from other columns / apply a function of multiple columns, row-wise (score <span>346548</span> in 2019)</a></li>
-<li><a href="#most-efficient-way-to-reverse-a-numpy-array-score-343514-in-2013">31: Most efficient way to reverse a numpy array (score <span>343514</span> in 2013)</a></li>
-<li><a href="#converting-between-datetime-timestamp-and-datetime64-score-334661-in-2019">32: Converting between datetime, Timestamp and datetime64 (score <span>334661</span> in 2019)</a></li>
-<li><a href="#installing-numpy-on-64bit-windows-7-with-python-2.7.3-score-333639-in-2013">33: Installing Numpy on 64bit Windows 7 with Python 2.7.3 (score <span>333639</span> in 2013)</a></li>
-<li><a href="#calculating-pearson-correlation-and-significance-in-python-score-329259-in-2014">34: Calculating Pearson correlation and significance in Python (score <span>329259</span> in 2014)</a></li>
-<li><a href="#how-do-i-convert-a-numpy-array-to-and-display-an-image-score-325989-in-2019">35: How do I convert a numpy array to (and display) an image? (score <span>325989</span> in 2019)</a></li>
-<li><a href="#transposing-a-numpy-array-score-324306-in-2019">36: Transposing a NumPy array (score <span>324306</span> in 2019)</a></li>
-<li><a href="#how-to-convert-a-pil-image-into-a-numpy-array-score-324029-in-2019">37: How to convert a PIL Image into a numpy array? (score <span>324029</span> in 2019)</a></li>
-<li><a href="#convert-columns-to-string-in-pandas-score-321312-in-2015">38: Convert Columns to String in Pandas (score <span>321312</span> in 2015)</a></li>
-<li><a href="#how-to-pretty-print-a-numpy.array-without-scientific-notation-and-with-given-precision-score-314326-in-2019">39: How to pretty-print a numpy.array without scientific notation and with given precision? (score <span>314326</span> in 2019)</a></li>
-<li><a href="#how-to-convert-2d-float-numpy-array-to-2d-int-numpy-array-score-312223-in">40: How to convert 2D float numpy array to 2D int numpy array? (score <span>312223</span> in )</a></li>
-<li><a href="#pandas-conditional-creation-of-a-seriesdataframe-column-score-310122-in-2019">41: Pandas conditional creation of a series/dataframe column (score <span>310122</span> in 2019)</a></li>
-<li><a href="#how-do-i-check-which-version-of-numpy-im-using-score-303358-in-2019">42: How do I check which version of NumPy I’m using? (score <span>303358</span> in 2019)</a></li>
-<li><a href="#replace-all-elements-of-python-numpy-array-that-are-greater-than-some-value-score-301621-in-2013">43: Replace all elements of Python NumPy Array that are greater than some value (score <span>301621</span> in 2013)</a></li>
-<li><a href="#most-efficient-way-to-map-function-over-numpy-array-score-301119-in-2016">44: Most efficient way to map function over numpy array (score <span>301119</span> in 2016)</a></li>
-<li><a href="#how-do-i-get-indices-of-n-maximum-values-in-a-numpy-array-score-300000-in-2019">45: How do I get indices of N maximum values in a NumPy array? (score <span>300000</span> in 2019)</a></li>
-<li><a href="#removing-nan-values-from-an-array-score-291858-in-2019">46: Removing nan values from an array (score <span>291858</span> in 2019)</a></li>
-<li><a href="#how-to-install-numpy-on-windows-using-pip-install-score-290925-in-2017">47: How to install numpy on windows using pip install? (score <span>290925</span> in 2017)</a></li>
-<li><a href="#comparing-two-numpy-arrays-for-equality-element-wise-score-285249-in-2015">48: Comparing two numpy arrays for equality, element-wise (score <span>285249</span> in 2015)</a></li>
-<li><a href="#moving-average-or-running-mean-score-281701-in-2017">49: Moving average or running mean (score <span>281701</span> in 2017)</a></li>
-<li><a href="#how-do-i-compute-derivative-using-numpy-score-267330-in-2015">50: How do I compute derivative using Numpy? (score <span>267330</span> in 2015)</a></li>
-<li><a href="#python-find-position-of-element-in-array-score-262440-in-2016">51: Python: find position of element in array (score <span>262440</span> in 2016)</a></li>
-<li><a href="#numpy-array-initialization-fill-with-identical-values-score-261624-in-2019">52: NumPy array initialization (fill with identical values) (score <span>261624</span> in 2019)</a></li>
-<li><a href="#concatenating-two-one-dimensional-numpy-arrays-score-256691-in-2019">53: Concatenating two one-dimensional NumPy arrays (score <span>256691</span> in 2019)</a></li>
-<li><a href="#what-does-.shape-do-in-for-i-in-rangey.shape0-score-255964-in-2014">54: What does .shape[] do in “for i in range(Y.shape[0])”? (score <span>255964</span> in 2014)</a></li>
-<li><a href="#sorting-arrays-in-numpy-by-column-score-255753-in-2018">55: Sorting arrays in NumPy by column (score <span>255753</span> in 2018)</a></li>
-<li><a href="#how-do-you-get-the-magnitude-of-a-vector-in-numpy-score-255123-in-2016">56: How do you get the magnitude of a vector in Numpy? (score <span>255123</span> in 2016)</a></li>
-<li><a href="#how-to-save-a-list-as-numpy-array-in-python-score-246629-in">57: How to save a list as numpy array in python? (score <span>246629</span> in )</a></li>
-<li><a href="#how-to-convert-an-array-of-strings-to-an-array-of-floats-in-numpy-score-243441-in-2018">58: How to convert an array of strings to an array of floats in numpy? (score <span>243441</span> in 2018)</a></li>
-<li><a href="#how-to-write-a-multidimensional-array-to-a-text-file-score-240878-in-2010">59: How to write a multidimensional array to a text file? (score <span>240878</span> in 2010)</a></li>
-<li><a href="#how-to-convert-an-rgb-image-to-numpy-array-score-239683-in-2018">60: how to convert an RGB image to numpy array? (score <span>239683</span> in 2018)</a></li>
-<li><a href="#how-can-i-convert-a-tensor-into-a-numpy-array-in-tensorflow-score-239603-in-2017">61: How can I convert a tensor into a numpy array in TensorFlow? (score <span>239603</span> in 2017)</a></li>
-<li><a href="#plotting-a-2d-heatmap-with-matplotlib-score-239404-in">62: Plotting a 2D heatmap with Matplotlib (score <span>239404</span> in )</a></li>
-<li><a href="#windows-scipy-install-no-lapackblas-resources-found-score-235788-in-2016">63: Windows Scipy Install: No Lapack/Blas Resources Found (score <span>235788</span> in 2016)</a></li>
-<li><a href="#matplotlib-set-markers-for-individual-points-on-a-line-score-235042-in-2013">64: matplotlib: Set markers for individual points on a line (score <span>235042</span> in 2013)</a></li>
-<li><a href="#from-nd-to-1d-arrays-score-234527-in-2016">65: From ND to 1D arrays (score <span>234527</span> in 2016)</a></li>
-<li><a href="#how-do-i-calculate-percentiles-with-pythonnumpy-score-234077-in-2019">66: How do I calculate percentiles with python/numpy? (score <span>234077</span> in 2019)</a></li>
-<li><a href="#how-does-multiplication-differ-for-numpy-matrix-vs-array-classes-score-233980-in-2014">67: how does multiplication differ for NumPy Matrix vs Array classes? (score <span>233980</span> in 2014)</a></li>
-<li><a href="#how-to-import-numpy-in-the-python-shell-score-233281-in-2018">68: How to import NumPy in the Python shell (score <span>233281</span> in 2018)</a></li>
-<li><a href="#importerror-numpy.core.multiarray-failed-to-import-score-232374-in-2018">69: ImportError: numpy.core.multiarray failed to import (score <span>232374</span> in 2018)</a></li>
-<li><a href="#find-nearest-value-in-numpy-array-score-230524-in-2017">70: Find nearest value in numpy array (score <span>230524</span> in 2017)</a></li>
-<li><a href="#numpy-most-efficient-frequency-counts-for-unique-values-in-an-array-score-228927-in-2015">71: numpy: most efficient frequency counts for unique values in an array (score <span>228927</span> in 2015)</a></li>
-<li><a href="#installing-scipy-and-numpy-using-pip-score-224954-in-2015">72: Installing SciPy and NumPy using pip (score <span>224954</span> in 2015)</a></li>
-<li><a href="#use-a.any-or-a.all-score-224789-in-2015">73: Use a.any() or a.all() (score <span>224789</span> in 2015)</a></li>
-<li><a href="#list-object-has-no-attribute-shape-score-220134-in-2016">74: ‘list’ object has no attribute ‘shape’ (score <span>220134</span> in 2016)</a></li>
-<li><a href="#pandas-read_csv-low_memory-and-dtype-options-score-217762-in-2016">75: Pandas read_csv low_memory and dtype options (score <span>217762</span> in 2016)</a></li>
-<li><a href="#extracting-specific-columns-in-numpy-array-score-213728-in-2011">76: Extracting specific columns in numpy array (score <span>213728</span> in 2011)</a></li>
-<li><a href="#how-to-normalize-a-numpy-array-to-within-a-certain-range-score-213628-in-2013">77: How to normalize a NumPy array to within a certain range? (score <span>213628</span> in 2013)</a></li>
-<li><a href="#take-multiple-lists-into-dataframe-score-211252-in-2019">78: Take multiple lists into dataframe (score <span>211252</span> in 2019)</a></li>
-<li><a href="#plotting-a-fast-fourier-transform-in-python-score-210888-in-2014">79: Plotting a Fast Fourier Transform in Python (score <span>210888</span> in 2014)</a></li>
-<li><a href="#add-single-element-to-array-in-numpy-score-210737-in">80: Add single element to array in numpy (score <span>210737</span> in )</a></li>
-<li><a href="#how-to-install-python-modules-without-root-access-score-210023-in-2011">81: How to install python modules without root access? (score <span>210023</span> in 2011)</a></li>
-<li><a href="#a-tool-to-convert-matlab-code-to-python-score-209989-in-2013">82: A tool to convert MATLAB code to Python (score <span>209989</span> in 2013)</a></li>
-<li><a href="#how-to-get-correlation-of-two-vectors-in-python-score-209806-in-2013">83: How to get correlation of two vectors in python (score <span>209806</span> in 2013)</a></li>
-<li><a href="#normalize-data-in-pandas-score-209237-in-2017">84: Normalize data in pandas (score <span>209237</span> in 2017)</a></li>
-<li><a href="#numpy-matrix-to-array-score-208328-in-2013">85: Numpy matrix to array (score <span>208328</span> in 2013)</a></li>
-<li><a href="#how-to-add-items-into-a-numpy-array-score-208229-in-2015">86: How to add items into a numpy array (score <span>208229</span> in 2015)</a></li>
-<li><a href="#what-does-numpy.random.seed0-do-score-207987-in-2018">87: What does numpy.random.seed(0) do? (score <span>207987</span> in 2018)</a></li>
-<li><a href="#deleting-rows-in-numpy-array-score-205862-in-2014">88: deleting rows in numpy array (score <span>205862</span> in 2014)</a></li>
-<li><a href="#simple-digit-recognition-ocr-in-opencv-python-score-204903-in-2018">89: Simple Digit Recognition OCR in OpenCV-Python (score <span>204903</span> in 2018)</a></li>
-<li><a href="#what-does--1-mean-in-numpy-reshape-score-203348-in-2015">90: What does -1 mean in numpy reshape? (score <span>203348</span> in 2015)</a></li>
-<li><a href="#linear-regression-with-matplotlib-numpy-score-200825-in-2017">91: Linear regression with matplotlib / numpy (score <span>200825</span> in 2017)</a></li>
-<li><a href="#convert-a-1d-array-to-a-2d-array-in-numpy-score-200751-in-2018">92: Convert a 1D array to a 2D array in numpy (score <span>200751</span> in 2018)</a></li>
-<li><a href="#how-to-smooth-a-curve-in-the-right-way-score-194813-in-2013">93: How to smooth a curve in the right way? (score <span>194813</span> in 2013)</a></li>
-<li><a href="#how-does-numpy.histogram-work-score-192883-in-2015">94: How does numpy.histogram() work? (score <span>192883</span> in 2015)</a></li>
-<li><a href="#find-indices-of-elements-equal-to-zero-in-a-numpy-array-score-190831-in-2018">95: Find indices of elements equal to zero in a NumPy array (score <span>190831</span> in 2018)</a></li>
-<li><a href="#numpy-array-typeerror-only-integer-scalar-arrays-can-be-converted-to-a-scalar-index-score-190084-in-2019">96: numpy array TypeError: only integer scalar arrays can be converted to a scalar index (score <span>190084</span> in 2019)</a></li>
-<li><a href="#importerror-dll-load-failed-the-specified-module-could-not-be-found-score-188704-in">97: ImportError: DLL load failed: The specified module could not be found (score <span>188704</span> in )</a></li>
-<li><a href="#slicing-of-a-numpy-2d-array-or-how-do-i-extract-an-mxm-submatrix-from-an-nxn-array-nm-score-187692-in-2015">98: Slicing of a NumPy 2d array, or how do I extract an mxm submatrix from an nxn array (n&gt;m)? (score <span>187692</span> in 2015)</a></li>
-<li><a href="#python-first-and-last-element-from-array-score-187102-in-2017">99: Python first and last element from array (score <span>187102</span> in 2017)</a></li>
-<li><a href="#how-to-do-exponential-and-logarithmic-curve-fitting-in-python-i-found-only-polynomial-fitting-score-186765-in-2013">100: How to do exponential and logarithmic curve fitting in Python? I found only polynomial fitting (score <span>186765</span> in 2013)</a></li>
-</ul>
-</nav>
 <section class="level2">
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 <section id="how-do-i-create-an-empty-arraymatrix-in-numpy-score-803995-in-2014" class="level3">
