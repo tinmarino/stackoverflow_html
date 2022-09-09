@@ -5,22 +5,124 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Reverse_engineering_top_100_se.md – Reverse_engineering &lt;- StackExchange top 100</title>
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <link rel="stylesheet" href="../wiki_html/Css/include.css" />
-  <script type="text/javascript" src="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/js_masonry_desandro.js"></script>
-  <p><link rel="stylesheet" href="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/color_dark_solarized.css"> <link rel="stylesheet" href="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/layout_toc.css"></p>
+  <link rel="stylesheet" href="../Css/color_dark_solarized.css" />
+  <link rel="stylesheet" href="../Css/layout_toc.css" />
+  <script type="text/javascript" src="../Css/js_masonry_desandro.js"></script>
 </head>
 <body>
-<header id="title-block-header">
+<header>
 <h1 class="title">Reverse_engineering &lt;- StackExchange top 100</h1>
 </header>
+<nav id="TOC">
+<ul>
+<li><a href="#is-there-any-disassembler-to-rival-ida-pro-score-311266-in-2015">1: Is there any disassembler to rival IDA Pro? (score <span>311266</span> in 2015)</a></li>
+<li><a href="#how-do-i-get-the-location-of-the-original-audiovideo-file-embedded-on-a-webpage-score-249455-in-2013">2: How do I get the location of the original audio/video file embedded on a webpage? (score <span>249455</span> in 2013)</a></li>
+<li><a href="#how-do-i-reverse-engineer-.so-files-found-in-android-apks-score-172692-in-2014">3: How do I reverse engineer .so files found in android APKs? (score <span>172692</span> in 2014)</a></li>
+<li><a href="#where-can-i-as-an-individual-get-malware-samples-to-analyze-score-110211-in-2013">4: Where can I, as an individual, get malware samples to analyze? (score <span>110211</span> in 2013)</a></li>
+<li><a href="#converting-assembly-code-to-c-score-106951-in-2014">5: Converting assembly code to c (score <span>106951</span> in 2014)</a></li>
+<li><a href="#possibilities-for-reverse-engineering-an-ipa-file-to-its-source-score-103842-in-2013">6: Possibilities for reverse engineering an ipa file to its source (score <span>103842</span> in 2013)</a></li>
+<li><a href="#what-is-a-good-java-decompiler-and-deobfuscator-score-98723-in-2013">7: What is a good Java decompiler and deobfuscator? (score <span>98723</span> in 2013)</a></li>
+<li><a href="#how-are-the-segment-registers-fs-gs-cs-ss-ds-es-used-in-linux-score-94077-in-2015">8: How are the segment registers (fs, gs, cs, ss, ds, es) used in Linux? (score <span>94077</span> in 2015)</a></li>
+<li><a href="#how-to-know-in-which-languagetechnology-program-.exe-is-written-score-94055-in-2014">9: How to know in which language/technology program (.exe) is written? (score <span>94055</span> in 2014)</a></li>
+<li><a href="#decent-gui-for-gdb-score-92096-in-2013">10: Decent GUI for GDB (score <span>92096</span> in 2013)</a></li>
+<li><a href="#how-to-deobfuscate-an-obfuscated-javascript-file-like-this-score-87501-in">11: How to deobfuscate an obfuscated javascript file like this? (score <span>87501</span> in )</a></li>
+<li><a href="#decompiling-iphone-app-score-79696-in-2015">12: Decompiling iPhone App (score <span>79696</span> in 2015)</a></li>
+<li><a href="#how-to-handle-stripped-binaries-with-gdb-no-source-no-symbols-and-gdb-only-shows-addresses-score-66463-in-2013">13: How to handle stripped binaries with GDB? No source, no symbols and GDB only shows addresses? (score <span>66463</span> in 2013)</a></li>
+<li><a href="#is-there-any-way-to-decompile-a-.net-assembly-or-program-score-63878-in-2013">14: Is there any way to decompile a .NET assembly or program? (score <span>63878</span> in 2013)</a></li>
+<li><a href="#analyzing-highly-obfuscated-javascript-score-63196-in">15: Analyzing highly obfuscated JavaScript (score <span>63196</span> in )</a></li>
+<li><a href="#translate-assembly-to-c-score-62329-in-2018">16: Translate ASSEMBLY to C (score <span>62329</span> in 2018)</a></li>
+<li><a href="#what-is-pltgot-score-61095-in-2013">17: What is PLT/GOT? (score <span>61095</span> in 2013)</a></li>
+<li><a href="#reversing-elf-64-bit-lsb-executable-x86-64-gdb-score-57319-in">18: Reversing ELF 64-bit LSB executable, x86-64 ,gdb (score <span>57319</span> in )</a></li>
+<li><a href="#how-to-obtain-x86-64-pseudocode-in-ida-pro-score-57124-in-2016">19: How to obtain x86-64 pseudocode in IDA Pro? (score <span>57124</span> in 2016)</a></li>
+<li><a href="#how-to-decompile-linux-.so-library-files-from-a-ms-windows-os-score-53501-in-2013">20: How to decompile Linux .so library files from a MS-Windows OS? (score <span>53501</span> in 2013)</a></li>
+<li><a href="#decompiling-.pyc-files-score-51248-in-2013">21: Decompiling .pyc files (score <span>51248</span> in 2013)</a></li>
+<li><a href="#how-do-i-extract-a-copy-of-an-unknown-firmware-from-a-hardware-device-score-50056-in">22: How do I extract a copy of an unknown firmware from a hardware device? (score <span>50056</span> in )</a></li>
+<li><a href="#how-do-you-reverse-engineer-an-exe-compiled-with-pyinstaller-score-49410-in-2013">23: How do you reverse engineer an EXE “compiled” with PyInstaller (score <span>49410</span> in 2013)</a></li>
+<li><a href="#how-do-i-acquire-softice-score-45604-in-2013">24: How do I acquire SoftICE? (score <span>45604</span> in 2013)</a></li>
+<li><a href="#how-can-i-decompile-my-dotnet-.exe-file-into-its-source-code-score-45227-in-2013">25: How can I decompile my (dot)NET .EXE file into its source code (score <span>45227</span> in 2013)</a></li>
+<li><a href="#how-does-one-reverse-engineer-a-swf-file-score-42513-in">26: How does one reverse engineer a SWF file? (score <span>42513</span> in )</a></li>
+<li><a href="#what-is-the-most-efficient-way-to-detect-and-to-break-xor-encryption-score-38115-in-2013">27: What is the most efficient way to detect and to break xor encryption? (score <span>38115</span> in 2013)</a></li>
+<li><a href="#how-to-decompile-an-exe-file-score-35702-in">28: How to decompile an exe file? (score <span>35702</span> in )</a></li>
+<li><a href="#sniffing-tcp-traffic-for-specific-process-using-wireshark-score-35644-in-2014">29: Sniffing TCP traffic for specific process using Wireshark (score <span>35644</span> in 2014)</a></li>
+<li><a href="#how-can-dll-injection-be-detected-score-34608-in-2017">30: How can DLL injection be detected? (score <span>34608</span> in 2017)</a></li>
+<li><a href="#what-is-dll-injection-and-how-is-it-used-for-reversing-score-34208-in-2013">31: What is DLL Injection and how is it used for reversing? (score <span>34208</span> in 2013)</a></li>
+<li><a href="#exe-to-c-source-code-decompiler-score-33173-in">32: EXE to C source code decompiler (score <span>33173</span> in )</a></li>
+<li><a href="#what-is-the-linux-equivalent-to-ollydbg-and-ida-pro-score-32989-in-2015">33: What is the linux equivalent to OllyDbg and Ida Pro? (score <span>32989</span> in 2015)</a></li>
+<li><a href="#how-could-i-change-an-instruction-in-ida-pro-score-31780-in-2014">34: How could I change an instruction in IDA Pro? (score <span>31780</span> in 2014)</a></li>
+<li><a href="#recover-source-code-for-c-.exe-score-30943-in">35: Recover source code for C# .exe (score <span>30943</span> in )</a></li>
+<li><a href="#decompiling-a-1990-dos-application-score-30782-in">36: Decompiling a 1990 DOS application (score <span>30782</span> in )</a></li>
+<li><a href="#modify-code-with-ilspy-score-30226-in">37: Modify code with ILSpy (score <span>30226</span> in )</a></li>
+<li><a href="#objdump---how-to-output-text-eg-ascii-strings-alongside-assembly-code-score-29918-in-2018">38: Objdump - How to output text (eg ASCII strings) alongside assembly code? (score <span>29918</span> in 2018)</a></li>
+<li><a href="#reverse-engineering-t-disk-barcodes-for-tassimo-coffee-makers-score-29680-in-2017">39: Reverse engineering T-Disk barcodes for Tassimo coffee makers (score <span>29680</span> in 2017)</a></li>
+<li><a href="#repackaging-apk-file-using-baksmali-and-smali-score-28672-in-2015">40: Repackaging APK file using baksmali and smali (score <span>28672</span> in 2015)</a></li>
+<li><a href="#how-to-get-video-url-from-embedded-link-in-twitter-score-28301-in-2017">41: How to get Video URL from embedded Link in Twitter (score <span>28301</span> in 2017)</a></li>
+<li><a href="#can-we-decompile-an-.exe-or-.dll-as-100-score-27907-in">42: Can we decompile an .exe or .dll as %100? (score <span>27907</span> in )</a></li>
+<li><a href="#is-reverse-engineering-and-using-parts-of-a-closed-source-application-legal-score-27869-in-2013">43: Is reverse engineering and using parts of a closed source application legal? (score <span>27869</span> in 2013)</a></li>
+<li><a href="#extracting-a-firmware-image-via-u-boot-score-27635-in">44: Extracting a firmware image via U-Boot (score <span>27635</span> in )</a></li>
+<li><a href="#how-do-i-add-functionality-to-an-existing-binary-executable-score-27420-in-2013">45: How do I add functionality to an existing binary executable? (score <span>27420</span> in 2013)</a></li>
+<li><a href="#decoding-new-jersey-drivers-license-codes-score-26992-in-2018">46: Decoding New Jersey Driver’s License Codes (score <span>26992</span> in 2018)</a></li>
+<li><a href="#get-the-function-prototypes-from-an-unknown-.dll-score-26713-in">47: Get the function prototypes from an unknown .dll (score <span>26713</span> in )</a></li>
+<li><a href="#reverse-engineering-a-visual-basic-p-code-binary-score-26249-in-2013">48: Reverse engineering a Visual Basic p-code binary (score <span>26249</span> in 2013)</a></li>
+<li><a href="#bypassing-copy-protection-in-microcontrollers-using-glitching-score-25480-in-2013">49: Bypassing copy protection in microcontrollers using glitching (score <span>25480</span> in 2013)</a></li>
+<li><a href="#cross-debugging-for-arm-mips-elf-with-qemutoolchain-score-25362-in-2017">50: Cross debugging for ARM / MIPS ELF with QEMU/toolchain (score <span>25362</span> in 2017)</a></li>
+<li><a href="#how-do-i-identify-and-use-jtag-score-25072-in-2013">51: How do I identify and use JTAG? (score <span>25072</span> in 2013)</a></li>
+<li><a href="#what-are-the-tools-use-for-reverse-engineering-android-apk-score-24992-in">52: What are the tools use for reverse engineering android apk? (score <span>24992</span> in )</a></li>
+<li><a href="#how-do-i-figure-out-what-is-burned-on-an-arduino-rom-score-24411-in-2013">53: How do I figure out what is burned on an Arduino ROM? (score <span>24411</span> in 2013)</a></li>
+<li><a href="#find-out-a-java-class-files-compiler-version-score-24126-in">54: Find out a Java class file’s compiler version (score <span>24126</span> in )</a></li>
+<li><a href="#how-can-i-set-a-breakpoint-for-a-button-click-score-24104-in-2013">55: How can I set a breakpoint for a button click? (score <span>24104</span> in 2013)</a></li>
+<li><a href="#are-there-any-ollydbg-anti-debuganti-anti-debug-plugins-what-work-with-windows-7-nt-6.x-score-23814-in">56: Are there any OllyDbg anti-debug/anti-anti-debug plugins what work with Windows 7 / NT 6.x? (score <span>23814</span> in )</a></li>
+<li><a href="#how-can-i-diff-two-x86-binaries-at-assembly-code-level-score-23589-in-2013">57: how can I diff two x86 binaries at assembly code level? (score <span>23589</span> in 2013)</a></li>
+<li><a href="#extract-files-from-a-bin-firmware-score-23396-in">58: Extract files from a bin firmware (score <span>23396</span> in )</a></li>
+<li><a href="#where-to-find-free-training-in-reverse-engineering-score-23332-in-2013">59: Where to find (free) training in reverse engineering? (score <span>23332</span> in 2013)</a></li>
+<li><a href="#difference-between-add-and-adds-in-arm-assembler-score-23244-in-2014">60: Difference between ‘add’ and ‘adds’ in ARM assembler? (score <span>23244</span> in 2014)</a></li>
+<li><a href="#what-is-the-meaning-of-movabs-in-gasx86-att-syntax-score-22975-in-2013">61: What is the meaning of movabs in gas/x86 AT&amp;T syntax? (score <span>22975</span> in 2013)</a></li>
+<li><a href="#how-to-dump-flash-memory-with-spi-score-22846-in">62: How to dump flash memory with SPI? (score <span>22846</span> in )</a></li>
+<li><a href="#how-do-i-analyze-a-.apk-file-and-understand-its-working-score-22796-in-2013">63: How do I analyze a .apk file and understand its working? (score <span>22796</span> in 2013)</a></li>
+<li><a href="#unpacking-upx-packed-possibly-scrambled-executable-score-22726-in">64: Unpacking UPX packed (possibly scrambled) executable (score <span>22726</span> in )</a></li>
+<li><a href="#how-to-debug-the-dll-of-an-exe-using-ida-pro-score-21918-in-2015">65: How to debug the DLL of an EXE using IDA Pro? (score <span>21918</span> in 2015)</a></li>
+<li><a href="#what-does-the-test-instruction-do-score-21170-in">66: What does the <code>TEST</code> instruction do (score <span>21170</span> in )</a></li>
+<li><a href="#crack-me-material-score-20908-in">67: Crack Me Material (score <span>20908</span> in )</a></li>
+<li><a href="#open-source-gui-tool-for-decomposing-a-pdf-score-20577-in-2013">68: Open source GUI tool for decomposing a PDF (score <span>20577</span> in 2013)</a></li>
+<li><a href="#convert-this-x86-asm-to-c-score-20404-in-2014">69: convert this x86 ASM to C? (score <span>20404</span> in 2014)</a></li>
+<li><a href="#how-to-detect-a-virtualized-environment-score-20313-in-2013">70: How to detect a virtualized environment? (score <span>20313</span> in 2013)</a></li>
+<li><a href="#what-does-the-assembly-instruction-repne-scas-byte-ptr-esedi-score-20181-in-2013">71: What does the assembly instruction ‘REPNE SCAS BYTE PTR ES:[EDI]’? (score <span>20181</span> in 2013)</a></li>
+<li><a href="#what-symbol-tables-stay-after-a-strip-in-elf-format-score-20149-in-2013">72: What symbol tables stay after a strip In ELF format? (score <span>20149</span> in 2013)</a></li>
+<li><a href="#determine-encryption-algorithm-score-20093-in-2013">73: Determine Encryption Algorithm (score <span>20093</span> in 2013)</a></li>
+<li><a href="#what-happens-when-a-dll-is-added-to-appinit_dll-score-20092-in-2013">74: What happens when a DLL is added to AppInit_DLL (score <span>20092</span> in 2013)</a></li>
+<li><a href="#ida-cannot-launch-debugger-for-64-bit-exe-files-score-19833-in">75: IDA cannot launch debugger for 64-bit exe files (score <span>19833</span> in )</a></li>
+<li><a href="#find-reference-to-string-in-radare2-score-19679-in">76: Find reference to string in radare2 (score <span>19679</span> in )</a></li>
+<li><a href="#try-to-deobfuscate-multi-layered-javascript-score-19348-in">77: Try to deobfuscate multi layered javascript (score <span>19348</span> in )</a></li>
+<li><a href="#unpacking-binaries-in-a-generic-way-score-18828-in-2016">78: Unpacking binaries in a generic way (score <span>18828</span> in 2016)</a></li>
+<li><a href="#what-does-mov-qword-ptr-dsrax18-r8-mean-score-18604-in-2017">79: What does mov qword ptr ds:[rax+18], r8 mean? (score <span>18604</span> in 2017)</a></li>
+<li><a href="#is-it-possible-to-extract-or-otherwise-edit-the-source-code-of-an-.exe-file-score-18368-in">80: Is it possible to extract or otherwise edit the source code of an .exe file? (score <span>18368</span> in )</a></li>
+<li><a href="#how-to-decompile-an-objective-c-static-library-for-ios-score-17333-in-2016">81: How to decompile an Objective-C static library (for iOS)? (score <span>17333</span> in 2016)</a></li>
+<li><a href="#debugging-third-party-android-apks-score-17324-in">82: Debugging third party android APKs (score <span>17324</span> in )</a></li>
+<li><a href="#looking-for-exported-symbols-in-a-dll-with-objdump-score-17293-in-2013">83: Looking for exported symbols in a DLL with objdump? (score <span>17293</span> in 2013)</a></li>
+<li><a href="#how-to-debug-like-gdb-with-radare2-score-17286-in-2019">84: How to debug (like gdb) with radare2? (score <span>17286</span> in 2019)</a></li>
+<li><a href="#convert-mips-assembly-code-to-c-score-17153-in-2014">85: Convert MIPS assembly code to C? (score <span>17153</span> in 2014)</a></li>
+<li><a href="#how-to-prevent-upx--d-on-an-upx-packed-executable-score-17003-in-2017">86: How to prevent “upx -d” on an UPX packed executable? (score <span>17003</span> in 2017)</a></li>
+<li><a href="#how-to-re-analyse-a-function-in-ida-pro-score-16977-in-2013">87: How to re-analyse a function in IDA Pro? (score <span>16977</span> in 2013)</a></li>
+<li><a href="#what-are-the-techniques-and-tools-to-obfuscate-python-programs-score-16875-in-2017">88: What are the techniques and tools to obfuscate Python programs? (score <span>16875</span> in 2017)</a></li>
+<li><a href="#bit-pseudocode-decompiler-score-16772-in-2014">89: 64 bit Pseudocode decompiler (score <span>16772</span> in 2014)</a></li>
+<li><a href="#get-jar-back-from-wrappedinto-exe-jar-score-16161-in-2014">90: Get jar back from wrapped(into exe) jar (score <span>16161</span> in 2014)</a></li>
+<li><a href="#what-is-a-flirt-signature-score-16045-in">91: What is a FLIRT signature? (score <span>16045</span> in )</a></li>
+<li><a href="#extract-text-data-from-a-compressedencrypted-.dat-file-score-15940-in-2015">92: Extract text data from a compressed/encrypted .DAT file (score <span>15940</span> in 2015)</a></li>
+<li><a href="#difference-between-dllmain-and-dllentrypoint-score-15788-in-2013">93: Difference between DllMain and DllEntryPoint (score <span>15788</span> in 2013)</a></li>
+<li><a href="#what-purpose-of-mov-espebp-score-15699-in-2014">94: What purpose of mov %esp,%ebp? (score <span>15699</span> in 2014)</a></li>
+<li><a href="#could-not-find-main-function-in-ida-pro-score-15581-in-2014">95: Could not find main function in IDA pro? (score <span>15581</span> in 2014)</a></li>
+<li><a href="#firmware-analysis-and-file-system-extraction-score-15418-in-2013">96: Firmware analysis and file system extraction? (score <span>15418</span> in 2013)</a></li>
+<li><a href="#recovering-.net-sources-into-full-blown-project-score-15109-in-2015">97: Recovering .NET sources into full blown project (score <span>15109</span> in 2015)</a></li>
+<li><a href="#how-can-i-make-ida-see-a-string-reference-score-15004-in">98: How can I make IDA see a string reference? (score <span>15004</span> in )</a></li>
+<li><a href="#freely-available-resource-hacking-applications-score-14888-in-2013">99: Freely available resource hacking applications (score <span>14888</span> in 2013)</a></li>
+<li><a href="#is-there-any-tool-for-decompiling-raw-binary-files-to-c-code-for-the-motorola-68000-processor-series-score-14672-in">100: Is there any tool for decompiling raw binary files to C code for the Motorola 68000 processor series? (score <span>14672</span> in )</a></li>
+</ul>
+</nav>
 <section class="level2">
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 <section id="is-there-any-disassembler-to-rival-ida-pro-score-311266-in-2015" class="level3">
@@ -386,92 +488,54 @@ Want more than a few samples? Want to download really large samples of malware? 
 <section id="question-4" class="level4">
 <h4>Question</h4>
 <p>I have the following assembly code over Linux distro:</p>
-<pre class="text"><code>
-# using the .data section for write permission
-
+<pre class="text"><code># using the .data section for write permission
 # instead of .text section
 .section .data
 .globl _start
 
 _start:
+     # displaying some characters for watermarking :-)
+     xor %eax,%eax      # clear eax by setting eax to 0
+     xor %ebx,%ebx      # clear ebx by setting ebx to 0
+     xor %edx,%edx      # clear edx by setting edx to 0
+     push %ebx          # push ebx into the stack, base pointer
+                        # for the stack frame
+     push $0xa696e55    # push U-n-i characters
+     push $0x4d555544   # push M-U-U-D characters
+     push $0x414d4841   # push A-M-H-A characters
+     movl  %esp,%ecx    # move the sp to ecx
+     movb  $0xf,%dl     # move 15 to dl (low d), it is the string length,
+                        # notice the use of movb - move byte, this is to avoid null
+     movb  $0x4,%al     # move 4 to al (low l),
+                        # 4 is system call number for
+                        # write(int fd, char *str, int len)
+     int  $0x80         # call kernel/syscall
 
-# displaying some characters for watermarking :-)
-     xor %eax,%eax
-# clear eax by setting eax to 0
-     xor %ebx,%ebx
-# clear ebx by setting ebx to 0
-     xor %edx,%edx
-# clear edx by setting edx to 0
-     push %ebx
-# push ebx into the stack, base pointer
+     # setuid(0)
+     xor %eax,%eax      # clear eax by setting eax to 0
+     xor %ebx,%ebx      # clear ebx by setting ebx to 0
+     xor %ecx,%ecx      # clear ecx by setting ecx to 0
+     movb $0x17,%al     # move 0x17 into al - setuid(0)
+     int $0x80          # call kernel/syscall
 
-# for the stack frame
-     push $0xa696e55
-# push U-n-i characters
-     push $0x4d555544
-# push M-U-U-D characters
-     push $0x414d4841
-# push A-M-H-A characters
-     movl  %esp,%ecx
-# move the sp to ecx
-     movb  $0xf,%dl
-# move 15 to dl (low d), it is the string length,
-
-# notice the use of movb - move byte, this is to avoid null
-     movb  $0x4,%al
-# move 4 to al (low l),
-
-# 4 is system call number for
-
-# write(int fd, char *str, int len)
-     int  $0x80
-# call kernel/syscall
-
-
-# setuid(0)
-     xor %eax,%eax
-# clear eax by setting eax to 0
-     xor %ebx,%ebx
-# clear ebx by setting ebx to 0
-     xor %ecx,%ecx
-# clear ecx by setting ecx to 0
-     movb $0x17,%al
-# move 0x17 into al - setuid(0)
-     int $0x80
-# call kernel/syscall
-
-     jmp do_call
-# jump to get the address with the call trick
+     jmp do_call        # jump to get the address with the call trick
 
 jmp_back:
-     pop %ebx
-# ebx (base pointer=stack frame pointer) has 
+     pop %ebx           # ebx (base pointer=stack frame pointer) has 
+                        # the address of our string, use it to index
+     xor %eax,%eax      # clear eax by setting eax to 0
+     movb %al,7(%ebx)   # put a null at the N or shell[7]
+     movl %ebx,8(%ebx)  # put the address of our string (in ebx) into shell[8]
 
-# the address of our string, use it to index
-     xor %eax,%eax
-# clear eax by setting eax to 0
-     movb %al,7(%ebx)
-# put a null at the N or shell[7]
-     movl %ebx,8(%ebx)
-# put the address of our string (in ebx) into shell[8]
-
-     movl %eax,12(%ebx)
-# put the null at shell[12] our string now looks something like
-
-# &quot;/bin/sh\0(*ebx)(*0000)&quot;
-     xor %eax,%eax
-# clear eax by setting eax to 0
-     movb $11,%al
-# put 11 which is execve
-
+     movl %eax,12(%ebx) # put the null at shell[12] our string now looks something like
+                        # &quot;/bin/sh\0(*ebx)(*0000)&quot;
+     xor %eax,%eax      # clear eax by setting eax to 0
+     movb $11,%al       # put 11 which is execve
 
 # syscall number into al
-     leal 8(%ebx),%ecx
-# put the address of XXXX i.e. (*ebx) into ecx
-     leal 12(%ebx),%edx
-# put the address of YYYY i.e. (*0000) into edx
-     int $0x80
-# call kernel/syscall
+     leal 8(%ebx),%ecx  # put the address of XXXX i.e. (*ebx) into ecx
+     leal 12(%ebx),%edx # put the address of YYYY i.e. (*0000) into edx
+     int $0x80          # call kernel/syscall
 
 do_call:
      call jmp_back
@@ -678,7 +742,7 @@ My apologies for the belated reply. <br/> I have been working on a new, open sou
 <p>I have not tried <a href="https://github.com/Storyyeller/Krakatau/" rel="nofollow noreferrer">Krakatau</a>, but it sounds like it may help with what you are looking for.</p>
 <ul>
 <li>
-From the readme: “The Krakatau decompiler takes a different approach to most Java decompilers. It can be thought of more as a compiler whose input language is Java bytecode and whose target language happens to be Java source code. Krakatau takes in arbitrary bytecode, and attempts to transform it to equivalent Java code. This makes it robust to minor obfuscation, though it has the drawback of not reconstructing the”original" source, leading to less readable output than a pattern matching decompiler would produce for unobfuscated Java classes."
+From the readme: “The Krakatau decompiler takes a different approach to most Java decompilers. It can be thought of more as a compiler whose input language is Java bytecode and whose target language happens to be Java source code. Krakatau takes in arbitrary bytecode, and attempts to transform it to equivalent Java code. This makes it robust to minor obfuscation, though it has the drawback of not reconstructing the”original&quot; source, leading to less readable output than a pattern matching decompiler would produce for unobfuscated Java classes.&quot;
 </li>
 <li>
 This is open source and appears to be actively (as of this writing) maintained.
@@ -935,8 +999,7 @@ compatible with Mozilla’s RR, for reverse debugging
 <h4>Answer 2 (score 44)</h4>
 <p>Although some people don’t care for its interface, it’s worth mentioning that GDB has its own built-in GUI as well (called TUI).</p>
 <p>You can start GDB in GUI mode with the command: <code>gdb -tui</code></p>
-<p>A quick reference to TUI commands may be found here: <a href="http://beej.us/guide/bggdb/
-#qref">http://beej.us/guide/bggdb/#qref</a></p>
+<p>A quick reference to TUI commands may be found here: <a href="http://beej.us/guide/bggdb/#qref">http://beej.us/guide/bggdb/#qref</a></p>
 </section>
 <section id="answer-3-score-28" class="level4">
 <h4>Answer 3 (score 28)</h4>
@@ -1039,8 +1102,7 @@ JavaScript Obfuscation - Manual Armor (<a href="http://secniche.blogspot.fr/2012
 <a href="https://reverseengineering.stackexchange.com/questions/64/what-is-a-good-tools-to-reverse-the-effects-of-minify-on-javascript">What is a good tools to reverse the effects of Minify on JavaScript?</a>
 </li>
 <li>
-Or, more generally, search for the <a href="/questions/tagged/javascript" class="post-tag" title="show questions tagged &
-#39;javascript&#39;" rel="tag">javascript</a> and <a href="/questions/tagged/deobfuscation" class="post-tag" title="show questions tagged &#39;deobfuscation&#39;" rel="tag">deobfuscation</a> tags (<a href="https://reverseengineering.stackexchange.com/questions/tagged/javascript+deobfuscation">link to the search</a>).
+Or, more generally, search for the <a href="/questions/tagged/javascript" class="post-tag" title="show questions tagged &#39;javascript&#39;" rel="tag">javascript</a> and <a href="/questions/tagged/deobfuscation" class="post-tag" title="show questions tagged &#39;deobfuscation&#39;" rel="tag">deobfuscation</a> tags (<a href="https://reverseengineering.stackexchange.com/questions/tagged/javascript+deobfuscation">link to the search</a>).
 </li>
 </ul>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
@@ -1205,8 +1267,7 @@ Assembly and GDB
 <h5>
 Showings the assembly code
 </h2>
-<p>And how is it going to show us the assembly code? Well, similar to the TUI mode (check the tag wiki for <a href="/questions/tagged/gdb" class="post-tag" title="show questions tagged &
-#39;gdb&#39;" rel="tag">gdb</a>) by using the following command:</p>
+<p>And how is it going to show us the assembly code? Well, similar to the TUI mode (check the tag wiki for <a href="/questions/tagged/gdb" class="post-tag" title="show questions tagged &#39;gdb&#39;" rel="tag">gdb</a>) by using the following command:</p>
 <pre class="text"><code>(gdb) layout asm</code></pre>
 <p>and if you are so inclined, also:</p>
 <pre class="text"><code>(gdb) layout regs</code></pre>
@@ -1230,8 +1291,7 @@ btw, if you prefer to save screen estate
 </h3>
 <p>… and have it less visual, starting with GDB 7.0 you can use:</p>
 <pre class="text"><code>set disassemble-next-line on</code></pre>
-<p>on GDB versions before that you can emulate the behavior by settings an <a href="http://sourceware.org/gdb/current/onlinedocs/gdb/Auto-Display.html
-#Auto-Display" rel="noreferrer">automatic <code>display</code></a>:</p>
+<p>on GDB versions before that you can emulate the behavior by settings an <a href="http://sourceware.org/gdb/current/onlinedocs/gdb/Auto-Display.html#Auto-Display" rel="noreferrer">automatic <code>display</code></a>:</p>
 <pre class="text"><code>display/i $pc</code></pre>
 <p>or shorter <code>disp/i $pc</code> where <code>/i</code> is the format, you can remember it best by thinking “instruction” and <code>$pc</code> being the instruction pointer, also known as program counter - hence <code>pc</code>.</p>
 <h5>
@@ -1330,43 +1390,33 @@ Better ways yet to manipulate/patch the running program
 </h2>
 <p>There are alternative (and way superior) methods like <a href="http://my.opera.com/taviso/blog/show.dml/248232" rel="noreferrer">this one by Tavis Ormandy</a>. I’m reproducing the <code>assemble</code> macro below (in case it goes offline from the other place):</p>
 <pre class="text"><code>define assemble
-
-# dont enter routine again if user hits enter
+ # dont enter routine again if user hits enter
  dont-repeat
  if ($argc)
   if (*$arg0 = *$arg0)
-
-# check if we have a valid address by dereferencing it,
-
-# if we havnt, this will cause the routine to exit.
+    # check if we have a valid address by dereferencing it,
+    # if we havnt, this will cause the routine to exit.
   end
-  printf &quot;Instructions will be written to %
-#x.\n&quot;, $arg0
+  printf &quot;Instructions will be written to %#x.\n&quot;, $arg0
  else
   printf &quot;Instructions will be written to stdout.\n&quot;
  end
  printf &quot;Type instructions, one per line.\n&quot;
  printf &quot;End with a line saying just \&quot;end\&quot;.\n&quot;
  if ($argc)
-
-# argument specified, assemble instructions into memory
-
-# at address specified.
+  # argument specified, assemble instructions into memory
+  # at address specified.
   shell nasm -f bin -o /dev/stdout /dev/stdin \
     &lt;&lt;&lt; &quot;$( echo &quot;BITS 32&quot;; while read -ep &#39;&gt;&#39; r &amp;&amp; test &quot;$r&quot; != end; \
                 do echo -E &quot;$r&quot;; done )&quot; | hexdump -ve \
-        &#39;1/1 &quot;set *((unsigned char *) $arg0 + %
-#2_ax) = %#02x\n&quot;&#39; \
+        &#39;1/1 &quot;set *((unsigned char *) $arg0 + %#2_ax) = %#02x\n&quot;&#39; \
             &gt; ~/.gdbassemble
-
-# load the file containing set instructions
+  # load the file containing set instructions
   source ~/.gdbassemble
-
-# all done.
+  # all done.
   shell rm -f ~/.gdbassemble
  else
-
-# no argument, assemble instructions to stdout
+  # no argument, assemble instructions to stdout
   shell nasm -f bin -o /dev/stdout /dev/stdin \
     &lt;&lt;&lt; &quot;$( echo &quot;BITS 32&quot;; while read -ep &#39;&gt;&#39; r &amp;&amp; test &quot;$r&quot; != end; \
                 do echo -E &quot;$r&quot;; done )&quot; | ndisasm -i -b32 /dev/stdin
@@ -1388,7 +1438,7 @@ end</code></pre>
 <h3>14: Is there any way to decompile a .NET assembly or program? (score <a href="https://stackoverflow.com/q/77.html">63878</a> in 2013)</h3>
 <section id="question-13" class="level4">
 <h4>Question</h4>
-<p>Are there any tools available to take an already compiled .dll or .exe file that you know was compiled from C # or Visual Basic and obtain the original source code from it?</p>
+<p>Are there any tools available to take an already compiled .dll or .exe file that you know was compiled from C# or Visual Basic and obtain the original source code from it?</p>
 </section>
 <section id="answer-accepted-score-49" class="level4">
 <h4>Answer accepted (score 49)</h4>
@@ -1403,10 +1453,10 @@ Assembly browsing
 IL Disassembly
 </li>
 <li>
-Support C # 5.0 “async”
+Support C# 5.0 “async”
 </li>
 <li>
-Decompilation to C #
+Decompilation to C#
 </li>
 <li>
 Supports lambdas and ‘yield return’
@@ -1439,7 +1489,7 @@ Navigation history
 BAML to XAML decompiler
 </li>
 <li>
-Save Assembly as C # Project
+Save Assembly as C# Project
 </li>
 <li>
 Find usage of field/method
@@ -1457,14 +1507,14 @@ Assembly Lists
 <h4>Answer 2 (score 23)</h4>
 <p>I’ve used <a href="http://www.jetbrains.com/decompiler/">JetBrains dotPeek</a> (free of charge) before with some success.</p>
 <p>Any JetBrains software I’ve ever used has been very solid.</p>
-<p>It is not quite the ‘original source’ but it is very readable C # - about the closest thing I would expect to get. Quote from their website:</p>
+<p>It is not quite the ‘original source’ but it is very readable C# - about the closest thing I would expect to get. Quote from their website:</p>
 <blockquote>
 <h5>
 What’s Cool about dotPeek?
 </h3>
 <ol>
 <li>
-Decompiling .NET 1.0-4.5 assemblies to C #
+Decompiling .NET 1.0-4.5 assemblies to C#
 </li>
 <li>
 Support for .<code>dll</code>, <code>.exe</code>, <code>.zip</code>, <code>.vsix</code>, <code>.nupkg</code>, and <code>.winmd</code> files
@@ -1504,7 +1554,7 @@ dotPeek is free!
 <blockquote>
 <ul>
 <li>
-Creating a Visual Studio project from an assembly in order to export lost projects or obtain multiple classes without the need to copy and paste code. At present, JustDecompile is able to export decompiled code only to C #.
+Creating a Visual Studio project from an assembly in order to export lost projects or obtain multiple classes without the need to copy and paste code. At present, JustDecompile is able to export decompiled code only to C#.
 </li>
 <li>
 Exporting code directly from the command prompt
@@ -1737,8 +1787,7 @@ called a function from inside your code
 <p>
 whenever a global variable of a shared library is accessed by your program, the compiler + linker emits instead two memory accesses:
 </p>
-<pre class="text"><code>mov    0x200271(%rip),%rax
-# 200828 &lt;_DYNAMIC+0x1a0&gt;
+<pre class="text"><code>mov    0x200271(%rip),%rax        # 200828 &lt;_DYNAMIC+0x1a0&gt;
 mov    (%rax),%eax</code></pre>
 <p>The first one load the true address of the variable from the GOT, which the dynamic linker previously set, into <code>rax</code>.</p>
 The second indirect access actually actually accesses the variable indirectly through the address from <code>rax</code>.
@@ -1783,8 +1832,7 @@ we can replace functions on the fly by playing with the <code>LD_PRELOAD</code> 
 <code>B</code> does 26-bit jumps, <code>B.cond</code> 19-bit
 </li>
 <li>
-<a href="https://stackoverflow.com/questions/28638981/howto-write-pc-relative-adressing-on-arm-asm/54480999
-#54480999">“LDR (literal)”</a> does 19-bit loads
+<a href="https://stackoverflow.com/questions/28638981/howto-write-pc-relative-adressing-on-arm-asm/54480999#54480999">“LDR (literal)”</a> does 19-bit loads
 </li>
 <li>
 <code>ADR</code> calculates 21-bit relative addresses that other instructions can use
@@ -2000,8 +2048,7 @@ Other solutions
 <a href="https://derevenets.com/" rel="nofollow noreferrer">Snowman</a>, A full-blown decompiler with an IDA plugin
 </li>
 <li>
-a plugin for AVG’s <a href="https://retdec.com/idaplugin/" rel="nofollow noreferrer">Retargetable Decompiler</a> <em>online</em> decompiler (<a href="https://reverseengineering.stackexchange.com/questions/2549/how-to-obtain-x86-64-pseudocode-in-ida-pro/13299?noredirect=1
-#comment20306_13299">Mentioned</a> by <span class="citation" data-cites="ws">@ws</span>)
+a plugin for AVG’s <a href="https://retdec.com/idaplugin/" rel="nofollow noreferrer">Retargetable Decompiler</a> <em>online</em> decompiler (<a href="https://reverseengineering.stackexchange.com/questions/2549/how-to-obtain-x86-64-pseudocode-in-ida-pro/13299?noredirect=1#comment20306_13299">Mentioned</a> by <span class="citation" data-cites="ws">@ws</span>)
 </li>
 <li>
 A python-only IDA decompiler plugin called <a href="https://github.com/EiNSTeiN-/decompiler" rel="nofollow noreferrer">ida-decompiler</a> (<a href="https://reverseengineering.stackexchange.com/a/2550/2147">Mentioned</a> by <span class="citation" data-cites="0xea">@0xea</span>)
@@ -2033,8 +2080,7 @@ Extract the functions from the library
 </h2>
 <p>A first step will be to extract the name of all the functions that are present in this library to know what it is looking like. I will use <code>/usr/lib/libao.so.4.0.0</code> (a random library I took on my system which is small enough to be taken as an example).</p>
 <p>First, run <code>readelf</code> on it to see a bit what you are on:</p>
-<pre class="text"><code>
-#&gt; readelf -a /usr/lib/libao.so.4.0.0
+<pre class="text"><code>#&gt; readelf -a /usr/lib/libao.so.4.0.0
 
 ELF Header:
 Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
@@ -2062,8 +2108,7 @@ Section header string table index: 28
 <p>Looking at the rest of the output of <code>readelf -a</code>, the dynamic symbol table (<code>.dynsym</code>) is quite informative because it contains entries like this:</p>
 <pre class="text"><code>43: 00000000000038e0  1302 FUNC    GLOBAL DEFAULT   13 ao_play@@LIBAO4_1.1.0</code></pre>
 <p>In fact, every function from this dynamic library is in this list and you can extract it simply like this:</p>
-<pre class="text"><code>
-#&gt; readelf -a /usr/lib/libao.so.4.0.0 | grep LIBAO4_1.1.0 | grep FUNC
+<pre class="text"><code>#&gt; readelf -a /usr/lib/libao.so.4.0.0 | grep LIBAO4_1.1.0 | grep FUNC
 
 43: 00000000000038e0  1302 FUNC    GLOBAL DEFAULT   13 ao_play@@LIBAO4_1.1.0
 44: 0000000000003670   177 FUNC    GLOBAL DEFAULT   13 ao_append_option@@LIBAO4_1.1.0
@@ -2081,8 +2126,7 @@ Section header string table index: 28
 57: 0000000000003e90    92 FUNC    GLOBAL DEFAULT   13 ao_driver_id@@LIBAO4_1.1.0</code></pre>
 <p>What you get here, is the names of the functions which are in the <code>.so</code> plus the address of their code in the memory (first column).</p>
 <p>Note that you can also get this information by using <code>objdump</code> like this:</p>
-<pre class="text"><code>
-#&gt; objdump -T /usr/lib/libao.so.4.0.0 | grep LIBAO4_1.1.0 | grep DF
+<pre class="text"><code>#&gt; objdump -T /usr/lib/libao.so.4.0.0 | grep LIBAO4_1.1.0 | grep DF
 00000000000038e0 g    DF .text  0000000000000516  LIBAO4_1.1.0 ao_play
 0000000000003670 g    DF .text  00000000000000b1  LIBAO4_1.1.0 ao_append_option
 00000000000040e0 g    DF .text  0000000000000046  LIBAO4_1.1.0 ao_driver_info
@@ -2103,8 +2147,7 @@ Disassemble each function
 <p>It is time now to use <code>objdump</code> (or a more advanced disassembler if you can get one). Given the list of functions and their address in the binary, you can simply run <code>objdump</code> for each function like this:</p>
 <pre class="text"><code>objdump -d /usr/lib/libao.so.4.0.0 --start-address=0x3730</code></pre>
 <p>Note that, as <code>objdump</code> use linear sweep, the disassembly may not be exact (see the following example) and, you also will have to decide by yourself when it ends.</p>
-<pre class="text"><code>
-#&gt; objdump -d /usr/lib/libao.so.4.0.0 --start-address=0x3730
+<pre class="text"><code>#&gt; objdump -d /usr/lib/libao.so.4.0.0 --start-address=0x3730
 
 /usr/lib/libao.so.4.0.0:     file format elf64-x86-64
 
@@ -2344,7 +2387,7 @@ I would recommended you check out the following link for more information about 
 <h3>25: How can I decompile my (dot)NET .EXE file into its source code (score <a href="https://stackoverflow.com/q/2688.html">45227</a> in 2013)</h3>
 <section id="question-24" class="level4">
 <h4>Question</h4>
-<p>I was working on a <code>C #.NET</code> application on windows platform, I was just testing the code and I don’t know somehow I messed it up and after making too much efforts on <strong>undoing</strong>, I am still not able to <strong>recover</strong> my code. I don’t want to write the whole code again.</p>
+<p>I was working on a <code>C#.NET</code> application on windows platform, I was just testing the code and I don’t know somehow I messed it up and after making too much efforts on <strong>undoing</strong>, I am still not able to <strong>recover</strong> my code. I don’t want to write the whole code again.</p>
 <p>I only left with its .EXE file that executes well here, I want to know about some techniques or tools so that I can decompile my <code>EXE</code> code into its source code, Is it possible if it is, then please tell me some good decompilers. Any help will be appreciated, Thanks.</p>
 </section>
 <section id="answer-accepted-score-3" class="level4">
@@ -2391,8 +2434,7 @@ I would recommended you check out the following link for more information about 
 </section>
 <section id="answer-accepted-score-14-1" class="level4">
 <h4>Answer accepted (score 14)</h4>
-<p>XOR encryption with a short pad (i.e., shorter than the plaintext) is basically the Vigenère cipher. So <a href="http://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher
-#Cryptanalysis">standard techniques to break Vigenère</a> should break xor encryption.</p>
+<p>XOR encryption with a short pad (i.e., shorter than the plaintext) is basically the Vigenère cipher. So <a href="http://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher#Cryptanalysis">standard techniques to break Vigenère</a> should break xor encryption.</p>
 <p>The basic idea is that if the encryption key is <strong>d</strong> symbols long, every <strong>d</strong>-th symbol is encrypted with the same pad. Thus, take every <strong>d</strong>-th ciphertext symbol and treat it like simple substitution cipher, break that and you have the 1st symbol of the key. Repeat for the <strong>d+1</strong>-th ciphertext symbols, <strong>d+2</strong>-th ciphertext symbols, etc. Eventually you will have all <strong>d</strong> symbols of the key.</p>
 <p>To break the <a href="http://en.wikipedia.org/wiki/Substitution_cipher">simple substitution</a> ciphers, you might try brute force (if the symbol set is small) and compare possible plaintexts with the statistical data you know. For certain plaintexts (english language for example) you can often break most of it even quicker (e.g., with english language text the most frequent symbol in ciphertext probably maps back to an <em>e</em>, etc).</p>
 <p>Now, you may be thinking, what if you don’t know <strong>d</strong>. Often with Vigenère, the length of the key is brute forced. Try d=1, d=2, d=3,… For each d, see how well the output plaintext matches the statistical data. Return the key for which the plaintext most closely matched the statistical data.</p>
@@ -2456,15 +2498,13 @@ Machine independence is a fairly simple concept. Basically it says that a progra
 <p>Programming languages are examples of formal languages:</p>
 <ul>
 <li>
-<a href="https://cs.stackexchange.com/questions/30639/what-is-the-relationship-between-programming-languages-regular-expressions-and/30667
-#30667">What is the Relationship Between Programming Languages, Regular Expressions and Formal Languages</a>
+<a href="https://cs.stackexchange.com/questions/30639/what-is-the-relationship-between-programming-languages-regular-expressions-and/30667#30667">What is the Relationship Between Programming Languages, Regular Expressions and Formal Languages</a>
 </li>
 <li>
 <a href="http://www.its.caltech.edu/~matilde/FormalLanguageTheory.pdf" rel="nofollow noreferrer">Formal Language Theory</a>
 </li>
 <li>
-<a href="https://en.wikipedia.org/wiki/Syntax_(programming_languages)
-#Levels_of_syntax" rel="nofollow noreferrer">Programming language syntax</a> <br> <br>
+<a href="https://en.wikipedia.org/wiki/Syntax_(programming_languages)#Levels_of_syntax" rel="nofollow noreferrer">Programming language syntax</a> <br> <br>
 </li>
 </ul>
 The translation of the series of statements written in a programming language in a program source file to semantically equivalent object code is accomplished by a compiler. Decompilation involves translation of architecture-dependent object code to a semantically equivalent representation (source code) that is not architecture specific, the reverse process of compilation.
@@ -2494,15 +2534,14 @@ Certainly, fully automated decompilation of arbitrary machine-code programs is n
 <p>In fact, correct disassembly (much less decompilation) is a major challenge:</p>
 <ul>
 <li>
-<a href="https://reverseengineering.stackexchange.com/questions/2580/why-is-disassembly-not-an-exact-science/8677
-#8677">Why is disassembly not an exact science</a>
+<a href="https://reverseengineering.stackexchange.com/questions/2580/why-is-disassembly-not-an-exact-science/8677#8677">Why is disassembly not an exact science</a>
 </li>
 <li>
 <a href="https://silviocesare.wordpress.com/2007/11/17/on-disassembling-obfuscated-assembly/" rel="nofollow noreferrer">Disassembling Obfuscated Assembly</a>
 </li>
 </ul>
 <hr>
-<p><sub>1. Scott, Michael L. <em>Programming Language Pragmatics</em>. 3rd ed. Page 111</sub></p>
+<p><sub>1. Scott, Michael L. <em>Programming Language Pragmatics</em>. 3rd ed. Page 111</sub></p>
 <p><sub>2. <a href="http://program-transformation.org/Transform/DecompilationPossible" rel="nofollow noreferrer">Is Decompilation Possible?</a></sub></p>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
@@ -2592,7 +2631,7 @@ Another thing is - some loader that will be placed with the name of the original
 <p><strong>Process Injection - it does not have to be dll but some arbitrary code</strong></p>
 <ol>
 <li>
-Monitor “invasion” API calls (for example) by patching<br> a. WriteProcessMemory b. VirtualAlloc(Ex)<br> c. VirtualProtect<br> d. ZwWriteProcessMemory<br> e. NtMapViewOfSection<br> f. CreateRemoteThread g. CreateProcess - with flags for Suspended state h. OpenProcess
+Monitor “invasion” API calls (for example) by patching<br> a. WriteProcessMemory b. VirtualAlloc(Ex)<br> c. VirtualProtect<br> d. ZwWriteProcessMemory<br> e. NtMapViewOfSection<br> f. CreateRemoteThread g. CreateProcess - with flags for Suspended state h. OpenProcess
 </li>
 <li>
 Create watchdog thread to monitor sensitive game memory regions for integrity
@@ -2681,7 +2720,7 @@ If you changed the executable to call your DLL <em>in addition to known DLLs</em
 </li>
 </ul>
 <hr>
-<p>I have performed DLL injection by launching the target process as a debuggee process, overwriting some bytes in its startup code with a custom code sequence that calls <code>LoadLibrary("mydll.dll"); GetProcAddress(myLib, "myFunc");</code>, and rewriting some code in the executable to jump to functions in the DLL instead.</p>
+<p>I have performed DLL injection by launching the target process as a debuggee process, overwriting some bytes in its startup code with a custom code sequence that calls <code>LoadLibrary(&quot;mydll.dll&quot;); GetProcAddress(myLib, &quot;myFunc&quot;);</code>, and rewriting some code in the executable to jump to functions in the DLL instead.</p>
 <p>Using this method some friends and I wrote a pretty big unofficial bugfix/enhancement DLL for <em>Command &amp; Conquer: Red Alert 2</em> - nowadays that DLL is about 15% the size of the original game executable. As a result, later official updates of the game were limited to only things their staff could do without recompiling the binary, which was uncharacteristically nice of EA.</p>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
@@ -2748,7 +2787,7 @@ For gbd try fGs <a href="https://github.com/gdbinit/gdbinit" rel="nofollow">gdbi
 <h3>35: Recover source code for C# .exe (score <a href="https://stackoverflow.com/q/12874.html">30943</a> in )</h3>
 <section id="question-34" class="level4">
 <h4>Question</h4>
-<p>I paid a freelancer programmer for an app to tun my clinic. He got about 95% of the project done, but then got a job elsewhere and vanished into thin air, along with my source code… So, I have a semi-working program and I need to finish it. How can I recover the source code (Visual Studio, C #) to a point I can finish what I need and then recompile it again? Is this possible? I’m willing to buy/pay…</p>
+<p>I paid a freelancer programmer for an app to tun my clinic. He got about 95% of the project done, but then got a job elsewhere and vanished into thin air, along with my source code… So, I have a semi-working program and I need to finish it. How can I recover the source code (Visual Studio, C#) to a point I can finish what I need and then recompile it again? Is this possible? I’m willing to buy/pay…</p>
 </section>
 <section id="answer-2-score-4" class="level4">
 <h4>Answer 2 (score 4)</h4>
@@ -2858,7 +2897,7 @@ In this way I have been able to recompile also more complicated<br> software. Fi
 </ul>
 <p>Code parts which do not recompile in ILSpy or Reflector (each has its own strengths and weaknesses) can be exported in IL and perhaps manually rearranged to recompile in the tools, then further processed in Visual Studio. Unfortunately, VS does not allow for inline IL assembled code.</p>
 <p>For instance, Reflector protects itself (among other means like obfuscation) against recompilation with useless jumps confusing the recompiler. ILSpy mostly is able to cope with this.</p>
-<p>ILSpy for instance is not able to recompile subclasses (i.e. classes within a class). They just not show up in the class tree, when in C # view. In IL view, you see all of them.</p>
+<p>ILSpy for instance is not able to recompile subclasses (i.e. classes within a class). They just not show up in the class tree, when in C# view. In IL view, you see all of them.</p>
 </section>
 <section id="answer-3-score-2-1" class="level4">
 <h4>Answer 3 (score 2)</h4>
@@ -2899,8 +2938,7 @@ Currently I can get the offsets and assembly code, but not text strings alongsid
 <p>
 Code and hardcoded strings are not intermingled in x86 or x86-64 ELF binaries. When the compiler toolchain generates a binary, hardcoded strings are placed in a separate area of the binary from the executable code and are referenced/accessed by their virtual memory address. Here is a <a href="https://github.com/corkami/pics/raw/master/binary/elf101/elf101.pdf" rel="noreferrer">diagram</a> by Ange Albertini of the how different sections are laid out in ELF binaries: <a href="https://i.stack.imgur.com/xkGtg.jpg" rel="noreferrer"><img src="https://i.stack.imgur.com/xkGtg.jpg" alt="Ange Albertini ELF"></a>
 </p>
-<p>To make this more clear, below are visualizations of the Linux utilities <code>ls</code>, <code>cat</code>, <code>mkdir</code> and <code>mv</code> (accomplished via <a href="http://binvis.io/
-#/" rel="noreferrer">binvis.io</a>). The solid blue areas consist of ASCII string data (the <code>.rodata</code> section, for example), and the large blocks of blue, white, red and black mixed together are regions that consist of executable code (the <code>.text</code> section, for example).</p>
+<p>To make this more clear, below are visualizations of the Linux utilities <code>ls</code>, <code>cat</code>, <code>mkdir</code> and <code>mv</code> (accomplished via <a href="http://binvis.io/#/" rel="noreferrer">binvis.io</a>). The solid blue areas consist of ASCII string data (the <code>.rodata</code> section, for example), and the large blocks of blue, white, red and black mixed together are regions that consist of executable code (the <code>.text</code> section, for example).</p>
 <p><code>*       ls                  cat              mkdir                mv</code></p>
 <p>
 <a href="https://i.stack.imgur.com/FF1Zv.png" rel="noreferrer"><img src="https://i.stack.imgur.com/FF1Zv.png" alt="ls"></a> <a href="https://i.stack.imgur.com/ldwLP.png" rel="noreferrer"><img src="https://i.stack.imgur.com/ldwLP.png" alt="cat"></a> <a href="https://i.stack.imgur.com/EsrKg.png" rel="noreferrer"><img src="https://i.stack.imgur.com/EsrKg.png" alt="mkdir"></a> <a href="https://i.stack.imgur.com/Vhagx.png" rel="noreferrer"><img src="https://i.stack.imgur.com/Vhagx.png" alt="mv"></a>
@@ -2941,8 +2979,7 @@ Disassembly of section .rodata:
   409402:       02 00                   add    (%rax),%al
   409404:       74 69                   je     40946f &lt;__sprintf_chk@plt+0x798f&gt;
   409406:       6d                      insl   (%dx),%es:(%rdi)
-  409407:       65 20 25 73 20 69 73    and    %ah,%gs:0x73692073(%rip)
-# 73a9b481 &lt;stderr+0x7348d131&gt;
+  409407:       65 20 25 73 20 69 73    and    %ah,%gs:0x73692073(%rip)        # 73a9b481 &lt;stderr+0x7348d131&gt;
   40940e:       20 6f 75                and    %ch,0x75(%rdi)
   409411:       74 20                   je     409433 &lt;__sprintf_chk@plt+0x7953&gt;
   409413:       6f                      outsl  %ds:(%rsi),(%dx)
@@ -2975,8 +3012,7 @@ Hex dump of section &#39;.rodata&#39;:
 <hr>
 <p>On top of the information from the links above, here’s what I found out myself.</p>
 <p>
-The barcode uses the <a href="http://en.wikipedia.org/wiki/Interleaved_2_of_5" rel="nofollow noreferrer">Interleaved 2 of 5</a> symbology and 6 digits. The last digit is the check digit calculated according to the <a href="http://en.wikipedia.org/wiki/Universal_Product_Code
-#Check_digits" rel="nofollow noreferrer">UPC Check Digit</a> rules.<br> Actual barcodes with the checksum removed:
+The barcode uses the <a href="http://en.wikipedia.org/wiki/Interleaved_2_of_5" rel="nofollow noreferrer">Interleaved 2 of 5</a> symbology and 6 digits. The last digit is the check digit calculated according to the <a href="http://en.wikipedia.org/wiki/Universal_Product_Code#Check_digits" rel="nofollow noreferrer">UPC Check Digit</a> rules.<br> Actual barcodes with the checksum removed:
 </p>
 <pre>
 ╔═════════╦══════════════════════════════════╦════════════╦═══════════════════╗
@@ -3028,11 +3064,8 @@ The checksum of 065375 =  3*0 + 6 + 3*5 + 3 + 3*7 + 5 = 50 (≡ 0 mod 10).</code
 0001100100001000 064088</code></pre>
 <p>If all these barcodes are accepted, they should produce different results which should give a hint at which bit has which meaning.</p>
 <p>If you want to play with some other bit combinations, here’s the source to my bitflip program (it’s not the cleanest code, and it will produce strange results if you throw anything but binary digits at it, but it will do the job):</p>
-<pre class="text"><code>
-#include &lt;stdio.h&gt;
-
+<pre class="text"><code>#include &lt;stdio.h&gt;
 #include &lt;string.h&gt;
-
 #include &lt;stdlib.h&gt;
 
 int main(int argc, char **argv) {
@@ -3096,11 +3129,8 @@ The checksum of 065375 =  3*0 + 6 + 3*5 + 3 + 3*7 + 5 = 50 (≡ 0 mod 10).</code
 0001100100001000 064088</code></pre>
 <p>If all these barcodes are accepted, they should produce different results which should give a hint at which bit has which meaning.</p>
 <p>If you want to play with some other bit combinations, here’s the source to my bitflip program (it’s not the cleanest code, and it will produce strange results if you throw anything but binary digits at it, but it will do the job):</p>
-<pre class="text"><code>
-#include &lt;stdio.h&gt;
-
+<pre class="text"><code>#include &lt;stdio.h&gt;
 #include &lt;string.h&gt;
-
 #include &lt;stdlib.h&gt;
 
 int main(int argc, char **argv) {
@@ -3200,8 +3230,7 @@ I tried to install the new repackaged APK. Using adb shell. Adb shell showed it 
 <li>
 <p>
 <p>decompile-apk</p>
-<pre class="text"><code>
-#!/bin/bash -e
+<pre class="text"><code>#!/bin/bash -e
 if ! [ &quot;$1&quot; ]; then
     echo &quot;usage: $0 &lt;file.apk&gt;&quot;
     exit -1
@@ -3215,8 +3244,7 @@ echo &quot;Done.&quot;</code></pre>
 <li>
 <p>
 <p>compile-apk</p>
-<pre class="text"><code>
-#!/bin/bash -e
+<pre class="text"><code>#!/bin/bash -e
 if ! [ &quot;$1&quot; ]; then
     echo &quot;usage: $0 &lt;original.apk&gt;&quot;
     exit -1
@@ -3370,8 +3398,7 @@ Making copies or adaptations of a legally obtained copy of the computer program 
 </section>
 <section id="answer-2-score-21-1" class="level4">
 <h4>Answer 2 (score 21)</h4>
-<p>Article 6 of the 1991 EU Computer Programs Directive allows reverse engineering for the purposes of interoperability, but prohibits it for the purposes of creating a competing product, and also prohibits the public release of information obtained through reverse engineering of software (<a href="http://en.wikipedia.org/wiki/Reverse_engineering
-#European_Union">source</a>).</p>
+<p>Article 6 of the 1991 EU Computer Programs Directive allows reverse engineering for the purposes of interoperability, but prohibits it for the purposes of creating a competing product, and also prohibits the public release of information obtained through reverse engineering of software (<a href="http://en.wikipedia.org/wiki/Reverse_engineering#European_Union">source</a>).</p>
 <p>That makes the answer NO, at least for the EU (you didn’t state the country to which your question applies).</p>
 </section>
 <section id="answer-3-score-11-1" class="level4">
@@ -3436,11 +3463,8 @@ Press Ctrl+C to stop autoboot
 CFG_BOOT_ADDR:0x58040000
 8192 KiB hi_sfc at 0:0 is now current device
 
-
 ### boot load complete: 1884992 bytes loaded to 0x82000000
-
 ### SAVE TO 80008000 !
-
 ## Booting kernel from Legacy Image at 82000000 ...
    Image Name:   linux
    Image Type:   ARM Linux Kernel Image (uncompressed)
@@ -3457,8 +3481,7 @@ Starting kernel ...
 
 Uncompressing Linux... done, booting the kernel.</code></pre>
 <p>And the u-boot environment:</p>
-<pre class="text"><code>hisilicon
-# printenv
+<pre class="text"><code>hisilicon # printenv
 bootcmd=fload;bootm 0x82000000
 baudrate=115200
 bootfile=&quot;uImage&quot;
@@ -3490,8 +3513,7 @@ ver=U-Boot 2010.06-svn (Jun 16 2014 - 09:36:52)
 
 Environment size: 1272/65532 bytes</code></pre>
 <p>U-Boot help prompt (I think you can build u-boot with optional modules. This shows what’s built into this instance of u-boot?):</p>
-<pre class="text"><code>hisilicon
-# help
+<pre class="text"><code>hisilicon # help
 ?       - alias for &#39;help&#39;
 base    - print or set address offset
 boot    - boot default, i.e., run &#39;bootcmd&#39;
@@ -3766,7 +3788,7 @@ Adding Scripting-Support to automate often repeated Operations (If there is no p
 </li>
 </ul>
 <p>
-<strong>Regarding wrapped Code &amp; Decompilers:</strong><br> I will not talk about wrapped Code in other Languages that is packaged with a VM / an Interpreter (Py2Exe, Java 2 Exe, …), or uses an installed one (JVM, C #). There are pretty good Decompilers for some of those cases. After a successful decompilation it pretty much boils down to defeating the Code Obfuscation (if there is one).
+<strong>Regarding wrapped Code &amp; Decompilers:</strong><br> I will not talk about wrapped Code in other Languages that is packaged with a VM / an Interpreter (Py2Exe, Java 2 Exe, …), or uses an installed one (JVM, C#). There are pretty good Decompilers for some of those cases. After a successful decompilation it pretty much boils down to defeating the Code Obfuscation (if there is one).
 </p>
 <p>
 <strong>Regarding C/C++-Decompilers:</strong><br> I cannot talk about C/C++-Decompilers, though it would boil down to best-effort HLL-Remapping (for stuff the Decompiler did not get) and Code-Deobfuscation (if it was compiled without Symbols) provided there is no further Protection in the Executeable.
@@ -3965,8 +3987,7 @@ Do tools exist which can extract those prototypes, or help me in a way?
 <h5>
 Otherwise …
 </h2>
-<p>Most disassemblers (read the tag wiki <a href="/questions/tagged/tools" class="post-tag" title="show questions tagged &
-#39;tools&#39;" rel="tag">tools</a>) will readily show you exported functions. So <em>locating</em> them won’t be a problem at all. They will also usually be shown with their exported names.</p>
+<p>Most disassemblers (read the tag wiki <a href="/questions/tagged/tools" class="post-tag" title="show questions tagged &#39;tools&#39;" rel="tag">tools</a>) will readily show you exported functions. So <em>locating</em> them won’t be a problem at all. They will also usually be shown with their exported names.</p>
 <p>From the output your screenshot shows, it looks like the names aren’t <a href="https://en.wikipedia.org/wiki/Name_mangling" rel="noreferrer">mangled/decorated</a>. This suggests - but is <em>not</em> conclusive <em>proof</em> - that the functions use the <code>stdcall</code> <a href="https://en.wikipedia.org/wiki/Calling_convention" rel="noreferrer">calling convention</a> (better yet read <a href="http://code.google.com/p/corkami/wiki/CallingConventions" rel="noreferrer">this one by Ange</a>, one of the moderators pro temp here). Now I don’t know how much you know, but since you attempt RCE you are probably well-versed in calling conventions. If not let’s sum it up like this: calling conventions govern how (order, alignment) and by what means (registers, stack) parameters get passed to functions. We’ll get back to this in a moment. If you are on x64 Windows and the DLL is 64bit as well, you can rely on the Microsoft x64 calling convention (read <a href="https://en.wikipedia.org/wiki/X86_calling_conventions" rel="noreferrer">this article</a>).</p>
 <h5>
 Now there are two main routes you can take
@@ -4069,8 +4090,7 @@ And there are many more you can think of, but also many reasons to what can prev
 <h4>Answer 3 (score 5)</h4>
 <p>It’s not directly targeted at bypassing copy protection, but there is substantial research in glitching embedded systems via fault injection by Jasper van Woudenberg. Applications of his research include manipulating branch decisions and leaking instructions and crypto keys, so there are likely avenues to apply it to your target as well.</p>
 <p>Slides from his talk in 2012 may be found here: <a href="http://www.riscure.com/news-events/fault-injection-attacks-on-embedded-chips" rel="nofollow">http://www.riscure.com/news-events/fault-injection-attacks-on-embedded-chips</a> (more publications by the company may be found <a href="http://www.riscure.com/news-events?f=publications" rel="nofollow">here</a>)</p>
-<p>He very recently <a href="http://www.infiltratecon.com/speakers.html
-#jasper" rel="nofollow">gave a talk at Infiltrate 2013</a> that touched heavily in this area, so keep a look out for for slides and video from that.</p>
+<p>He very recently <a href="http://www.infiltratecon.com/speakers.html#jasper" rel="nofollow">gave a talk at Infiltrate 2013</a> that touched heavily in this area, so keep a look out for for slides and video from that.</p>
 <p>Additionally, it may be worthwhile to learn about the <a href="http://free60.org/wiki/Reset_Glitch_Hack" rel="nofollow">Xbox 360 glitch hack</a> and the process involved there.</p>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
@@ -4088,11 +4108,9 @@ vmlinux-2.6.32-5-4kc-malta</code></pre>
 <p>Then i’ve run the specified command for a 32 bit (because the elf informations) MIPS system.</p>
 <pre class="text"><code>qemu-system-mips -M malta -kernel vmlinux-2.6.32-5-4kc-malta -hda debian_squeeze_mips_standard.qcow2 -append &quot;root=/dev/sda1 console=tty0&quot;</code></pre>
 <p>So far, i have the emulator running in one shell and the command uname -a gives me:</p>
-<pre class="text"><code>Linux debian-mips 2.6.32-5-4kc-malta
-#1 Tue Sep 24 00:02:22 UTC 2013 mips GNU/Linux</code></pre>
+<pre class="text"><code>Linux debian-mips 2.6.32-5-4kc-malta #1 Tue Sep 24 00:02:22 UTC 2013 mips GNU/Linux</code></pre>
 <p>There are only the very basics commands/tools on the emulator. I’ve read that gdb can debug on a remote target (here the MIPS-emulator) from an host machine which is my x86_64. And to be honest i have no idea about what i should do now. I first tried to install gdb itself on the the qemu emulator.When i run gdb my elf i can see that gdb was automatically configured as mips-linux-gnu.</p>
-<pre class="text"><code>root@debian-mips:~
-# gdb myelf 
+<pre class="text"><code>root@debian-mips:~# gdb myelf 
 GNU gdb (GDB) 7.0.1-debian
 Copyright (C) 2009 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later &lt;http://gnu.org/licenses/gpl.html&gt;
@@ -4194,23 +4212,16 @@ $ sudo apt-get update</code></pre>
 Installing the libraries
 </h3>
 <p>Now we can install packages! The package which includes all of the <code>mipsel</code> libraries you need to run the binary you selected is</p>
-<pre class="text"><code>$ sudo apt-get install libc6-mipsel-cross
-# For MIPS-EL
-$ sudo apt-get install libc6-armhf-armel-cross
-# For ARM</code></pre>
+<pre class="text"><code>$ sudo apt-get install libc6-mipsel-cross      # For MIPS-EL
+$ sudo apt-get install libc6-armhf-armel-cross # For ARM</code></pre>
 <p>If you want to build programs like the sample above, you’ll need a cross-compiler.</p>
-<pre class="text"><code>$ sudo apt-get install gcc-4.4-mipsel-linux-gnu
-# For MIPS-EL on Ubuntu 14.04
-$ sudo apt-get install gcc-mipsel-linux-gnu
-# For MIPS-EL on Ubuntu 16.04
-$ sudo apt-get install gcc-arm-linux-gnueabihf
-# For ARM</code></pre>
+<pre class="text"><code>$ sudo apt-get install gcc-4.4-mipsel-linux-gnu # For MIPS-EL on Ubuntu 14.04
+$ sudo apt-get install gcc-mipsel-linux-gnu     # For MIPS-EL on Ubuntu 16.04
+$ sudo apt-get install gcc-arm-linux-gnueabihf  # For ARM</code></pre>
 <p>Very finally, we need to tell <code>binfmt</code> where the libraries are for <code>mipsel</code> binaries.</p>
 <pre class="text"><code>$ sudo mkdir /etc/qemu-binfmt
-$ sudo ln -s /usr/mipsel-linux-gnu /etc/qemu-binfmt/mipsel
-# MIPSEL
-$ sudo ln -s /usr/arm-linux-gnueabihf /etc/qemu-binfmt/arm
-# ARM</code></pre>
+$ sudo ln -s /usr/mipsel-linux-gnu /etc/qemu-binfmt/mipsel # MIPSEL
+$ sudo ln -s /usr/arm-linux-gnueabihf /etc/qemu-binfmt/arm # ARM</code></pre>
 <p>Now you can run the binary on your system*!</p>
 <pre class="text"><code>$ ./myelf
 Usage: ./crackme password</code></pre>
@@ -4321,8 +4332,7 @@ FLOSS to use JTAG
 <a href="http://openocd.sourceforge.net/" rel="noreferrer">OpenOCD</a> (OCD stands for on-chip debugger)
 </li>
 </ul>
-<p>GDB (<a href="/questions/tagged/gdb" class="post-tag" title="show questions tagged &
-#39;gdb&#39;" rel="tag">gdb</a>) can be used in conjunction with these in some scenarios (e.g. <a href="http://openocd.sourceforge.net/doc/html/GDB-and-OpenOCD.html" rel="noreferrer">OpenOCD</a>).</p>
+<p>GDB (<a href="/questions/tagged/gdb" class="post-tag" title="show questions tagged &#39;gdb&#39;" rel="tag">gdb</a>) can be used in conjunction with these in some scenarios (e.g. <a href="http://openocd.sourceforge.net/doc/html/GDB-and-OpenOCD.html" rel="noreferrer">OpenOCD</a>).</p>
 <h5>
 “Cheap” JTAG probes
 </h2>
@@ -4421,8 +4431,7 @@ How do I figure out the original source code that went into the hex file?
 </ol>
 <p>While the specifics will depend on the revision of the Uno that you have, you’ll want to use avrdude (<a href="http://savannah.nongnu.org/projects/avrdude">available for linux, bundled with the OS X Arduino software</a>) and a command similar to the following that would extract the information from an ATmega168:</p>
 <pre class="text"><code>avrdude -F -v -pm168 -cstk500v1 -P/dev/ttyUSB0 -b19200 -D -Uflash:r:program.bin:r</code></pre>
-<p>Look at the <a href="http://www.nongnu.org/avrdude/user-manual/avrdude_4.html
-#Option-Descriptions">avrdude documentation</a> to match the part parameter <code>-p</code> specific to your device (or post them and we can go from there).</p>
+<p>Look at the <a href="http://www.nongnu.org/avrdude/user-manual/avrdude_4.html#Option-Descriptions">avrdude documentation</a> to match the part parameter <code>-p</code> specific to your device (or post them and we can go from there).</p>
 <p>Since it appears that you have the <a href="http://arduino.cc/en/Main/arduinoBoardUno">Uno Rev3</a>, that board has an ATmega328 (<code>-pm328</code>). The programmer “communicates using the original STK500 protocol” thus the communication protocol flag <code>-c</code> should be <code>-cstk500v1</code> the command you would need (assuming the Uno is connected to /dev/ttyUSB0) follows:</p>
 <pre class="text"><code>avrdude -F -v -pm328p -cstk500v1 -P/dev/ttyUSB0 -b19200 -D -Uflash:r:program.bin:r</code></pre>
 <p>Next up your second question.</p>
@@ -4474,8 +4483,7 @@ hardware\tools\avr/etc/avrdude.conf&quot;
 
                                        Block Poll               Page
            Polled
-                Memory Type Mode Delay Size  Indx Paged  Size   Size
-#Pages MinW
+                Memory Type Mode Delay Size  Indx Paged  Size   Size #Pages MinW
   MaxW   ReadBack
                 ----------- ---- ----- ----- ---- ------ ------ ---- ------ ----
 - ----- ---------
@@ -4507,8 +4515,7 @@ hardware\tools\avr/etc/avrdude.conf&quot;
 
 avrdude2.exe: AVR device initialized and ready to accept instructions
 
-Reading |
-################################################## | 100% 0.02s
+Reading | ################################################## | 100% 0.02s
 
 avrdude2.exe: Device signature = 0x1e950f
 avrdude2.exe: safemode: lfuse reads as 0
@@ -4516,8 +4523,7 @@ avrdude2.exe: safemode: hfuse reads as 0
 avrdude2.exe: safemode: efuse reads as 0
 avrdude2.exe: reading flash memory:
 
-Reading |
-################################################## | 100% 9.49s
+Reading | ################################################## | 100% 9.49s
 
 avrdude2.exe: writing output file &quot;c:\keep\program.bin&quot;
 
@@ -4542,16 +4548,13 @@ avrdude2.exe done.  Thank you.</code></pre>
 <pre class="text"><code>C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\avrdude &quot;-CC:\Program Files (x86)\Arduino\hardware\tools\avr/etc/avrdude.conf&quot; -v -v -patmega328p -carduino -PCOM14 -b57600 -D -Uflash:w:C:\Users\\user\AppData\Local\Temp\build4588201597642272956.tmp/TFT_Baja2.cpp.hex:i</code></pre>
 <p>Interesting fact: the hex dump included fragments of other code I’d written… this suggests some very interesting privacy and security problems for anyone shipping arduinos which have been previously used for other things…</p>
 <p>If you’re using boards other than a nano, my shim was:</p>
-<pre class="text"><code>
-#!perl
+<pre class="text"><code>#!perl
 
 use strict;
 
-foreach(@ARGV){$_=qq(&quot;$_&quot;) if(/\s/)};
-# DOS Wants quotes around space-embedded paramaters!
+foreach(@ARGV){$_=qq(&quot;$_&quot;) if(/\s/)};   # DOS Wants quotes around space-embedded paramaters!
 
-foreach(@ARGV){$_=&#39;-v&#39; if($_ eq &#39;-q&#39;);}
-# go verbose instead of silent
+foreach(@ARGV){$_=&#39;-v&#39; if($_ eq &#39;-q&#39;);} # go verbose instead of silent
 
 my $parms=join(&quot; &quot;,@ARGV);
 open(OUT,&quot;&gt;&gt;&quot;,&quot;C:\\keep\\avrdude.log&quot;) || warn &quot;Cannot write: $!&quot;; 
@@ -4561,7 +4564,6 @@ my $rc=`avrdude2.exe $parms`;
 
 open(OUT,&quot;&gt;&gt;&quot;,&quot;C:\\keep\\avrdude.log&quot;); print OUT $rc; close(OUT);
 print $rc;
-
 
 # Return &quot;now()&quot; in mysql default format.
 sub db_now {
@@ -5129,7 +5131,7 @@ Desoldering
 <p>First option is desoldering the chip from the board. After having done so you have 2 options</p>
 <ul>
 <li>
-Read the chip out using a chip programmer like e.g. <a href="http://www.dataman.com/" rel="noreferrer">Dataman</a> that supports your chip ($$$ expensive solution).
+Read the chip out using a chip programmer like e.g. <a href="http://www.dataman.com/" rel="noreferrer">Dataman</a> that supports your chip ($$$ expensive solution).
 </li>
 <li>
 Or use a cheap micro controller based solution like a <a href="http://dangerousprototypes.com/docs/Bus_Pirate" rel="noreferrer">Bus Pirate</a>, an <a href="http://arduino.cc/en/Reference/SPI" rel="noreferrer">Ardunio</a> or code your own dumper (which is generally not too hard).
@@ -5277,17 +5279,14 @@ List item
 <h3>64: Unpacking UPX packed (possibly scrambled) executable (score <a href="https://stackoverflow.com/q/8268.html">22726</a> in )</h3>
 <section id="question-63" class="level4">
 <h4>Question</h4>
-<p>I’ve decided to reverse <a href="https://mega.co.nz/
-#!iEpDETIY!h0xZgdQ7etqJBUupq-yIcglj79aQcs-fQnRW898n4Wc" rel="nofollow noreferrer">this</a> crackme. Obviously it’s packed. I was told by PeID that there is only UPX inside. Ok, but <code>upx -d</code> simple crashed that’s why I’ve concluded that this UPX may be scrambled somehow.</p>
+<p>I’ve decided to reverse <a href="https://mega.co.nz/#!iEpDETIY!h0xZgdQ7etqJBUupq-yIcglj79aQcs-fQnRW898n4Wc" rel="nofollow noreferrer">this</a> crackme. Obviously it’s packed. I was told by PeID that there is only UPX inside. Ok, but <code>upx -d</code> simple crashed that’s why I’ve concluded that this UPX may be scrambled somehow.</p>
 <p><img src="https://i.stack.imgur.com/XEm04.png" alt="IDA warning"></p>
 <p>Binary didn’t run properly in debugger(windbg) for unpacking it so I’ve dumped exe from working process and tried to fix imports. Maybe I should have tried Olly with plugins? However IDA still warns me that some imports might be destroyed(see picture). My question is: did I unpacked it correctly? If no what else should I do to unpack it?</p>
-<p><a href="https://mega.co.nz/
-#!OU4X1a4Y!00wN9c72-4nRtNgF5t7ZdGLxDzjYE9G6CNakblHBUOs" rel="nofollow noreferrer">Unpacked</a></p>
+<p><a href="https://mega.co.nz/#!OU4X1a4Y!00wN9c72-4nRtNgF5t7ZdGLxDzjYE9G6CNakblHBUOs" rel="nofollow noreferrer">Unpacked</a></p>
 </section>
 <section id="answer-accepted-score-6-1" class="level4">
 <h4>Answer accepted (score 6)</h4>
-<p><a href="https://mega.co.nz/
-#F!OAx0wL7K!gLPZh7pkMv7d8as5serOmg" rel="noreferrer">Here</a> you can find bunch of tools for unpacking upx. One of them(Upx Unpacker 0.2) solved my issue. Every unpacker should be used in specific case and this list may be incomplete.</p>
+<p><a href="https://mega.co.nz/#F!OAx0wL7K!gLPZh7pkMv7d8as5serOmg" rel="noreferrer">Here</a> you can find bunch of tools for unpacking upx. One of them(Upx Unpacker 0.2) solved my issue. Every unpacker should be used in specific case and this list may be incomplete.</p>
 </section>
 <section id="answer-2-score-3-4" class="level4">
 <h4>Answer 2 (score 3)</h4>
@@ -5487,8 +5486,7 @@ I’d like to get started with reverse engineering. Some years ago I’ve seen m
 <a href="https://github.com/s7ephen/CSAW_2009" rel="noreferrer">https://github.com/s7ephen/CSAW_2009</a>
 </li>
 <li>
-<a href="https://github.com/isislab/Hack-Night/tree/master/2013-Fall
-#week-6-reverse-engineering-part-1" rel="noreferrer">https://github.com/isislab/Hack-Night/tree/master/2013-Fall#week-6-reverse-engineering-part-1</a>
+<a href="https://github.com/isislab/Hack-Night/tree/master/2013-Fall#week-6-reverse-engineering-part-1" rel="noreferrer">https://github.com/isislab/Hack-Night/tree/master/2013-Fall#week-6-reverse-engineering-part-1</a>
 </li>
 <li>
 <a href="http://pwnable.kr/" rel="noreferrer">http://pwnable.kr/</a>
@@ -5807,8 +5805,7 @@ virtualized environment artifacts: registry keys, hard disk name, network card a
 environment differences: no mouse, internet connection, sound card,…
 </li>
 <li>
-<p>execution difference: detection of block translation (create another thread and apply statistics on IP), <a href="https://code.google.com/p/corkami/source/browse/trunk/src/CoST/CoST.asm?r=1593
-#1363" rel="nofollow noreferrer">different system registers values</a>, …</p>
+<p>execution difference: detection of block translation (create another thread and apply statistics on IP), <a href="https://code.google.com/p/corkami/source/browse/trunk/src/CoST/CoST.asm?r=1593#1363" rel="nofollow noreferrer">different system registers values</a>, …</p>
 <ul>
 <li>
 lack of user interaction (specific for automated environment): no mouse movement, no file operations,…
@@ -5816,8 +5813,7 @@ lack of user interaction (specific for automated environment): no mouse movement
 </ul>
 </li>
 <li>
-specific environment differences: <a href="https://code.google.com/p/corkami/source/browse/trunk/src/CoST/CoST.asm?r=1593
-#2015" rel="nofollow noreferrer">VmWare backdoor</a>, <a href="https://code.google.com/p/corkami/source/browse/trunk/src/CoST/CoST.asm?r=1593#1900" rel="nofollow noreferrer">VirtualPC exception bug</a>, …
+specific environment differences: <a href="https://code.google.com/p/corkami/source/browse/trunk/src/CoST/CoST.asm?r=1593#2015" rel="nofollow noreferrer">VmWare backdoor</a>, <a href="https://code.google.com/p/corkami/source/browse/trunk/src/CoST/CoST.asm?r=1593#1900" rel="nofollow noreferrer">VirtualPC exception bug</a>, …
 </li>
 </ul>
 <p>(check the <a href="https://reverseengineering.stackexchange.com/tags/anti-debug/info">anti-debug tag wiki</a> for more)</p>
@@ -6203,7 +6199,7 @@ And after that this-one: <a href="https://i.stack.imgur.com/HM5Mv.png" rel="nofo
 <p>in this case it’s the location of <code>win64_remotex64</code> or remote debugger and <code>nh8sy261</code> is just some random password. You pick it. Make sure though not to put any spaces after the <code>-P</code> parameter and the password.</p>
 <ol start="2" type="1">
 <li><p>Run batch file from (1) as admin.</p></li>
-<li><p>Open 64-bit version of IDA Pro as admin. (File <code>"C:\Program Files (x86)\IDA 6.5\idaq64.exe"</code>)</p></li>
+<li><p>Open 64-bit version of IDA Pro as admin. (File <code>&quot;C:\Program Files (x86)\IDA 6.5\idaq64.exe&quot;</code>)</p></li>
 <li><p>Pick <code>Go</code> to work on your own. Then in the blank IDA Pro window, in the menu go to <code>Debugger -&gt; Run -&gt; Remote Windows debugger</code>. Then in the <code>Application</code> pick your application with the <code>...</code> button. Specify debuggee parameters and directory, if needed. Then in the <code>Hostname</code> add <code>127.0.0.1</code>, port as <code>23946</code> and password as what you typed above in the batch file:</p></li>
 </ol>
 <p><a href="https://i.stack.imgur.com/4EZU5.png" rel="noreferrer"><img src="https://i.stack.imgur.com/4EZU5.png" alt="enter image description here"></a></p>
@@ -6230,8 +6226,7 @@ addr=0x00000abc off=0x00000abc ordinal=003 sz=10 len=10 section=.rodata type=A s
 
  -- How about a nice game of chess?
 [0x080488c4]&gt; /c ab2
-f hit_0 @ 0x08048841
-# 5: push 0x8048ab2
+f hit_0 @ 0x08048841   # 5: push 0x8048ab2
 [0x080488c4]&gt;</code></pre>
 <p>I tried the same thing, but for me is not working:</p>
 <pre class="text"><code>$ r2 crackserial_linux
@@ -6253,7 +6248,6 @@ addr=0x08048d9a off=0x00000d9a ordinal=003 sz=10 section=.rodata string=Try agai
 <p>The commend <em>per se</em> seems to work correctly for me here:</p>
 <pre class="text"><code>radare2-w32-0.9.9&gt; cat xxx\helloworld.cpp
 
-
 #include &lt;stdio.h&gt;
 int main (void) {
   printf(&quot;hello world\n&quot;);
@@ -6266,8 +6260,7 @@ radare2-w32-0.9.9&gt; radare2 xxx\helloworld.exe
 <p><code>/c</code> uses pattern matching using <code>1118c</code> wont give you any results using <code>18c</code> will spew a lot of results think about it before asking why (that is one of the drawbacks of following tuts blindly your <code>/d90</code> or <code>/ab2</code> are falling in this category )</p>
 <p>Lets search for xrefs to the virtual address</p>
 <pre class="text"><code>[0x00401347]&gt; /c 41218c
-0x00401003
-# 5: push 0x41218c</code></pre>
+0x00401003   # 5: push 0x41218c</code></pre>
 <p>Disassemble around the hit</p>
 <pre class="text"><code>[0x00401347]&gt; pd 5 @0x401000
            ;-- section..text:
@@ -6348,7 +6341,7 @@ if during tracing you can identify memory where the unpacked code is being writt
 </li>
 <li>
 <p>
-set breakpoints on common APIs used by startup code, e.g. <code>GetCommandLine</code> or <code>GetVersionEx</code>. This won’t get you the exact OEP, but you can usually go back the callstack and find it more or less easily.
+set breakpoints on common APIs used by startup code, e.g. <code>GetCommandLine</code> or <code>GetVersionEx</code>. This won’t get you the exact OEP, but you can usually go back the callstack and find it more or less easily.
 </p>
 </li>
 </ol>
@@ -6717,16 +6710,11 @@ In addition you have a radare 2 book, see <a href="https://radare.gitbooks.io/ra
 <h4>Question</h4>
 <p>Can someone help me convert the following MIPS code back to C?</p>
 <p>Assume that the variables <code>f</code>, <code>g</code>, <code>h</code>, <code>i</code>, and <code>j</code> are assigned to registers <code>$s0</code>, <code>$s1</code>, <code>$s2</code>, <code>$s3</code>, and <code>$s4</code>, respectively. Base address of the arrays <code>A</code> and <code>B</code> are in registers <code>$s6</code> and <code>$s7</code>, respectively.</p>
-<pre class="text"><code>sll $t0, $s0, 2
-# $t0 = f * 4
-add $t0, $s6, $t0
-# $t0 = &amp;A[f]
-sll $t1, $s1, 2
-# $t1 = g * 4
-add $t1, $s7, $t1
-# $t1 = &amp;B[g]
-lw $s0, 0($t0)
-# f = A[f]
+<pre class="text"><code>sll $t0, $s0, 2      # $t0 = f * 4
+add $t0, $s6, $t0    # $t0 = &amp;A[f]
+sll $t1, $s1, 2      # $t1 = g * 4
+add $t1, $s7, $t1    # $t1 = &amp;B[g]
+lw $s0, 0($t0)       # f = A[f]
 addi $t2, $t0, 4 
 lw $t0, 0($t2)
 add $t0, $t0, $s0
@@ -6736,24 +6724,15 @@ sw $t0, 0($t1)</code></pre>
 <h4>Answer 2 (score 5)</h4>
 <p>Seems like your h, i and j aren’t used at all.</p>
 <p>Here is your code including my comments:</p>
-<pre class="text"><code>sll $t0, $s0, 2
-# $t0 = f * 4
-add $t0, $s6, $t0
-# $t0 = &amp;A[f]
-sll $t1, $s1, 2
-# $t1 = g * 4
-add $t1, $s7, $t1
-# $t1 = &amp;B[g]
-lw $s0, 0($t0)
-# f = A[f]
-addi $t2, $t0, 4
-# $t2=$t0+4 =&gt; $t2 points to A[f+1] now
-lw $t0, 0($t2)
-# $t0 = A[f+1]
-add $t0, $t0, $s0
-# $t0 = $t0 + $s0  =&gt; $t0 is now A[f] + A[f+1]
-sw $t0, 0($t1)
-# store the result into B[g]</code></pre>
+<pre class="text"><code>sll $t0, $s0, 2         # $t0 = f * 4
+add $t0, $s6, $t0       # $t0 = &amp;A[f]
+sll $t1, $s1, 2         # $t1 = g * 4
+add $t1, $s7, $t1       # $t1 = &amp;B[g]
+lw $s0, 0($t0)          # f = A[f]
+addi $t2, $t0, 4        # $t2=$t0+4 =&gt; $t2 points to A[f+1] now
+lw $t0, 0($t2)          # $t0 = A[f+1]
+add $t0, $t0, $s0       # $t0 = $t0 + $s0  =&gt; $t0 is now A[f] + A[f+1]
+sw $t0, 0($t1)          # store the result into B[g]</code></pre>
 <p>So the whole snipped could have been</p>
 <pre class="text"><code>B[g] = A[f] + A[f+1];</code></pre>
 <p>in C. Assuming, of course, that A and B are arrays of 4-byte integers.</p>
@@ -6870,8 +6849,7 @@ foolupx:\&gt;</code></pre>
 <section id="question-87" class="level4">
 <h4>Question</h4>
 <p>This question is related to this <a href="https://reverseengineering.stackexchange.com/questions/1934/is-it-possible-to-get-python-bytecode-without-using-co-code">other one</a>. I just wonder what are the techniques applicable and which can be found in the real world to obfuscate Python program (similar questions can be found on stackoverflow <a href="https://stackoverflow.com/questions/261638/how-do-i-protect-python-code">here</a> and <a href="https://stackoverflow.com/questions/576963/python-code-obfuscation">here</a>).</p>
-<p><a href="https://reverseengineering.stackexchange.com/questions/1934/is-it-possible-to-get-python-bytecode-without-using-co-code/1942
-#1942">mikeazo mentioned</a> the fact that his program was provided with a custom Python interpreter, but what are the other techniques and how efficient are they ?</p>
+<p><a href="https://reverseengineering.stackexchange.com/questions/1934/is-it-possible-to-get-python-bytecode-without-using-co-code/1942#1942">mikeazo mentioned</a> the fact that his program was provided with a custom Python interpreter, but what are the other techniques and how efficient are they ?</p>
 </section>
 <section id="answer-accepted-score-19-3" class="level4">
 <h4>Answer accepted (score 19)</h4>
@@ -7111,8 +7089,7 @@ I’m from Uruguay so I’ll make my best effort to explain my “problem” in 
 <p>I’m interested in just two files. One, is named “Lang_INT.dat”, inside the Localization folder, there is another file in that folder named “GFxTranslation.int”, which has some text that appears in the Lobby Screen and things like that, that’s why the “Localization” folder has to be where the text is… but in the first picture that I shared, you can see text that appears in-game and also in the lobby screen, and it’s on another folder named “Content” and the file is named “assembly.dat”, with another file named “behavior_trees.dat” but I think that file is not important to me.</p>
 <p>By the way, this maybe would be usefull as a “reference”, there is another .DAT file named “word filter” which (i suppose) has the “bad words” that are censored in the chat if the word filter is activated. This .DAT is inside the Localization folder.</p>
 <h5>
-<a href="https://mega.nz/
-#!eJ5QiLDD!lxbfkGmKBmJ7OoXQoIjcH7adAhIn7I8Cka2CCTLyPsw" rel="nofollow noreferrer">Here is a link with ALL the .DAT mentioned in this post</a>
+<a href="https://mega.nz/#!eJ5QiLDD!lxbfkGmKBmJ7OoXQoIjcH7adAhIn7I8Cka2CCTLyPsw" rel="nofollow noreferrer">Here is a link with ALL the .DAT mentioned in this post</a>
 </h2>
 <p>I’ll appreciate any kind of help on this, I did some research but I did not find anything that is usefull… the only thing that I know is: A person who has no knowledge about programing or “some” knowledge, could “de-compress” “decrypt” one of this files…or that is what looks like, and no, that person do not want to help me :c</p>
 <p>Thanks in advance again, and sorry for bad English:</p>
@@ -7353,15 +7330,11 @@ pop %ebp</code></pre>
 </ol>
 <p>The instruction pointer will be <code>0x08048408</code>. <code>ebp</code> will point to <em><code>10.</code></em>.</p>
 <p>At this point, the processor generates an exception, which the operating system processes. It then sends <code>SIGSEGV</code> to the process, which obligingly terminates and dumps core. You then bring up the core dump in gdb with <code>gdb -c core</code>, and you type in <code>file a.out</code> and <code>bt</code>, and it gives you in response:</p>
-<pre class="text"><code>
-#0  0x08048408 in quux () at test.c:20
-
+<pre class="text"><code>#0  0x08048408 in quux () at test.c:20
 #1  0x080483f9 in bar () at test.c:12
-
 #2  0x080483e7 in foo () at test.c:7
-
 #3  0x0804841b in main () at test.c:24</code></pre>
-<p><code>#0</code> is generated from the instruction pointer. Then, it goes to <code>ebp</code> (10), looks at the previous item on the stack (9), and generates <code>#1</code>. It follows <code>ebp</code> (i.e. <code>mov %ebp, (%ebp)</code>) to (7), and looks 4 bytes above that (6) to generate <code>#2</code>. It finally follows (7) to (4) and looks at (3) to generate <code>#3</code>.</p>
+<p><code>#0</code> is generated from the instruction pointer. Then, it goes to <code>ebp</code> (10), looks at the previous item on the stack (9), and generates <code>#1</code>. It follows <code>ebp</code> (i.e. <code>mov %ebp, (%ebp)</code>) to (7), and looks 4 bytes above that (6) to generate <code>#2</code>. It finally follows (7) to (4) and looks at (3) to generate <code>#3</code>.</p>
 <p><strong>Note:</strong> This is but one way of doing such stack tracing. GDB is very, very smart, and can perform the stack trace even when you use <code>-fomit-frame-pointer</code>. However, in a very basic implementation this is probably the simplest way to generate a stack trace.</p>
 </section>
 <section id="answer-2-score-16-5" class="level4">
@@ -7429,8 +7402,7 @@ DECIMAL         HEX             DESCRIPTION
 145038048       0x8A51AE0       gzip compressed data, ASCII, extra field, last modified: Mon May 26 20:11:40 2014  </code></pre>
 <p>When trying to decompress the data I got the following error using gunzip/gzip</p>
 <pre class="text"><code>gzip: 4CD3B57.gz is a multi-part gzip file -- not supported</code></pre>
-<p>According to gzip FAQ (<a href="http://www.gzip.org/
-#faq2">http://www.gzip.org/#faq2</a>) this is due to a transfer not made in binary mode which has corrupted the gzip header.</p>
+<p>According to gzip FAQ (<a href="http://www.gzip.org/#faq2">http://www.gzip.org/#faq2</a>) this is due to a transfer not made in binary mode which has corrupted the gzip header.</p>
 <p>It looks more like a false positive from binwalk to me mostly because the magic number used to identify gzip data can easily trigger false positive and the dates are wrong.</p>
 <p>I also ran strings and hexdump command in order to have an idea of the contents of the file and try to identify known pattern but it didn’t help much so far (I probably lack experience in that type of thing here).</p>
 <p>The only non-gibberish/identifiable strings are located at the end of the firmware image.</p>
@@ -7467,8 +7439,7 @@ DECIMAL         HEX             DESCRIPTION
 <p>
 The NAS OS has a script for processing a firmware update image:
 </p>
-<pre class="text"><code>
-# /etc/init.d/update.sh /mnt/HDA_ROOT/update/TS-209_2.1.2_build1031.img</code></pre>
+<pre class="text"><code># /etc/init.d/update.sh /mnt/HDA_ROOT/update/TS-209_2.1.2_build1031.img</code></pre>
 </li>
 <li>
 <p>
@@ -7482,8 +7453,7 @@ There is a checksum embedded in the binary and THEN there is this line in the ou
 The Hard Way (but with useful tips)
 </h3>
 <p>I downloaded the TS-569 full system recovery image from the Firmware Recovery page which took almost 2 hours for 500MB. Now I had to figure out what I was working with:</p>
-<pre class="text"><code>
-# file F_TS-569_20120628-1.2.2.img
+<pre class="text"><code># file F_TS-569_20120628-1.2.2.img
 F_TS-569_20120628-1.2.2.img: x86 boot sector; GRand Unified Bootloader, ...</code></pre>
 <p>A full disk image which looks like this:</p>
 <pre class="text"><code>$ fdisk -l F_TS-569_20120628-1.2.2.img
@@ -7495,15 +7465,10 @@ F_TS-569_20120628-1.2.2.img4          973568     1007615       17024    5  Exten
 F_TS-569_20120628-1.2.2.img5          973600      990207        8304   83  Linux
 F_TS-569_20120628-1.2.2.img6          990240     1007615        8688   83  Linux</code></pre>
 <p>Separate out the partitions (or you could write the image to a spare disk):</p>
-<pre class="text"><code>
-# dd if=F_TS-569_20120628-1.2.2.img bs=512 of=part1 skip=32 count=2160w
-
+<pre class="text"><code># dd if=F_TS-569_20120628-1.2.2.img bs=512 of=part1 skip=32 count=2160w
 # dd if=F_TS-569_20120628-1.2.2.img bs=512 of=part2 skip=4352 count=242304w
-
 # dd if=F_TS-569_20120628-1.2.2.img bs=512 of=part3 skip=488960 count=242304w
-
 # dd if=F_TS-569_20120628-1.2.2.img bs=512 of=part5 skip=973600 count=8304w
-
 # dd if=F_TS-569_20120628-1.2.2.img bs=512 of=part6 skip=990240 count=8688w  
 ... which gives  
 -rw-r--r-- 1 root   root     2211840 2013-08-30 15:41 part1
@@ -7512,11 +7477,8 @@ F_TS-569_20120628-1.2.2.img6          990240     1007615        8688   83  Linux
 -rw-r--r-- 1 root   root     8503296 2013-08-30 15:42 part5
 -rw-r--r-- 1 root   root     8896512 2013-08-30 15:42 part6</code></pre>
 <p>Partition 3 is a mirror of partition 2, verified through md5sum. Partitions 5 and 6 are empty, likely for scratch space. Partition 1 is <strong>/boot/grub</strong> which contains modules and the like for booting and hardware configuration. So lets look at partition 2, the boot partition.</p>
-<pre class="text"><code>
-# mkdir /mnt/ts2
-
+<pre class="text"><code># mkdir /mnt/ts2
 # mount -r part2 /mnt/ts2 -o loop
-
 # ls -la /mnt/ts2/boot
 -rw-r--r-- 1 root root  3982976 2012-06-27 22:17 bzImage
 -rw-r--r-- 1 root root       81 2012-06-27 22:17 bzImage.cksum
@@ -7528,7 +7490,6 @@ F_TS-569_20120628-1.2.2.img6          990240     1007615        8688   83  Linux
 -rw-r--r-- 1 root root       85 2012-06-27 22:17 rootfs2.bz.cksum
 -rw-r--r-- 1 root root 31160679 2012-06-27 22:17 rootfs_ext.tgz
 -rw-r--r-- 1 root root       87 2012-06-27 22:17 rootfs_ext.tgz.cksum
-
 # file -z /mnt/ts2/boot/initrd.boot
 /mnt/ts2/boot/initrd.boot: Linux rev 1.0 ext2 filesystem data, UUID=770ce31c-d03f-484e-81e8-6911340bdcbf (gzip compressed data, from Unix, last modified: Wed Jun 27 22:16:58 2012, max compression)</code></pre>
 <ul>
@@ -7549,13 +7510,9 @@ rootfs_ext.tgz is a compressed tarball of another ext2 filesystem of /opt/source
 </li>
 </ul>
 <p>All of the magic is inside the initrd filesystem image. Peering into that we get:</p>
-<pre class="text"><code>
-# gunzip -c /mnt/ts2/boot/initrd.boot &gt;/tmp/initrd.boot.img
-
+<pre class="text"><code># gunzip -c /mnt/ts2/boot/initrd.boot &gt;/tmp/initrd.boot.img
 # mkdir /mnt/tsinitrd
-
 # mount -r /tmp/initrd.boot.img /mnt/tsinitrd -o loop
-
 # ls -la /mnt/tsinitrd
 drwxr-xr-x  2 root root  2048 2012-06-27 22:05 bin
 drwxr-xr-x  5 root root 13312 2012-06-27 22:11 dev
@@ -7575,8 +7532,7 @@ drwxrwxr-x 29 root root  1024 2006-02-28 00:57 share
 drwxrwxrwx  4 root root  1024 2006-02-28 00:57 tmp
 drwxrwxrwx  8 root root  1024 2012-06-27 22:15 var</code></pre>
 <p>Remember the 2 things that stuck out from the Firmware Recovery page? The update script and the encryption reference:</p>
-<pre class="text"><code>
-# more /mnt/tsinitrd/etc/init.d/update.sh
+<pre class="text"><code># more /mnt/tsinitrd/etc/init.d/update.sh
 ...
 ... line 223
     /sbin/PC1 d QNAPNASVERSION4 $path_name ${_tgz};
@@ -7584,21 +7540,18 @@ drwxrwxrwx  8 root root  1024 2012-06-27 22:15 var</code></pre>
 <p>
 There’s the reference to what appears to be the encryption key and perhaps the decrypter! Since this NAS firmware image is x86 based, and I’m in an x86 VM, might as well try it:
 </p>
-<pre class="text"><code>
-# /mnt/tsinitrd/sbin/PC1
+<pre class="text"><code># /mnt/tsinitrd/sbin/PC1
 Usage: pc1 e|d &quot;key&quot; sourcefile &lt;targetfile&gt;
 where: e - encrypt, d - decrypt &amp; &quot;key&quot; is the encryption key.
 The length of the key will determine strength of encryption
 If no targetfile, output file name is equal to sourfile name
 ie: 5 characters is 40-bit encryption.</code></pre>
 <p>And finally:</p>
-<pre class="text"><code>
-# /mnt/tsinitrd/sbin/PC1 d QNAPNASVERSION4 TS-569_20130726-4.0.2.img TS-569_20130726-4.0.2.tgz
+<pre class="text"><code># /mnt/tsinitrd/sbin/PC1 d QNAPNASVERSION4 TS-569_20130726-4.0.2.img TS-569_20130726-4.0.2.tgz
 Using 120-bit encryption - (QNAPNASVERSION4)
 len=1048576
 model name = TS-569
 version = 4.0.2
-
 
 # tar -tvf TS-569_20130726-4.0.2.tgz 
 -rw-r--r-- root/root       106 2013-07-25 20:49 bios_layout
@@ -7632,11 +7585,8 @@ The Very Easy Way
 </h2>
 <p>Once I got to the end of the “hard way”, I decided to google for the encryption key “QNAPNASVERSION4”. The first result was for the PC1 enc/dec algorithm in C that someone has already so kindly modified to handle the firmware format specifics for us: <a href="http://www.r00ted.com/downloads/pc1.c">http://www.r00ted.com/downloads/pc1.c</a></p>
 <p><strong>Update: Link was reported broken, here’s a dump: <a href="http://pastebin.com/KHbX85nG">http://pastebin.com/KHbX85nG</a></strong></p>
-<pre class="text"><code>
-# gcc -o pc1 pc1.c
-
+<pre class="text"><code># gcc -o pc1 pc1.c
 # pc1 d QNAPNASVERSION4 TS-569_20130726-4.0.2.img TS-569_20130726-4.0.2.tgz
-
 # tar -tvf TS-569_20130726-4.0.2.tgz
 -rw-r--r-- root/root       106 2013-07-25 20:49 bios_layout
 drwxr-xr-x root/root         0 2013-07-25 20:49 boot/
@@ -7694,8 +7644,7 @@ firmware mod kit: <a href="http://code.google.com/p/firmware-mod-kit/downloads/l
 <h4>Question</h4>
 <p>IDA has disassembled the following code:</p>
 <pre class="text"><code>seg019:C0292548             loc_C0292548                            ; CODE XREF: sub_C0292414+11Cj
-seg019:C0292548 02 00 54 E3                 CMP     R4,
-#2
+seg019:C0292548 02 00 54 E3                 CMP     R4, #2
 seg019:C029254C 0F 00 00 1A                 BNE     loc_C0292590
 seg019:C0292550 F0 30 9F E5                 LDR     R3, =0xC0298608
 seg019:C0292554 02 2C A0 E3+                MOV     R2, 0x205
@@ -7704,10 +7653,8 @@ seg019:C0292560 02 00 53 E1                 CMP     R3, R2
 seg019:C0292564 04 00 00 1A                 BNE     loc_C029257C
 seg019:C0292568 D4 00 9F E5                 LDR     R0, =0xC02860F0
 seg019:C029256C 53 FC FF EB                 BL      sub_C02916C0
-seg019:C0292570 2B 30 A0 E3                 MOV     R3,
-#0x2B
-seg019:C0292574 7F 20 A0 E3                 MOV     R2,
-#0x7F
+seg019:C0292570 2B 30 A0 E3                 MOV     R3, #0x2B
+seg019:C0292574 7F 20 A0 E3                 MOV     R2, #0x7F
 seg019:C0292578 08 00 00 EA                 B       loc_C02925A0</code></pre>
 <p>If I hit enter on <code>0xC02860F0</code>, it takes me to:</p>
 <pre class="text"><code>seg019:C02860F0 50                          DCB 0x50 ; P

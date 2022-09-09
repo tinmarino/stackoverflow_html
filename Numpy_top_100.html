@@ -13,14 +13,121 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="../wiki_html/Css/include.css" />
-  <script type="text/javascript" src="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/js_masonry_desandro.js"></script>
-  <p><link rel="stylesheet" href="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/color_dark_solarized.css"> <link rel="stylesheet" href="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/layout_toc.css"></p>
+  <link rel="stylesheet" href="../Css/color_dark_solarized.css" />
+  <link rel="stylesheet" href="../Css/layout_toc.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="../Css/js_masonry_desandro.js"></script>
 </head>
 <body>
 <header id="title-block-header">
 <h1 class="title">Numpy &lt;- StackOverflow top 100</h1>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#how-do-i-create-an-empty-arraymatrix-in-numpy-score-803995-in-2014">1: How do I create an empty array/matrix in NumPy? (score <span>803995</span> in 2014)</a></li>
+<li><a href="#convert-pandas-dataframe-to-numpy-array-score-765238-in-2019">2: Convert pandas dataframe to NumPy array (score <span>765238</span> in 2019)</a></li>
+<li><a href="#valueerror-setting-an-array-element-with-a-sequence-score-695400-in-2019">3: ValueError: setting an array element with a sequence (score <span>695400</span> in 2019)</a></li>
+<li><a href="#numpy-array-dimensions-score-684791-in-2018">4: Numpy array dimensions (score <span>684791</span> in 2018)</a></li>
+<li><a href="#how-can-the-euclidean-distance-be-calculated-with-numpy-score-614528-in-2018">5: How can the Euclidean distance be calculated with NumPy? (score <span>614528</span> in 2018)</a></li>
+<li><a href="#how-do-i-read-csv-data-into-a-record-array-in-numpy-score-609746-in-2018">6: How do I read CSV data into a record array in NumPy? (score <span>609746</span> in 2018)</a></li>
+<li><a href="#how-to-access-the-ith-column-of-a-numpy-multidimensional-array-score-607071-in-2017">7: How to access the ith column of a NumPy multidimensional array? (score <span>607071</span> in 2017)</a></li>
+<li><a href="#import-error-no-module-named-numpy-score-579767-in-2017">8: Import Error: No module named numpy (score <span>579767</span> in 2017)</a></li>
+<li><a href="#creating-a-pandas-dataframe-from-a-numpy-array-how-do-i-specify-the-index-column-and-column-headers-score-566365-in-2018">9: Creating a Pandas DataFrame from a Numpy array: How do I specify the index column and column headers? (score <span>566365</span> in 2018)</a></li>
+<li><a href="#combine-two-columns-of-text-in-dataframe-in-pandaspython-score-565423-in-2017">10: Combine two columns of text in dataframe in pandas/python (score <span>565423</span> in 2017)</a></li>
+<li><a href="#is-there-a-numpy-function-to-return-the-first-index-of-something-in-an-array-score-554833-in-2019">11: Is there a NumPy function to return the first index of something in an array? (score <span>554833</span> in 2019)</a></li>
+<li><a href="#list-to-array-conversion-to-use-ravel-function-score-548984-in-2019">12: List to array conversion to use ravel() function (score <span>548984</span> in 2019)</a></li>
+<li><a href="#dump-a-numpy-array-into-a-csv-file-score-539580-in-2012">13: Dump a NumPy array into a csv file (score <span>539580</span> in 2012)</a></li>
+<li><a href="#append-a-numpy-array-to-a-numpy-array-score-503527-in-2016">14: Append a NumPy array to a NumPy array (score <span>503527</span> in 2016)</a></li>
+<li><a href="#valueerror-the-truth-value-of-an-array-with-more-than-one-element-is-ambiguous.-use-a.any-or-a.all-score-475606-in-2019">15: ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all() (score <span>475606</span> in 2019)</a></li>
+<li><a href="#how-to-print-the-full-numpy-array-without-truncation-score-457227-in-2019">16: How to print the full NumPy array, without truncation? (score <span>457227</span> in 2019)</a></li>
+<li><a href="#stringio-in-python3-score-456612-in-2018">17: StringIO in Python3 (score <span>456612</span> in 2018)</a></li>
+<li><a href="#how-do-i-find-the-length-or-dimensions-size-of-a-numpy-matrix-in-python-score-449859-in-2014">18: How do I find the length (or dimensions, size) of a numpy matrix in python? (score <span>449859</span> in 2014)</a></li>
+<li><a href="#how-to-normalize-an-array-in-numpy-score-442096-in-2019">19: How to normalize an array in NumPy? (score <span>442096</span> in 2019)</a></li>
+<li><a href="#saving-a-numpy-array-as-an-image-score-433082-in-2009">20: Saving a Numpy array as an image (score <span>433082</span> in 2009)</a></li>
+<li><a href="#how-to-count-the-occurrence-of-certain-item-in-an-ndarray-in-python-score-403188-in-2018">21: How to count the occurrence of certain item in an ndarray in Python? (score <span>403188</span> in 2018)</a></li>
+<li><a href="#how-to-take-column-slices-of-dataframe-in-pandas-score-392251-in-2019">22: How to take column-slices of dataframe in pandas (score <span>392251</span> in 2019)</a></li>
+<li><a href="#how-to-remove-specific-elements-in-a-numpy-array-score-374737-in">23: How to remove specific elements in a numpy array (score <span>374737</span> in )</a></li>
+<li><a href="#initialize-a-numpy-array-score-371377-in-2016">24: initialize a numpy array (score <span>371377</span> in 2016)</a></li>
+<li><a href="#converting-numpy-array-into-python-list-structure-score-368802-in-2016">25: Converting NumPy array into Python List structure? (score <span>368802</span> in 2016)</a></li>
+<li><a href="#how-to-add-an-extra-column-to-a-numpy-array-score-365161-in-2018">26: How to add an extra column to a NumPy array (score <span>365161</span> in 2018)</a></li>
+<li><a href="#python-numpy-valueerror-operands-could-not-be-broadcast-together-with-shapes-score-361482-in-2019">27: python numpy ValueError: operands could not be broadcast together with shapes (score <span>361482</span> in 2019)</a></li>
+<li><a href="#numpy-matrix-vector-multiplication-score-359277-in-2016">28: numpy matrix vector multiplication (score <span>359277</span> in 2016)</a></li>
+<li><a href="#numpy---add-row-to-array-score-349056-in-2010">29: Numpy - add row to array (score <span>349056</span> in 2010)</a></li>
+<li><a href="#pandas-create-new-column-based-on-values-from-other-columns-apply-a-function-of-multiple-columns-row-wise-score-346548-in-2019">30: pandas create new column based on values from other columns / apply a function of multiple columns, row-wise (score <span>346548</span> in 2019)</a></li>
+<li><a href="#most-efficient-way-to-reverse-a-numpy-array-score-343514-in-2013">31: Most efficient way to reverse a numpy array (score <span>343514</span> in 2013)</a></li>
+<li><a href="#converting-between-datetime-timestamp-and-datetime64-score-334661-in-2019">32: Converting between datetime, Timestamp and datetime64 (score <span>334661</span> in 2019)</a></li>
+<li><a href="#installing-numpy-on-64bit-windows-7-with-python-2.7.3-score-333639-in-2013">33: Installing Numpy on 64bit Windows 7 with Python 2.7.3 (score <span>333639</span> in 2013)</a></li>
+<li><a href="#calculating-pearson-correlation-and-significance-in-python-score-329259-in-2014">34: Calculating Pearson correlation and significance in Python (score <span>329259</span> in 2014)</a></li>
+<li><a href="#how-do-i-convert-a-numpy-array-to-and-display-an-image-score-325989-in-2019">35: How do I convert a numpy array to (and display) an image? (score <span>325989</span> in 2019)</a></li>
+<li><a href="#transposing-a-numpy-array-score-324306-in-2019">36: Transposing a NumPy array (score <span>324306</span> in 2019)</a></li>
+<li><a href="#how-to-convert-a-pil-image-into-a-numpy-array-score-324029-in-2019">37: How to convert a PIL Image into a numpy array? (score <span>324029</span> in 2019)</a></li>
+<li><a href="#convert-columns-to-string-in-pandas-score-321312-in-2015">38: Convert Columns to String in Pandas (score <span>321312</span> in 2015)</a></li>
+<li><a href="#how-to-pretty-print-a-numpy.array-without-scientific-notation-and-with-given-precision-score-314326-in-2019">39: How to pretty-print a numpy.array without scientific notation and with given precision? (score <span>314326</span> in 2019)</a></li>
+<li><a href="#how-to-convert-2d-float-numpy-array-to-2d-int-numpy-array-score-312223-in">40: How to convert 2D float numpy array to 2D int numpy array? (score <span>312223</span> in )</a></li>
+<li><a href="#pandas-conditional-creation-of-a-seriesdataframe-column-score-310122-in-2019">41: Pandas conditional creation of a series/dataframe column (score <span>310122</span> in 2019)</a></li>
+<li><a href="#how-do-i-check-which-version-of-numpy-im-using-score-303358-in-2019">42: How do I check which version of NumPy I’m using? (score <span>303358</span> in 2019)</a></li>
+<li><a href="#replace-all-elements-of-python-numpy-array-that-are-greater-than-some-value-score-301621-in-2013">43: Replace all elements of Python NumPy Array that are greater than some value (score <span>301621</span> in 2013)</a></li>
+<li><a href="#most-efficient-way-to-map-function-over-numpy-array-score-301119-in-2016">44: Most efficient way to map function over numpy array (score <span>301119</span> in 2016)</a></li>
+<li><a href="#how-do-i-get-indices-of-n-maximum-values-in-a-numpy-array-score-300000-in-2019">45: How do I get indices of N maximum values in a NumPy array? (score <span>300000</span> in 2019)</a></li>
+<li><a href="#removing-nan-values-from-an-array-score-291858-in-2019">46: Removing nan values from an array (score <span>291858</span> in 2019)</a></li>
+<li><a href="#how-to-install-numpy-on-windows-using-pip-install-score-290925-in-2017">47: How to install numpy on windows using pip install? (score <span>290925</span> in 2017)</a></li>
+<li><a href="#comparing-two-numpy-arrays-for-equality-element-wise-score-285249-in-2015">48: Comparing two numpy arrays for equality, element-wise (score <span>285249</span> in 2015)</a></li>
+<li><a href="#moving-average-or-running-mean-score-281701-in-2017">49: Moving average or running mean (score <span>281701</span> in 2017)</a></li>
+<li><a href="#how-do-i-compute-derivative-using-numpy-score-267330-in-2015">50: How do I compute derivative using Numpy? (score <span>267330</span> in 2015)</a></li>
+<li><a href="#python-find-position-of-element-in-array-score-262440-in-2016">51: Python: find position of element in array (score <span>262440</span> in 2016)</a></li>
+<li><a href="#numpy-array-initialization-fill-with-identical-values-score-261624-in-2019">52: NumPy array initialization (fill with identical values) (score <span>261624</span> in 2019)</a></li>
+<li><a href="#concatenating-two-one-dimensional-numpy-arrays-score-256691-in-2019">53: Concatenating two one-dimensional NumPy arrays (score <span>256691</span> in 2019)</a></li>
+<li><a href="#what-does-.shape-do-in-for-i-in-rangey.shape0-score-255964-in-2014">54: What does .shape[] do in “for i in range(Y.shape[0])”? (score <span>255964</span> in 2014)</a></li>
+<li><a href="#sorting-arrays-in-numpy-by-column-score-255753-in-2018">55: Sorting arrays in NumPy by column (score <span>255753</span> in 2018)</a></li>
+<li><a href="#how-do-you-get-the-magnitude-of-a-vector-in-numpy-score-255123-in-2016">56: How do you get the magnitude of a vector in Numpy? (score <span>255123</span> in 2016)</a></li>
+<li><a href="#how-to-save-a-list-as-numpy-array-in-python-score-246629-in">57: How to save a list as numpy array in python? (score <span>246629</span> in )</a></li>
+<li><a href="#how-to-convert-an-array-of-strings-to-an-array-of-floats-in-numpy-score-243441-in-2018">58: How to convert an array of strings to an array of floats in numpy? (score <span>243441</span> in 2018)</a></li>
+<li><a href="#how-to-write-a-multidimensional-array-to-a-text-file-score-240878-in-2010">59: How to write a multidimensional array to a text file? (score <span>240878</span> in 2010)</a></li>
+<li><a href="#how-to-convert-an-rgb-image-to-numpy-array-score-239683-in-2018">60: how to convert an RGB image to numpy array? (score <span>239683</span> in 2018)</a></li>
+<li><a href="#how-can-i-convert-a-tensor-into-a-numpy-array-in-tensorflow-score-239603-in-2017">61: How can I convert a tensor into a numpy array in TensorFlow? (score <span>239603</span> in 2017)</a></li>
+<li><a href="#plotting-a-2d-heatmap-with-matplotlib-score-239404-in">62: Plotting a 2D heatmap with Matplotlib (score <span>239404</span> in )</a></li>
+<li><a href="#windows-scipy-install-no-lapackblas-resources-found-score-235788-in-2016">63: Windows Scipy Install: No Lapack/Blas Resources Found (score <span>235788</span> in 2016)</a></li>
+<li><a href="#matplotlib-set-markers-for-individual-points-on-a-line-score-235042-in-2013">64: matplotlib: Set markers for individual points on a line (score <span>235042</span> in 2013)</a></li>
+<li><a href="#from-nd-to-1d-arrays-score-234527-in-2016">65: From ND to 1D arrays (score <span>234527</span> in 2016)</a></li>
+<li><a href="#how-do-i-calculate-percentiles-with-pythonnumpy-score-234077-in-2019">66: How do I calculate percentiles with python/numpy? (score <span>234077</span> in 2019)</a></li>
+<li><a href="#how-does-multiplication-differ-for-numpy-matrix-vs-array-classes-score-233980-in-2014">67: how does multiplication differ for NumPy Matrix vs Array classes? (score <span>233980</span> in 2014)</a></li>
+<li><a href="#how-to-import-numpy-in-the-python-shell-score-233281-in-2018">68: How to import NumPy in the Python shell (score <span>233281</span> in 2018)</a></li>
+<li><a href="#importerror-numpy.core.multiarray-failed-to-import-score-232374-in-2018">69: ImportError: numpy.core.multiarray failed to import (score <span>232374</span> in 2018)</a></li>
+<li><a href="#find-nearest-value-in-numpy-array-score-230524-in-2017">70: Find nearest value in numpy array (score <span>230524</span> in 2017)</a></li>
+<li><a href="#numpy-most-efficient-frequency-counts-for-unique-values-in-an-array-score-228927-in-2015">71: numpy: most efficient frequency counts for unique values in an array (score <span>228927</span> in 2015)</a></li>
+<li><a href="#installing-scipy-and-numpy-using-pip-score-224954-in-2015">72: Installing SciPy and NumPy using pip (score <span>224954</span> in 2015)</a></li>
+<li><a href="#use-a.any-or-a.all-score-224789-in-2015">73: Use a.any() or a.all() (score <span>224789</span> in 2015)</a></li>
+<li><a href="#list-object-has-no-attribute-shape-score-220134-in-2016">74: ‘list’ object has no attribute ‘shape’ (score <span>220134</span> in 2016)</a></li>
+<li><a href="#pandas-read_csv-low_memory-and-dtype-options-score-217762-in-2016">75: Pandas read_csv low_memory and dtype options (score <span>217762</span> in 2016)</a></li>
+<li><a href="#extracting-specific-columns-in-numpy-array-score-213728-in-2011">76: Extracting specific columns in numpy array (score <span>213728</span> in 2011)</a></li>
+<li><a href="#how-to-normalize-a-numpy-array-to-within-a-certain-range-score-213628-in-2013">77: How to normalize a NumPy array to within a certain range? (score <span>213628</span> in 2013)</a></li>
+<li><a href="#take-multiple-lists-into-dataframe-score-211252-in-2019">78: Take multiple lists into dataframe (score <span>211252</span> in 2019)</a></li>
+<li><a href="#plotting-a-fast-fourier-transform-in-python-score-210888-in-2014">79: Plotting a Fast Fourier Transform in Python (score <span>210888</span> in 2014)</a></li>
+<li><a href="#add-single-element-to-array-in-numpy-score-210737-in">80: Add single element to array in numpy (score <span>210737</span> in )</a></li>
+<li><a href="#how-to-install-python-modules-without-root-access-score-210023-in-2011">81: How to install python modules without root access? (score <span>210023</span> in 2011)</a></li>
+<li><a href="#a-tool-to-convert-matlab-code-to-python-score-209989-in-2013">82: A tool to convert MATLAB code to Python (score <span>209989</span> in 2013)</a></li>
+<li><a href="#how-to-get-correlation-of-two-vectors-in-python-score-209806-in-2013">83: How to get correlation of two vectors in python (score <span>209806</span> in 2013)</a></li>
+<li><a href="#normalize-data-in-pandas-score-209237-in-2017">84: Normalize data in pandas (score <span>209237</span> in 2017)</a></li>
+<li><a href="#numpy-matrix-to-array-score-208328-in-2013">85: Numpy matrix to array (score <span>208328</span> in 2013)</a></li>
+<li><a href="#how-to-add-items-into-a-numpy-array-score-208229-in-2015">86: How to add items into a numpy array (score <span>208229</span> in 2015)</a></li>
+<li><a href="#what-does-numpy.random.seed0-do-score-207987-in-2018">87: What does numpy.random.seed(0) do? (score <span>207987</span> in 2018)</a></li>
+<li><a href="#deleting-rows-in-numpy-array-score-205862-in-2014">88: deleting rows in numpy array (score <span>205862</span> in 2014)</a></li>
+<li><a href="#simple-digit-recognition-ocr-in-opencv-python-score-204903-in-2018">89: Simple Digit Recognition OCR in OpenCV-Python (score <span>204903</span> in 2018)</a></li>
+<li><a href="#what-does--1-mean-in-numpy-reshape-score-203348-in-2015">90: What does -1 mean in numpy reshape? (score <span>203348</span> in 2015)</a></li>
+<li><a href="#linear-regression-with-matplotlib-numpy-score-200825-in-2017">91: Linear regression with matplotlib / numpy (score <span>200825</span> in 2017)</a></li>
+<li><a href="#convert-a-1d-array-to-a-2d-array-in-numpy-score-200751-in-2018">92: Convert a 1D array to a 2D array in numpy (score <span>200751</span> in 2018)</a></li>
+<li><a href="#how-to-smooth-a-curve-in-the-right-way-score-194813-in-2013">93: How to smooth a curve in the right way? (score <span>194813</span> in 2013)</a></li>
+<li><a href="#how-does-numpy.histogram-work-score-192883-in-2015">94: How does numpy.histogram() work? (score <span>192883</span> in 2015)</a></li>
+<li><a href="#find-indices-of-elements-equal-to-zero-in-a-numpy-array-score-190831-in-2018">95: Find indices of elements equal to zero in a NumPy array (score <span>190831</span> in 2018)</a></li>
+<li><a href="#numpy-array-typeerror-only-integer-scalar-arrays-can-be-converted-to-a-scalar-index-score-190084-in-2019">96: numpy array TypeError: only integer scalar arrays can be converted to a scalar index (score <span>190084</span> in 2019)</a></li>
+<li><a href="#importerror-dll-load-failed-the-specified-module-could-not-be-found-score-188704-in">97: ImportError: DLL load failed: The specified module could not be found (score <span>188704</span> in )</a></li>
+<li><a href="#slicing-of-a-numpy-2d-array-or-how-do-i-extract-an-mxm-submatrix-from-an-nxn-array-nm-score-187692-in-2015">98: Slicing of a NumPy 2d array, or how do I extract an mxm submatrix from an nxn array (n&gt;m)? (score <span>187692</span> in 2015)</a></li>
+<li><a href="#python-first-and-last-element-from-array-score-187102-in-2017">99: Python first and last element from array (score <span>187102</span> in 2017)</a></li>
+<li><a href="#how-to-do-exponential-and-logarithmic-curve-fitting-in-python-i-found-only-polynomial-fitting-score-186765-in-2013">100: How to do exponential and logarithmic curve fitting in Python? I found only polynomial fitting (score <span>186765</span> in 2013)</a></li>
+</ul>
+</nav>
 <section class="level2">
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 <section id="how-do-i-create-an-empty-arraymatrix-in-numpy-score-803995-in-2014" class="level3">
@@ -193,22 +300,19 @@ Deprecate your usage of <code>values</code> and <code>as_matrix()</code>!
 <strong><code>array</code></strong>, which is defined on <code>Index</code> and <code>Series</code> objects only.
 </li>
 </ol>
-<p>If you visit the v0.24 docs for <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.values.html
-#pandas.DataFrame.values" rel="noreferrer"><code>.values</code></a>, you will see a big red warning that says:</p>
+<p>If you visit the v0.24 docs for <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.values.html#pandas.DataFrame.values" rel="noreferrer"><code>.values</code></a>, you will see a big red warning that says:</p>
 <blockquote>
 <h5>
 Warning: We recommend using <code>DataFrame.to_numpy()</code> instead.
 </h3>
 </blockquote>
-<p>See <a href="https://pandas-docs.github.io/pandas-docs-travis/whatsnew/v0.24.0.html
-#accessing-the-values-in-a-series-or-index" rel="noreferrer">this section of the v0.24.0 release notes</a>, and <a href="https://stackoverflow.com/a/54324513/4909087">this answer</a> for more information.</p>
+<p>See <a href="https://pandas-docs.github.io/pandas-docs-travis/whatsnew/v0.24.0.html#accessing-the-values-in-a-series-or-index" rel="noreferrer">this section of the v0.24.0 release notes</a>, and <a href="https://stackoverflow.com/a/54324513/4909087">this answer</a> for more information.</p>
 <hr>
 <h5>
 <strong>Towards Better Consistency: <a href="http://pandas.pydata.org/pandas-docs/version/0.24.0rc1/api/generated/pandas.Series.to_numpy.html" rel="noreferrer"><code>to_numpy()</code></a></strong>
 </h1>
 <p>In the spirit of better consistency throughout the API, a new method <code>to_numpy</code> has been introduced to extract the underlying NumPy array from DataFrames.</p>
 <pre><code>numpy
-
 # Setup.
 df = pd.DataFrame({&#39;A&#39;: [1, 2, 3], &#39;B&#39;: [4, 5, 6]}, index=[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;])
 df
@@ -225,11 +329,9 @@ array([[1, 4],
 <p>As mentioned above, this method is also defined on <code>Index</code> and <code>Series</code> objects (see <a href="https://stackoverflow.com/a/54324513/4909087">here</a>).</p>
 <pre><code>numpy
 df.index.to_numpy()
-
 # array([&#39;a&#39;, &#39;b&#39;, &#39;c&#39;], dtype=object)
 
 df[&#39;A&#39;].to_numpy()
-
 #  array([1, 2, 3])</code></pre>
 <p>By default, a view is returned, so any modifications made will affect the original.</p>
 <pre><code>numpy
@@ -252,22 +354,17 @@ a  1  4
 b  2  5
 c  3  6</code></pre>
 <p>
-<strong>If you need to Preserve the <code>dtypes</code>…</strong><br> As shown in another answer, <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_records.html
-#pandas-dataframe-to-records" rel="noreferrer"><code>DataFrame.to_records</code></a> is a good way to do this.
+<strong>If you need to Preserve the <code>dtypes</code>…</strong><br> As shown in another answer, <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_records.html#pandas-dataframe-to-records" rel="noreferrer"><code>DataFrame.to_records</code></a> is a good way to do this.
 </p>
 <pre><code>numpy
 df.to_records()
-
 # rec.array([(&#39;a&#39;, -1, 4), (&#39;b&#39;,  2, 5), (&#39;c&#39;,  3, 6)],
-
 #           dtype=[(&#39;index&#39;, &#39;O&#39;), (&#39;A&#39;, &#39;&amp;lt;i8&#39;), (&#39;B&#39;, &#39;&amp;lt;i8&#39;)])</code></pre>
 <p>This cannot be done with <code>to_numpy</code>, unfortunately. However, as an alternative, you can use <code>np.rec.fromrecords</code>:</p>
 <pre><code>numpy
 v = df.reset_index()
 np.rec.fromrecords(v, names=v.columns.tolist())
-
 # rec.array([(&#39;a&#39;, -1, 4), (&#39;b&#39;,  2, 5), (&#39;c&#39;,  3, 6)],
-
 #          dtype=[(&#39;index&#39;, &#39;&amp;lt;U1&#39;), (&#39;A&#39;, &#39;&amp;lt;i8&#39;), (&#39;B&#39;, &#39;&amp;lt;i8&#39;)])</code></pre>
 <p>Performance wise, it’s nearly the same (actually, using <code>rec.fromrecords</code> is a bit faster).</p>
 <pre><code>numpy
@@ -319,8 +416,7 @@ def firstfunction():
     roughTrimmedMatrix = p.array(dataMatrix[1:,1:17])
 
 
-    trimmedMatrix = p.array(roughTrimmedMatrix,dtype=p.float64)
-#ERROR THROWN HERE
+    trimmedMatrix = p.array(roughTrimmedMatrix,dtype=p.float64)  #ERROR THROWN HERE
 
 
     myMeans = p.mean(trimmedMatrix,axis=0,dtype=p.float64)
@@ -400,49 +496,37 @@ ValueError: setting an array element with a sequence.</code></pre>
 <pre><code>numpy
 import numpy
 
-numpy.array([1,2,3])
-#good
+numpy.array([1,2,3])               #good
 
-numpy.array([1, (2,3)])
-#Fail, can&#39;t convert a tuple into a numpy 
-
-#array element
+numpy.array([1, (2,3)])            #Fail, can&#39;t convert a tuple into a numpy 
+                                   #array element
 
 
-numpy.mean([5,(6+7)])
-#good
+numpy.mean([5,(6+7)])              #good
 
-numpy.mean([5,tuple(range(2))])
-#Fail, can&#39;t convert a tuple into a numpy 
-
-#array element
+numpy.mean([5,tuple(range(2))])    #Fail, can&#39;t convert a tuple into a numpy 
+                                   #array element
 
 
 def foo():
     return 3
-numpy.array([2, foo()])
-#good
+numpy.array([2, foo()])            #good
 
 
 def foo():
     return [3,4]
-numpy.array([2, foo()])
-#Fail, can&#39;t convert a list into a numpy 
-
-#array element</code></pre>
+numpy.array([2, foo()])            #Fail, can&#39;t convert a list into a numpy 
+                                   #array element</code></pre>
 <p><strong>2. By trying to cram a numpy array length &gt; 1 into a numpy array element:</strong></p>
 <pre><code>numpy
 x = np.array([1,2,3])
-x[0] = np.array([4])
-#good
+x[0] = np.array([4])         #good
 
 
 
 x = np.array([1,2,3])
-x[0] = np.array([4,5])
-#Fail, can&#39;t convert the numpy array to fit 
-
-#into a numpy array element</code></pre>
+x[0] = np.array([4,5])       #Fail, can&#39;t convert the numpy array to fit 
+                             #into a numpy array element</code></pre>
 <p>A numpy array is being created, and numpy doesn’t know how to cram multivalued tuples or arrays into single element slots. It expects whatever you give it to evaluate to a single number, if it doesn’t, Numpy responds that it doesn’t know how to set an array element with a sequence.</p>
 </section>
 <section id="answer-3-score-12" class="level4">
@@ -491,8 +575,7 @@ a = np.array([[1,2],[1,2]])</code></pre>
 </section>
 <section id="answer-accepted-score-450" class="level4">
 <h4>Answer accepted (score 450)</h4>
-<p>It is <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html
-#numpy.ndarray.shape" rel="noreferrer"><code>.shape</code></a>:</p>
+<p>It is <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.shape.html#numpy.ndarray.shape" rel="noreferrer"><code>.shape</code></a>:</p>
 <blockquote>
 <p>
 ndarray.<strong>shape</strong><br> Tuple of array dimensions.
@@ -520,32 +603,27 @@ Second：
 <h5>
 dimension
 </h3>
-<p>In <em>Mathematics/Physics</em>, dimension or dimensionality is informally defined as the minimum number of coordinates needed to specify any point within a space. But in <em>Numpy</em>, according to the <a href="https://docs.scipy.org/doc/numpy/user/quickstart.html
-#the-basics" rel="noreferrer">numpy doc</a>, it’s the same as axis/axes:</p>
+<p>In <em>Mathematics/Physics</em>, dimension or dimensionality is informally defined as the minimum number of coordinates needed to specify any point within a space. But in <em>Numpy</em>, according to the <a href="https://docs.scipy.org/doc/numpy/user/quickstart.html#the-basics" rel="noreferrer">numpy doc</a>, it’s the same as axis/axes:</p>
 <blockquote>
 In Numpy dimensions are called axes. The number of axes is rank.
 </blockquote>
 <pre><code>numpy
-In [3]: a.ndim
-# num of dimensions/axes, *Mathematics definition of dimension*
+In [3]: a.ndim  # num of dimensions/axes, *Mathematics definition of dimension*
 Out[3]: 2</code></pre>
 <h5>
 axis/axes
 </h3>
 <p>the <em>nth</em> coordinate to index an <code>array</code> in Numpy. And multidimensional arrays can have one index per axis.</p>
 <pre><code>numpy
-In [4]: a[1,0]
-# to index `a`, we specific 1 at the first axis and 0 at the second axis.
-Out[4]: 3
-# which results in 3 (locate at the row 1 and column 0, 0-based index)</code></pre>
+In [4]: a[1,0]  # to index `a`, we specific 1 at the first axis and 0 at the second axis.
+Out[4]: 3  # which results in 3 (locate at the row 1 and column 0, 0-based index)</code></pre>
 <h5>
 shape
 </h3>
 <p>describes how many data (or the range) along each available axis.</p>
 <pre><code>numpy
 In [5]: a.shape
-Out[5]: (2, 2)
-# both the first and second axis have 2 (columns/rows/pages/blocks/...) data</code></pre>
+Out[5]: (2, 2)  # both the first and second axis have 2 (columns/rows/pages/blocks/...) data</code></pre>
 </section>
 <section id="answer-3-score-44" class="level4">
 <h4>Answer 3 (score 44)</h4>
@@ -593,8 +671,7 @@ dist = numpy.linalg.norm(a-b)</code></pre>
 </section>
 <section id="answer-2-score-136" class="level4">
 <h4>Answer 2 (score 136)</h4>
-<p>There’s a function for that in SciPy. It’s called <a href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.euclidean.html
-#scipy.spatial.distance.euclidean" rel="noreferrer">Euclidean</a>.</p>
+<p>There’s a function for that in SciPy. It’s called <a href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.euclidean.html#scipy.spatial.distance.euclidean" rel="noreferrer">Euclidean</a>.</p>
 <p>Example:</p>
 <pre><code>numpy
 from scipy.spatial import distance
@@ -709,8 +786,7 @@ df=pd.read_csv(&#39;myfile.csv&#39;, sep=&#39;,&#39;,header=None)
 df.values
 array([[ 1. ,  2. ,  3. ],
        [ 4. ,  5.5,  6. ]])</code></pre>
-<p>This gives a pandas <a href="http://pandas.pydata.org/pandas-docs/dev/dsintro.html
-#dataframe" rel="noreferrer">DataFrame</a> - allowing <a href="https://stackoverflow.com/a/11077215/1461850">many useful data manipulation functions which are not directly available with numpy record arrays</a>.</p>
+<p>This gives a pandas <a href="http://pandas.pydata.org/pandas-docs/dev/dsintro.html#dataframe" rel="noreferrer">DataFrame</a> - allowing <a href="https://stackoverflow.com/a/11077215/1461850">many useful data manipulation functions which are not directly available with numpy record arrays</a>.</p>
 <blockquote>
 <p>
 DataFrame is a 2-dimensional labeled data structure with columns of potentially different types. You can think of it like a spreadsheet or SQL table…
@@ -866,15 +942,11 @@ df = pd.DataFrame(data,index=data[:,0]),</code></pre>
 </section>
 <section id="answer-accepted-score-258" class="level4">
 <h4>Answer accepted (score 258)</h4>
-<p>You need to specify <code>data</code>, <code>index</code> and <code>columns</code> to <a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html
-#pandas.DataFrame" rel="noreferrer"><code>DataFrame</code></a> constructor, as in:</p>
+<p>You need to specify <code>data</code>, <code>index</code> and <code>columns</code> to <a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html#pandas.DataFrame" rel="noreferrer"><code>DataFrame</code></a> constructor, as in:</p>
 <pre><code>numpy
-&amp;gt;&amp;gt;&amp;gt; pd.DataFrame(data=data[1:,1:],
-# values
-...              index=data[1:,0],
-# 1st column as index
-...              columns=data[0,1:])
-# 1st row as the column names</code></pre>
+&amp;gt;&amp;gt;&amp;gt; pd.DataFrame(data=data[1:,1:],    # values
+...              index=data[1:,0],    # 1st column as index
+...              columns=data[0,1:])  # 1st row as the column names</code></pre>
 <p><strong>edit</strong>: as in the <span class="citation" data-cites="joris">@joris</span> comment, you may need to change above to <code>np.int_(data[1:,1:])</code> to have correct data type.</p>
 </section>
 <section id="answer-2-score-53" class="level4">
@@ -884,14 +956,12 @@ df = pd.DataFrame(data,index=data[:,0]),</code></pre>
 import numpy as np
 import pandas as pd
 
-
 # Creating a 2 dimensional numpy array
 &amp;gt;&amp;gt;&amp;gt; data = np.array([[5.8, 2.8], [6.0, 2.2]])
 &amp;gt;&amp;gt;&amp;gt; print(data)
 &amp;gt;&amp;gt;&amp;gt; data
 array([[5.8, 2.8],
        [6. , 2.2]])
-
 
 # Creating pandas dataframe from numpy array
 &amp;gt;&amp;gt;&amp;gt; dataset = pd.DataFrame({&#39;Column1&#39;: data[:, 0], &#39;Column2&#39;: data[:, 1]})
@@ -992,12 +1062,9 @@ array[itemindex[0][1]][itemindex[1][1]]</code></pre>
 <h4>Answer 3 (score 42)</h4>
 <p>You can also convert a NumPy array to list in the air and get its index. For example,</p>
 <pre><code>numpy
-l = [1,2,3,4,5]
-# Python list
-a = numpy.array(l)
-# NumPy array
-i = a.tolist().index(2)
-# i will return index of 2
+l = [1,2,3,4,5] # Python list
+a = numpy.array(l) # NumPy array
+i = a.tolist().index(2) # i will return index of 2
 print i</code></pre>
 <p>It will print 1.</p>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
@@ -1036,8 +1103,7 @@ for item in arrayA:
 <pre><code>numpy
 dataset_list = &#39;&#39;.join(input_list)
 dataset_array = []
-for item in dataset_list.split(&#39;;&#39;):
-# comma, or other
+for item in dataset_list.split(&#39;;&#39;): # comma, or other
     dataset_array.append(item)</code></pre>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
@@ -1220,8 +1286,7 @@ ValueError: The truth value of an array with more than one element is ambiguous.
 &amp;gt;&amp;gt;&amp;gt; arr or arr
 ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()</code></pre>
 <p>There are more functions and statements in Python that hide <code>bool</code> calls, for example <code>2 &amp;lt; x &amp;lt; 10</code> is just another way of writing <code>2 &amp;lt; x and x &amp;lt; 10</code>. And the <code>and</code> will call <code>bool</code>: <code>bool(2 &amp;lt; x) and bool(x &amp;lt; 10)</code>.</p>
-<p>The <strong>element-wise</strong> equivalent for <code>and</code> would be the <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.logical_and.html" rel="noreferrer"><code>np.logical_and</code></a> function, similarly you could use <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.logical_or.html
-#numpy.logical_or" rel="noreferrer"><code>np.logical_or</code></a> as equivalent for <code>or</code>.</p>
+<p>The <strong>element-wise</strong> equivalent for <code>and</code> would be the <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.logical_and.html" rel="noreferrer"><code>np.logical_and</code></a> function, similarly you could use <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.logical_or.html#numpy.logical_or" rel="noreferrer"><code>np.logical_or</code></a> as equivalent for <code>or</code>.</p>
 <p>For boolean arrays - and comparisons like <code>&amp;lt;</code>, <code>&amp;lt;=</code>, <code>==</code>, <code>!=</code>, <code>&amp;gt;=</code> and <code>&amp;gt;</code> on NumPy arrays return boolean NumPy arrays - you can also use the <strong>element-wise bitwise</strong> functions (and operators): <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.bitwise_and.html" rel="noreferrer"><code>np.bitwise_and</code></a> (<code>&amp;amp;</code> operator)</p>
 <pre><code>numpy
 &amp;gt;&amp;gt;&amp;gt; np.logical_and(arr &amp;gt; 1, arr &amp;lt; 3)
@@ -1232,8 +1297,7 @@ array([False,  True, False], dtype=bool)
 
 &amp;gt;&amp;gt;&amp;gt; (arr &amp;gt; 1) &amp;amp; (arr &amp;lt; 3)
 array([False,  True, False], dtype=bool)</code></pre>
-<p>and <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.bitwise_or.html
-#numpy.bitwise_or" rel="noreferrer"><code>bitwise_or</code></a> (<code>|</code> operator):</p>
+<p>and <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.bitwise_or.html#numpy.bitwise_or" rel="noreferrer"><code>bitwise_or</code></a> (<code>|</code> operator):</p>
 <pre><code>numpy
 &amp;gt;&amp;gt;&amp;gt; np.logical_or(arr &amp;lt;= 1, arr &amp;gt;= 3)
 array([ True, False,  True], dtype=bool)
@@ -1337,11 +1401,9 @@ The <code>StringIO</code> and <code>cStringIO</code> modules are gone. Instead, 
 <p>A possibly useful method of fixing some Python 2 code to also work in Python 3 (caveat emptor):</p>
 <pre><code>numpy
 try:
-    from StringIO import StringIO
-## for Python 2
+    from StringIO import StringIO ## for Python 2
 except ImportError:
-    from io import StringIO
-## for Python 3</code></pre>
+    from io import StringIO ## for Python 3</code></pre>
 <blockquote>
 <em>Note: This example may be tangential to the main issue of the question and is included only as something to consider when generically addressing the missing <code>StringIO</code> module.</em> For a more direct solution the the message <code>TypeError: Can't convert 'bytes' object to str implicitly</code>, see <a href="https://stackoverflow.com/a/11970414/86967">this answer</a>.
 </blockquote>
@@ -1381,8 +1443,7 @@ A.shape</code></pre>
 </section>
 <section id="answer-2-score-30" class="level4">
 <h4>Answer 2 (score 30)</h4>
-<p><code>matrix.size</code> according to <a href="http://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html
-#array-methods" rel="noreferrer">the numpy docs</a> returns the <code>Number of elements in the array.</code> Hope that helps.</p>
+<p><code>matrix.size</code> according to <a href="http://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html#array-methods" rel="noreferrer">the numpy docs</a> returns the <code>Number of elements in the array.</code> Hope that helps.</p>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
 </section>
@@ -1402,8 +1463,7 @@ def normalize(v):
 </section>
 <section id="answer-accepted-score-122" class="level4">
 <h4>Answer accepted (score 122)</h4>
-<p>If you’re using scikit-learn you can use <a href="http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.normalize.html
-#sklearn.preprocessing.normalize" rel="noreferrer"><code>sklearn.preprocessing.normalize</code></a>:</p>
+<p>If you’re using scikit-learn you can use <a href="http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.normalize.html#sklearn.preprocessing.normalize" rel="noreferrer"><code>sklearn.preprocessing.normalize</code></a>:</p>
 <pre><code>numpy
 import numpy as np
 from sklearn.preprocessing import normalize
@@ -1412,7 +1472,6 @@ x = np.random.rand(1000)*10
 norm1 = x / np.linalg.norm(x)
 norm2 = normalize(x[:,np.newaxis], axis=0).ravel()
 print np.all(norm1 == norm2)
-
 # True</code></pre>
 </section>
 <section id="answer-2-score-37" class="level4">
@@ -1456,8 +1515,7 @@ def normalize(v):
 </section>
 <section id="answer-accepted-score-52" class="level4">
 <h4>Answer accepted (score 52)</h4>
-<p>You can use <a href="https://github.com/drj11/pypng/" rel="noreferrer">PyPNG</a>. It’s a pure Python (no dependencies) open source PNG encoder/decoder and it <a href="http://packages.python.org/pypng/ex.html
-#numpy" rel="noreferrer">supports</a> writing NumPy arrays as images.</p>
+<p>You can use <a href="https://github.com/drj11/pypng/" rel="noreferrer">PyPNG</a>. It’s a pure Python (no dependencies) open source PNG encoder/decoder and it <a href="http://packages.python.org/pypng/ex.html#numpy" rel="noreferrer">supports</a> writing NumPy arrays as images.</p>
 </section>
 <section id="answer-2-score-246" class="level4">
 <h4>Answer 2 (score 246)</h4>
@@ -1504,8 +1562,7 @@ In Python, I have an ndarray <code>y</code> that is printed as <code>array([0, 0
 &amp;gt;&amp;gt;&amp;gt; dict(zip(unique, counts))
 {0: 7, 1: 4, 2: 1, 3: 2, 4: 1}</code></pre>
 <p><strong>Non-numpy way</strong>:</p>
-<p>Use <a href="https://docs.python.org/2/library/collections.html
-#collections.Counter" rel="noreferrer"><code>collections.Counter</code></a>;</p>
+<p>Use <a href="https://docs.python.org/2/library/collections.html#collections.Counter" rel="noreferrer"><code>collections.Counter</code></a>;</p>
 <pre><code>numpy
 &amp;gt;&amp;gt; import collections, numpy
 
@@ -1567,8 +1624,7 @@ By the way, I find dataframe indexing pretty inconsistent: <code>data['a']</code
 <h5>
 2017 Answer - pandas 0.20: .ix is deprecated. Use .loc
 </h1>
-<p>See the <a href="https://pandas.pydata.org/pandas-docs/stable/indexing.html
-#ix-indexer-is-deprecated" rel="noreferrer">deprecation in the docs</a></p>
+<p>See the <a href="https://pandas.pydata.org/pandas-docs/stable/indexing.html#ix-indexer-is-deprecated" rel="noreferrer">deprecation in the docs</a></p>
 <p><code>.loc</code> uses label based indexing to select both rows and columns. The labels being the values of the index or the columns. Slicing with <code>.loc</code> includes the last element.</p>
 <blockquote>
 <p>
@@ -1576,69 +1632,47 @@ Let’s assume we have a DataFrame with the following columns:<br> <code>foo</co
 </p>
 </blockquote>
 <pre><code>numpy
-
 # selects all rows and all columns beginning at &#39;foo&#39; up to and including &#39;sat&#39;
 df.loc[:, &#39;foo&#39;:&#39;sat&#39;]
-
 # foo bar quz ant cat sat</code></pre>
 <p><code>.loc</code> accepts the same slice notation that Python lists do for both row and columns. Slice notation being <code>start:stop:step</code></p>
 <pre><code>numpy
-
 # slice from &#39;foo&#39; to &#39;cat&#39; by every 2nd column
 df.loc[:, &#39;foo&#39;:&#39;cat&#39;:2]
-
 # foo quz cat
-
 
 # slice from the beginning to &#39;bar&#39;
 df.loc[:, :&#39;bar&#39;]
-
 # foo bar
-
 
 # slice from &#39;quz&#39; to the end by 3
 df.loc[:, &#39;quz&#39;::3]
-
 # quz sat
-
 
 # attempt from &#39;sat&#39; to &#39;bar&#39;
 df.loc[:, &#39;sat&#39;:&#39;bar&#39;]
-
 # no columns returned
-
 
 # slice from &#39;sat&#39; to &#39;bar&#39;
 df.loc[:, &#39;sat&#39;:&#39;bar&#39;:-1]
 sat cat ant quz bar
 
-
 # slice notation is syntatic sugar for the slice function
-
 # slice from &#39;quz&#39; to the end by 2 with slice function
 df.loc[:, slice(&#39;quz&#39;,None, 2)]
-
 # quz cat dat
 
-
 # select specific columns with a list
-
 # select columns foo, bar and dat
 df.loc[:, [&#39;foo&#39;,&#39;bar&#39;,&#39;dat&#39;]]
-
 # foo bar dat</code></pre>
 <p>You can slice by rows and columns. For instance, if you have 5 rows with labels <code>v</code>, <code>w</code>, <code>x</code>, <code>y</code>, <code>z</code></p>
 <pre><code>numpy
-
 # slice from &#39;w&#39; to &#39;y&#39; and &#39;foo&#39; to &#39;ant&#39; by 3
 df.loc[&#39;w&#39;:&#39;y&#39;, &#39;foo&#39;:&#39;ant&#39;:3]
-
 #    foo ant
-
 # w
-
 # x
-
 # y</code></pre>
 </section>
 <section id="answer-2-score-148" class="level4">
@@ -1652,15 +1686,13 @@ df.loc[&#39;w&#39;:&#39;y&#39;, &#39;foo&#39;:&#39;ant&#39;:3]
 1  0.991058  0.510228  0.594784  0.534366
 2  0.407472  0.259811  0.396664  0.894202
 3  0.726168  0.139531  0.324932  0.906575</code></pre>
-<p>where .ix[row slice, column slice] is what is being interpreted. More on Pandas indexing here: <a href="http://pandas.pydata.org/pandas-docs/stable/indexing.html
-#indexing-advanced" rel="noreferrer">http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-advanced</a></p>
+<p>where .ix[row slice, column slice] is what is being interpreted. More on Pandas indexing here: <a href="http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-advanced" rel="noreferrer">http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-advanced</a></p>
 <p><strong>Note:</strong> <code>.ix</code> has been deprecated since Pandas v0.20. You should instead use <code>.loc</code> or <code>.iloc</code>, as appropriate.</p>
 </section>
 <section id="answer-3-score-70" class="level4">
 <h4>Answer 3 (score 70)</h4>
 <p>Lets use the titanic dataset from the seaborn package as an example</p>
 <pre><code>numpy
-
 # Load dataset (pip install seaborn)
 &amp;gt;&amp;gt; import seaborn.apionly as sns
 &amp;gt;&amp;gt; titanic = sns.load_dataset(&#39;titanic&#39;)</code></pre>
@@ -1723,8 +1755,7 @@ index = [2, 3, 6]
 
 new_a = np.delete(a, index)
 
-print(new_a)
-#Prints `[1, 2, 5, 6, 8, 9]`</code></pre>
+print(new_a) #Prints `[1, 2, 5, 6, 8, 9]`</code></pre>
 <p>Note that <code>numpy.delete()</code> returns a new array since <a href="http://docs.scipy.org/doc/numpy/reference/arrays.scalars.html" rel="noreferrer">array scalars</a> are immutable, similar to strings in Python, so each time a change is made to it, a new object is created. I.e., to quote the <code>delete()</code> <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.delete.html" rel="noreferrer">docs</a>:</p>
 <blockquote>
 <p>
@@ -1763,8 +1794,7 @@ for i in range(5):
     a.append(i)</code></pre>
 <p>I want to do something similar with a numpy array. I know about vstack, concatenate etc. However, it seems these require two numpy arrays as inputs. What I need is:</p>
 <pre><code>numpy
-big_array
-# Initially empty. This is where I don&#39;t know what to specify
+big_array # Initially empty. This is where I don&#39;t know what to specify
 for i in range(5):
     array i of shape = (2,4) created.
     add to big_array</code></pre>
@@ -1790,8 +1820,7 @@ Return a new array of given shape and type, filled with ones.
 </blockquote>
 <p>or</p>
 <blockquote>
-<p><a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.empty.html
-#numpy.empty"><code>numpy.empty</code></a></p>
+<p><a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.empty.html#numpy.empty"><code>numpy.empty</code></a></p>
 <p>
 Return a new array of given shape and type, without initializing entries.
 </p>
@@ -1804,14 +1833,11 @@ Return a new array of given shape and type, without initializing entries.
 <p>The way I usually do that is by creating a regular list, then append my stuff into it, and finally transform the list to a numpy array as follows :</p>
 <pre><code>numpy
 import numpy as np
-big_array = []
-#  empty regular list
+big_array = [] #  empty regular list
 for i in range(5):
-    arr = i*np.ones((2,4))
-# for instance
+    arr = i*np.ones((2,4)) # for instance
     big_array.append(arr)
-big_np_array = np.array(big_array)
-# transformed to a numpy array</code></pre>
+big_np_array = np.array(big_array)  # transformed to a numpy array</code></pre>
 <p>of course your final object takes twice the space in the memory at the creation step, but appending on python list is very fast, and creation using np.array() also.</p>
 </section>
 <section id="answer-3-score-13" class="level4">
@@ -1926,41 +1952,33 @@ In [27]: %timeit b = np.zeros((a.shape[0],a.shape[1]+1)); b[:,:-1] = a
 : N = 3
 : A = np.eye(N)
 
-: np.c_[ A, np.ones(N) ]
-# add a column
+: np.c_[ A, np.ones(N) ]              # add a column
 array([[ 1.,  0.,  0.,  1.],
        [ 0.,  1.,  0.,  1.],
        [ 0.,  0.,  1.,  1.]])
 
-: np.c_[ np.ones(N), A, np.ones(N) ]
-# or two
+: np.c_[ np.ones(N), A, np.ones(N) ]  # or two
 array([[ 1.,  1.,  0.,  0.,  1.],
        [ 1.,  0.,  1.,  0.,  1.],
        [ 1.,  0.,  0.,  1.,  1.]])
 
-: np.r_[ A, [A[1]] ]
-# add a row
+: np.r_[ A, [A[1]] ]              # add a row
 array([[ 1.,  0.,  0.],
        [ 0.,  1.,  0.],
        [ 0.,  0.,  1.],
        [ 0.,  1.,  0.]])
-:
-# not np.r_[ A, A[1] ]
+: # not np.r_[ A, A[1] ]
 
-: np.r_[ A[0], 1, 2, 3, A[1] ]
-# mix vecs and scalars
+: np.r_[ A[0], 1, 2, 3, A[1] ]    # mix vecs and scalars
   array([ 1.,  0.,  0.,  1.,  2.,  3.,  0.,  1.,  0.])
 
-: np.r_[ A[0], [1, 2, 3], A[1] ]
-# lists
+: np.r_[ A[0], [1, 2, 3], A[1] ]  # lists
   array([ 1.,  0.,  0.,  1.,  2.,  3.,  0.,  1.,  0.])
 
-: np.r_[ A[0], (1, 2, 3), A[1] ]
-# tuples
+: np.r_[ A[0], (1, 2, 3), A[1] ]  # tuples
   array([ 1.,  0.,  0.,  1.,  2.,  3.,  0.,  1.,  0.])
 
-: np.r_[ A[0], 1:4, A[1] ]
-# same, 1:4 == arange(1,4) == 1,2,3
+: np.r_[ A[0], 1:4, A[1] ]        # same, 1:4 == arange(1,4) == 1,2,3
   array([ 1.,  0.,  0.,  1.,  2.,  3.,  0.,  1.,  0.])</code></pre>
 <p>
 (The reason for square brackets [] instead of round () is that Python expands e.g. 1:4 in square – the wonders of overloading.)
@@ -2036,8 +2054,7 @@ Out[2]: (97, 1)</code></pre>
 </section>
 <section id="answer-3-score-29" class="level4">
 <h4>Answer 3 (score 29)</h4>
-<p>Per Wes McKinney’s <em><a href="http://zempirians.com/ebooks/Wes%20McKinney-Python%20for%20Data%20Analysis-O&
-#39;Reilly%20Media%20(2012).pdf" rel="noreferrer">Python for Data Analysis</a></em></p>
+<p>Per Wes McKinney’s <em><a href="http://zempirians.com/ebooks/Wes%20McKinney-Python%20for%20Data%20Analysis-O&#39;Reilly%20Media%20(2012).pdf" rel="noreferrer">Python for Data Analysis</a></em></p>
 <blockquote>
 <strong>The Broadcasting Rule</strong>: Two arrays are compatable for broadcasting if for each <em>trailing dimension</em> (that is, starting from the end), the axis lengths match or if either of the lengths is 1. Broadcasting is then performed over the missing and/or length 1 dimensions.
 </blockquote>
@@ -2047,8 +2064,7 @@ Out[2]: (97, 1)</code></pre>
 &amp;gt;&amp;gt;&amp;gt; import numpy as np
 &amp;gt;&amp;gt;&amp;gt;
 &amp;gt;&amp;gt;&amp;gt; X = np.arange(8).reshape(4, 2)
-&amp;gt;&amp;gt;&amp;gt; y = np.arange(2).reshape(1, 2)
-# create a 1x2 matrix
+&amp;gt;&amp;gt;&amp;gt; y = np.arange(2).reshape(1, 2)  # create a 1x2 matrix
 &amp;gt;&amp;gt;&amp;gt; X * y
 array([[0,1],
        [0,3],
@@ -2109,8 +2125,7 @@ array([16, 6, 8])</code></pre>
 </li>
 <li>
 <p>
-If you want overkill, you can use <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.einsum.html
-#numpy.einsum" rel="noreferrer"><code>numpy.einsum</code></a>. The documentation will give you a flavor for how it works, but honestly, I didn’t fully understand how to use it until reading <a href="https://stackoverflow.com/a/33641428/1634191">this answer</a> and just playing around with it on my own.
+If you want overkill, you can use <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.einsum.html#numpy.einsum" rel="noreferrer"><code>numpy.einsum</code></a>. The documentation will give you a flavor for how it works, but honestly, I didn’t fully understand how to use it until reading <a href="https://stackoverflow.com/a/33641428/1634191">this answer</a> and just playing around with it on my own.
 </p>
 <pre><code>numpy
 &amp;gt;&amp;gt;&amp;gt; np.einsum(&#39;ji,i-&amp;gt;j&#39;, a, b)
@@ -2118,8 +2133,7 @@ array([16, 6, 8])</code></pre>
 </li>
 <li>
 <p>
-As of mid 2016 (numpy 1.10.1), you can try the experimental <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.matmul.html
-#numpy-matmul" rel="noreferrer"><code>numpy.matmul</code></a>, which works like <code>numpy.dot</code> with two major exceptions: no scalar multiplication but it works with stacks of matrices.
+As of mid 2016 (numpy 1.10.1), you can try the experimental <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.matmul.html#numpy-matmul" rel="noreferrer"><code>numpy.matmul</code></a>, which works like <code>numpy.dot</code> with two major exceptions: no scalar multiplication but it works with stacks of matrices.
 </p>
 <pre><code>numpy
 &amp;gt;&amp;gt;&amp;gt; np.matmul(a, b)
@@ -2132,7 +2146,6 @@ array([16, 6, 8])</code></pre>
 <pre><code>numpy
 &amp;gt;&amp;gt;&amp;gt; np.inner(a, b)
 array([16, 6, 8])
-
 
 # Beware using for matrix-matrix multiplication though!
 &amp;gt;&amp;gt;&amp;gt; b = a.T
@@ -2153,8 +2166,7 @@ Rarer options for edge cases
 <ul>
 <li>
 <p>
-If you have tensors (arrays of dimension greater than or equal to one), you can use <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.tensordot.html
-#numpy.tensordot" rel="noreferrer"><code>numpy.tensordot</code></a> with the optional argument <code>axes=1</code>:
+If you have tensors (arrays of dimension greater than or equal to one), you can use <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.tensordot.html#numpy.tensordot" rel="noreferrer"><code>numpy.tensordot</code></a> with the optional argument <code>axes=1</code>:
 </p>
 <pre><code>numpy
 &amp;gt;&amp;gt;&amp;gt; np.tensordot(a, b, axes=1)
@@ -2162,8 +2174,7 @@ array([16,  6,  8])</code></pre>
 </li>
 <li>
 <p>
-<strong>Don’t use <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.vdot.html
-#numpy.vdot" rel="noreferrer"><code>numpy.vdot</code></a></strong> if you have a matrix of complex numbers, as the matrix will be flattened to a 1D array, then it will try to find the complex conjugate dot product between your flattened matrix and vector (which will fail due to a size mismatch <code>n*m</code> vs <code>n</code>).
+<strong>Don’t use <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.vdot.html#numpy.vdot" rel="noreferrer"><code>numpy.vdot</code></a></strong> if you have a matrix of complex numbers, as the matrix will be flattened to a 1D array, then it will try to find the complex conjugate dot product between your flattened matrix and vector (which will fail due to a size mismatch <code>n*m</code> vs <code>n</code>).
 </p>
 </li>
 </ul>
@@ -2201,7 +2212,6 @@ X = array([[0, 1, 2], [1, 2, 0], [2, 1, 2], [3, 2, 0]])</code></pre>
 <pre><code>numpy
 A = vstack((A, X[X[:,0] &amp;lt; 3]))
 
-
 # returns: 
 array([[0, 1, 2],
        [0, 2, 0],
@@ -2234,11 +2244,10 @@ np.append(A, [[7, 8, 9]], axis=0)
     &amp;gt;&amp;gt; array([[1, 2, 3],
               [4, 5, 6],
               [7, 8, 9]])
-
 #or 
 np.r_[A,[[7,8,9]]]</code></pre>
 <p>Just to someone’s intersted, if you would like to add a column,</p>
-<p><code>array = np.c_[A,np.zeros( #A's row size)]</code></p>
+<p><code>array = np.c_[A,np.zeros(#A's row size)]</code></p>
 <p>following what we did before on matrix A, adding a column to it</p>
 <pre><code>numpy
 np.c_[A, [2,8]]
@@ -2340,44 +2349,30 @@ df[&#39;race_label&#39;] = df.apply (lambda row: label_race(row), axis=1)</code>
 <pre><code>numpy
 import pandas as pd
 
-
 # make a simple dataframe
 df = pd.DataFrame({&#39;a&#39;:[1,2], &#39;b&#39;:[3,4]})
 df
-
 #    a  b
-
 # 0  1  3
-
 # 1  2  4
-
 
 # create an unattached column with an index
 df.apply(lambda row: row.a + row.b, axis=1)
-
 # 0    4
-
 # 1    6
-
 
 # do same but attach it to the dataframe
 df[&#39;c&#39;] = df.apply(lambda row: row.a + row.b, axis=1)
 df
-
 #    a  b  c
-
 # 0  1  3  4
-
 # 1  2  4  6</code></pre>
 <hr>
 <p>If you get the <code>SettingWithCopyWarning</code> you can do it this way also:</p>
 <pre><code>numpy
-fn = lambda row: row.a + row.b
-# define a function for the new column
-col = df.apply(fn, axis=1)
-# get column data with an index
-df = df.assign(c=col.values)
-# assign values to column &#39;c&#39;</code></pre>
+fn = lambda row: row.a + row.b # define a function for the new column
+col = df.apply(fn, axis=1) # get column data with an index
+df = df.assign(c=col.values) # assign values to column &#39;c&#39;</code></pre>
 <p>Source: <a href="https://stackoverflow.com/a/12555510/243392">https://stackoverflow.com/a/12555510/243392</a></p>
 <p>And if your column name includes spaces you can use syntax like this:</p>
 <pre><code>numpy
@@ -2523,7 +2518,6 @@ import datetime
 import numpy as np
 import pandas as pd
 dt = datetime.datetime(2012, 5, 1)
-
 # A strange way to extract a Timestamp object, there&#39;s surely a better way?
 ts = pd.DatetimeIndex([dt])[0]
 dt64 = np.datetime64(dt)
@@ -2579,12 +2573,10 @@ datetime.datetime(2012, 12, 4, 13, 34, 52, 827542)</code></pre>
 &amp;gt;&amp;gt;&amp;gt; numpy.datetime64(&#39;2002-06-28T01:00:00.000000000+0100&#39;).astype(datetime)
 datetime.datetime(2002, 6, 28, 0, 0)
 &amp;gt;&amp;gt;&amp;gt; numpy.__version__
-&#39;1.6.2&#39;
-# current version available via pip install numpy</code></pre>
+&#39;1.6.2&#39; # current version available via pip install numpy</code></pre>
 <p>I can reproduce the <code>long</code> value on <code>numpy-1.8.0</code> installed as:</p>
 <pre><code>numpy
-pip install git+https://github.com/numpy/numpy.git
-#egg=numpy-dev</code></pre>
+pip install git+https://github.com/numpy/numpy.git#egg=numpy-dev</code></pre>
 <p>The same example:</p>
 <pre><code>numpy
 &amp;gt;&amp;gt;&amp;gt; from datetime import datetime
@@ -2598,8 +2590,7 @@ pip install git+https://github.com/numpy/numpy.git
 <pre><code>numpy
 &amp;gt;&amp;gt;&amp;gt; dt64.dtype
 dtype(&#39;&amp;lt;M8[ns]&#39;)
-&amp;gt;&amp;gt;&amp;gt; ns = 1e-9
-# number of seconds in a nanosecond
+&amp;gt;&amp;gt;&amp;gt; ns = 1e-9 # number of seconds in a nanosecond
 &amp;gt;&amp;gt;&amp;gt; datetime.utcfromtimestamp(dt64.astype(int) * ns)
 datetime.datetime(2002, 6, 28, 0, 0)</code></pre>
 <p>To get datetime64 that uses seconds directly:</p>
@@ -2645,8 +2636,7 @@ Out[24]: datetime.datetime(2012, 5, 1, 1, 0, tzinfo=tzoffset(None, 3600))</code>
 <section id="answer-accepted-score-160" class="level4">
 <h4>Answer accepted (score 160)</h4>
 <p>Try the (unofficial) binaries in this site:</p>
-<p><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/
-#numpy">http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy</a></p>
+<p><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy">http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy</a></p>
 <p>You can get the newest <code>numpy</code> x64 with or without Intel MKL libs for Python 2.7 or Python 3.</p>
 </section>
 <section id="answer-2-score-42" class="level4">
@@ -2675,8 +2665,7 @@ Still at the command prompt, navigate to the above directory and run:<br><br> <c
 </section>
 <section id="answer-3-score-27" class="level4">
 <h4>Answer 3 (score 27)</h4>
-<p>Download <strong>numpy-1.9.2+mkl-cp27-none-win32.whl</strong> from <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/
-#numpy" rel="noreferrer">http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy</a> .</p>
+<p>Download <strong>numpy-1.9.2+mkl-cp27-none-win32.whl</strong> from <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy" rel="noreferrer">http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy</a> .</p>
 <p>Copy the file to <strong>C:</strong></p>
 <p>Run cmd from the above location and type</p>
 <pre><code>numpy
@@ -2743,8 +2732,7 @@ pearsonr(x, y)
 
  References
  ----------
- http://www.statsoft.com/textbook/glosp.html
-#Pearson%20Correlation</code></pre>
+ http://www.statsoft.com/textbook/glosp.html#Pearson%20Correlation</code></pre>
 </section>
 <section id="answer-3-score-105" class="level4">
 <h4>Answer 3 (score 105)</h4>
@@ -2840,12 +2828,10 @@ a.T</code></pre>
 &amp;gt;&amp;gt;&amp;gt; a = [3,6,9]
 &amp;gt;&amp;gt;&amp;gt; b = np.array(a)
 &amp;gt;&amp;gt;&amp;gt; b.T
-array([3, 6, 9])
-#Here it didn&#39;t transpose because &#39;a&#39; is 1 dimensional
+array([3, 6, 9])         #Here it didn&#39;t transpose because &#39;a&#39; is 1 dimensional
 &amp;gt;&amp;gt;&amp;gt; b = np.array([a])
 &amp;gt;&amp;gt;&amp;gt; b.T
-array([[3],
-#Here it did transpose because a is 2 dimensional
+array([[3],              #Here it did transpose because a is 2 dimensional
        [6],
        [9]])</code></pre>
 <p>Use numpy’s <code>shape</code> method to see what is going on here:</p>
@@ -2862,8 +2848,7 @@ array([[3],
 <p><strong>For 1D arrays</strong>:</p>
 <pre><code>numpy
 a = np.array([1, 2, 3, 4])
-a = a.reshape((-1, 1))
-# &amp;lt;--- THIS IS IT
+a = a.reshape((-1, 1)) # &amp;lt;--- THIS IS IT
 
 print a
 array([[1],
@@ -2922,8 +2907,7 @@ SystemError: new style getargs format but argument is not a tuple</code></pre>
 from PIL import Image
 import numpy as np
 im = Image.open(&#39;1.jpg&#39;)
-im2arr = np.array(im)
-# im2arr.shape: height x width x channel
+im2arr = np.array(im) # im2arr.shape: height x width x channel
 arr2im = Image.fromarray(im2arr)</code></pre>
 <p>One thing that needs noticing is that Pillow-style <code>im</code> is column-major while numpy-style <code>im2arr</code> is row-major. However, the function <code>Image.fromarray</code> already takes this into consideration. That is, <code>arr2im.size == im.size</code> and <code>arr2im.mode == im.mode</code> in the above example.</p>
 <p>We should take care of the HxWxC data format when processing the transformed numpy arrays, e.g. do the transform <code>im2arr = np.rollaxis(im2arr, 2, 0)</code> or <code>im2arr = np.transpose(im2arr, (2, 0, 1))</code> into CxHxW format.</p>
@@ -2987,20 +2971,17 @@ In [78]: df = pd.DataFrame({
     ...:     &#39;C&#39;: [10, 5, np.nan]})
     ...: 
 
-In [79]: df.dtypes
-## Current datatype
+In [79]: df.dtypes ## Current datatype
 Out[79]: 
 A    float64
 B     object
 C    float64
 dtype: object
 
-
 ## Multiple columns string conversion
 In [80]: df[[&quot;A&quot;, &quot;C&quot;]] = df[[&quot;A&quot;, &quot;C&quot;]].astype(str) 
 
-In [81]: df.dtypes
-## Updated datatype after string conversion
+In [81]: df.dtypes ## Updated datatype after string conversion
 Out[81]: 
 A    object
 B    object
@@ -3035,24 +3016,19 @@ print &#39;%.3f&#39; % x</code></pre>
 import numpy as np
 x=np.random.random(10)
 print(x)
-
 # [ 0.07837821  0.48002108  0.41274116  0.82993414  0.77610352  0.1023732
-
 #   0.51303098  0.4617183   0.33487207  0.71162095]
 
 np.set_printoptions(precision=3)
 print(x)
-
 # [ 0.078  0.48   0.413  0.83   0.776  0.102  0.513  0.462  0.335  0.712]</code></pre>
 <p>And <code>suppress</code> suppresses the use of scientific notation for small numbers:</p>
 <pre><code>numpy
 y=np.array([1.5e-10,1.5,1500])
 print(y)
-
 # [  1.500e-10   1.500e+00   1.500e+03]
 np.set_printoptions(suppress=True)
 print(y)
-
 # [    0.      1.5  1500. ]</code></pre>
 <p>See the <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.set_printoptions.html" rel="noreferrer">docs for set_printoptions</a> for other options.</p>
 <hr>
@@ -3063,14 +3039,11 @@ print(y)
 x = np.random.random(10)
 with np.printoptions(precision=3, suppress=True):
     print(x)
-
-# [ 0.073  0.461  0.689  0.754  0.624  0.901  0.049  0.582  0.557  0.348]</code></pre>
+    # [ 0.073  0.461  0.689  0.754  0.624  0.901  0.049  0.582  0.557  0.348]</code></pre>
 <p>But outside the <code>with-suite</code> the print options are back to default settings:</p>
 <pre><code>numpy
 print(x)    
-
 # [ 0.07334334  0.46132615  0.68935231  0.75379645  0.62424021  0.90115836
-
 #   0.04879837  0.58207504  0.55694118  0.34768638]</code></pre>
 <p>
 If you are using an earlier version of NumPy, you can create the context manager yourself. For example,
@@ -3091,8 +3064,7 @@ def printoptions(*args, **kwargs):
 x = np.random.random(10)
 with printoptions(precision=3, suppress=True):
     print(x)
-
-# [ 0.073  0.461  0.689  0.754  0.624  0.901  0.049  0.582  0.557  0.348]</code></pre>
+    # [ 0.073  0.461  0.689  0.754  0.624  0.901  0.049  0.582  0.557  0.348]</code></pre>
 <hr>
 <p><strong>To prevent zeros from being stripped from the end of floats:</strong></p>
 <p><code>np.set_printoptions</code> now has a <code>formatter</code> parameter which allows you to specify a format function for each type.</p>
@@ -3181,8 +3153,7 @@ array([[1, 2],
 </section>
 <section id="answer-2-score-58-1" class="level4">
 <h4>Answer 2 (score 58)</h4>
-<p>Some numpy functions for how to control the rounding: <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.rint.html
-#numpy.rint" rel="noreferrer">rint</a>, <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.floor.html#numpy.floor" rel="noreferrer">floor</a>,<a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.trunc.html#numpy.trunc" rel="noreferrer">trunc</a>, <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ceil.html" rel="noreferrer">ceil</a>. depending how u wish to round the floats, up, down, or to the nearest int.</p>
+<p>Some numpy functions for how to control the rounding: <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.rint.html#numpy.rint" rel="noreferrer">rint</a>, <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.floor.html#numpy.floor" rel="noreferrer">floor</a>,<a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.trunc.html#numpy.trunc" rel="noreferrer">trunc</a>, <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ceil.html" rel="noreferrer">ceil</a>. depending how u wish to round the floats, up, down, or to the nearest int.</p>
 <pre><code>numpy
 &amp;gt;&amp;gt;&amp;gt; x = np.array([[1.0,2.3],[1.3,2.9]])
 &amp;gt;&amp;gt;&amp;gt; x
@@ -3487,7 +3458,6 @@ import numpy as np
 
 x = np.array([1, 2, 3, 4, 5])
 
-
 # Obtain array of square of each element in x
 squarer = lambda t: t ** 2
 squares = np.array([squarer(xi) for xi in x])</code></pre>
@@ -3513,8 +3483,7 @@ import math
 
 
 def f(x):
-
-# return math.sqrt(x)
+    # return math.sqrt(x)
     return np.sqrt(x)
 
 
@@ -3562,7 +3531,6 @@ x = np.array([1, 2, 3, 4, 5])
 squarer = lambda t: t ** 2
 vfunc = np.vectorize(squarer)
 vfunc(x)
-
 # Output : array([ 1,  4,  9, 16, 25])</code></pre>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
@@ -3621,8 +3589,7 @@ idx = (-arr).argsort()[:n]</code></pre>
 <h4>Question</h4>
 <p>I want to figure out how to remove nan values from my array. My array looks something like this:</p>
 <pre><code>numpy
-x = [1400, 1500, 1600, nan, nan, nan ,1700]
-#Not in this exact configuration</code></pre>
+x = [1400, 1500, 1600, nan, nan, nan ,1700] #Not in this exact configuration</code></pre>
 <p>How can I remove the <code>nan</code> values from <code>x</code>?</p>
 </section>
 <section id="answer-accepted-score-303" class="level4">
@@ -3652,8 +3619,7 @@ works both for lists and numpy array since v!=v only for NaN
 <pre><code>numpy
 import math
 print [value for value in x if not math.isnan(value)]</code></pre>
-<p>For more, read on <a href="http://docs.python.org/tutorial/datastructures.html
-#list-comprehensions">List Comprehensions</a>.</p>
+<p>For more, read on <a href="http://docs.python.org/tutorial/datastructures.html#list-comprehensions">List Comprehensions</a>.</p>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
 </section>
@@ -3701,8 +3667,7 @@ pip install -U numpy</code></pre>
 <p>Instead:</p>
 <ol>
 <li>
-Download the Numpy wheel for your Python version from <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/
-#numpy">http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy</a>
+Download the Numpy wheel for your Python version from <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy">http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy</a>
 </li>
 <li>
 Install it from the command line <code>pip install numpy-1.10.2+mkl-cp35-none-win_amd64.whl</code>
@@ -3740,17 +3705,13 @@ Another risk is if <code>A</code> and <code>B</code> don’t have the same shape
 </ul>
 <p>In conclusion, the solution I proposed is the standard one, I think, but if you have a doubt about <code>A</code> and <code>B</code> shape or simply want to be safe: use one of the specialized functions:</p>
 <pre><code>numpy
-np.array_equal(A,B)
-# test if same shape, same elements values
-np.array_equiv(A,B)
-# test if broadcastable shape, same elements values
-np.allclose(A,B,...)
-# test if same shape, elements have close enough values</code></pre>
+np.array_equal(A,B)  # test if same shape, same elements values
+np.array_equiv(A,B)  # test if broadcastable shape, same elements values
+np.allclose(A,B,...) # test if same shape, elements have close enough values</code></pre>
 </section>
 <section id="answer-2-score-84" class="level4">
 <h4>Answer 2 (score 84)</h4>
-<p>The <code>(A==B).all()</code> solution is very neat, but there are some built-in functions for this task. Namely <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.array_equal.html" rel="noreferrer"><code>array_equal</code></a>, <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html
-#numpy.allclose" rel="noreferrer"><code>allclose</code></a> and <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.array_equiv.html#numpy.array_equiv" rel="noreferrer"><code>array_equiv</code></a>.</p>
+<p>The <code>(A==B).all()</code> solution is very neat, but there are some built-in functions for this task. Namely <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.array_equal.html" rel="noreferrer"><code>array_equal</code></a>, <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.allclose.html#numpy.allclose" rel="noreferrer"><code>allclose</code></a> and <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.array_equiv.html#numpy.array_equiv" rel="noreferrer"><code>array_equiv</code></a>.</p>
 <p>(Although, some quick testing with <code>timeit</code> seems to indicate that the <code>(A==B).all()</code> method is the fastest, which is a little peculiar, given it has to allocate a whole new array.)</p>
 </section>
 <section id="answer-3-score-14" class="level4">
@@ -3817,8 +3778,7 @@ for i, x in enumerate(mylist, 1):
     cumsum.append(cumsum[i-1] + x)
     if i&amp;gt;=N:
         moving_ave = (cumsum[i] - cumsum[i-N])/N
-
-#can do stuff with moving_ave here
+        #can do stuff with moving_ave here
         moving_aves.append(moving_ave)</code></pre>
 </section>
 <section id="answer-2-score-211" class="level4">
@@ -3973,12 +3933,9 @@ Error: List indices must be int
 </blockquote>
 <p>I saved each of the columns of my CSV into variables, so they are all individual lists.</p>
 <pre><code>numpy
-lat          = [row[0] for row in weather_data]
-# latitude
-long         = [row[1] for row in weather_data]
-# longitude
-mean_temp    = [row[2] for row in weather_data]
-# mean temperature </code></pre>
+lat          = [row[0] for row in weather_data]  # latitude
+long         = [row[1] for row in weather_data]  # longitude
+mean_temp    = [row[2] for row in weather_data]  # mean temperature </code></pre>
 <p>I have resolved the problem as per the suggestion list.index(x)</p>
 <pre><code>numpy
 mean_temp.index(coldest_temp) 
@@ -4120,8 +4077,7 @@ Join a sequence of arrays together.
 <h4>Answer 2 (score 31)</h4>
 <p>The first parameter to <code>concatenate</code> should itself be a <em>sequence of arrays</em> to concatenate:</p>
 <pre><code>numpy
-numpy.concatenate((a,b))
-# Note the extra parentheses.</code></pre>
+numpy.concatenate((a,b)) # Note the extra parentheses.</code></pre>
 </section>
 <section id="answer-3-score-23-2" class="level4">
 <h4>Answer 3 (score 23)</h4>
@@ -4225,8 +4181,7 @@ array([[7, 0, 5],
 <section id="answer-accepted-score-123-1" class="level4">
 <h4>Answer accepted (score 123)</h4>
 <p><a href="https://stackoverflow.com/users/208339/steve-tjoa"><span class="citation" data-cites="steve">@steve</span></a>’s is actually the most elegant way of doing it.</p>
-<p>For the “correct” way see the order keyword argument of <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.sort.html
-#numpy.ndarray.sort" rel="noreferrer">numpy.ndarray.sort</a></p>
+<p>For the “correct” way see the order keyword argument of <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.sort.html#numpy.ndarray.sort" rel="noreferrer">numpy.ndarray.sort</a></p>
 <p>However, you’ll need to view your array as an array with fields (a structured array).</p>
 <p>The “correct” way is quite ugly if you didn’t initially define your array with fields…</p>
 <p>As a quick example, to sort it and return a copy:</p>
@@ -4242,8 +4197,7 @@ array([[0, 0, 1],
        [4, 5, 6]])</code></pre>
 <p>To sort it in-place:</p>
 <pre><code>numpy
-In [6]: a.view(&#39;i8,i8,i8&#39;).sort(order=[&#39;f1&#39;], axis=0)
-#&amp;lt;-- returns None
+In [6]: a.view(&#39;i8,i8,i8&#39;).sort(order=[&#39;f1&#39;], axis=0) #&amp;lt;-- returns None
 
 In [7]: a
 Out[7]: 
@@ -4262,8 +4216,7 @@ array([[0, 0, 1],
 <h4>Answer 3 (score 27)</h4>
 <p>You can sort on multiple columns as per Steve Tjoa’s method by using a stable sort like mergesort and sorting the indices from the least significant to the most significant columns:</p>
 <pre><code>numpy
-a = a[a[:,2].argsort()]
-# First sort doesn&#39;t need to be stable.
+a = a[a[:,2].argsort()] # First sort doesn&#39;t need to be stable.
 a = a[a[:,1].argsort(kind=&#39;mergesort&#39;)]
 a = a[a[:,0].argsort(kind=&#39;mergesort&#39;)]</code></pre>
 <p>This sorts by column 0, then 1, then 2.</p>
@@ -4365,8 +4318,7 @@ In [4]: %timeit np.sqrt(np.einsum(&#39;i,i&#39;, a, a))
 <section id="answer-accepted-score-144" class="level4">
 <h4>Answer accepted (score 144)</h4>
 <p>If you look here, it might tell you what you need to know.</p>
-<p><a href="http://www.scipy.org/Tentative_NumPy_Tutorial
-#head-d3f8e5fe9b903f3c3b2a5c0dfceb60d71602cf93">http://www.scipy.org/Tentative_NumPy_Tutorial#head-d3f8e5fe9b903f3c3b2a5c0dfceb60d71602cf93</a></p>
+<p><a href="http://www.scipy.org/Tentative_NumPy_Tutorial#head-d3f8e5fe9b903f3c3b2a5c0dfceb60d71602cf93">http://www.scipy.org/Tentative_NumPy_Tutorial#head-d3f8e5fe9b903f3c3b2a5c0dfceb60d71602cf93</a></p>
 <p>Basically, you can create an array from a sequence.</p>
 <pre><code>numpy
 from numpy import array
@@ -4385,8 +4337,7 @@ a = array( your_list )</code></pre>
 </section>
 <section id="answer-3-score-17" class="level4">
 <h4>Answer 3 (score 17)</h4>
-<p><a href="http://www.scipy.org/Tentative_NumPy_Tutorial
-#head-d3f8e5fe9b903f3c3b2a5c0dfceb60d71602cf93" rel="noreferrer">Yes it is:</a></p>
+<p><a href="http://www.scipy.org/Tentative_NumPy_Tutorial#head-d3f8e5fe9b903f3c3b2a5c0dfceb60d71602cf93" rel="noreferrer">Yes it is:</a></p>
 <pre><code>numpy
 a = numpy.array([1,2,3])</code></pre>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
@@ -4477,86 +4428,64 @@ with file(&#39;test.txt&#39;, &#39;w&#39;) as outfile:
 <pre><code>numpy
 import numpy as np
 
-
 # Generate some test data
 data = np.arange(200).reshape((4,5,10))
 
-
 # Write the array to disk
 with open(&#39;test.txt&#39;, &#39;w&#39;) as outfile:
+    # I&#39;m writing a header here just for the sake of readability
+    # Any line starting with &quot;#&quot; will be ignored by numpy.loadtxt
+    outfile.write(&#39;# Array shape: {0}\n&#39;.format(data.shape))
 
-# I&#39;m writing a header here just for the sake of readability
-
-# Any line starting with &quot;#&quot; will be ignored by numpy.loadtxt
-    outfile.write(&#39;
-# Array shape: {0}\n&#39;.format(data.shape))
-
-
-# Iterating through a ndimensional array produces slices along
-
-# the last axis. This is equivalent to data[i,:,:] in this case
+    # Iterating through a ndimensional array produces slices along
+    # the last axis. This is equivalent to data[i,:,:] in this case
     for data_slice in data:
 
-
-# The formatting string indicates that I&#39;m writing out
-
-# the values in left-justified columns 7 characters in width
-
-# with 2 decimal places.  
+        # The formatting string indicates that I&#39;m writing out
+        # the values in left-justified columns 7 characters in width
+        # with 2 decimal places.  
         np.savetxt(outfile, data_slice, fmt=&#39;%-7.2f&#39;)
 
-
-# Writing out a break to indicate different slices...
-        outfile.write(&#39;
-# New slice\n&#39;)</code></pre>
+        # Writing out a break to indicate different slices...
+        outfile.write(&#39;# New slice\n&#39;)</code></pre>
 <p>This yields:</p>
 <pre><code>numpy
-
 # Array shape: (4, 5, 10)
 0.00    1.00    2.00    3.00    4.00    5.00    6.00    7.00    8.00    9.00   
 10.00   11.00   12.00   13.00   14.00   15.00   16.00   17.00   18.00   19.00  
 20.00   21.00   22.00   23.00   24.00   25.00   26.00   27.00   28.00   29.00  
 30.00   31.00   32.00   33.00   34.00   35.00   36.00   37.00   38.00   39.00  
 40.00   41.00   42.00   43.00   44.00   45.00   46.00   47.00   48.00   49.00  
-
 # New slice
 50.00   51.00   52.00   53.00   54.00   55.00   56.00   57.00   58.00   59.00  
 60.00   61.00   62.00   63.00   64.00   65.00   66.00   67.00   68.00   69.00  
 70.00   71.00   72.00   73.00   74.00   75.00   76.00   77.00   78.00   79.00  
 80.00   81.00   82.00   83.00   84.00   85.00   86.00   87.00   88.00   89.00  
 90.00   91.00   92.00   93.00   94.00   95.00   96.00   97.00   98.00   99.00  
-
 # New slice
 100.00  101.00  102.00  103.00  104.00  105.00  106.00  107.00  108.00  109.00 
 110.00  111.00  112.00  113.00  114.00  115.00  116.00  117.00  118.00  119.00 
 120.00  121.00  122.00  123.00  124.00  125.00  126.00  127.00  128.00  129.00 
 130.00  131.00  132.00  133.00  134.00  135.00  136.00  137.00  138.00  139.00 
 140.00  141.00  142.00  143.00  144.00  145.00  146.00  147.00  148.00  149.00 
-
 # New slice
 150.00  151.00  152.00  153.00  154.00  155.00  156.00  157.00  158.00  159.00 
 160.00  161.00  162.00  163.00  164.00  165.00  166.00  167.00  168.00  169.00 
 170.00  171.00  172.00  173.00  174.00  175.00  176.00  177.00  178.00  179.00 
 180.00  181.00  182.00  183.00  184.00  185.00  186.00  187.00  188.00  189.00 
 190.00  191.00  192.00  193.00  194.00  195.00  196.00  197.00  198.00  199.00 
-
 # New slice</code></pre>
 <p>Reading it back in is very easy, as long as we know the shape of the original array. We can just do <code>numpy.loadtxt('test.txt').reshape((4,5,10))</code>. As an example (You can do this in one line, I’m just being verbose to clarify things):</p>
 <pre><code>numpy
-
 # Read the array from disk
 new_data = np.loadtxt(&#39;test.txt&#39;)
-
 
 # Note that this returned a 2D array!
 print new_data.shape
 
-
 # However, going back to 3D is easy if we know the 
-
 # original shape of the array
 new_data = new_data.reshape((4,5,10))
-
 
 # Just to check that they&#39;re the same...
 assert np.all(new_data == data)</code></pre>
@@ -4594,31 +4523,22 @@ pkl_file.close()</code></pre>
 import numpy as np
 import scipy.io
 
-
 # Some test data
 x = np.arange(200).reshape((4,5,10))
-
 
 # Specify the filename of the .mat file
 matfile = &#39;test_mat.mat&#39;
 
-
 # Write the array to the mat file. For this to work, the array must be the value
-
 # corresponding to a key name of your choice in a dictionary
 scipy.io.savemat(matfile, mdict={&#39;out&#39;: x}, oned_as=&#39;row&#39;)
 
-
 # For the above line, I specified the kwarg oned_as since python (2.7 with 
-
 # numpy 1.6.1) throws a FutureWarning.  Here, this isn&#39;t really necessary 
-
 # since oned_as is a kwarg for dealing with 1-D arrays.
-
 
 # Now load in the data from the .mat that was just saved
 matdata = scipy.io.loadmat(matfile)
-
 
 # And just to check if the data is the same:
 assert np.all(x == matdata[&#39;out&#39;])</code></pre>
@@ -4728,8 +4648,7 @@ output: <code>&amp;lt;class 'numpy.ndarray'&amp;gt;</code>
 <h5>
 <strong>TensorFlow 2.0</strong>
 </h1>
-<p><a href="https://www.tensorflow.org/guide/eager" rel="nofollow noreferrer">Eager Execution</a> is enabled by default, so just call <a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/framework/ops.py
-#L752-L770" rel="nofollow noreferrer"><strong><code>.numpy()</code></strong></a> on the Tensor object.</p>
+<p><a href="https://www.tensorflow.org/guide/eager" rel="nofollow noreferrer">Eager Execution</a> is enabled by default, so just call <a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/framework/ops.py#L752-L770" rel="nofollow noreferrer"><strong><code>.numpy()</code></strong></a> on the Tensor object.</p>
 <pre><code>numpy
 import tensorflow as tf
 
@@ -4737,21 +4656,15 @@ a = tf.constant([[1, 2], [3, 4]])
 b = tf.add(a, 1)
 
 a.&lt;b&gt;numpy()&lt;/b&gt;
-
 # array([[1, 2],
-
 #        [3, 4]], dtype=int32)
 
 b.&lt;b&gt;numpy()&lt;/b&gt;
-
 # array([[2, 3],
-
 #        [4, 5]], dtype=int32)
 
 tf.multiply(a, b).&lt;b&gt;numpy()&lt;/b&gt;
-
 # array([[ 2,  6],
-
 #        [12, 20]], dtype=int32)</code></pre>
 <p>It is worth noting (from the docs),</p>
 <blockquote>
@@ -4766,12 +4679,9 @@ b = tf.add(a, 1)
 out = tf.multiply(a, b)
 
 out.eval(session=&lt;b&gt;tf.compat.v1.Session()&lt;/b&gt;)    
-
 # array([[ 2,  6],
-
 #        [12, 20]], dtype=int32)</code></pre>
-<p>See also <a href="https://docs.google.com/spreadsheets/d/1FLFJLzg7WNP6JHODX5q8BDgptKafq_slHpnHVbJIteQ/edit
-#gid=0" rel="nofollow noreferrer">TF 2.0 Symbols Map</a> for a mapping of the old API to the new one.</p>
+<p>See also <a href="https://docs.google.com/spreadsheets/d/1FLFJLzg7WNP6JHODX5q8BDgptKafq_slHpnHVbJIteQ/edit#gid=0" rel="nofollow noreferrer">TF 2.0 Symbols Map</a> for a mapping of the old API to the new one.</p>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
 </section>
@@ -4784,8 +4694,7 @@ out.eval(session=&lt;b&gt;tf.compat.v1.Session()&lt;/b&gt;)
 </section>
 <section id="answer-2-score-147" class="level4">
 <h4>Answer 2 (score 147)</h4>
-<p>The <a href="https://matplotlib.org/api/pyplot_api.html
-#matplotlib.pyplot.imshow" rel="noreferrer"><code>imshow()</code></a> function with parameters <code>interpolation='nearest'</code> and <code>cmap='hot'</code> should do what you want.</p>
+<p>The <a href="https://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.imshow" rel="noreferrer"><code>imshow()</code></a> function with parameters <code>interpolation='nearest'</code> and <code>cmap='hot'</code> should do what you want.</p>
 <pre><code>numpy
 import matplotlib.pyplot as plt
 import numpy as np
@@ -4848,8 +4757,7 @@ pip install --no-index --find-links=&quot;S:\python\scipy 0.15.0&quot; scipy</co
 <section id="answer-2-score-115" class="level4">
 <h4>Answer 2 (score 115)</h4>
 <p><strong>The following link should solve all problems with Windows and SciPy</strong>; just choose the appropriate download. I was able to pip install the package with no problems. Every other solution I have tried gave me big headaches.</p>
-<p>Source: <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/
-#scipy" rel="noreferrer">http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy</a></p>
+<p>Source: <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy" rel="noreferrer">http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy</a></p>
 <p>Command:</p>
 <pre><code>numpy
  pip install [Local File Location]\[Your specific file such as scipy-0.16.0-cp27-none-win_amd64.whl]</code></pre>
@@ -4879,7 +4787,7 @@ My python’s version is 2.7.10, 64-bits Windows 7.
 </h1>
 <ol>
 <li>
-Download <code>scipy-0.18.0-cp27-cp27m-win_amd64.whl</code> from <code>http://www.lfd.uci.edu/~gohlke/pythonlibs/ #scipy</code>
+Download <code>scipy-0.18.0-cp27-cp27m-win_amd64.whl</code> from <code>http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy</code>
 </li>
 <li>
 Open <code>cmd</code>
@@ -4982,8 +4890,7 @@ plt.show()  </code></pre>
 </section>
 <section id="answer-3-score-14-1" class="level4">
 <h4>Answer 3 (score 14)</h4>
-<p>For future reference - the <code>Line2D</code> artist returned by <code>plot()</code> also has a <code>set_markevery()</code> method which allows you to only set markers on certain points - see <a href="https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html
-#matplotlib.lines.Line2D.set_markevery" rel="nofollow noreferrer">https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D.set_markevery</a></p>
+<p>For future reference - the <code>Line2D</code> artist returned by <code>plot()</code> also has a <code>set_markevery()</code> method which allows you to only set markers on certain points - see <a href="https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D.set_markevery" rel="nofollow noreferrer">https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D.set_markevery</a></p>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
 </section>
@@ -5014,8 +4921,7 @@ b = np.reshape(a, (1,np.product(a.shape)))[0]</code></pre>
 </section>
 <section id="answer-accepted-score-235" class="level4">
 <h4>Answer accepted (score 235)</h4>
-<p>Use <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ravel.html
-#numpy-ravel" rel="noreferrer">np.ravel</a> (for a 1D view) or <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.flatten.html" rel="noreferrer">np.flatten</a> (for a 1D copy) or <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.flat.html#numpy-ndarray-flat" rel="noreferrer">np.flat</a> (for an 1D iterator):</p>
+<p>Use <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ravel.html#numpy-ravel" rel="noreferrer">np.ravel</a> (for a 1D view) or <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.flatten.html" rel="noreferrer">np.flatten</a> (for a 1D copy) or <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.flat.html#numpy-ndarray-flat" rel="noreferrer">np.flat</a> (for an 1D iterator):</p>
 <pre><code>numpy
 In [12]: a = np.array([[1,2,3], [4,5,6]])
 
@@ -5057,10 +4963,8 @@ For list of array with different size use following:
 <pre><code>numpy
 import numpy as np
 
-
 # ND array list with different size
 a = [[1],[2,3,4,5],[6,7,8]]
-
 
 # stack them
 b = np.hstack(a)
@@ -5083,14 +4987,12 @@ Output:
 </section>
 <section id="answer-accepted-score-248" class="level4">
 <h4>Answer accepted (score 248)</h4>
-<p>You might be interested in the <a href="http://docs.scipy.org/doc/scipy/reference/stats.html" rel="noreferrer">SciPy Stats</a> package. It has <a href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.scoreatpercentile.html
-#scipy.stats.scoreatpercentile" rel="noreferrer">the percentile function</a> you’re after and many other statistical goodies.</p>
+<p>You might be interested in the <a href="http://docs.scipy.org/doc/scipy/reference/stats.html" rel="noreferrer">SciPy Stats</a> package. It has <a href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.scoreatpercentile.html#scipy.stats.scoreatpercentile" rel="noreferrer">the percentile function</a> you’re after and many other statistical goodies.</p>
 <p><code>percentile()</code> <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.percentile.html" rel="noreferrer">is available</a> in <code>numpy</code> too.</p>
 <pre><code>numpy
 import numpy as np
 a = np.array([1,2,3,4,5])
-p = np.percentile(a, 50)
-# return 50th percentile, e.g median.
+p = np.percentile(a, 50) # return 50th percentile, e.g median.
 print p
 3.0</code></pre>
 <p><s><a href="http://projects.scipy.org/numpy/ticket/626" rel="noreferrer">This ticket</a> leads me to believe they won’t be integrating <code>percentile()</code> into numpy anytime soon.</s></p>
@@ -5099,7 +5001,6 @@ print p
 <h4>Answer 2 (score 67)</h4>
 <p>By the way, there is <a href="http://code.activestate.com/recipes/511478-finding-the-percentile-of-the-values/" rel="noreferrer">a pure-Python implementation of percentile function</a>, in case one doesn’t want to depend on scipy. The function is copied below:</p>
 <pre><code>numpy
-
 ## {{{ http://code.activestate.com/recipes/511478/ (r1)
 import math
 import functools
@@ -5125,10 +5026,8 @@ def percentile(N, percent, key=lambda x:x):
     d1 = key(N[int(c)]) * (k-f)
     return d0+d1
 
-
 # median is 50th percentile.
 median = functools.partial(percentile, percent=0.5)
-
 ## end of http://code.activestate.com/recipes/511478/ }}}</code></pre>
 </section>
 <section id="answer-3-score-25" class="level4">
@@ -5136,8 +5035,7 @@ median = functools.partial(percentile, percent=0.5)
 <pre><code>numpy
 import numpy as np
 a = [154, 400, 1124, 82, 94, 108]
-print np.percentile(a,95)
-# gives the 95th percentile</code></pre>
+print np.percentile(a,95) # gives the 95th percentile</code></pre>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
 </section>
@@ -5212,8 +5110,7 @@ matrix([[ 7,  8, 15],
 &amp;gt;&amp;gt;&amp;gt; a2t.shape
 (3, 4)
 
-&amp;gt;&amp;gt;&amp;gt; a1 * a2t
-# same as NP.dot(a1, a2t) 
+&amp;gt;&amp;gt;&amp;gt; a1 * a2t         # same as NP.dot(a1, a2t) 
 matrix([[127,  84,  85,  89],
         [218, 139, 142, 173],
         [226, 157, 136, 103],
@@ -5225,8 +5122,7 @@ matrix([[127,  84,  85,  89],
 
 &amp;gt;&amp;gt;&amp;gt; a1 * a2t
 Traceback (most recent call last):
-   File &quot;&amp;lt;pyshell
-#277&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
+   File &quot;&amp;lt;pyshell#277&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
    a1 * a2t
    ValueError: operands could not be broadcast together with shapes (4,3) (3,4) </code></pre>
 <p>though using the <strong><em>NP.dot</em></strong> syntax works with <em>arrays</em>; this operations works like matrix multiplication:</p>
@@ -5310,8 +5206,7 @@ matrix([[ 0.028,  0.028,  0.028,  0.028],
 &amp;gt;&amp;gt;&amp;gt; a1.I
 
 Traceback (most recent call last):
-   File &quot;&amp;lt;pyshell
-#230&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
+   File &quot;&amp;lt;pyshell#230&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
    a1.I
    AttributeError: &#39;numpy.ndarray&#39; object has no attribute &#39;I&#39;</code></pre>
 <p>but the <strong><em>Moore-Penrose pseudoinverse</em></strong> seems to works just fine</p>
@@ -5344,8 +5239,7 @@ array([[ 0.314,  0.407, -1.008, -0.553,  0.131,  0.373,  0.217,  0.785],
     x=np.array([[7,8,5],[3,5,7]],np.int32)
 
    Traceback (most recent call last):
-   File &quot;&amp;lt;pyshell
-#3&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
+   File &quot;&amp;lt;pyshell#3&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
    import numpy as np
    File &quot;C:\Python27\lib\numpy\__init__.py&quot;, line 127, in &amp;lt;module&amp;gt;
    raise ImportError(msg)
@@ -5451,15 +5345,12 @@ def find_nearest(array, value):
 
 array = np.random.random(10)
 print(array)
-
 # [ 0.21069679  0.61290182  0.63425412  0.84635244  0.91599191  0.00213826
-
 #   0.17104965  0.56874386  0.57319379  0.28719469]
 
 value = 0.5
 
 print(find_nearest(array, value))
-
 # 0.568743859261</code></pre>
 </section>
 <section id="answer-2-score-71" class="level4">
@@ -5514,12 +5405,10 @@ ii = np.nonzero(y)[0]</code></pre>
 <p>And then:</p>
 <pre><code>numpy
 zip(ii,y[ii]) 
-
 # [(1, 5), (2, 3), (5, 1), (25, 1)]</code></pre>
 <p>or:</p>
 <pre><code>numpy
 np.vstack((ii,y[ii])).T
-
 # array([[ 1,  5],
          [ 2,  3],
          [ 5,  1],
@@ -5834,8 +5723,7 @@ What dtypes exists?
   numpy.datetime64,
   numpy.object_]]</code></pre>
 <p>Pandas also adds two dtypes: <code>categorical</code> and <code>datetime64[ns, tz]</code> that are not available in numpy</p>
-<p><a href="http://pandas.pydata.org/pandas-docs/stable/getting_started/basics.html
-#dtypes" rel="noreferrer">Pandas dtype reference</a></p>
+<p><a href="http://pandas.pydata.org/pandas-docs/stable/getting_started/basics.html#dtypes" rel="noreferrer">Pandas dtype reference</a></p>
 <h5>
 Gotchas, caveats, notes
 </h1>
@@ -5913,11 +5801,9 @@ extractedData = data[:,idx_IN_columns]</code></pre>
 <h4>Question</h4>
 <p>After doing some processing on an audio or image array, it needs to be normalized within a range before it can be written back to a file. This can be done like so:</p>
 <pre><code>numpy
-
 # Normalize audio channels to between -1.0 and +1.0
 audio[:,0] = audio[:,0]/abs(audio[:,0]).max()
 audio[:,1] = audio[:,1]/abs(audio[:,1]).max()
-
 
 # Normalize image to between 0 and 255
 image = image/(image.max()/255.0)</code></pre>
@@ -5930,12 +5816,10 @@ audio /= np.max(np.abs(audio),axis=0)
 image *= (255.0/image.max())</code></pre>
 <p>Using <code>/=</code> and <code>*=</code> allows you to eliminate an intermediate temporary array, thus saving some memory. Multiplication is less expensive than division, so</p>
 <pre><code>numpy
-image *= 255.0/image.max()
-# Uses 1 division and image.size multiplications</code></pre>
+image *= 255.0/image.max()    # Uses 1 division and image.size multiplications</code></pre>
 <p>is marginally faster than</p>
 <pre><code>numpy
-image /= image.max()/255.0
-# Uses 1+image.size divisions</code></pre>
+image /= image.max()/255.0    # Uses 1+image.size divisions</code></pre>
 <p>Since we are using basic numpy methods here, I think this is about as efficient a solution in numpy as can be.</p>
 <hr>
 <p>
@@ -5952,14 +5836,11 @@ import numpy as np
 
 a = np.random.rand(3,2)
 
-
 # Normalised [0,1]
 b = (a - np.min(a))/np.ptp(a)
 
-
 # Normalised [0,255] as integer
 c = 255*(a - np.min(a))/np.ptp(a).astype(int)
-
 
 # Normalised [-1,1]
 d = 2.*(a - np.min(a))/np.ptp(a)-1</code></pre>
@@ -6062,10 +5943,8 @@ pd.DataFrame(list(map(list, zip(lst1,lst2,lst3))))</code></pre>
 <p>I have tried the following example:</p>
 <pre><code>numpy
 from scipy.fftpack import fft
-
 # Number of samplepoints
 N = 600
-
 # sample spacing
 T = 1.0 / 800.0
 x = np.linspace(0.0, N*T, N)
@@ -6084,27 +5963,21 @@ plt.show()</code></pre>
 <p>When i do an fft on the whole thing it just has a huge spike at zero and nothing else</p>
 <p>Here is my code:</p>
 <pre><code>numpy
-
 ## Perform FFT WITH SCIPY
 signalFFT = fft(yInterp)
-
 
 ## Get Power Spectral Density
 signalPSD = np.abs(signalFFT) ** 2
 
-
 ## Get frequencies corresponding to signal PSD
 fftFreq = fftfreq(len(signalPSD), spacing)
-
 
 ## Get positive half of frequencies
 i = fftfreq&amp;gt;0
 
-
 ##
 plt.figurefigsize=(8,4));
 plt.plot(fftFreq[i], 10*np.log10(signalPSD[i]));
-
 #plt.xlim(0, 100);
 plt.xlabel(&#39;Frequency Hz&#39;);
 plt.ylabel(&#39;PSD (dB)&#39;)</code></pre>
@@ -6119,10 +5992,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.fftpack
 
-
 # Number of samplepoints
 N = 600
-
 # sample spacing
 T = 1.0 / 800.0
 x = np.linspace(0.0, N*T, N)
@@ -6143,10 +6014,8 @@ In response to the raw data and comments being posted
 <pre><code>numpy
 import pandas
 import matplotlib.pyplot as plt
-
 #import seaborn
 %matplotlib inline
-
 
 # the OP&#39;s data
 x = pandas.read_csv(&#39;http://pastebin.com/raw.php?i=ksM4FvZS&#39;, skiprows=2, header=None).values
@@ -6185,10 +6054,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.fftpack
 
-
 # Number of samplepoints
 N = 600
-
 # sample spacing
 T = 1.0 / 800.0
 x = np.linspace(0.0, N*T, N)
@@ -6595,8 +6462,7 @@ a = array([[1,3,4,x],[1,2,3,x]...[1,2,1,x]])</code></pre>
 </section>
 <section id="answer-accepted-score-125" class="level4">
 <h4>Answer accepted (score 125)</h4>
-<p>Appending data to an existing array is a natural thing to want to do for anyone with python experience. However, if you find yourself regularly appending to large arrays, you’ll quickly discover that NumPy doesn’t easily or efficiently do this the way a python <code>list</code> will. You’ll find that every “append” action requires re-allocation of the array memory and short-term doubling of memory requirements. So, the more general solution to the problem is to try to allocate arrays to be as large as the final output of your algorithm. Then perform all your operations on sub-sets (<a href="http://docs.scipy.org/doc/numpy/user/basics.indexing.html
-#other-indexing-options" rel="noreferrer">slices</a>) of that array. Array creation and destruction should ideally be minimized.</p>
+<p>Appending data to an existing array is a natural thing to want to do for anyone with python experience. However, if you find yourself regularly appending to large arrays, you’ll quickly discover that NumPy doesn’t easily or efficiently do this the way a python <code>list</code> will. You’ll find that every “append” action requires re-allocation of the array memory and short-term doubling of memory requirements. So, the more general solution to the problem is to try to allocate arrays to be as large as the final output of your algorithm. Then perform all your operations on sub-sets (<a href="http://docs.scipy.org/doc/numpy/user/basics.indexing.html#other-indexing-options" rel="noreferrer">slices</a>) of that array. Array creation and destruction should ideally be minimized.</p>
 <p>That said, It’s often unavoidable and the functions that do this are:</p>
 <p>for 2-D arrays:</p>
 <ul>
@@ -6887,7 +6753,6 @@ gray = cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)
 blur = cv2.GaussianBlur(gray,(5,5),0)
 thresh = cv2.adaptiveThreshold(blur,255,1,1,11,2)
 
-
 #################      Now finding Contours         ###################
 
 contours,hierarchy = cv2.findContours(thresh,cv2.RETR_LIST,cv2.CHAIN_APPROX_SIMPLE)
@@ -6907,8 +6772,7 @@ for cnt in contours:
             cv2.imshow(&#39;norm&#39;,im)
             key = cv2.waitKey(0)
 
-            if key == 27:
-# (escape to quit)
+            if key == 27:  # (escape to quit)
                 sys.exit()
             elif key in keys:
                 responses.append(int(chr(key)))
@@ -6957,7 +6821,6 @@ Then we use KNearest.find_nearest() function to find the nearest item to the one
 import cv2
 import numpy as np
 
-
 #######   training part    ############### 
 samples = np.loadtxt(&#39;generalsamples.data&#39;,np.float32)
 responses = np.loadtxt(&#39;generalresponses.data&#39;,np.float32)
@@ -6965,7 +6828,6 @@ responses = responses.reshape((responses.size,1))
 
 model = cv2.KNearest()
 model.train(samples,responses)
-
 
 ############################# testing part  #########################
 
@@ -7258,12 +7120,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 x = [1,2,3,4]
-y = [3,5,7,10]
-# 10, not 9, so the fit isn&#39;t perfect
+y = [3,5,7,10] # 10, not 9, so the fit isn&#39;t perfect
 
 fit = np.polyfit(x,y,1)
 fit_fn = np.poly1d(fit) 
-
 # fit_fn is now a function which takes in x and returns an estimate for y
 
 plt.plot(x,y, &#39;yo&#39;, x, fit_fn(x), &#39;--k&#39;)
@@ -7277,8 +7137,7 @@ plt.ylim(0, 12)</code></pre>
 <pre><code>numpy
 from scipy.stats import linregress
 
-linregress(x,y)
-#x and y are arrays or lists.</code></pre>
+linregress(x,y) #x and y are arrays or lists.</code></pre>
 <p>gives out a list with the following:</p>
 <blockquote>
 <p>
@@ -7389,21 +7248,18 @@ import matplotlib.pyplot as plt
 
 x = np.linspace(0,2*np.pi,100)
 y = np.sin(x) + np.random.random(100) * 0.2
-yhat = savitzky_golay(y, 51, 3)
-# window size 51, polynomial order 3
+yhat = savitzky_golay(y, 51, 3) # window size 51, polynomial order 3
 
 plt.plot(x,y)
 plt.plot(x,yhat, color=&#39;red&#39;)
 plt.show()</code></pre>
 <p><img src="https://i.stack.imgur.com/SbvSL.png" alt="optimally smoothing a noisy sinusoid"></p>
 <p>
-<strong>UPDATE:</strong> It has come to my attention that the cookbook example I linked to has been taken down. Fortunately, the Savitzky-Golay filter has been incorporated <a href="http://docs.scipy.org/doc/scipy-dev/reference/generated/scipy.signal.savgol_filter.html
-#scipy.signal.savgol_filter" rel="noreferrer">into the SciPy library</a>, as pointed out by <a href="https://stackoverflow.com/users/2068580/dodohjk"><span class="citation" data-cites="dodohjk">@dodohjk</span></a>. To adapt the above code by using SciPy source, type:
+<strong>UPDATE:</strong> It has come to my attention that the cookbook example I linked to has been taken down. Fortunately, the Savitzky-Golay filter has been incorporated <a href="http://docs.scipy.org/doc/scipy-dev/reference/generated/scipy.signal.savgol_filter.html#scipy.signal.savgol_filter" rel="noreferrer">into the SciPy library</a>, as pointed out by <a href="https://stackoverflow.com/users/2068580/dodohjk"><span class="citation" data-cites="dodohjk">@dodohjk</span></a>. To adapt the above code by using SciPy source, type:
 </p>
 <pre><code>numpy
 from scipy.signal import savgol_filter
-yhat = savgol_filter(y, 51, 3)
-# window size 51, polynomial order 3</code></pre>
+yhat = savgol_filter(y, 51, 3) # window size 51, polynomial order 3</code></pre>
 </section>
 <section id="answer-3-score-111" class="level4">
 <h4>Answer 3 (score 111)</h4>
@@ -7470,14 +7326,12 @@ hist, bin_edges = np.histogram([1, 1, 2, 2, 2, 2, 3], bins = range(5))</code></p
 <p>Below, <code>hist</code> indicates that there are 0 items in bin #0, 2 in bin #1, 4 in bin #3, 1 in bin #4.</p>
 <pre><code>numpy
 print(hist)
-
 # array([0, 2, 4, 1])   </code></pre>
 <p>
 <code>bin_edges</code> indicates that bin #0 is the interval [0,1), bin #1 is [1,2), …, bin #3 is [3,4).
 </p>
 <pre><code>numpy
 print (bin_edges)
-
 # array([0, 1, 2, 3, 4]))  </code></pre>
 <p>Play with the above code, change the input to <code>np.histogram</code> and see how it works.</p>
 <hr>
@@ -7519,20 +7373,16 @@ array([1, 3, 5])</code></pre>
 </section>
 <section id="answer-2-score-25" class="level4">
 <h4>Answer 2 (score 25)</h4>
-<p>There is <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.argwhere.html
-#numpy-argwhere" rel="noreferrer"><code>np.argwhere</code></a>,</p>
+<p>There is <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.argwhere.html#numpy-argwhere" rel="noreferrer"><code>np.argwhere</code></a>,</p>
 <pre><code>numpy
 import numpy as np
 arr = np.array([[1,2,3], [0, 1, 0], [7, 0, 2]])
 np.argwhere(arr == 0)</code></pre>
 <p>which returns all found indices as rows:</p>
 <pre><code>numpy
-array([[1, 0],
-# Indices of the first zero
-       [1, 2],
-# Indices of the second zero
-       [2, 1]],
-# Indices of the third zero
+array([[1, 0],    # Indices of the first zero
+       [1, 2],    # Indices of the second zero
+       [2, 1]],   # Indices of the third zero
       dtype=int64)</code></pre>
 </section>
 <section id="answer-3-score-23-3" class="level4">
@@ -7540,8 +7390,7 @@ array([[1, 0],
 <p>You can search for any scalar condition with:</p>
 <pre><code>numpy
 &amp;gt;&amp;gt;&amp;gt; a = np.asarray([0,1,2,3,4])
-&amp;gt;&amp;gt;&amp;gt; a == 0
-# or whatver
+&amp;gt;&amp;gt;&amp;gt; a == 0 # or whatver
 array([ True, False, False, False, False], dtype=bool)</code></pre>
 <p>Which will give back the array as an boolean mask of the condition.</p>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
@@ -7620,8 +7469,7 @@ a.reshape((1, -1))</code></pre>
    File &quot;C:\Python25\lib\site-packages\pylab.py&quot;, line 1, in &amp;lt;module&amp;gt;
       from matplotlib.pylab import *
    File &quot;C:\Python25\lib\site-packages\matplotlib\pylab.py&quot;, line 216, in &amp;lt;module&amp;gt;
-      from matplotlib import mpl
-# pulls in most modules
+      from matplotlib import mpl  # pulls in most modules
    File &quot;C:\Python25\lib\site-packages\matplotlib\mpl.py&quot;, line 1, in &amp;lt;module&amp;gt;
       from matplotlib import artist
    File &quot;C:\Python25\lib\site-packages\matplotlib\artist.py&quot;, line 6, in &amp;lt;module&amp;gt;
@@ -7735,8 +7583,7 @@ y.strides
 <pre><code>numpy
 x[[[1],[3]],[1,3]]</code></pre>
 <p>
-This is because the index arrays are <a href="http://docs.scipy.org/doc/numpy-1.5.x/reference/ufuncs.html
-#broadcasting" rel="noreferrer">broadcasted</a> to a common shape. Of course, for this particular example, you can also make do with basic slicing:
+This is because the index arrays are <a href="http://docs.scipy.org/doc/numpy-1.5.x/reference/ufuncs.html#broadcasting" rel="noreferrer">broadcasted</a> to a common shape. Of course, for this particular example, you can also make do with basic slicing:
 </p>
 <pre><code>numpy
 x[1::2, 1::2]</code></pre>
@@ -7764,7 +7611,6 @@ test = [1,23,4,6,7,8]</code></pre>
 If I am trying to get the <code>first and last = 1,8</code>, <code>23,7</code> and <code>4,6</code>. Is there a way to get elements in this order? I looked at a couple of questions <a href="https://stackoverflow.com/questions/12218796/python-slice-first-and-last-element-in-list">Link</a> <a href="https://stackoverflow.com/questions/930397/how-to-get-the-last-element-of-a-list">Link2</a>. I took help of these links and I came up with this prototype..
 </p>
 <pre><code>numpy
-
 #!/usr/bin/env python
 
 import numpy
@@ -7806,10 +7652,8 @@ In [43]: %timeit numpy.vstack((arr, arr[::-1]))[:,:len(arr)//2]
 <p>I ended here, because I googled for “python first and last element of array”, and found everything else but this. So here’s the answer to the title question:</p>
 <pre><code>numpy
 a = [1,2,3]
-a[0]
-# first element (returns 1)
-a[-1]
-# last element (returns 3)</code></pre>
+a[0] # first element (returns 1)
+a[-1] # last element (returns 3)</code></pre>
 </section>
 <section id="answer-3-score-3" class="level4">
 <h4>Answer 3 (score 3)</h4>
@@ -7818,19 +7662,15 @@ a[-1]
 &amp;gt;&amp;gt;&amp;gt; test
 array([ 1, 23,  4,  6,  7,  8])
 
-&amp;gt;&amp;gt;&amp;gt; test[::-1]
-# test, reversed
+&amp;gt;&amp;gt;&amp;gt; test[::-1]  # test, reversed
 array([ 8,  7,  6,  4, 23,  1])
 
-&amp;gt;&amp;gt;&amp;gt; numpy.vstack([test, test[::-1]])
-# stack test and its reverse
+&amp;gt;&amp;gt;&amp;gt; numpy.vstack([test, test[::-1]])  # stack test and its reverse
 array([[ 1, 23,  4,  6,  7,  8],
        [ 8,  7,  6,  4, 23,  1]])
 
-&amp;gt;&amp;gt;&amp;gt;
-# transpose, then take the first half;
-&amp;gt;&amp;gt;&amp;gt;
-# +1 to cater to odd-length arrays
+&amp;gt;&amp;gt;&amp;gt; # transpose, then take the first half;
+&amp;gt;&amp;gt;&amp;gt; # +1 to cater to odd-length arrays
 &amp;gt;&amp;gt;&amp;gt; numpy.vstack([test, test[::-1]]).T[:(len(test) + 1) // 2]
 array([[ 1,  8],
        [23,  7],
@@ -7855,7 +7695,6 @@ array([[ 1,  8],
 &amp;gt;&amp;gt;&amp;gt; y = numpy.array([10, 19, 30, 35, 51])
 &amp;gt;&amp;gt;&amp;gt; numpy.polyfit(numpy.log(x), y, 1)
 array([ 8.46295607,  6.61867463])
-
 # y ≈ 8.46 log(x) + 6.62</code></pre>
 <hr>
 <p>For fitting <em>y</em> = <em>Ae</em><sup><em>Bx</em></sup>, take the logarithm of both side gives log <em>y</em> = log <em>A</em> + <em>Bx</em>. So fit (log <em>y</em>) against <em>x</em>.</p>
@@ -7866,15 +7705,11 @@ array([ 8.46295607,  6.61867463])
 &amp;gt;&amp;gt;&amp;gt; y = numpy.array([1, 7, 20, 50, 79])
 &amp;gt;&amp;gt;&amp;gt; numpy.polyfit(x, numpy.log(y), 1)
 array([ 0.10502711, -0.40116352])
-
 #    y ≈ exp(-0.401) * exp(0.105 * x) = 0.670 * exp(0.105 * x)
-
 # (^ biased towards small values)
 &amp;gt;&amp;gt;&amp;gt; numpy.polyfit(x, numpy.log(y), 1, w=numpy.sqrt(y))
 array([ 0.06009446,  1.41648096])
-
 #    y ≈ exp(1.42) * exp(0.0601 * x) = 4.12 * exp(0.0601 * x)
-
 # (^ not so biased)</code></pre>
 <p><strong>Note that Excel, LibreOffice and most scientific calculators typically use the unweighted (biased) formula for the exponential regression / trend lines.</strong> If you want your results to be compatible with these platforms, do not include the weights even if it provides better results.</p>
 <hr>
@@ -7887,7 +7722,6 @@ array([ 0.06009446,  1.41648096])
 (array([ 6.61867467,  8.46295606]), 
  array([[ 28.15948002,  -7.89609542],
         [ -7.89609542,   2.9857172 ]]))
-
 # y ≈ 6.62 + 8.46 log(x)</code></pre>
 <p>For <em>y</em> = <em>Ae</em><sup><em>Bx</em></sup>, however, we can get a better fit since it computes Δ(log <em>y</em>) directly. But we need to provide an initialize guess so <code>curve_fit</code> can reach the desired local minimum.</p>
 <pre><code>numpy
@@ -7897,13 +7731,11 @@ array([ 0.06009446,  1.41648096])
 (array([  5.60728326e-21,   9.99993501e-01]),
  array([[  4.14809412e-27,  -1.45078961e-08],
         [ -1.45078961e-08,   5.07411462e+10]]))
-
 # oops, definitely wrong.
 &amp;gt;&amp;gt;&amp;gt; scipy.optimize.curve_fit(lambda t,a,b: a*numpy.exp(b*t),  x,  y,  p0=(4, 0.1))
 (array([ 4.88003249,  0.05531256]),
  array([[  1.01261314e+01,  -4.31940132e-02],
         [ -4.31940132e-02,   1.91188656e-04]]))
-
 # y ≈ 4.88 exp(0.0553 x). much better.</code></pre>
 <p><a href="https://i.stack.imgur.com/8JSLa.png" rel="noreferrer"><img src="https://i.stack.imgur.com/8JSLa.png" alt="comparison of exponential regression"></a></p>
 </section>
@@ -7937,7 +7769,6 @@ plt.show()</code></pre>
 <p>I was having some trouble with this so let me be very explicit so noobs like me can understand.</p>
 <p>Lets say that we have a data file or something like that</p>
 <pre><code>numpy
-
 # -*- coding: utf-8 -*-
 
 import matplotlib.pyplot as plt
@@ -7959,10 +7790,8 @@ plt.plot(x, y, &#39;ro&#39;,label=&quot;Original Data&quot;)
 &quot;&quot;&quot;
 brutal force to avoid errors
 &quot;&quot;&quot;    
-x = np.array(x, dtype=float)
-#transform your data in a numpy array of floats 
-y = np.array(y, dtype=float)
-#so the curve_fit can work
+x = np.array(x, dtype=float) #transform your data in a numpy array of floats 
+y = np.array(y, dtype=float) #so the curve_fit can work
 
 &quot;&quot;&quot;
 create a function to fit with your data. a, b, c and d are the coefficients
@@ -7996,9 +7825,7 @@ plt.title(r&#39;$f(\lambda)= %s$&#39; %(tex),fontsize=16)
 Print the coefficients and plot the funcion.
 &quot;&quot;&quot;
 
-plt.plot(x, func(x, *popt), label=&quot;Fitted Curve&quot;)
-#same as line above \/
-
+plt.plot(x, func(x, *popt), label=&quot;Fitted Curve&quot;) #same as line above \/
 #plt.plot(x, popt[0]*x**3 + popt[1]*x**2 + popt[2]*x + popt[3], label=&quot;Fitted Curve&quot;) 
 
 plt.legend(loc=&#39;upper left&#39;)

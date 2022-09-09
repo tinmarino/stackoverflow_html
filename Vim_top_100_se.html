@@ -5,22 +5,125 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Vim_top_100_se.md – Vim &lt;- StackEchange top 100</title>
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <link rel="stylesheet" href="../wiki_html/Css/include.css" />
-  <script type="text/javascript" src="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/js_masonry_desandro.js"></script>
-  <p><link rel="stylesheet" href="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/color_dark_solarized.css"> <link rel="stylesheet" href="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/layout_toc.css"></p>
+  <link rel="stylesheet" href="../Css/code_prism_dark.css" />
+  <link rel="stylesheet" href="../Css/color_dark_solarized.css" />
+  <link rel="stylesheet" href="../Css/layout_toc.css" />
+  <script type="text/javascript" src="../Css/js_masonry_desandro.js"></script>
 </head>
 <body>
-<header id="title-block-header">
+<header>
 <h1 class="title">Vim &lt;- StackEchange top 100</h1>
 </header>
+<nav id="TOC">
+<ul>
+<li><a href="#how-can-i-copy-text-to-the-system-clipboard-from-vim-score-228296-in-2015">1: How can I copy text to the system clipboard from Vim? (score <span>228296</span> in 2015)</a></li>
+<li><a href="#how-can-i-use-vim-as-a-hex-editor-score-160234-in-2017">2: How can I use Vim as a hex editor? (score <span>160234</span> in 2017)</a></li>
+<li><a href="#how-do-i-install-a-plugin-in-vimvi-score-140003-in-2017">3: How do I install a plugin in Vim/vi? (score <span>140003</span> in 2017)</a></li>
+<li><a href="#how-do-i-use-vim-as-a-diff-tool-score-134835-in-2015">4: How do I use vim as a diff tool? (score <span>134835</span> in 2015)</a></li>
+<li><a href="#displaying-tabs-as-characters-score-118320-in-2015">5: Displaying tabs as characters (score <span>118320</span> in 2015)</a></li>
+<li><a href="#why-doesnt-the-backspace-key-work-in-insert-mode-score-103819-in-2017">6: Why doesn’t the backspace key work in insert mode? (score <span>103819</span> in 2017)</a></li>
+<li><a href="#whats-the-simplest-way-to-strip-trailing-whitespace-from-all-lines-in-a-file-score-91801-in-2015">7: What’s the simplest way to strip trailing whitespace from all lines in a file? (score <span>91801</span> in 2015)</a></li>
+<li><a href="#is-it-possible-to-split-vim-window-to-view-multiple-files-at-once-score-90210-in">8: Is it possible to split Vim window to view multiple files at once? (score <span>90210</span> in )</a></li>
+<li><a href="#what-is-the-difference-between-the-vim-plugin-managers-score-89866-in-2016">9: What is the difference between the vim plugin managers? (score <span>89866</span> in 2016)</a></li>
+<li><a href="#how-do-i-reload-the-current-file-score-74672-in-2015">10: How do I reload the current file? (score <span>74672</span> in 2015)</a></li>
+<li><a href="#is-it-possible-to-have-vim-auto-complete-function-names-variables-etc.-when-using-it-to-program-score-72480-in-2015">11: Is it possible to have vim auto-complete function names, variables, etc. when using it to program? (score <span>72480</span> in 2015)</a></li>
+<li><a href="#how-to-replace-tabs-with-spaces-score-67722-in-2015">12: How to replace tabs with spaces? (score <span>67722</span> in 2015)</a></li>
+<li><a href="#how-to-edit-binary-files-with-vim-score-64852-in-2015">13: How to edit binary files with Vim? (score <span>64852</span> in 2015)</a></li>
+<li><a href="#find-and-replace-using-regular-expressions-score-64492-in-2019">14: Find and replace using regular expressions (score <span>64492</span> in 2019)</a></li>
+<li><a href="#how-can-i-see-the-full-path-of-the-current-file-score-62317-in-2015">15: How can I see the full path of the current file? (score <span>62317</span> in 2015)</a></li>
+<li><a href="#how-do-i-change-the-current-splits-width-and-height-score-60587-in-2019">16: How do I change the current split’s width and height? (score <span>60587</span> in 2019)</a></li>
+<li><a href="#how-can-i-clear-word-highlighting-in-the-current-document-e.g.such-as-after-searching-for-a-word-score-57992-in">17: How can I clear word highlighting in the current document (e.g. such as after searching for a word)? (score <span>57992</span> in )</a></li>
+<li><a href="#how-do-i-delete-a-large-block-of-text-without-counting-the-lines-score-57383-in">18: How do I delete a large block of text without counting the lines? (score <span>57383</span> in )</a></li>
+<li><a href="#other-ways-to-exit-insert-mode-besides-escape-score-57295-in-2015">19: Other ways to exit Insert mode besides Escape (score <span>57295</span> in 2015)</a></li>
+<li><a href="#how-can-i-change-the-font-size-in-gvim-score-49495-in-2017">20: How can I change the font size in gVim? (score <span>49495</span> in 2017)</a></li>
+<li><a href="#how-do-i-fix-the-status-bar-symbols-in-the-airline-plugin-score-48604-in-2017">21: How do I fix the status bar symbols in the Airline plugin? (score <span>48604</span> in 2017)</a></li>
+<li><a href="#how-can-i-easily-move-a-line-score-48450-in-2015">22: How can I easily move a line? (score <span>48450</span> in 2015)</a></li>
+<li><a href="#what-does-set-backgrounddark-do-score-41525-in-2017">23: What does :set background=dark do? (score <span>41525</span> in 2017)</a></li>
+<li><a href="#how-to-install-youcompleteme-with-clang-completer-offline-score-39070-in">24: How to install YouCompleteMe with Clang completer offline? (score <span>39070</span> in )</a></li>
+<li><a href="#what-is-the-purpose-of-swap-files-score-38781-in">25: What is the purpose of swap files? (score <span>38781</span> in )</a></li>
+<li><a href="#does-ex-mode-have-any-practical-use-score-37752-in-2018">26: Does Ex mode have any practical use? (score <span>37752</span> in 2018)</a></li>
+<li><a href="#how-to-get-intelligent-c-auto-completion-score-37303-in-2015">27: How to get intelligent C++ auto-completion (score <span>37303</span> in 2015)</a></li>
+<li><a href="#how-do-i-configure-the-vim-airline-plugin-to-look-like-its-own-project-screenshot-score-37122-in-2019">28: How do I configure the Vim airline plugin to look like its own project screenshot? (score <span>37122</span> in 2019)</a></li>
+<li><a href="#how-to-enable-python-feature-in-vim-score-36047-in-2017">29: How to enable +python feature in vim (score <span>36047</span> in 2017)</a></li>
+<li><a href="#is-there-a-way-to-count-the-number-of-occurrences-of-a-word-in-a-file-score-35456-in-2017">30: Is there a way to count the number of occurrences of a word in a file? (score <span>35456</span> in 2017)</a></li>
+<li><a href="#how-can-i-integrate-gdb-with-vim-score-34965-in-2015">31: How can I integrate gdb with Vim? (score <span>34965</span> in 2015)</a></li>
+<li><a href="#what-is-neovim-how-is-it-different-from-vim-and-why-should-i-care-score-33870-in-2015">32: What is Neovim? How is it different from Vim? And why should I care? (score <span>33870</span> in 2015)</a></li>
+<li><a href="#how-can-i-rename-the-file-im-editing-score-33764-in-2015">33: How can I rename the file I’m editing? (score <span>33764</span> in 2015)</a></li>
+<li><a href="#how-do-i-stop-recording-while-in-command-line-score-32725-in">34: How do I stop recording while in command line? (score <span>32725</span> in )</a></li>
+<li><a href="#close-and-unload-a-buffer-without-exiting-vim-score-32516-in">35: Close and unload a buffer without exiting Vim (score <span>32516</span> in )</a></li>
+<li><a href="#how-to-add-indentation-guideslines-score-32447-in-2015">36: How to add indentation guides/lines (score <span>32447</span> in 2015)</a></li>
+<li><a href="#how-to-execute-shell-commands-silently-score-31968-in-2015">37: How to execute shell commands silently? (score <span>31968</span> in 2015)</a></li>
+<li><a href="#how-can-i-get-gvim-on-windows-to-behave-as-on-linux-score-29967-in-2018">38: How can I get gVim on Windows to behave as on Linux? (score <span>29967</span> in 2018)</a></li>
+<li><a href="#setting-tab-to-2-spaces-score-29213-in">39: Setting TAB to 2 spaces (score <span>29213</span> in )</a></li>
+<li><a href="#is-there-an-easy-way-to-close-a-scratch-bufferpreview-window-score-28792-in-2015">40: Is there an easy way to close a scratch buffer/preview window? (score <span>28792</span> in 2015)</a></li>
+<li><a href="#how-to-install-nerdtree-with-vundle-score-28784-in-2016">41: How to install NERDTree with Vundle? (score <span>28784</span> in 2016)</a></li>
+<li><a href="#what-is-the-vim8-package-feature-and-how-should-i-use-it-score-28596-in-2017">42: What is the Vim8 package feature and how should I use it? (score <span>28596</span> in 2017)</a></li>
+<li><a href="#vim-8.0-python-support-score-28486-in-2017">43: Vim 8.0 Python support (score <span>28486</span> in 2017)</a></li>
+<li><a href="#how-can-i-set-up-a-ruler-at-a-specific-column-score-27647-in-2016">44: How can I set up a ruler at a specific column? (score <span>27647</span> in 2016)</a></li>
+<li><a href="#how-can-i-get-a-newer-version-of-vim-on-ubuntu-score-27162-in">45: How can I get a newer version of Vim on Ubuntu? (score <span>27162</span> in )</a></li>
+<li><a href="#exit-from-terminal-mode-in-neovim-score-26735-in-2017">46: Exit from Terminal mode in Neovim (score <span>26735</span> in 2017)</a></li>
+<li><a href="#what-is-the-command-for-select-all-in-vim-and-vsvim-score-23764-in-2016">47: what is the command for “Select All” in vim and VsVim? (score <span>23764</span> in 2016)</a></li>
+<li><a href="#how-to-map-alt-key-score-23521-in-2015">48: How to map Alt key? (score <span>23521</span> in 2015)</a></li>
+<li><a href="#what-are-the-differences-between-wq-x-and-zz-when-exiting-vim-score-23339-in-2016">49: What are the differences between :wq<cr> :x<cr> and ZZ when exiting vim? (score <span>23339</span> in 2016)</a></li>
+<li><a href="#how-can-i-yank-copy-the-single-character-on-which-the-cursor-rests-score-22848-in-2017">50: How can I yank (copy) the single character on which the cursor rests? (score <span>22848</span> in 2017)</a></li>
+<li><a href="#fastest-way-to-switch-to-a-buffer-in-vim-score-22833-in-2017">51: Fastest way to switch to a buffer in vim? (score <span>22833</span> in 2017)</a></li>
+<li><a href="#colorschemes-background-not-correct-in-terminal-score-22830-in-2015">52: Colorscheme’s background not correct in terminal (score <span>22830</span> in 2015)</a></li>
+<li><a href="#how-do-i-open-and-close-nerdtree-toggle-nerdtree-view-using-a-single-keystroke-score-22723-in">53: How do I open and close NERDTree (toggle NERDTree view) using a single keystroke? (score <span>22723</span> in )</a></li>
+<li><a href="#how-can-i-find-out-what-is-set-to-and-is-it-possible-to-remap-score-22707-in-2015">54: How can I find out what <Leader> is set to? And is it possible to remap <Leader>? (score <span>22707</span> in 2015)</a></li>
+<li><a href="#search-for-lines-starting-with-given-string-in-vim-score-22603-in-2015">55: Search for lines starting with given string in vim? (score <span>22603</span> in 2015)</a></li>
+<li><a href="#e297-write-error-in-swap-file-due-to-running-in-a-vm-score-21311-in-2016">56: “E297: Write error in swap file” due to running in a VM (score <span>21311</span> in 2016)</a></li>
+<li><a href="#how-can-i-change-the-indent-size-score-21224-in-2016">57: How can I change the indent size? (score <span>21224</span> in 2016)</a></li>
+<li><a href="#what-is-the-difference-between-filetype-plugin-indent-on-and-filetype-indent-on-score-19996-in">58: What is the difference between <code>filetype plugin indent on</code> and <code>filetype indent on</code>? (score <span>19996</span> in )</a></li>
+<li><a href="#what-are-the-.viminfo-and-.netrwhist-files-score-19886-in">59: What are the .viminfo and .netrwhist files? (score <span>19886</span> in )</a></li>
+<li><a href="#how-to-indent-as-spaces-instead-of-tab-score-19184-in-2017">60: How to indent as spaces instead of tab? (score <span>19184</span> in 2017)</a></li>
+<li><a href="#how-can-i-show-relative-line-numbers-score-19134-in-2015">61: How can I show relative line numbers? (score <span>19134</span> in 2015)</a></li>
+<li><a href="#what-is-the-difference-between-autoindent-and-smartindent-in-vimrc-score-18488-in-2016">62: What is the difference between autoindent and smartindent in vimrc? (score <span>18488</span> in 2016)</a></li>
+<li><a href="#why-do-i-need-both-a-vimrc-and-a-gvimrc-score-18307-in-2015">63: Why do I need both a vimrc and a gvimrc? (score <span>18307</span> in 2015)</a></li>
+<li><a href="#what-is-softtabstop-used-for-score-17681-in-2015">64: What is <code>softtabstop</code> used for? (score <span>17681</span> in 2015)</a></li>
+<li><a href="#how-to-block-replace-code-in-visual-mode-score-17521-in">65: How to block replace code in visual mode? (score <span>17521</span> in )</a></li>
+<li><a href="#trouble-using-color-scheme-in-neovim-score-17506-in-2015">66: Trouble Using Color Scheme in NeoVim (score <span>17506</span> in 2015)</a></li>
+<li><a href="#show-only-matching-lines-score-16648-in-2015">67: Show only matching lines? (score <span>16648</span> in 2015)</a></li>
+<li><a href="#can-i-jump-to-a-function-declaration-or-definition-in-a-multiple-c-source-files-project-score-16557-in-2015">68: Can I jump to a function declaration or definition in a multiple C++ source files project? (score <span>16557</span> in 2015)</a></li>
+<li><a href="#how-to-diff-and-merge-two-directories-score-15944-in-2017">69: How to diff and merge two directories? (score <span>15944</span> in 2017)</a></li>
+<li><a href="#how-to-jump-to-function-call-score-15853-in">70: How to jump to function call? (score <span>15853</span> in )</a></li>
+<li><a href="#how-can-i-get-vim-to-stop-putting-comments-in-front-of-new-lines-score-15818-in-2015">71: How can I get vim to stop putting comments in front of new lines? (score <span>15818</span> in 2015)</a></li>
+<li><a href="#how-do-i-know-the-patch-version-of-my-vim-score-15753-in">72: How do I know the patch version of my vim? (score <span>15753</span> in )</a></li>
+<li><a href="#how-do-i-debug-my-vimrc-file-score-15629-in-2018">73: How do I debug my vimrc file? (score <span>15629</span> in 2018)</a></li>
+<li><a href="#why-is-using-arrow-keys-in-normal-mode-considered-bad-practice-score-15441-in-2018">74: Why is using arrow keys in normal mode considered bad practice? (score <span>15441</span> in 2018)</a></li>
+<li><a href="#execute-normal-command-over-range-score-15035-in-2015">75: Execute normal command over range (score <span>15035</span> in 2015)</a></li>
+<li><a href="#vim-code-completion-for-python-3-score-14860-in-2015">76: Vim Code Completion for Python 3 (score <span>14860</span> in 2015)</a></li>
+<li><a href="#what-is-the-difference-between-the-vim-snippets-plugins-score-14786-in-2017">77: What is the difference between the vim snippets plugins? (score <span>14786</span> in 2017)</a></li>
+<li><a href="#how-can-i-install-64-bit-vim-on-windows-score-14762-in-2017">78: How can I install 64-bit Vim on Windows? (score <span>14762</span> in 2017)</a></li>
+<li><a href="#how-to-open-multiple-files-in-split-mode-score-14601-in-2017">79: How to open multiple files in split mode? (score <span>14601</span> in 2017)</a></li>
+<li><a href="#why-am-i-getting-a-e488-trailing-characters-error-on-this-custom-command-score-14576-in-2015">80: Why am I getting a “E488: Trailing characters” error on this custom command? (score <span>14576</span> in 2015)</a></li>
+<li><a href="#how-to-share-config-between-vim-and-neovim-score-14462-in-2018">81: How to share config between vim and Neovim (score <span>14462</span> in 2018)</a></li>
+<li><a href="#how-to-join-lines-without-producing-a-space-score-14278-in-2015">82: How to join lines without producing a space? (score <span>14278</span> in 2015)</a></li>
+<li><a href="#regex-to-match-any-character-including-newline-score-14103-in">83: Regex to match any character including newline (score <span>14103</span> in )</a></li>
+<li><a href="#list-valid-color-schemes-score-13644-in">84: List valid color schemes? (score <span>13644</span> in )</a></li>
+<li><a href="#how-to-match-the-first-occurence-of-a-repeating-pattern-on-the-same-line-score-13388-in-2015">85: How to match the first occurence of a repeating pattern on the same line? (score <span>13388</span> in 2015)</a></li>
+<li><a href="#list-known-filetypes-score-13108-in-2015">86: List known filetypes (score <span>13108</span> in 2015)</a></li>
+<li><a href="#how-can-i-get-vim-to-show-documentation-of-a-cc-function-score-13098-in-2016">87: How can I get Vim to show documentation of a C/C++ function? (score <span>13098</span> in 2016)</a></li>
+<li><a href="#how-to-automatically-turn-off-hlsearch-after-im-done-searching-score-13021-in-2016">88: How to automatically turn off “hlsearch” after I’m done searching? (score <span>13021</span> in 2016)</a></li>
+<li><a href="#how-to-insert-a-newline-without-leaving-normal-mode-score-12974-in-2019">89: How to insert a newline without leaving normal mode (score <span>12974</span> in 2019)</a></li>
+<li><a href="#how-can-i-change-the-colour-of-the-line-highlighted-with-the-cursorline-option-score-12817-in-2015">90: How can I change the colour of the line highlighted with the ‘cursorline’ option? (score <span>12817</span> in 2015)</a></li>
+<li><a href="#use-conditional-operators-and-or-or-in-an-if-statement-score-12775-in-2016">91: Use conditional operators AND or OR in an IF statement? (score <span>12775</span> in 2016)</a></li>
+<li><a href="#where-is-xxd-in-windows-gvim-score-12746-in-2016">92: Where is xxd in Windows gvim? (score <span>12746</span> in 2016)</a></li>
+<li><a href="#swap-the-position-of-two-windows-score-12523-in-2015">93: Swap the position of two windows (score <span>12523</span> in 2015)</a></li>
+<li><a href="#is-there-a-difference-between-sudo-apt-get-vim-and-.configure-with-featureshuge-score-12436-in-2015">94: Is there a difference between “sudo apt-get vim” and “./configure –with-features=huge”? (score <span>12436</span> in 2015)</a></li>
+<li><a href="#why-does-vim-use-hjkl-for-cursor-keys-score-12352-in-2017">95: Why does vim use hjkl for cursor keys? (score <span>12352</span> in 2017)</a></li>
+<li><a href="#how-do-i-use-the-system-clipboard-with-vim-in-arch-linux-score-12300-in-2015">96: How do I use the system clipboard with Vim in Arch Linux? (score <span>12300</span> in 2015)</a></li>
+<li><a href="#how-do-i-copy-and-paste-between-two-vim-instances---shared-clipboard-score-12281-in">97: How do I copy and paste between two vim instances - shared clipboard? (score <span>12281</span> in )</a></li>
+<li><a href="#how-do-i-exit-ex-input-mode-score-12106-in">98: How do I exit ex input mode? (score <span>12106</span> in )</a></li>
+<li><a href="#can-i-justify-text-in-vim-score-11909-in-2015">99: Can I justify text in Vim? (score <span>11909</span> in 2015)</a></li>
+<li><a href="#vim--p-caught-deadly-signal-segv-score-11863-in-2015">100: Vim -p: Caught deadly signal SEGV? (score <span>11863</span> in 2015)</a></li>
+</ul>
+</nav>
 <section class="level2">
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 <section id="how-can-i-copy-text-to-the-system-clipboard-from-vim-score-228296-in-2015" class="level3">
@@ -63,10 +166,10 @@ You can use these registers as any register. For example, using the PRIMARY clip
 </p>
 <ul>
 <li>
-<code>"*yy</code>
+<code>&quot;*yy</code>
 </li>
 <li>
-<code>"*p</code>
+<code>&quot;*p</code>
 </li>
 </ul>
 <p>You could maybe use this as more convenient keybinds:</p>
@@ -150,9 +253,7 @@ This requires the <code>ForwardX11Trusted</code> setting, and should <strong>onl
 <p>
 To make these settings persistent (so you don’t need to add <code>-XY</code> every time), you could do something like this in your <code>~/.ssh/config</code>:
 </p>
-<pre class="language-vim"><code>
-# Do **NOT** set this globally; it gives the server complete control over
-
+<pre class="language-vim"><code># Do **NOT** set this globally; it gives the server complete control over
 # your X11 session.
 Host myhost
     ForwardX11 yes
@@ -166,21 +267,20 @@ Neovim revamped the clipboard support. The built-in interface was removed and re
 <p>
 It should automatically pick up these utilities and use them. On OS X <code>pbcopy</code> and <code>pbpaste</code> should be available by default, on Linux you probably want to install <code>xclip</code>, as that’s the most widely available (there are actually <em>two</em> versions of <code>xsel</code> with <em>incompatible flags</em>. This is really stupid).
 </p>
-<p>Also see <a href="https://neovim.io/doc/user/provider.html
-#clipboard" rel="noreferrer"><code>:help clipboard</code></a> in Neovim.</p>
+<p>Also see <a href="https://neovim.io/doc/user/provider.html#clipboard" rel="noreferrer"><code>:help clipboard</code></a> in Neovim.</p>
 </section>
 <section id="answer-2-score-18" class="level4">
 <h4>Answer 2 (score 18)</h4>
 <p>
-The other answers cover how to copy text from your buffer into the system clipboard. Another common operation is to copy text from another <em>register</em> to the clipboard. For example, if you’ve already yanked some text into <code>"</code> (the default register), you might want to load that register into the clipboard.
+The other answers cover how to copy text from your buffer into the system clipboard. Another common operation is to copy text from another <em>register</em> to the clipboard. For example, if you’ve already yanked some text into <code>&quot;</code> (the default register), you might want to load that register into the clipboard.
 </p>
 <p>You can do this with <code>:let</code>:</p>
 <ul>
 <li>
-<code>let @+=@"</code> — copies the default register into the clipboard
+<code>let @+=@&quot;</code> — copies the default register into the clipboard
 </li>
 <li>
-<code>let @*=@"</code> — copies the default register into the X11 primary selection (“mouse clipboard”)
+<code>let @*=@&quot;</code> — copies the default register into the X11 primary selection (“mouse clipboard”)
 </li>
 <li>
 <code>let @+=@a</code> — copy from register <code>a</code> to the clipboard
@@ -195,8 +295,7 @@ etc.
 <h4>Answer 3 (score 17)</h4>
 <p>From <a href="http://vim.wikia.com/wiki/Accessing_the_system_clipboard" rel="noreferrer">http://vim.wikia.com/wiki/Accessing_the_system_clipboard</a></p>
 <pre class="language-vim"><code>set clipboard=unnamedplus</code></pre>
-<p>This changes the default Vim register to the <code>+</code> register, which is linked to the system clipboard. From <a href="http://vimhelp.appspot.com/options.txt.html
-#clipboard-unnamedplus" rel="noreferrer"><code>:h clipboard-unnamedplus</code></a>:</p>
+<p>This changes the default Vim register to the <code>+</code> register, which is linked to the system clipboard. From <a href="http://vimhelp.appspot.com/options.txt.html#clipboard-unnamedplus" rel="noreferrer"><code>:h clipboard-unnamedplus</code></a>:</p>
 <pre class="language-vim"><code>                                        clipboard-unnamedplus
 unnamedplus     A variant of the &quot;unnamed&quot; flag which uses the
                 clipboard register &#39;+&#39; (quoteplus) instead of
@@ -290,8 +389,7 @@ a set of files in directories that follow an expected structure (<code>plugin/*<
 </li>
 </ul>
 <p>A single <code>.vim</code> file is supposed to be placed in the <code>.vim/plugin</code> directory.</p>
-<p>A Vimball file <a href="https://vi.stackexchange.com/questions/491/how-do-i-install-a-vimball-plugin">can be installed</a> by opening it in Vim and running <a href="http://vimhelp.appspot.com/repeat.txt.html
-#%3Asource" rel="noreferrer"><code>:source %</code></a>.</p>
+<p>A Vimball file <a href="https://vi.stackexchange.com/questions/491/how-do-i-install-a-vimball-plugin">can be installed</a> by opening it in Vim and running <a href="http://vimhelp.appspot.com/repeat.txt.html#%3Asource" rel="noreferrer"><code>:source %</code></a>.</p>
 <p>A set of files in the standard directory layout can be installed either by copying them to <code>.vim</code>, or using a <a href="https://vi.stackexchange.com/questions/388/what-is-the-difference-between-the-vim-package-managers">plugin package manager</a>.</p>
 <p>Plugins may depend on certain features. Therefore:</p>
 <ul>
@@ -332,27 +430,23 @@ A key advantage of vim-plug over <a href="https://vi.stackexchange.com/a/615/51"
 vim-plug relies on <a href="http://www.git-scm.com/" rel="noreferrer">git</a>; for MS Windows, you want <a href="http://msysgit.github.io/" rel="noreferrer">msysgit</a>.
 </p>
 <p>You can define plugins in your vimrc like so:</p>
-<pre class="language-vim"><code>call plug
-#begin(&#39;~/.vim/plugged&#39;)
+<pre class="language-vim"><code>call plug#begin(&#39;~/.vim/plugged&#39;)
 
 &quot; For MS Windows, this is probably better:
-&quot;call plug
-#begin(&#39;~/vimfiles/plugged&#39;)
+&quot;call plug#begin(&#39;~/vimfiles/plugged&#39;)
 
 Plug &#39;embear/vim-localvimrc&#39;
 Plug &#39;kchmck/vim-coffee-script&#39;
 &quot; ... etc
 
-call plug
-#end()</code></pre>
+call plug#end()</code></pre>
 <p>Then restart Vim, and then install plugins with:</p>
 <pre class="language-vim"><code>:PlugInstall</code></pre>
 <p>
 This will put the plugins in <code>~/.vim/plugged</code> or <code>$HOME\vimfiles\plugged</code> for MS Windows.
 </p>
 <p>
-You can add <a href="https://github.com/junegunn/vim-plug/wiki/faq
-#automatic-installation" rel="noreferrer">this snippet from the FAQ</a> to your vimrc file before the <code>plug #begin()</code> call:
+You can add <a href="https://github.com/junegunn/vim-plug/wiki/faq#automatic-installation" rel="noreferrer">this snippet from the FAQ</a> to your vimrc file before the <code>plug#begin()</code> call:
 </p>
 <pre class="language-vim"><code>if empty(glob(&#39;~/.vim/autoload/plug.vim&#39;))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -394,8 +488,7 @@ Create the <code>~/.vim/bundle</code> directory, if it does not exist already.
 <p>
 Add the following line to the very beginning of your <code>.vimrc</code>:
 </p>
-<pre class="language-vim"><code>execute pathogen
-#infect()</code></pre>
+<pre class="language-vim"><code>execute pathogen#infect()</code></pre>
 </li>
 <li>
 <p>
@@ -492,8 +585,7 @@ set listchars=tab:&gt;-</code></pre>
 ^Ig++ -c $&lt;</code></pre>
 <p>doesn’t look good, especially when you expect the <code>g</code> of <code>g++</code> to appear under the first <code>p</code> of <code>cpp</code> (assuming <code>tabstop=8</code>).</p>
 <p>Therefore, I suggest that in your <code>.vimrc</code> you put something like <code>:set listchars=tab:␉·</code> (To be clear, that’s Unicode character <a href="https://codepoints.net/U+2409">U+2409 SYMBOL FOR HORIZONTAL TABULATION</a> followed by <a href="https://codepoints.net/U+00B7">U+00B7 MIDDLE DOT</a>.)</p>
-<p>As explained in <a href="https://vimhelp.appspot.com/options.txt.html
-#%27listchars%27"><code>:help listchars</code></a>, a two-character setting for <code>tab:xy</code> causes visual alignment to be preserved:</p>
+<p>As explained in <a href="https://vimhelp.appspot.com/options.txt.html#%27listchars%27"><code>:help listchars</code></a>, a two-character setting for <code>tab:xy</code> causes visual alignment to be preserved:</p>
 <blockquote>
 <pre class="language-vim"><code>tab:xy        Two characters to be used to show a tab.  The first
               char is used once.  The second char is repeated to
@@ -519,8 +611,7 @@ For <code>nbsp</code>, I use <a href="https://codepoints.net/U+23B5">U+23B5 BOTT
 </li>
 </ul>
 <p>These characters are distinctive enough that they rarely appear literally in document text.</p>
-<p>To type these special characters into your <code>vimrc</code>, type <kbd>Ctrl-v</kbd><kbd>u</kbd><code>23CE</code> while in Insert Mode, as explained in <a href="https://vimhelp.appspot.com/mbyte.txt.html
-#utf-8-typing"><code>:help utf-8-typing</code></a>.</p>
+<p>To type these special characters into your <code>vimrc</code>, type <kbd>Ctrl-v</kbd><kbd>u</kbd><code>23CE</code> while in Insert Mode, as explained in <a href="https://vimhelp.appspot.com/mbyte.txt.html#utf-8-typing"><code>:help utf-8-typing</code></a>.</p>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
 </section>
@@ -553,8 +644,7 @@ Is this behaviour intended as a feature? In other words: are there better altern
 Longer answer
 </h1>
 <p>Though the default behaviour may be surprising, the backspace “not working” can be considered a <em>feature</em>; it can prevents you from accidentally removing indentation, and from removing too much text by restricting it to the current line and/or the start of the insert.</p>
-<p><a href="http://vimhelp.appspot.com/options.txt.html
-#%27backspace%27" rel="noreferrer"><code>:help 'backspace'</code></a> tells us:</p>
+<p><a href="http://vimhelp.appspot.com/options.txt.html#%27backspace%27" rel="noreferrer"><code>:help 'backspace'</code></a> tells us:</p>
 <pre class="language-vim"><code>Influences the working of `&lt;BS&gt;`, `&lt;Del&gt;`, `CTRL-W` and `CTRL-U` in Insert
 mode.  This is a list of items, separated by commas.  Each item allows
 a way to backspace over something:
@@ -578,8 +668,7 @@ But if we would then add a command and the <code>fi</code>, and go back up, we <
     █:
 fi</code></pre>
 <p>This is because in the first example, Vim determined it should add 1 level of indentation when you pressed Enter; but in the second example, Vim didn’t autoindent anything, it’s just Tab characters or a few spaces.</p>
-<p>Also see <a href="http://vimhelp.appspot.com/options.txt.html
-#%27autoindent%27" rel="noreferrer"><code>:help 'autoindent'</code></a></p>
+<p>Also see <a href="http://vimhelp.appspot.com/options.txt.html#%27autoindent%27" rel="noreferrer"><code>:help 'autoindent'</code></a></p>
 <p>
 <strong>eol</strong><br> This should be the most obvious, pressing Backspace also removes EOL markers (<code>\n</code> or <code>\r\n</code>); if disabled, Backspace will do nothing if you try to delete a EOL marker.
 </p>
@@ -603,8 +692,7 @@ Normal mode
 </h1>
 <p>This question is about Backspace in insert mode, but let me also add some brief remarks about Backspace in normal mode.</p>
 <p>In normal mode, the Backspace acts as <code>h</code>, it just goes to the left.</p>
-<p>By default, the backspace will go to the previous line if at the start of a line (as if <code>eol</code> was in <code>backspace</code>); you can control this behaviour with the <a href="http://vimhelp.appspot.com/options.txt.html
-#%27ww%27" rel="noreferrer"><code>'whichwrap'</code></a> option through the <code>b</code> flag (enabled by default).</p>
+<p>By default, the backspace will go to the previous line if at the start of a line (as if <code>eol</code> was in <code>backspace</code>); you can control this behaviour with the <a href="http://vimhelp.appspot.com/options.txt.html#%27ww%27" rel="noreferrer"><code>'whichwrap'</code></a> option through the <code>b</code> flag (enabled by default).</p>
 <p>You can also make backspace delete characters by mapping it to the <code>X</code> command:</p>
 <pre class="language-vim"><code>nnoremap &lt;BS&gt; X</code></pre>
 </section>
@@ -613,8 +701,7 @@ Normal mode
 <p>Just in case anyone is experience not explainable <code>&lt;BS&gt;</code> behavior using ConEmu on Windows, you may have to remap the <code>&lt;BS&gt;</code> key to:</p>
 <pre class="language-vim"><code>inoremap &lt;Char-0x07F&gt; &lt;BS&gt;
 nnoremap &lt;Char-0x07F&gt; &lt;BS&gt;</code></pre>
-<p><a href="https://conemu.github.io/en/VimXterm.html
-#vim-bs-issue" rel="nofollow noreferrer">More information</a></p>
+<p><a href="https://conemu.github.io/en/VimXterm.html#vim-bs-issue" rel="nofollow noreferrer">More information</a></p>
 </section>
 <section id="answer-3-score-1" class="level4">
 <h4>Answer 3 (score 1)</h4>
@@ -643,8 +730,7 @@ Copyright (C) 2007 Free Software Foundation, Inc.</code></pre>
 <h5>
 Use a keybinding to strip all trailing whitespace
 </h2>
-<p>Since some pages that I edit actually need trailing whitespaces (e.g. markdown) and others don’t, I set up a keybinding to <kbd>F5</kbd> so that it’s trivial to do without being automatic. To do so, add the <a href="http://vim.wikia.com/wiki/Remove_unwanted_spaces
-#Simple_commands_to_remove_unwanted_whitespace" rel="noreferrer">code below (from vim.wikia)</a> or some variation of it to your <code>.vimrc</code>:</p>
+<p>Since some pages that I edit actually need trailing whitespaces (e.g. markdown) and others don’t, I set up a keybinding to <kbd>F5</kbd> so that it’s trivial to do without being automatic. To do so, add the <a href="http://vim.wikia.com/wiki/Remove_unwanted_spaces#Simple_commands_to_remove_unwanted_whitespace" rel="noreferrer">code below (from vim.wikia)</a> or some variation of it to your <code>.vimrc</code>:</p>
 <pre class="language-vim"><code>&quot;Remove all trailing whitespace by pressing F5
 nnoremap &lt;F5&gt; :let _s=@/&lt;Bar&gt;:%s/\s\+$//e&lt;Bar&gt;:let @/=_s&lt;Bar&gt;&lt;CR&gt;</code></pre>
 <ul>
@@ -897,14 +983,12 @@ Post-update hooks e.g. automatically recompile YCM
 <pre class="language-vim"><code>curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</code></pre>
 <p>And in your vimrc:</p>
-<pre class="language-vim"><code>call plug
-#begin()
+<pre class="language-vim"><code>call plug#begin()
 Plug &#39;tpope/vim-sensible&#39;
 
 &quot; On-demand loading
 Plug &#39;scrooloose/nerdtree&#39;, { &#39;on&#39;: &#39;NERDTreeToggle&#39; }
-call plug
-#end()</code></pre>
+call plug#end()</code></pre>
 <p>Then give the command</p>
 <pre class="language-vim"><code>:PlugInstall</code></pre>
 <p>to install the listed plugins.</p>
@@ -939,10 +1023,8 @@ no lazy loading
 <pre class="language-vim"><code>mkdir -p ~/.vim/autoload ~/.vim/bundle &amp;&amp; \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim</code></pre>
 <p>And add to your <code>.vimrc</code>:</p>
-<pre class="language-vim"><code>call pathogen
-#infect()
-call pathogen
-#helptags() &quot;If you like to get crazy :)</code></pre>
+<pre class="language-vim"><code>call pathogen#infect()
+call pathogen#helptags() &quot;If you like to get crazy :)</code></pre>
 <p>If you don’t like to get crazy, only call <code>:Helptags</code> when you need to.</p>
 <p>Plugins are then added to <code>~/vim/bundle</code>.</p>
 </section>
@@ -977,16 +1059,14 @@ filetype off                  &quot; required
 
 &quot; set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle
-#begin()
+call vundle#begin()
 
 &quot; let Vundle manage Vundle, required
 Plugin &#39;gmarik/Vundle.vim&#39;
 
 &quot; more Plugin commands
 &quot; ...
-call vundle
-#end()            &quot; required
+call vundle#end()            &quot; required
 filetype plugin indent on    &quot; required</code></pre>
 <p>To install a plugin, use the <code>Plugin</code> command in <code>.vimrc</code> (more examples on the Github README):</p>
 <pre class="language-vim"><code>&quot; plugin on Github
@@ -1006,10 +1086,8 @@ Plugin &#39;L9&#39;</code></pre>
 </section>
 <section id="answer-accepted-score-173" class="level4">
 <h4>Answer accepted (score 173)</h4>
-<p>The command you want is <a href="http://vimdoc.sourceforge.net/htmldoc/editing.html
-#edit-a-file"><code>:e</code></a> (short for <code>:edit</code>). If you use <code>:edit!</code> it will discard local changes and reload.</p>
-<p>You can also have vim do this automatically with <a href="http://vimdoc.sourceforge.net/htmldoc/options.html
-#%27autoread%27"><code>set autoread</code></a> in your vimrc.</p>
+<p>The command you want is <a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#edit-a-file"><code>:e</code></a> (short for <code>:edit</code>). If you use <code>:edit!</code> it will discard local changes and reload.</p>
+<p>You can also have vim do this automatically with <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#%27autoread%27"><code>set autoread</code></a> in your vimrc.</p>
 </section>
 <section id="answer-2-score-19" class="level4">
 <h4>Answer 2 (score 19)</h4>
@@ -1081,8 +1159,7 @@ if hungry:
 <section id="answer-accepted-score-98" class="level4">
 <h4>Answer accepted (score 98)</h4>
 <p>
-You can use the <code>:retab</code> command. From <a href="http://vimhelp.appspot.com/change.txt.html
-#%3Aretab"><code>:help :retab</code></a>
+You can use the <code>:retab</code> command. From <a href="http://vimhelp.appspot.com/change.txt.html#%3Aretab"><code>:help :retab</code></a>
 </p>
 <blockquote>
 <p>
@@ -1112,12 +1189,10 @@ fun! Retab(expandtab)
 
     &quot; Replace tabs with spaces
     if a:expandtab
-        silent! execute &#39;%substitute
-#^\%(&#39; . l:spaces . &#39;\)\+#\=repeat(&quot;\t&quot;, len(submatch(0)) / &amp;tabstop)#e&#39;
+        silent! execute &#39;%substitute#^\%(&#39; . l:spaces . &#39;\)\+#\=repeat(&quot;\t&quot;, len(submatch(0)) / &amp;tabstop)#e&#39;
     &quot; Replace spaces with tabs
     else
-        silent! execute &#39;%substitute
-#^\%(\t\)\+#\=repeat(&quot;&#39; . l:spaces . &#39;&quot;, len(submatch(0)))#e&#39;
+        silent! execute &#39;%substitute#^\%(\t\)\+#\=repeat(&quot;&#39; . l:spaces . &#39;&quot;, len(submatch(0)))#e&#39;
     endif
 endfun</code></pre>
 <p>
@@ -1126,11 +1201,10 @@ With this version, you have to manually specify <code>expandtab</code> in the fu
 </section>
 <section id="answer-3-score-11-1" class="level4">
 <h4>Answer 3 (score 11)</h4>
-<p>Vim provides <code>!retab</code> command which will replace all sequences of <code>&lt;Tab&gt;</code> with new strings of white-space using the new tabstop (e.g. <code>:set tabstop=2</code>) value given, but <strong>all tabs inside of strings can be modified</strong> (e.g. in a C program, you should use <code>\t</code> to avoid this)!</p>
+<p>Vim provides <code>!retab</code> command which will replace all sequences of <code>&lt;Tab&gt;</code> with new strings of white-space using the new tabstop (e.g. <code>:set tabstop=2</code>) value given, but <strong>all tabs inside of strings can be modified</strong> (e.g. in a C program, you should use <code>\t</code> to avoid this)!</p>
 <p>So alternatively you can change all tabs into spaces using the following command:</p>
 <pre class="language-vim"><code>:%s/\t/  /g</code></pre>
-<p>or as suggested by <a href="https://vi.stackexchange.com/questions/495/how-to-replace-tabs-with-spaces/844?noredirect=1
-#comment20357_844"><span class="citation" data-cites="Shahbaz">@Shahbaz</span></a>:</p>
+<p>or as suggested by <a href="https://vi.stackexchange.com/questions/495/how-to-replace-tabs-with-spaces/844?noredirect=1#comment20357_844"><span class="citation" data-cites="Shahbaz">@Shahbaz</span></a>:</p>
 <pre class="language-vim"><code>:%s/^\t\+/ g</code></pre>
 <p><sup>So only the tabs used in indentation are converted.</sup></p>
 <p>Explanation:</p>
@@ -1231,7 +1305,7 @@ there was one in the original file (normally Vim appends an &lt;EOL&gt; to
 the last line if there is none; this would make the file longer).  See
 the &#39;endofline&#39; option.</code></pre>
 <p>
-If you don’t do this, and your environment is using a multibyte encoding (e.g. UTF-8, as most people use), Vim tries to encode the text as such, usually leading to file corruption.
+If you don’t do this, and your environment is using a multibyte encoding ( e.g. UTF-8, as most people use), Vim tries to encode the text as such, usually leading to file corruption.
 </p>
 <p>
 You can verify this by opening a file, and just using <code>:w</code>. It is now changed.<br> If you set <code>LANG</code> and <code>LC_ALL</code> to <code>C</code> (ASCII), Vim doesn’t convert anything and the files stay the same (it still adds a newline, though) since Vim won’t need to do any multibyte encoding.
@@ -1330,23 +1404,17 @@ Description-en: binary file editor
 <section id="question-13" class="level4">
 <h4>Question</h4>
 <p>I have a file with a bunch of user defaults in. I want to change some of the text, but I’m struggling coming up with a matcher and replacer. Using the following example:</p>
-<pre class="language-vim"><code>
-###############################################################################
-
+<pre class="language-vim"><code>###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
-
 ###############################################################################
-
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true</code></pre>
-<p>I’d like to replace <code># Trackpad: ...</code> with <code>running "Trackpad: ..."</code></p>
+<p>I’d like to replace <code># Trackpad: ...</code> with <code>running &quot;Trackpad: ...&quot;</code></p>
 <p>Breaking the problem down, I came up with something using a regex tester:</p>
-<pre class="language-vim"><code>/\n\n
-#\s(.*)/g</code></pre>
+<pre class="language-vim"><code>/\n\n#\s(.*)/g</code></pre>
 <p>If I try and use this in Vim it doesn’t work for me:</p>
-<pre class="language-vim"><code>:/\n\n
-#\s(.*)/running &quot;\1&quot;/g</code></pre>
+<pre class="language-vim"><code>:/\n\n#\s(.*)/running &quot;\1&quot;/g</code></pre>
 <p>I guess my problem boils down to two specific questions:</p>
 <ol>
 <li>
@@ -1362,22 +1430,18 @@ How can I effectively use capture groups?
 <section id="answer-accepted-score-18" class="level4">
 <h4>Answer accepted (score 18)</h4>
 <p>Just to be clear… I believe you asked for this to be the result of the substitution?</p>
-<pre class="language-vim"><code>
-###############################################################################
-
+<pre class="language-vim"><code>###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
-
 ###############################################################################
 
 running &quot;Trackpad: enable tap to click for this user and for the login screen&quot;
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true</code></pre>
 <p>In that case, I recommend the following command:</p>
-<p><code>:%s/\n\n #\s\+\(.*\)/&lt;b&gt;&lt;i&gt;^M^M&lt;/i&gt;&lt;/b&gt;running "\1"/</code></p>
+<p><code>:%s/\n\n#\s\+\(.*\)/&lt;b&gt;&lt;i&gt;^M^M&lt;/i&gt;&lt;/b&gt;running &quot;\1&quot;/</code></p>
 <h5>
 Explanation of the pattern
 </h3>
-<p><code>:s/&lt;i&gt;PATTERN&lt;/i&gt;/&lt;i&gt;REPLACEMENT&lt;/i&gt;/</code> is the <a href="https://vimhelp.appspot.com/change.txt.html
-#%3Asubstitute" rel="noreferrer">substitute</a> command. The percent sign in <code>:%s</code> makes it work on the whole file, rather than just the current line.</p>
+<p><code>:s/&lt;i&gt;PATTERN&lt;/i&gt;/&lt;i&gt;REPLACEMENT&lt;/i&gt;/</code> is the <a href="https://vimhelp.appspot.com/change.txt.html#%3Asubstitute" rel="noreferrer">substitute</a> command. The percent sign in <code>:%s</code> makes it work on the whole file, rather than just the current line.</p>
 <p>The <code>\n\n</code> says that the line of interest must occur after a blank line. If you didn’t care about the preceding blank line, then <code>^</code> would suffice.</p>
 <p><code>#\s\+</code> matches a hash character followed by one or more whitespace characters. <code>\(.*\)</code> captures all subsequent text on the line.</p>
 <h5>
@@ -1389,11 +1453,10 @@ Explanation of the replacement text
 <section id="answer-2-score-11" class="level4">
 <h4>Answer 2 (score 11)</h4>
 <p>I would use something like:</p>
-<pre class="language-vim"><code>:s/^
-#\s\+\(.\{-}\):/running &quot;\1&quot;:/</code></pre>
+<pre class="language-vim"><code>:s/^#\s\+\(.\{-}\):/running &quot;\1&quot;:/</code></pre>
 <ul>
 <li>
-<code>^ #</code> to match the <code>#</code> character anchored at the start of the line (this answers question 1)
+<code>^#</code> to match the <code>#</code> character anchored at the start of the line (this answers question 1)
 </li>
 <li>
 <code>\s\+</code> to match any whitespace one or more times
@@ -1417,8 +1480,7 @@ I came up with something using a regex tester
 </blockquote>
 <p>Regular expression syntax is a bit like wiki syntax: there are a bunch of them, they all look alike at a glance, none of them is obviously better than any other, but there are many differences.</p>
 <p>Today, the so called “Perl compatible” regular expressions are the de-facto default in most languages, but Vim regular expressions are <em>not</em> compatible with Perl-compatible expressions! Vim regexp syntax goes back to at least the ’70’s, when Perl wasn’t even around.</p>
-<p>You can see this with the subgroups, where you have to use <code>\(</code> and not <code>(</code> (this is compatible with POSIX ‘basic’ syntax, but not with the more common POSIX ‘extended’ syntax or Perl syntax). You can control this by adding the <code>\v</code> flag in a pattern (See <a href="http://vimhelp.appspot.com/pattern.txt.html
-#/%5CV"><code>:help /\v</code></a> for details), this will make it “more compatible”, but not completely (You still have to use <code>.{-}</code> for non-greedy matches for example)</p>
+<p>You can see this with the subgroups, where you have to use <code>\(</code> and not <code>(</code> (this is compatible with POSIX ‘basic’ syntax, but not with the more common POSIX ‘extended’ syntax or Perl syntax). You can control this by adding the <code>\v</code> flag in a pattern (See <a href="http://vimhelp.appspot.com/pattern.txt.html#/%5CV"><code>:help /\v</code></a> for details), this will make it “more compatible”, but not completely (You still have to use <code>.{-}</code> for non-greedy matches for example)</p>
 <p>So this might explain why using “a regex tester” almost, but not quite, works.</p>
 <p><a href="http://www.vimregex.com/">http://www.vimregex.com/</a> as a good overview/cheatsheet of Vim regexps.</p>
 </section>
@@ -1430,7 +1492,7 @@ I came up with something using a regex tester
 search for lines that don’t end in <code>#</code>: <code>:/[^#]$/</code>
 </li>
 <li>
-replace <code>#\s(.*)</code> at the start of the line: <code>s/\v^#\s(.*)/running "\1"/</code>
+replace <code>#\s(.*)</code> at the start of the line: <code>s/\v^#\s(.*)/running &quot;\1&quot;/</code>
 </li>
 </ul>
 <p>To use groups, you need to either:</p>
@@ -1443,8 +1505,7 @@ use <a href="https://vi.stackexchange.com/a/2279/205">“magic”</a> by beginni
 </li>
 </ul>
 <p>Combining it:</p>
-<pre class="language-vim"><code>:/[^
-#]$/s/\v^#\s(.*)/running &quot;\1&quot;/</code></pre>
+<pre class="language-vim"><code>:/[^#]$/s/\v^#\s(.*)/running &quot;\1&quot;/</code></pre>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
 </section>
@@ -1456,8 +1517,7 @@ use <a href="https://vi.stackexchange.com/a/2279/205">“magic”</a> by beginni
 </section>
 <section id="answer-accepted-score-143" class="level4">
 <h4>Answer accepted (score 143)</h4>
-<p>You can press <a href="http://vimhelp.appspot.com/editing.txt.html
-#CTRL-G" rel="noreferrer"><code>{count}Ctrl-G</code></a>:</p>
+<p>You can press <a href="http://vimhelp.appspot.com/editing.txt.html#CTRL-G" rel="noreferrer"><code>{count}Ctrl-G</code></a>:</p>
 <pre class="language-vim"><code>{count}CTRL-G       Like CTRL-G, but prints the current file name with
                     full path.  If the count is higher than 1 the current
                     buffer number is also given.</code></pre>
@@ -1478,8 +1538,7 @@ use <a href="https://vi.stackexchange.com/a/2279/205">“magic”</a> by beginni
 <p>In insert mode, type <kbd>Ctrl</kbd>-<kbd>r</kbd> then <kbd>%</kbd> to insert the name of the current file.</p>
 <p>The following commands insert lines consisting of the full path of the current and alternate files into the buffer:</p>
 <pre class="language-vim"><code>:put =expand(&#39;%:p&#39;)
-:put =expand(&#39;
-#:p&#39;)</code></pre>
+:put =expand(&#39;#:p&#39;)</code></pre>
 <p>Source: <a href="http://vim.wikia.com/wiki/Get_the_name_of_the_current_file" rel="noreferrer">Get the name of the current file</a> at vim wikia</p>
 <p>Related:</p>
 <ul>
@@ -1564,8 +1623,7 @@ use <a href="https://vi.stackexchange.com/a/2279/205">“magic”</a> by beginni
 <code>:vertical resize N</code> - resize a vertical split, setting width to N characters.
 </li>
 </ul>
-<p>These are equivalent to the <kbd>Ctrl</kbd><kbd>w</kbd> commands. See <a href="http://vimhelp.appspot.com/windows.txt.html
-#window-resize"><code>:help window-resize</code></a>.</p>
+<p>These are equivalent to the <kbd>Ctrl</kbd><kbd>w</kbd> commands. See <a href="http://vimhelp.appspot.com/windows.txt.html#window-resize"><code>:help window-resize</code></a>.</p>
 </section>
 <section id="answer-3-score-30" class="level4">
 <h4>Answer 3 (score 30)</h4>
@@ -1580,7 +1638,7 @@ use <a href="https://vi.stackexchange.com/a/2279/205">“magic”</a> by beginni
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
 </section>
-<section id="how-can-i-clear-word-highlighting-in-the-current-document-e.g.-such-as-after-searching-for-a-word-score-57992-in" class="level3">
+<section id="how-can-i-clear-word-highlighting-in-the-current-document-e.g.such-as-after-searching-for-a-word-score-57992-in" class="level3">
 <h3>17: How can I clear word highlighting in the current document (e.g. such as after searching for a word)? (score <a href="https://stackoverflow.com/q/184.html">57992</a> in )</h3>
 <section id="question-16" class="level4">
 <h4>Question</h4>
@@ -1589,11 +1647,11 @@ use <a href="https://vi.stackexchange.com/a/2279/205">“magic”</a> by beginni
 </section>
 <section id="answer-accepted-score-47" class="level4">
 <h4>Answer accepted (score 47)</h4>
-<p>As an alternative to <code>:noh</code>, I like to do <code>:let @/=""</code> mapped to a keyboard shortcut.</p>
+<p>As an alternative to <code>:noh</code>, I like to do <code>:let @/=&quot;&quot;</code> mapped to a keyboard shortcut.</p>
 <p>
-The difference is that <code>:noh</code> leaves the search term in the search register, so <code>n</code> and <code>N</code> in normal mode resume the search by jumping to the next/previous match and re-highlighting. Using <code>:let @/=""</code>, on the other hand, causes the message <code>E25: No previous regular expression</code> and <em>leaves your cursor where it was</em>, which is especially convenient if you don’t yet know about <code>ctrl</code>-<code>o</code> yet and accidentally hit <code>n</code>.
+The difference is that <code>:noh</code> leaves the search term in the search register, so <code>n</code> and <code>N</code> in normal mode resume the search by jumping to the next/previous match and re-highlighting. Using <code>:let @/=&quot;&quot;</code>, on the other hand, causes the message <code>E25: No previous regular expression</code> and <em>leaves your cursor where it was</em>, which is especially convenient if you don’t yet know about <code>ctrl</code>-<code>o</code> yet and accidentally hit <code>n</code>.
 </p>
-<p>This can also be used the other way. To cause vim to highlight some text without jumping to it, you can <code>:let @/="some text"</code></p>
+<p>This can also be used the other way. To cause vim to highlight some text without jumping to it, you can <code>:let @/=&quot;some text&quot;</code></p>
 <p>In these expressions, @ lets you refer to a register, and @/ is the register holding the last search pattern.</p>
 </section>
 <section id="answer-2-score-31" class="level4">
@@ -1690,8 +1748,7 @@ Press <kbd> d </kbd>
 </section>
 <section id="answer-3-score-42" class="level4">
 <h4>Answer 3 (score 42)</h4>
-<p>You can <a href="http://vimhelp.appspot.com/options.txt.html
-#%27relativenumber%27"><code>:set relativenumber</code></a>, so you don’t have to count. ;)</p>
+<p>You can <a href="http://vimhelp.appspot.com/options.txt.html#%27relativenumber%27"><code>:set relativenumber</code></a>, so you don’t have to count. ;)</p>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
 </section>
@@ -1707,8 +1764,7 @@ Press <kbd> d </kbd>
 <h4>Answer accepted (score 60)</h4>
 <p>A common binding you’ll see is <strong>jj</strong>, because it works well for QWERTY layouts if you use home row positioning.</p>
 <pre class="language-vim"><code>inoremap jj &lt;ESC&gt;</code></pre>
-<p>In that case, to type a literal <code>jj</code> - you should wait for 1 sec (by default) between typing the second character. (see <a href="http://vimhelp.appspot.com/options.txt.html
-#%27timeout%27" rel="noreferrer"><code>:help 'timeout'</code></a> for details)</p>
+<p>In that case, to type a literal <code>jj</code> - you should wait for 1 sec (by default) between typing the second character. (see <a href="http://vimhelp.appspot.com/options.txt.html#%27timeout%27" rel="noreferrer"><code>:help 'timeout'</code></a> for details)</p>
 <p>There is also <code>c-o</code> which will take you out of insert, letting you do <strong>one</strong> normal command, and then put you right back into insert.</p>
 <p><a href="http://vim.wikia.com/wiki/Avoid_the_escape_key" rel="noreferrer">http://vim.wikia.com/wiki/Avoid_the_escape_key</a></p>
 </section>
@@ -1884,14 +1940,12 @@ Font settings
 </section>
 <section id="answer-2-score-12" class="level4">
 <h4>Answer 2 (score 12)</h4>
-<p>From the <a href="https://github.com/bling/vim-airline
-#user-content-integrating-with-powerline-fonts">README</a>:</p>
+<p>From the <a href="https://github.com/bling/vim-airline#user-content-integrating-with-powerline-fonts">README</a>:</p>
 <blockquote>
 <h5>
 Integrating with powerline fonts
 </h1>
-<p>For the nice looking powerline symbols to appear, you will need to install a patched font. Instructions can be found in the official powerline <a href="https://powerline.readthedocs.org/en/master/installation.html
-#patched-fonts">documentation</a>. Prepatched fonts can be found in the <a href="https://github.com/Lokaltog/powerline-fonts">powerline-fonts</a> repository.</p>
+<p>For the nice looking powerline symbols to appear, you will need to install a patched font. Instructions can be found in the official powerline <a href="https://powerline.readthedocs.org/en/master/installation.html#patched-fonts">documentation</a>. Prepatched fonts can be found in the <a href="https://github.com/Lokaltog/powerline-fonts">powerline-fonts</a> repository.</p>
 Finally, you can add the convenience variable <code>let g:airline_powerline_fonts = 1</code> to your vimrc which will automatically populate the <code>g:airline_symbols</code> dictionary with the powerline symbols.<br />
 
 </blockquote>
@@ -1904,10 +1958,8 @@ Finally, you can add the convenience variable <code>let g:airline_powerline_font
 <h5>
 Configuring Vim
 </h2>
-<p>This is opposite to the <a href="https://github.com/vim-airline/vim-airline
-#integrating-with-powerline-fonts" rel="nofollow noreferrer">official instructions</a> but I had this bit wrong at the end which made me question all the font installations. So I suggest you get this configured first and then if you get the fonts working it should magically appear.</p>
-<p>The final trick was forcing vim-airline to use the fonts it needs. In the <a href="https://github.com/vim-airline/vim-airline
-#integrating-with-powerline-fonts" rel="nofollow noreferrer">official documentation</a> it should just be adding <code>let g:airline_powerline_fonts = 1</code> in your <code>.vimrc</code>. However I did this and no luck. There’s more information in <code>:help airline-customization</code> and that gives you some simple config settings that you need, just in case. This was the final magic sauce that I needed. I don’t know why this wasn’t automatically created. Copy and paste the settings mentioned in <a href="https://vi.stackexchange.com/a/3363/11986">Alexander Myshov’s accepted answer here</a>.</p>
+<p>This is opposite to the <a href="https://github.com/vim-airline/vim-airline#integrating-with-powerline-fonts" rel="nofollow noreferrer">official instructions</a> but I had this bit wrong at the end which made me question all the font installations. So I suggest you get this configured first and then if you get the fonts working it should magically appear.</p>
+<p>The final trick was forcing vim-airline to use the fonts it needs. In the <a href="https://github.com/vim-airline/vim-airline#integrating-with-powerline-fonts" rel="nofollow noreferrer">official documentation</a> it should just be adding <code>let g:airline_powerline_fonts = 1</code> in your <code>.vimrc</code>. However I did this and no luck. There’s more information in <code>:help airline-customization</code> and that gives you some simple config settings that you need, just in case. This was the final magic sauce that I needed. I don’t know why this wasn’t automatically created. Copy and paste the settings mentioned in <a href="https://vi.stackexchange.com/a/3363/11986">Alexander Myshov’s accepted answer here</a>.</p>
 <h5>
 Kitchen sinking it on Fedora and Ubuntu
 </h2>
@@ -1915,8 +1967,7 @@ Kitchen sinking it on Fedora and Ubuntu
 <ol>
 <li>
 <p>
-Install the general powerline font <code>sudo dnf install powerline-fonts</code> (or <code>sudo apt install fonts-powerline</code>) - this should mean that you can use any font you already have installed. If you don’t have an easy way of installing like dnf/apt then there’s instructions for manually doing it e.g. <a href="https://www.tecmint.com/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/" rel="nofollow noreferrer">https://www.tecmint.com/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/</a>, also the official documentation has instructions (<a href="https://powerline.readthedocs.io/en/latest/installation/linux.html
-#fonts-installation" rel="nofollow noreferrer">https://powerline.readthedocs.io/en/latest/installation/linux.html#fonts-installation</a>).
+Install the general powerline font <code>sudo dnf install powerline-fonts</code> (or <code>sudo apt install fonts-powerline</code>) - this should mean that you can use any font you already have installed. If you don’t have an easy way of installing like dnf/apt then there’s instructions for manually doing it e.g. <a href="https://www.tecmint.com/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/" rel="nofollow noreferrer">https://www.tecmint.com/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/</a>, also the official documentation has instructions (<a href="https://powerline.readthedocs.io/en/latest/installation/linux.html#fonts-installation" rel="nofollow noreferrer">https://powerline.readthedocs.io/en/latest/installation/linux.html#fonts-installation</a>).
 </p>
 Now close your terminal re-open and check that the Powerline symbols font is available if you edit the terminal preferences and set a custom font. <strong>You don’t want to use the font directly, just check that it’s available</strong>. Now try opening Vim and see if you have nice symbols.
 </li>
@@ -1924,8 +1975,7 @@ Now close your terminal re-open and check that the Powerline symbols font is ava
 <p>
 If the general powerline font didn’t work or if you’re trying to improve things you can try installing individual ‘patched’ fonts, this took a while to figure out, but you can literally just go to the folder you want in <a href="https://github.com/powerline/fonts/" rel="nofollow noreferrer">https://github.com/powerline/fonts/</a> and download it, the font that I’ve liked the most from my tests is the <a href="https://github.com/powerline/fonts/tree/master/SourceCodePro" rel="nofollow noreferrer">Source Code Pro patched font</a>. Then just open the downloaded font file and click on ‘Install’.
 </p>
-<p>If you’d rather the command line, you can install <a href="https://github.com/vim-airline/vim-airline/wiki/FAQ
-#the-powerline-font-is-not-perfectly-lined-up-or-there-a-bit-of-whitespace-in-between-symbols-or-they-are-cut-off" rel="nofollow noreferrer">all patched fonts</a>:</p>
+<p>If you’d rather the command line, you can install <a href="https://github.com/vim-airline/vim-airline/wiki/FAQ#the-powerline-font-is-not-perfectly-lined-up-or-there-a-bit-of-whitespace-in-between-symbols-or-they-are-cut-off" rel="nofollow noreferrer">all patched fonts</a>:</p>
 <pre class="language-vim"><code> $ git clone https://github.com/powerline/fonts.git --depth=1
  $ fonts/install.sh
  $ rm -rf fonts</code></pre>
@@ -1946,8 +1996,7 @@ If you can’t get that working the patched font that you downloaded above shoul
 <h5>
 Tweaking Linux
 </h2>
-<p>Once I actually got it working for the first time, it was really disappointing as the icons didn’t fully match up. But as per the <a href="https://github.com/vim-airline/vim-airline/wiki/FAQ
-#the-powerline-font-is-not-perfectly-lined-up-or-there-a-bit-of-whitespace-in-between-symbols-or-they-are-cut-off" rel="nofollow noreferrer">FAQ</a> we need to do some tweaking. I started off with Inconsolata as this gives me a consistent font across Windows and Linux. You can install the general font easily on Ubuntu with <code>apt install fonts-inconsolata</code> This is what I got:</p>
+<p>Once I actually got it working for the first time, it was really disappointing as the icons didn’t fully match up. But as per the <a href="https://github.com/vim-airline/vim-airline/wiki/FAQ#the-powerline-font-is-not-perfectly-lined-up-or-there-a-bit-of-whitespace-in-between-symbols-or-they-are-cut-off" rel="nofollow noreferrer">FAQ</a> we need to do some tweaking. I started off with Inconsolata as this gives me a consistent font across Windows and Linux. You can install the general font easily on Ubuntu with <code>apt install fonts-inconsolata</code> This is what I got:</p>
 <p><a href="https://i.stack.imgur.com/QObBQ.png" rel="nofollow noreferrer"><img src="https://i.stack.imgur.com/QObBQ.png" alt="enter image description here"></a></p>
 <p>The arrows are too large and are shifted up in an ugly manner.</p>
 <p>Then I tried all the other default Ubuntu fonts.</p>
@@ -2012,7 +2061,7 @@ Handling the delicate flower of Windows (assuming GVim)
 <section id="answer-accepted-score-51" class="level4">
 <h4>Answer accepted (score 51)</h4>
 <p>First, you do not need to yank <em>and</em> delete; the latter will also put the deleted contents into the (default or specified) register. Therefore, <code>ddp</code> / <code>ddkP</code> are common commands to move a line one down / up.</p>
-<p>Alternatively, you can use the <code>:move</code> command, i.e. <code>:move +1</code> / <code>:move -2</code>; this doesn’t clobber the register, and you can also move entire ranges. You can easily define key mappings to shorten this.</p>
+<p>Alternatively, you can use the <code>:move</code> command, i.e. <code>:move +1</code> / <code>:move -2</code>; this doesn’t clobber the register, and you can also move entire ranges. You can easily define key mappings to shorten this.</p>
 <p>If you don’t mind plugins (and the additional comfort that often comes with them), both Tim Pope’s <a href="http://www.vim.org/scripts/script.php?script_id=1590">unimpaired plugin</a> and my <a href="http://www.vim.org/scripts/script.php?script_id=4140">LineJuggler plugin</a> provide <code>]e</code> / <code>[e</code> mappings to move lines (and several more; Tim’s for a variety of uses, mine focused on handling line(s)).</p>
 </section>
 <section id="answer-2-score-36" class="level4">
@@ -2122,8 +2171,7 @@ As you have already described, the <code>'background'</code> option is not inten
 <p>
 So if the colour scheme resets <code>'background'</code>, Vim takes this to mean that the colour scheme simply doesn’t support the new setting of <code>'background'</code>. Since the user has indicated they <em>are using</em> such a background this means that the current colour scheme is no longer appropriate, and so Vim unsets <code>g:colors_name</code> and then reloads the default colours.
 </p>
-<p>If you’d like to explore the actual code that is run when <code>'background'</code> is set, <a href="https://github.com/vim/vim/blob/master/src/option.c
-#L6261" rel="noreferrer">you can start here</a>.</p>
+<p>If you’d like to explore the actual code that is run when <code>'background'</code> is set, <a href="https://github.com/vim/vim/blob/master/src/option.c#L6261" rel="noreferrer">you can start here</a>.</p>
 <h5>
 What’s happening in your installation
 </h2>
@@ -2140,8 +2188,7 @@ The problem is that your <code>colors/darcula.vim</code> file doesn’t set this
 Therefore, when you call <code>:set background=dark</code> Vim carries out the step in the “If no colour scheme is currently loaded” section above, and sets the default colours for a dark background. This explains why <code>:color</code> then reports <code>default</code>.
 </p>
 <p>
-(Note, however, that setting the default colours does <em>not</em>, as you might expect, remove all the colours that had previously been set, and this is why you end up with the results you see, rather than the colours that are displayed when you start up Vim in the first place. <a href="http://peterodding.com/code/vim/colorscheme-switcher/
-#known_problems" rel="noreferrer">There’s some discussion of this issue here</a>)
+(Note, however, that setting the default colours does <em>not</em>, as you might expect, remove all the colours that had previously been set, and this is why you end up with the results you see, rather than the colours that are displayed when you start up Vim in the first place. <a href="http://peterodding.com/code/vim/colorscheme-switcher/#known_problems" rel="noreferrer">There’s some discussion of this issue here</a>)
 </p>
 <p>
 In short, your colour scheme is misconfigured: See <code>:edit $VIMRUNTIME/colors/README.txt</code> (in particular the section at the bottom) for more details on this, and on the interaction between <code>'background'</code> and colour schemes.
@@ -2150,8 +2197,7 @@ In short, your colour scheme is misconfigured: See <code>:edit $VIMRUNTIME/color
 <section id="answer-2-score-4" class="level4">
 <h4>Answer 2 (score 4)</h4>
 <p>
-The doc at <a href="http://vimhelp.appspot.com/options.txt.html
-#%27background%27" rel="nofollow noreferrer"><code>:h 'background'</code></a> should provide all the information you need:
+The doc at <a href="http://vimhelp.appspot.com/options.txt.html#%27background%27" rel="nofollow noreferrer"><code>:h 'background'</code></a> should provide all the information you need:
 </p>
 <blockquote>
 <p>
@@ -2163,8 +2209,7 @@ Your colorscheme defines 2 groups of colors: the ones used on a light background
 </p>
 <blockquote>
 <p>
-Setting this option does not change the background color, it tells Vim what the background color looks like. For changing the background color, see <a href="http://vimhelp.appspot.com/syntax.txt.html
-#%3ahi%2dnormal" rel="nofollow noreferrer"><code>:h :hi-normal</code></a>.
+Setting this option does not change the background color, it tells Vim what the background color looks like. For changing the background color, see <a href="http://vimhelp.appspot.com/syntax.txt.html#%3ahi%2dnormal" rel="nofollow noreferrer"><code>:h :hi-normal</code></a>.
 </p>
 <p>
 When ‘background’ is set Vim will adjust the default color groups for the new value. But the colors used for syntax highlighting will not change.
@@ -2173,8 +2218,7 @@ When ‘background’ is set Vim will adjust the default color groups for the ne
 <p>
 That’s the follow up of the previous paragraph: It’s the colorscheme which defines the groups of colors and <code>background</code> selects one of these groups.
 </p>
-<p>Finally if you want to write your own color scheme without having to put <code>set background=dark</code> in your vimrc, remember that a colorscheme is nothing more than a program in vimscript, so nothing stops you from using the command directly in the code of your colorscheme like e.g. <a href="https://github.com/nanotech/jellybeans.vim/blob/master/colors/jellybeans.vim
-#L58" rel="nofollow noreferrer">jellybeans</a> or <a href="https://github.com/romainl/Apprentice/blob/master/colors/apprentice.vim#L45" rel="nofollow noreferrer">apprentice</a></p>
+<p>Finally if you want to write your own color scheme without having to put <code>set background=dark</code> in your vimrc, remember that a colorscheme is nothing more than a program in vimscript, so nothing stops you from using the command directly in the code of your colorscheme like e.g. <a href="https://github.com/nanotech/jellybeans.vim/blob/master/colors/jellybeans.vim#L58" rel="nofollow noreferrer">jellybeans</a> or <a href="https://github.com/romainl/Apprentice/blob/master/colors/apprentice.vim#L45" rel="nofollow noreferrer">apprentice</a></p>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
 </section>
@@ -2183,8 +2227,7 @@ That’s the follow up of the previous paragraph: It’s the colorscheme which d
 <section id="question-23" class="level4">
 <h4>Question</h4>
 <p>I have installed YouCompleteMe with Clang completer in OS X 10.10.4, and in my new OS X 10.11.4 I want to reinstall it.</p>
-<p>The previous installation process downloaded about 140MB at very low speed. I have used the main <a href="https://github.com/Valloric/YouCompleteMe/blob/master/README.md
-#mac-os-x" rel="noreferrer">tutorial</a> to install with these commands (after installing the bundle with <a href="https://github.com/VundleVim/Vundle.vim" rel="noreferrer">Vundle</a>):</p>
+<p>The previous installation process downloaded about 140MB at very low speed. I have used the main <a href="https://github.com/Valloric/YouCompleteMe/blob/master/README.md#mac-os-x" rel="noreferrer">tutorial</a> to install with these commands (after installing the bundle with <a href="https://github.com/VundleVim/Vundle.vim" rel="noreferrer">Vundle</a>):</p>
 <pre class="language-vim"><code>cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer</code></pre>
 <p>How can I manually download the additional file and install it offline?</p>
@@ -2198,7 +2241,7 @@ That’s the follow up of the previous paragraph: It’s the colorscheme which d
 Install vim 7.4:
 </p>
 <pre class="language-vim"><code>brew install vim</code></pre>
-Note: If you are using mac operating system, make sure you create an alias in your bash_profile pointing to macvim i.e. <code>which mvim</code>
+Note: If you are using mac operating system, make sure you create an alias in your bash_profile pointing to macvim i.e. <code>which mvim</code>
 </li>
 <li>
 <p>
@@ -2245,19 +2288,16 @@ filetype off                  &quot; required
 
 &quot; set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle
-#begin()
+call vundle#begin()
 &quot; alternatively, pass a path where Vundle should install plugins
-&quot;call vundle
-#begin(&#39;~/some/path/here&#39;)
+&quot;call vundle#begin(&#39;~/some/path/here&#39;)
 
 &quot; let Vundle manage Vundle, required
 Plugin &#39;VundleVim/Vundle.vim&#39;
 
 
 &quot; All of your Plugins must be added before the following line
-call vundle
-#end()            &quot; required
+call vundle#end()            &quot; required
 filetype plugin indent on    &quot; required</code></pre>
 <p>Run following to install:</p>
 <pre class="language-vim"><code>git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -2307,8 +2347,7 @@ Organizing swap files
 <p>Vim has an Ex mode that can be entered by entering <kbd>Q</kbd>, and a command line mode that can be entered with <kbd>q</kbd><kbd>:</kbd>. A common complaint amongst new vim users is that they enter these modes accidentally when trying to quit vim. As such, I disable these keys in my <code>~/.vimrc</code> to stop myself hitting them accidentally (particularly <kbd>q</kbd><kbd>:</kbd>):</p>
 <pre class="language-vim"><code>map q: &lt;Nop&gt;
 nnoremap Q &lt;nop&gt;</code></pre>
-<p>Although I’ve read the <a href="http://vimdoc.sourceforge.net/htmldoc/intro.html
-#Ex" rel="noreferrer">vim documentation on Ex</a>, am a moderately experienced Vim user, and understand the basic idea behind it, I still struggle to find any use for it in my daily vim use. In general it seems less useful than just entering a standard vim command-line command prefixed with <kbd>:</kbd>, as changes are not echoed straight away.</p>
+<p>Although I’ve read the <a href="http://vimdoc.sourceforge.net/htmldoc/intro.html#Ex" rel="noreferrer">vim documentation on Ex</a>, am a moderately experienced Vim user, and understand the basic idea behind it, I still struggle to find any use for it in my daily vim use. In general it seems less useful than just entering a standard vim command-line command prefixed with <kbd>:</kbd>, as changes are not echoed straight away.</p>
 <p>Does Ex have any practical everyday use in modern Vim? Is there anything that’s easier to do in Ex mode than with standard commands? What is the difference between command line mode and ex mode?</p>
 </section>
 <section id="answer-accepted-score-81" class="level4">
@@ -2384,8 +2423,7 @@ alias retab=&quot;ex +&#39;set ts=2&#39; +&#39;bufdo retab&#39; -scxa&quot;</cod
 <p>Also learn further about Ex-mode at:</p>
 <ul>
 <li>
-<a href="https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes
-#Ex-mode" rel="noreferrer">Learning the vi Editor/Vim/Modes: Ex-mode</a>
+<a href="https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes#Ex-mode" rel="noreferrer">Learning the vi Editor/Vim/Modes: Ex-mode</a>
 </li>
 </ul>
 </section>
@@ -2404,8 +2442,7 @@ alias retab=&quot;ex +&#39;set ts=2&#39; +&#39;bufdo retab&#39; -scxa&quot;</cod
 <section id="question-26" class="level4">
 <h4>Question</h4>
 <p>Some editors (such as visual studio on windows) do C++ autocompletion which understand C++. For example, given:</p>
-<pre class="language-vim"><code>
-#include &lt;vector&gt;
+<pre class="language-vim"><code>#include &lt;vector&gt;
 
 int main(void) {
   std::vector&lt;int&gt; v;
@@ -2467,11 +2504,10 @@ int main(void) {
 <p>As mentioned in the powerline docs:</p>
 <blockquote>
 <p>
-Powerline uses several special glyphs to get the arrow effect and some custom symbols for developers. This requires having either a symbol font or a patched font installed in the system. Used application (e.g. terminal emulator) must also either be configured to use patched fonts (in some cases even support it because custom glyphs live in private use area which some applications reserve for themselves) or support fontconfig for powerline to work properly with powerline-specific glyphs.
+Powerline uses several special glyphs to get the arrow effect and some custom symbols for developers. This requires having either a symbol font or a patched font installed in the system. Used application ( e.g. terminal emulator) must also either be configured to use patched fonts (in some cases even support it because custom glyphs live in private use area which some applications reserve for themselves) or support fontconfig for powerline to work properly with powerline-specific glyphs.
 </p>
 </blockquote>
-<p>So one can patch existing fonts (<a href="https://powerline.readthedocs.org/en/latest/installation.html
-#fonts-installation">see the powerline font section</a> docs or you may install a collection or already prepared fonts.</p>
+<p>So one can patch existing fonts (<a href="https://powerline.readthedocs.org/en/latest/installation.html#fonts-installation">see the powerline font section</a> docs or you may install a collection or already prepared fonts.</p>
 <p>You can install a powerline font collection via:</p>
 <pre class="language-vim"><code>git clone git@github.com:powerline/fonts.git
 cd fontd
@@ -2569,11 +2605,9 @@ configure and make
 sudo ./configure --with-features=huge \
 --enable-multibyte \
 --enable-pythoninterp=yes \
---with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ \
-# pay attention here check directory correct
+--with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ \  # pay attention here check directory correct
 --enable-python3interp=yes \
---with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu/ \
-# pay attention here check directory correct
+--with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu/ \  # pay attention here check directory correct
 --enable-gui=gtk2 \
 --enable-cscope \ 
 --prefix=/usr/local/
@@ -2692,8 +2726,7 @@ let g:ConqueTerm_StartMessages = 0 &quot; display warning messages if conqueTerm
 <p>You have several plugins that integrates gdb.</p>
 <ul>
 <li>
-We used to have <a href="http://pyclewn.sourceforge.net/" rel="nofollow noreferrer">pyclewn</a>. The <a href="https://bitbucket.org/xdegaye/etc-merge/issues/1/looking-for-pyclewn
-#comment-42145498" rel="nofollow noreferrer">project has been discontinued</a> after version 2.3. The last commit has been made in 2016. For the curious ones there is still a <a href="https://github.com/xdegaye/pyclewn" rel="nofollow noreferrer">mirror on github</a> where its author has archived his work. Note: pyclewn used to be the last stage step in the evolution of the other Xavier Degaye’s *clewn projects.
+We used to have <a href="http://pyclewn.sourceforge.net/" rel="nofollow noreferrer">pyclewn</a>. The <a href="https://bitbucket.org/xdegaye/etc-merge/issues/1/looking-for-pyclewn#comment-42145498" rel="nofollow noreferrer">project has been discontinued</a> after version 2.3. The last commit has been made in 2016. For the curious ones there is still a <a href="https://github.com/xdegaye/pyclewn" rel="nofollow noreferrer">mirror on github</a> where its author has archived his work. Note: pyclewn used to be the last stage step in the evolution of the other Xavier Degaye’s *clewn projects.
 </li>
 <li>
 <a href="https://github.com/idanarye/vim-vebugger" rel="nofollow noreferrer">vim-debugger</a>, that integrates several other debuggers
@@ -2732,8 +2765,7 @@ notEvil’s <a href="https://github.com/notEvil/vim-debug" rel="nofollow norefer
 Why should I care? As a user, what’s the difference for me?
 </blockquote>
 <p>The thing I am most excited about as a Vim user are the new kinds of plugins, integrations, and interfaces that will be enabled by the changes under Neovim’s hood.</p>
-<p>As time goes by you will begin to see really impressive plugins and programs that work with Neovim but not Vim. There’s a list of Neovim-specific plugins: <a href="https://github.com/neovim/neovim/wiki/Related-projects
-#plugins" rel="noreferrer">here in neovim’s github</a>.</p>
+<p>As time goes by you will begin to see really impressive plugins and programs that work with Neovim but not Vim. There’s a list of Neovim-specific plugins: <a href="https://github.com/neovim/neovim/wiki/Related-projects#plugins" rel="noreferrer">here in neovim’s github</a>.</p>
 <p>I don’t know how up-to-date it is, but I am excited to see it grow as we get more tools to make coding more efficient and enjoyable.</p>
 </section>
 <section id="answer-3-score-15-1" class="level4">
@@ -2829,7 +2861,7 @@ How do I stop recording if my macro ends in command mode?
 <p>One way to do it:</p>
 <ul>
 <li>
-start your macro as usual (e.g. <code>qq</code> … other chars)
+start your macro as usual (e.g. <code>qq</code> … other chars)
 </li>
 <li>
 when you reach the cmdline-mode, write all the characters you want
@@ -2899,8 +2931,7 @@ that’s it: run your macro: <code>@q</code>.
 :bnext       - go to the next buffer (:bn also)
 :bprevious   - go to the previous buffer (:bp also)</code></pre>
 <p>
-There is a lot more to buffer handling that is out of the scope of this question. Have a look at:<br> <a href="http://vim.wikia.com/wiki/Vim_buffer_FAQ" rel="noreferrer">http://vim.wikia.com/wiki/Vim_buffer_FAQ</a> <a href="http://vimdoc.sourceforge.net/htmldoc/windows.html
-#buffers" rel="noreferrer">http://vimdoc.sourceforge.net/htmldoc/windows.html#buffers</a>
+There is a lot more to buffer handling that is out of the scope of this question. Have a look at:<br> <a href="http://vim.wikia.com/wiki/Vim_buffer_FAQ" rel="noreferrer">http://vim.wikia.com/wiki/Vim_buffer_FAQ</a> <a href="http://vimdoc.sourceforge.net/htmldoc/windows.html#buffers" rel="noreferrer">http://vimdoc.sourceforge.net/htmldoc/windows.html#buffers</a>
 </p>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
@@ -2986,11 +3017,10 @@ hi IndentGuidesOdd ctermbg=236</code></pre>
 </section>
 <section id="answer-2-score-52" class="level4">
 <h4>Answer 2 (score 52)</h4>
-<p><code>:silent exec "!command"</code></p>
+<p><code>:silent exec &quot;!command&quot;</code></p>
 <p>Note that your vim session will still be occupied while your command is executing. This is due to Vim’s synchronous nature. You can still get back to your shell by pressing CTRL+z (to send Vim to the background) and then resume vim with the command <code>fg</code> as usual.</p>
 <p>To do things asynchronously, take a look at Tim Pope’s plugin <a href="https://github.com/tpope/vim-dispatch" rel="noreferrer">vim-dispatch</a> or the project NeoVim which has native support for asynchronous command execution, which you can easily leverage using the plugin NeoMake. The latest version of Vim also has support for asynchronous tasks.</p>
-<p>See <a href="http://vimhelp.appspot.com/various.txt.html
-#%3Asilent" rel="noreferrer">:h :silent</a></p>
+<p>See <a href="http://vimhelp.appspot.com/various.txt.html#%3Asilent" rel="noreferrer">:h :silent</a></p>
 </section>
 <section id="answer-3-score-30-1" class="level4">
 <h4>Answer 3 (score 30)</h4>
@@ -3031,8 +3061,7 @@ Press ENTER or type command to continue
 </section>
 <section id="answer-3-score-4-1" class="level4">
 <h4>Answer 3 (score 4)</h4>
-<p>As Roflo and Rich mentioned in their comment <a href="https://vi.stackexchange.com/questions/7457/which-alternatives-to-gvim-exist-on-windows
-#comment12229_7457">here</a> and <a href="https://vi.stackexchange.com/questions/7457/which-alternatives-to-gvim-exist-on-windows#comment16039_7457">here</a>, your problem with being unable to use visual block (I’m not sure what <code>rx</code> command is) is because the system-wide vimrc (<code>$VIM\_vimrc</code>) sources <code>$VIMRUNTIME\mswin.vim</code> which defines Windows-style mappings like <kbd>Ctrl</kbd>+<kbd>v</kbd> for paste, <kbd>Ctrl</kbd>+<kbd>c</kbd> for copy, <kbd>Ctrl</kbd>+<kbd>x</kbd> for cut.</p>
+<p>As Roflo and Rich mentioned in their comment <a href="https://vi.stackexchange.com/questions/7457/which-alternatives-to-gvim-exist-on-windows#comment12229_7457">here</a> and <a href="https://vi.stackexchange.com/questions/7457/which-alternatives-to-gvim-exist-on-windows#comment16039_7457">here</a>, your problem with being unable to use visual block (I’m not sure what <code>rx</code> command is) is because the system-wide vimrc (<code>$VIM\_vimrc</code>) sources <code>$VIMRUNTIME\mswin.vim</code> which defines Windows-style mappings like <kbd>Ctrl</kbd>+<kbd>v</kbd> for paste, <kbd>Ctrl</kbd>+<kbd>c</kbd> for copy, <kbd>Ctrl</kbd>+<kbd>x</kbd> for cut.</p>
 <p>The easiest way to get around this is to create a <code>_vimrc</code> files in your home directory (Note that Windows version of vim uses <code>_vimrc</code> instead of <code>.vimrc</code>). As you can see in <code>:h vimrc</code>, vim looks for vimrc in several locations and only uses the first one it finds while ignoring the rest. The one in the home directory is always searched/used first.</p>
 <p>Minimal steps:</p>
 <ul>
@@ -3169,15 +3198,13 @@ filetype off
 
 &quot; set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle
-#begin()
+call vundle#begin()
 
 &quot; let Vundle manage Vundle, required
 Plugin &#39;gmarik/Vundle.vim&#39;
 
 &quot; All of your Plugins must be added before the following line
-call vundle
-#end()            &quot; required
+call vundle#end()            &quot; required
 filetype plugin indent on    &quot; required</code></pre>
 <p>
 Now if you want to add a new plugin example <a href="https://github.com/scrooloose/nerdtree">nerdtree</a>
@@ -3190,16 +3217,14 @@ filetype off
 
 &quot; set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle
-#begin()
+call vundle#begin()
 
 &quot; let Vundle manage Vundle, required
 Plugin &#39;gmarik/Vundle.vim&#39;
 &quot; added nerdtree
 Plugin &#39;scrooloose/nerdtree&#39;
 &quot; All of your Plugins must be added before the following line
-call vundle
-#end()            &quot; required
+call vundle#end()            &quot; required
 filetype plugin indent on    &quot; required</code></pre>
 <p>Now, just save the vimrc and restart vim so it can source the new vimrc then issue the <strong>:PluginInstall command:</strong></p>
 <pre class="language-vim"><code>:PluginInstall</code></pre>
@@ -3216,8 +3241,7 @@ filetype plugin indent on    &quot; required</code></pre>
 </section>
 <section id="answer-accepted-score-74" class="level4">
 <h4>Answer accepted (score 74)</h4>
-<p>First of all, the relevant documentation can be found with <a href="http://vimhelp.appspot.com/repeat.txt.html
-#packages" rel="noreferrer"><code>:h packages</code></a> on the newly compiled Vim8 version and <a href="https://github.com/vim/vim/blob/master/runtime/doc/repeat.txt#L459" rel="noreferrer">here on Github</a>.</p>
+<p>First of all, the relevant documentation can be found with <a href="http://vimhelp.appspot.com/repeat.txt.html#packages" rel="noreferrer"><code>:h packages</code></a> on the newly compiled Vim8 version and <a href="https://github.com/vim/vim/blob/master/runtime/doc/repeat.txt#L459" rel="noreferrer">here on Github</a>.</p>
 <p>A first important note is about the vocabulary: In Vim8 a package is defined like this:</p>
 <blockquote>
 A Vim package is a directory that contains one or more plugins.
@@ -3262,8 +3286,7 @@ A package can contain plugins that are automatically loaded on startup and ones 
                             buzz/
                                 plugin/
                                     buzz.vim</code></pre>
-<p>The emplacement of the folder is defined by the option <code>packpath</code> (See <a href="http://vimhelp.appspot.com/options.txt.html
-#%27packpath%27" rel="noreferrer"><code>:h 'packpath'</code></a>).</p>
+<p>The emplacement of the folder is defined by the option <code>packpath</code> (See <a href="http://vimhelp.appspot.com/options.txt.html#%27packpath%27" rel="noreferrer"><code>:h 'packpath'</code></a>).</p>
 <p>Note the importance of the structure of your folder:</p>
 <ul>
 <li>
@@ -3295,8 +3318,7 @@ opt/fooextra/doc/tags           &quot; help tags</code></pre>
 <p>I’m not sure it will be really convenient to use it out of the box (especially because handling nested version control repositories can be a painful task) but maybe this is the occasion to make plugin managers more efficient?</p>
 <p>Now it is also possible to imagine moving the existing plugins to adopt the structure required by the package manager and to manage them directly from the file system. Maybe some wrapper will be created to use this new feature.</p>
 <hr>
-<p><strong>EDIT</strong> As suggested by <span class="citation" data-cites="Sato">@Sato</span> Katsura here is a note about the <code>helptags</code> command. The Vim8 commit introduced two line in the <a href="https://github.com/vim/vim/blob/master/runtime/doc/helphelp.txt
-#L200-L201" rel="noreferrer"><code>helptag</code> doc</a>:</p>
+<p><strong>EDIT</strong> As suggested by <span class="citation" data-cites="Sato">@Sato</span> Katsura here is a note about the <code>helptags</code> command. The Vim8 commit introduced two line in the <a href="https://github.com/vim/vim/blob/master/runtime/doc/helphelp.txt#L200-L201" rel="noreferrer"><code>helptag</code> doc</a>:</p>
 <blockquote>
 <pre class="language-vim"><code>:helpt[ags] [++t] {dir}
 
@@ -3311,31 +3333,18 @@ When {dir} is ALL then all &quot;doc&quot; directories in &#39;runtimepath&#39; 
 <p>I used to use Vundle, which was fantastic, but now have replaced it with 18 or so lines of bash.</p>
 <p>I find it useful to use subfolders in the pack directory to group related plugins. E.g. “Syntax” or “Ruby”.</p>
 <p>The relevant bash example is below. Place in a file and run it.</p>
-<p>Additional discussion around the topic at: <a href="https://stories.abletech.nz/get-rid-of-your-vim-plugin-manager-7c8ff742f643
-#.abnjauzgk" rel="noreferrer">https://stories.abletech.nz/get-rid-of-your-vim-plugin-manager-7c8ff742f643#.abnjauzgk</a></p>
-<pre class="language-vim"><code>
-#!/usr/bin/env bash
-
+<p>Additional discussion around the topic at: <a href="https://stories.abletech.nz/get-rid-of-your-vim-plugin-manager-7c8ff742f643#.abnjauzgk" rel="noreferrer">https://stories.abletech.nz/get-rid-of-your-vim-plugin-manager-7c8ff742f643#.abnjauzgk</a></p>
+<pre class="language-vim"><code>#!/usr/bin/env bash
 # This file lives in ~/.vim/pack/install.sh
-
 # Remember to add executable: chmod +x ~/.vim/pack/install.sh
-
 #
-
 # Create new folder in ~/.vim/pack that contains a start folder and cd into it.
-
 #
-
 # Arguments:
-
 #   package_group, a string folder name to create and change into.
-
 #
-
 # Examples:
-
 #   set_group syntax-highlighting
-
 #
 function set_group () {
   package_group=$1
@@ -3343,21 +3352,13 @@ function set_group () {
   mkdir -p &quot;$path&quot;
   cd &quot;$path&quot; || exit
 }
-
 # Clone or update a git repo in the current directory.
-
 #
-
 # Arguments:
-
 #   repo_url, a URL to the git repo.
-
 #
-
 # Examples:
-
 #   package https://github.com/tpope/vim-endwise.git
-
 #
 function package () {
   repo_url=$1
@@ -3408,7 +3409,7 @@ Go to the <code>pack/*/start</code> directory and clone the package there.
 </p>
 </li>
 <li>
-Fire up n/vim and do <code>:scriptnames</code> to check if everything is loaded. Don’t worry if not every part is loaded, because some files are meant to loaded after some hook, e.g. <code>autoload/plugin.vim</code>.
+Fire up n/vim and do <code>:scriptnames</code> to check if everything is loaded. Don’t worry if not every part is loaded, because some files are meant to loaded after some hook, e.g. <code>autoload/plugin.vim</code>.
 </li>
 <li>
 To uninstall, just remove the directory where you cloned the package. Don’t need to do anything else.
@@ -3528,8 +3529,8 @@ vim-gnome:
 <h4>Answer 3 (score 14)</h4>
 <p>Vim 7.3 brings the <code>colorcolumn</code> option, as detailed very well in other answers.</p>
 <p>However, if you don’t have version 7.3 for whatever reason, you can still achieve a visual indication that you are exceeding a particular column count using vim’s <code>match</code> functionality (see <code>:help match</code> for details).</p>
-<p>Essentially, the match commands allow you to create persistent highlights for text matching a given regular expression. <code>:match ColorColumn "\%80v."</code> will highlight text in column 80 with the “ColorColumn” group. You can of course substitute any highlight group, and any column value. If you want a strong visual indication, the expression <code>"\%&gt;79v.\+"</code> will highlight column 80 and beyond.</p>
-<p>(<code>\%80v</code> means “match in virtual column 80,” and <code>\%&gt;79v</code> means "match <em>after</em> virtual column 79; see <code>:help /\%c</code> for more.)</p>
+<p>Essentially, the match commands allow you to create persistent highlights for text matching a given regular expression. <code>:match ColorColumn &quot;\%80v.&quot;</code> will highlight text in column 80 with the “ColorColumn” group. You can of course substitute any highlight group, and any column value. If you want a strong visual indication, the expression <code>&quot;\%&gt;79v.\+&quot;</code> will highlight column 80 and beyond.</p>
+<p>(<code>\%80v</code> means “match in virtual column 80,” and <code>\%&gt;79v</code> means &quot;match <em>after</em> virtual column 79; see <code>:help /\%c</code> for more.)</p>
 <p>This approach will only highlight when there are actual characters present in the specified columns, however, which makes it visually less consistent than <code>colorcolumn</code>.</p>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
@@ -3680,12 +3681,11 @@ git pull</code></pre>
 <pre class="language-vim"><code>make clean
 make distclean</code></pre>
 <p>And here you are with a fresh Vim install.</p>
-<p>You will probably want to remove any Vim you’ve installed from the Ubuntu repo, but you don’t <em>need</em> to. By default, Vim will install to <code>/usr/local/</code>, rather than <code>/usr/</code>. Just make sure you’re running the correct Vim version (i.e. <code>/usr/local/bin/vim</code>, and not <code>/usr/bin/vim</code>).</p>
+<p>You will probably want to remove any Vim you’ve installed from the Ubuntu repo, but you don’t <em>need</em> to. By default, Vim will install to <code>/usr/local/</code>, rather than <code>/usr/</code>. Just make sure you’re running the correct Vim version (i.e. <code>/usr/local/bin/vim</code>, and not <code>/usr/bin/vim</code>).</p>
 </section>
 <section id="answer-2-score-2" class="level4">
 <h4>Answer 2 (score 2)</h4>
-<pre class="language-vim"><code>
-#!/usr/bin/env bash
+<pre class="language-vim"><code>#!/usr/bin/env bash
 
 sudo apt update
 
@@ -3829,8 +3829,7 @@ nnoremap &lt;M-j&gt; j</code></pre>
 </section>
 <section id="answer-2-score-8-2" class="level4">
 <h4>Answer 2 (score 8)</h4>
-<p>With help of <a href="https://vi.stackexchange.com/questions/2350/how-to-map-alt-key
-#comment2107_2350">Carpetsmoker</a>, it seems that Terminal wasn’t configured to ‘Use Alt/option as meta key’ (this is especially common for GUI Terminals).</p>
+<p>With help of <a href="https://vi.stackexchange.com/questions/2350/how-to-map-alt-key#comment2107_2350">Carpetsmoker</a>, it seems that Terminal wasn’t configured to ‘Use Alt/option as meta key’ (this is especially common for GUI Terminals).</p>
 <p>For Terminal on OSX, it’s in <em>Preferences -&gt; Settings -&gt; Keyboard tab -&gt; ‘Use option as meta key’</em>. Check: <a href="https://apple.stackexchange.com/questions/54777/how-can-i-change-terminal-so-that-i-dont-have-to-press-esc-every-time-i-want-to">How can I change Terminal to use option as meta key?</a> (<a href="https://apple.stackexchange.com/questions/146485/can-you-enable-the-meta-key-in-mavericks">Mavericks</a>).</p>
 <p>For XTerm, check: <a href="http://frequal.com/linux/XTermMetaSendsEscape.html" rel="nofollow noreferrer">Configuring XTerm to Default to Meta Sends Escape</a> which says:</p>
 <blockquote>
@@ -3843,15 +3842,14 @@ nnoremap &lt;M-j&gt; j</code></pre>
 <pre class="language-vim"><code>:map &lt;A-j&gt; j
 :map &lt;A-k&gt; k</code></pre>
 <p>works fine.</p>
-<p>For help, see: <a href="http://vimhelp.appspot.com/map.txt.html
-#%3Amap-alt-keys" rel="nofollow noreferrer"><code>:h :map-alt-keys</code></a>.</p>
+<p>For help, see: <a href="http://vimhelp.appspot.com/map.txt.html#%3Amap-alt-keys" rel="nofollow noreferrer"><code>:h :map-alt-keys</code></a>.</p>
 </section>
 <section id="answer-3-score-4-4" class="level4">
 <h4>Answer 3 (score 4)</h4>
 <p>Similar to Kossak’s answer but a bit simpler, by mapping literal key presses.</p>
 <p>Either in normal mode after pressing <kbd>:</kbd>, or inserted into your <code>.vimrc</code>, map the input directly by starting the mapping:</p>
 <pre class="language-vim"><code>nnoremap </code></pre>
-<p>then hitting <kbd>Ctrl</kbd> + <kbd>V</kbd> then the keystroke to record, e.g. <kbd>Alt</kbd> + <kbd>←</kbd>. This will show as something like this:</p>
+<p>then hitting <kbd>Ctrl</kbd> + <kbd>V</kbd> then the keystroke to record, e.g. <kbd>Alt</kbd> + <kbd>←</kbd>. This will show as something like this:</p>
 <pre class="language-vim"><code>nnoremap ^[[1;3D</code></pre>
 <p>but each <code>^[</code> is a single, literal escape character and syntax highlighting should show this. Replace the literal escape(s) with the text <code>&lt;Esc&gt;</code>, and append the command you wish to use:</p>
 <pre class="language-vim"><code>nnoremap &lt;Esc&gt;[1;3D &lt;C-w&gt;h</code></pre>
@@ -3874,13 +3872,11 @@ nnoremap &lt;M-j&gt; j</code></pre>
 </section>
 <section id="answer-accepted-score-40" class="level4">
 <h4>Answer accepted (score 40)</h4>
-<p>From Vim’s documentation, <a href="http://vimhelp.appspot.com/editing.txt.html
-#%3Ax" rel="noreferrer"><code>:x</code></a> and <a href="http://vimhelp.appspot.com/editing.txt.html#ZZ" rel="noreferrer"><code>ZZ</code></a> are equivalent; they only save the file if it has been modified, then quit Vim:</p>
+<p>From Vim’s documentation, <a href="http://vimhelp.appspot.com/editing.txt.html#%3Ax" rel="noreferrer"><code>:x</code></a> and <a href="http://vimhelp.appspot.com/editing.txt.html#ZZ" rel="noreferrer"><code>ZZ</code></a> are equivalent; they only save the file if it has been modified, then quit Vim:</p>
 <pre class="language-vim"><code>Write current file, if modified, and quit (same as &quot;:x&quot;).  
 (Note: If there are several windows for the
 current file, the file is written if it was modified and the window is closed).</code></pre>
-<p><a href="http://vimhelp.appspot.com/editing.txt.html
-#%3Awq" rel="noreferrer"><code>:wq</code></a> on the other hand writes the file and quits Vim (assuming proper permissions).</p>
+<p><a href="http://vimhelp.appspot.com/editing.txt.html#%3Awq" rel="noreferrer"><code>:wq</code></a> on the other hand writes the file and quits Vim (assuming proper permissions).</p>
 </section>
 <section id="answer-2-score-9" class="level4">
 <h4>Answer 2 (score 9)</h4>
@@ -3907,8 +3903,7 @@ As akshay pointed out, Vim’s documentation explains, that <code>:x</code> and 
 <code>x</code> = delete the character under the cursor<br> <code>r</code> = replace the character under the cursor
 </p>
 <p>But how in the world do you simply copy a single character under the cursor?</p>
-<p>My motivation is that I’m programming in Perl 6 and some of the operators are Unicode characters. Right now I’m using <a href="https://github.com/tadzik/perl6-Config-INI/blob/master/lib/Config/INI.pm" rel="noreferrer">tadzik’s Perl 6 Config::INI code</a> as a starting point for a custom parser, for example, and I would have liked to have copied just that one <a href="https://doc.perl6.org/language/operators
-#postfix_%C2%BB._%2F_postfix_%3E%3E." rel="noreferrer">French quote character (a hyper operator)</a> from <a href="https://github.com/tadzik/perl6-Config-INI/blob/master/lib/Config/INI.pm#L26" rel="noreferrer">this line</a>:</p>
+<p>My motivation is that I’m programming in Perl 6 and some of the operators are Unicode characters. Right now I’m using <a href="https://github.com/tadzik/perl6-Config-INI/blob/master/lib/Config/INI.pm" rel="noreferrer">tadzik’s Perl 6 Config::INI code</a> as a starting point for a custom parser, for example, and I would have liked to have copied just that one <a href="https://doc.perl6.org/language/operators#postfix_%C2%BB._%2F_postfix_%3E%3E." rel="noreferrer">French quote character (a hyper operator)</a> from <a href="https://github.com/tadzik/perl6-Config-INI/blob/master/lib/Config/INI.pm#L26" rel="noreferrer">this line</a>:</p>
 <pre class="language-vim"><code>my %hash = $&lt;sections&gt;».ast;</code></pre>
 <p>I could use the two character “Texas” version of the hyper operator <code>&gt;&gt;</code>, but I thought that <code>&gt;»</code> looked better and less ambiguous than <code>&gt;&gt;&gt;</code>:</p>
 <pre class="language-vim"><code>my %hash = $&lt;sections&gt;&gt;&gt;.ast;</code></pre>
@@ -3942,8 +3937,7 @@ As akshay pointed out, Vim’s documentation explains, that <code>:x</code> and 
 <pre class="language-vim"><code>&quot; move among buffers with CTRL
 map &lt;C-J&gt; :bnext&lt;CR&gt;
 map &lt;C-K&gt; :bprev&lt;CR&gt;</code></pre>
-<p>Another way (direct access) could be <a href="http://vim.wikia.com/wiki/Easier_buffer_switching
-#Switching_by_number" rel="noreferrer">switching by number</a>: knowing the buffer number, it is possible to switch directly by entering the buffer number followed by <code>&lt;C-^&gt;</code>. So if I want to switch to buffer number 5, I would press <code>5&lt;C-^&gt;</code>.</p>
+<p>Another way (direct access) could be <a href="http://vim.wikia.com/wiki/Easier_buffer_switching#Switching_by_number" rel="noreferrer">switching by number</a>: knowing the buffer number, it is possible to switch directly by entering the buffer number followed by <code>&lt;C-^&gt;</code>. So if I want to switch to buffer number 5, I would press <code>5&lt;C-^&gt;</code>.</p>
 <p>But this seem not working for me (I use vim 7.4 on ubuntu box, from a Windows guest, with <em>Italian keyboard</em>). I suspect that’s because the <code>^</code> character is in the upper case key <code>^ì</code> in the Italian keyboard, so in fact to got <code>^</code> I need to press <code>SHIFT-^</code></p>
 <p>Any ideas?</p>
 </section>
@@ -4131,8 +4125,7 @@ nnoremap &lt;Leader&gt;a :echo &quot;Hey there space&quot;&lt;CR&gt;</code></pre
 <p>Will produce <em>two</em> mappings: <code>,a</code> and <code>&lt;Space&gt;a</code>.</p>
 <p>This means that the <em>current</em> value of <code>mapleader</code> is not necessarily the value that was used to define your mappings!</p>
 <p>In addition, there’s the <code>maplocalleader</code>, which is the same as <code>mapleader</code>, except that it’s used by <code>&lt;LocalLeader&gt;</code> and that it’s local to the current buffer.</p>
-<p>More information about <code>&lt;Leader&gt;</code> can be found in Vim’s help with <a href="http://vimhelp.appspot.com/map.txt.html
-#mapleader"><code>:help mapleader</code></a>.</p>
+<p>More information about <code>&lt;Leader&gt;</code> can be found in Vim’s help with <a href="http://vimhelp.appspot.com/map.txt.html#mapleader"><code>:help mapleader</code></a>.</p>
 </section>
 <section id="answer-2-score-8-4" class="level4">
 <h4>Answer 2 (score 8)</h4>
@@ -4145,29 +4138,24 @@ nnoremap &lt;Leader&gt;a :echo &quot;Hey there space&quot;&lt;CR&gt;</code></pre
 <section id="question-54" class="level4">
 <h4>Question</h4>
 <p>I have this code snippet:</p>
-<pre class="language-vim"><code>
-# import ipdb; ipdb.set_trace()
+<pre class="language-vim"><code># import ipdb; ipdb.set_trace()
 def foo():
     ...
     import ipdb; ipdb.set_trace()
     ...
-
-# import ipdb; ipdb.set_trace()</code></pre>
+    # import ipdb; ipdb.set_trace()</code></pre>
 <p>How should I specify search query, that it would find only the uncommented <code>ipdb</code> lines?</p>
 <p>I guess the command could look something like: <code>/import ipdb/(line start flag)</code></p>
 </section>
 <section id="answer-accepted-score-12" class="level4">
 <h4>Answer accepted (score 12)</h4>
 <p>How about this:</p>
-<pre class="language-vim"><code>/^[^
-#]*ipdb</code></pre>
+<pre class="language-vim"><code>/^[^#]*ipdb</code></pre>
 <p>
-The first <code>^</code> will anchor the match to the start of the line, <code>[^ #]</code> will match any character <em>except</em> a <code>#</code> (the <code>^</code> means to match any character <em>except</em> those given), and the <code>*</code> repeats this 0 or more times.
+The first <code>^</code> will anchor the match to the start of the line, <code>[^#]</code> will match any character <em>except</em> a <code>#</code> (the <code>^</code> means to match any character <em>except</em> those given), and the <code>*</code> repeats this 0 or more times.
 </p>
 <p>
-See:<a href="http://vimhelp.appspot.com/pattern.txt.html
-#/%5E" rel="noreferrer"><code>:help /^</code></a> <a href="http://vimhelp.appspot.com/pattern.txt.html
-#/collection" rel="noreferrer"><code>:help /[</code></a> for some more information.
+See:<a href="http://vimhelp.appspot.com/pattern.txt.html#/%5E" rel="noreferrer"><code>:help /^</code></a> <a href="http://vimhelp.appspot.com/pattern.txt.html#/collection" rel="noreferrer"><code>:help /[</code></a> for some more information.
 </p>
 <p>Note that this will match all lines with <code>ipdb</code> which don’t start with a comment, including:</p>
 <pre class="language-vim"><code>import other_module, ipdb</code></pre>
@@ -4199,16 +4187,13 @@ See:<a href="http://vimhelp.appspot.com/pattern.txt.html
 <section id="answer-2-score-2-1" class="level4">
 <h4>Answer 2 (score 2)</h4>
 <p>Didn’t intend to reply to my own question, and this is not necessarily better than the <code>swapfile</code> method, but this works too:</p>
-<p><code>:w</code> then <a href="http://vimhelp.appspot.com/editing.txt.html
-#discard" rel="nofollow"><code>:e!</code></a></p>
+<p><code>:w</code> then <a href="http://vimhelp.appspot.com/editing.txt.html#discard" rel="nofollow"><code>:e!</code></a></p>
 <p>I initially tried <code>:e</code> as I mentioned but I hadn’t tried <code>:e!</code>. And I still have undo history with <code>:e!</code> (tested only on Vim 7.4), just like with the <code>swapfile</code> solution, <em>but</em>…</p>
 <p>The negative with this solution of course is that you will <em>lose any unsaved changes</em> since that’s ordinarily the purpose of the exclamation, to say “I don’t care if I lose changes since the last time saved,” so make sure you use <code>:w</code> before doing this. In these swap file error situations, I am always able to save just fine.</p>
-<p>The Vim docs mention that <a href="http://vimhelp.appspot.com/editing.txt.html
-#discard" rel="nofollow"><code>:e!</code></a> is useful when you want to “start all over again” which is kind of the situation here, though we don’t want to needlessly throw away undo history:</p>
+<p>The Vim docs mention that <a href="http://vimhelp.appspot.com/editing.txt.html#discard" rel="nofollow"><code>:e!</code></a> is useful when you want to “start all over again” which is kind of the situation here, though we don’t want to needlessly throw away undo history:</p>
 <blockquote>
 <p>
-:e! Edit the current file always. Discard any changes to the current buffer. This is useful if you want to start all over again.<br> - <a href="http://vimhelp.appspot.com/editing.txt.html
-#discard" rel="nofollow"><code>:h :e!</code></a>
+:e! Edit the current file always. Discard any changes to the current buffer. This is useful if you want to start all over again.<br> - <a href="http://vimhelp.appspot.com/editing.txt.html#discard" rel="nofollow"><code>:h :e!</code></a>
 </p>
 </blockquote>
 <p>Because of the unsaved changes issue, I would say the <code>swapfile</code> solution is overall the more advisable, even though <code>:e!</code> is much quicker to type.</p>
@@ -4237,14 +4222,10 @@ I am running GVim when this happens and do not want to be forced to <strong>clos
 <section id="answer-accepted-score-21" class="level4">
 <h4>Answer accepted (score 21)</h4>
 <p>Several settings controls the behavior:</p>
-<p>First <code>set expandtab</code> allows to replace the tabs by white spaces characters <a href="http://vimdoc.sourceforge.net/htmldoc/options.html
-#%27expandtab%27"><code>:h 'expandtab'</code></a>.</p>
-<p>Then <code>set shiftwidth=4</code> makes the tabulations be 4 white spaces <a href="http://vimdoc.sourceforge.net/htmldoc/options.html
-#%27shiftwidth%27"><code>:h 'shiftwidth'</code></a>.</p>
-<p>You could also be interested by by <a href="http://vimdoc.sourceforge.net/htmldoc/options.html
-#%27tabstop%27"><code>:h 'tabstop'</code></a> which defines the number of spaces that a tab character in the file counts for.</p>
-<p>As a bonus see <a href="http://vimdoc.sourceforge.net/htmldoc/options.html
-#%27smartindent%27"><code>:h 'smartindent'</code></a> and <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#%27autoindent%27"><code>:h 'autoindent'</code></a> which are pretty useful.</p>
+<p>First <code>set expandtab</code> allows to replace the tabs by white spaces characters <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#%27expandtab%27"><code>:h 'expandtab'</code></a>.</p>
+<p>Then <code>set shiftwidth=4</code> makes the tabulations be 4 white spaces <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#%27shiftwidth%27"><code>:h 'shiftwidth'</code></a>.</p>
+<p>You could also be interested by by <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#%27tabstop%27"><code>:h 'tabstop'</code></a> which defines the number of spaces that a tab character in the file counts for.</p>
+<p>As a bonus see <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#%27smartindent%27"><code>:h 'smartindent'</code></a> and <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#%27autoindent%27"><code>:h 'autoindent'</code></a> which are pretty useful.</p>
 </section>
 <section id="answer-2-score-7" class="level4">
 <h4>Answer 2 (score 7)</h4>
@@ -4274,8 +4255,7 @@ You can set <code>shiftwidth</code> to any number of spaces. This works both in 
 <pre class="language-vim"><code>filetype plugin indent on</code></pre>
 <p>But how does it differ from this line:</p>
 <pre class="language-vim"><code>filetype indent on</code></pre>
-<p>I’ve found <a href="http://vimdoc.sourceforge.net/htmldoc/filetype.html
-#:filetype-indent-on" rel="noreferrer">documentation for the latter</a>, but I’m still confused.</p>
+<p>I’ve found <a href="http://vimdoc.sourceforge.net/htmldoc/filetype.html#:filetype-indent-on" rel="noreferrer">documentation for the latter</a>, but I’m still confused.</p>
 </section>
 <section id="answer-accepted-score-45" class="level4">
 <h4>Answer accepted (score 45)</h4>
@@ -4283,8 +4263,7 @@ You can set <code>shiftwidth</code> to any number of spaces. This works both in 
 <pre class="language-vim"><code>filetype on
 filetype plugin on
 filetype indent on</code></pre>
-<p>It turns on “detection”, “plugin” and “indent” at once. You can check for yourself by reading <a href="http://vimdoc.sourceforge.net/htmldoc/filetype.html
-#:filetype-overview" rel="noreferrer"><code>:help :filetype-overview</code></a>.</p>
+<p>It turns on “detection”, “plugin” and “indent” at once. You can check for yourself by reading <a href="http://vimdoc.sourceforge.net/htmldoc/filetype.html#:filetype-overview" rel="noreferrer"><code>:help :filetype-overview</code></a>.</p>
 <h5>
 Detection
 </h1>
@@ -4329,13 +4308,11 @@ The result is that when a file is edited its indent file is loaded (if there is 
 <section id="answer-2-score-5-1" class="level4">
 <h4>Answer 2 (score 5)</h4>
 <p>You can see that here:</p>
-<p><a href="http://vimhelp.appspot.com/starting.txt.html
-#viminfo" rel="nofollow noreferrer"><code>:h viminfo</code></a></p>
+<p><a href="http://vimhelp.appspot.com/starting.txt.html#viminfo" rel="nofollow noreferrer"><code>:h viminfo</code></a></p>
 <blockquote>
 If you exit Vim and later start it again, you would normally lose a lot of information. The viminfo file can be used to remember that information, which enables you to continue where you left off.
 </blockquote>
-<p><a href="http://vimhelp.appspot.com/pi_netrw.txt.html
-#.netrwhist" rel="nofollow noreferrer"><code>:h .netrwhist</code></a></p>
+<p><a href="http://vimhelp.appspot.com/pi_netrw.txt.html#.netrwhist" rel="nofollow noreferrer"><code>:h .netrwhist</code></a></p>
 <blockquote>
 <p>
 The file “.netrwhist” holds history when netrw (and vim) is not active.
@@ -4485,14 +4462,13 @@ endif</code></pre>
 </li>
 </ul>
 <p>My normal setting is <code>set ts=4 sw=4 expandtab smarttab</code>.</p>
-<p>But according to <a href="http://vimdoc.sourceforge.net/htmldoc/options.html
-#%27sts%27" rel="noreferrer"><code>sts</code> documentation</a>, if <code>expandtab</code> is not set, it will try to use a combination of spaces and tabs to make up of the desired number of blanks for a tab size.</p>
+<p>But according to <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#%27sts%27" rel="noreferrer"><code>sts</code> documentation</a>, if <code>expandtab</code> is not set, it will try to use a combination of spaces and tabs to make up of the desired number of blanks for a tab size.</p>
 <p>I can’t really think of a useful scenario for this setting: Why would someone wants to have a fixed number of tabs and spaces that may just mess things up? The only advantage of doing this that I can think of is to reduce the number of characters and thus reduce the file size, which seems weird to me.</p>
 </section>
 <section id="answer-accepted-score-20-1" class="level4">
 <h4>Answer accepted (score 20)</h4>
 <p>As the <code>softtabstop</code> documention mentions, it’s useful if you want to keep the default tab stop size of 8, but edit a file as if the tab stop size was some other value. For example, if you wanted an indentation level of 4 while editing code, but some comments had tab-indented text such as a table that depended on a tab stop of 8, you could set <code>sts</code> to <code>4</code>.</p>
-<p>One difference I notice between your tab settings (<code>set ts=4 sw=4 expandtab smarttab</code>) and the use of <code>sts</code> (e.g. <code>set ts=8 sts=4</code>) is when backspacing over spaces in the middle of a line of text. For example, consider the following line of text, where <code>·</code> indicates a space:</p>
+<p>One difference I notice between your tab settings (<code>set ts=4 sw=4 expandtab smarttab</code>) and the use of <code>sts</code> (e.g. <code>set ts=8 sts=4</code>) is when backspacing over spaces in the middle of a line of text. For example, consider the following line of text, where <code>·</code> indicates a space:</p>
 <pre class="language-vim"><code>some·text·······more·text</code></pre>
 <p>In insert mode, move the cursor just before the <code>m</code> of <code>more text</code>. With your settings, pressing Backspace deletes a single space. But while using <code>sts=4</code>, Backspace deletes all the way to the previous tab stop, as it would behave if the spaces were a tab character instead.</p>
 <p>You can set <code>sts=4</code> in addition to your settings and get the mid-line backspace behavior while not mixing tabs and spaces. Tabs will be expanded to four spaces, but you can backspace over a range of spaces in the middle of a line.</p>
@@ -4764,8 +4740,7 @@ My goal is to understand why the xterm hack is necessary/working in vim, and why
 </blockquote>
 <ul>
 <li>
-<p>Neovim doesn’t care about <code>t_Co</code> because it assumes 256 unless you <a href="https://github.com/neovim/neovim/wiki/FAQ
-#how-can-i-use-true-color-in-the-terminal" rel="nofollow noreferrer">enable “true color”</a>.</p>
+<p>Neovim doesn’t care about <code>t_Co</code> because it assumes 256 unless you <a href="https://github.com/neovim/neovim/wiki/FAQ#how-can-i-use-true-color-in-the-terminal" rel="nofollow noreferrer">enable “true color”</a>.</p>
 <ul>
 <li>
 In fact Neovim ignores all <code>t_*</code> options, see <code>:help t_xx</code>.
@@ -4821,10 +4796,8 @@ Normally, I would search with <code>/</code> and jump through the matches with <
 <h4>Answer 2 (score 33)</h4>
 <pre class="language-vim"><code>:vimgrep pattern %
 :cwin</code></pre>
-<p><a href="http://vimhelp.appspot.com/quickfix.txt.html
-#grep"><code>vimgrep</code></a> will search for your pattern in the current file (<code>%</code>), or whatever files you specify.</p>
-<p><a href="http://vimhelp.appspot.com/quickfix.txt.html
-#%3Acwin"><code>cwin</code></a> will then open a buffer in your window that will only show the desired lines. You can use pretty much any navigating/search command within the <code>cwin</code> buffer. Press return to jump to the line under your cursor in the source file.</p>
+<p><a href="http://vimhelp.appspot.com/quickfix.txt.html#grep"><code>vimgrep</code></a> will search for your pattern in the current file (<code>%</code>), or whatever files you specify.</p>
+<p><a href="http://vimhelp.appspot.com/quickfix.txt.html#%3Acwin"><code>cwin</code></a> will then open a buffer in your window that will only show the desired lines. You can use pretty much any navigating/search command within the <code>cwin</code> buffer. Press return to jump to the line under your cursor in the source file.</p>
 </section>
 <section id="answer-3-score-14-2" class="level4">
 <h4>Answer 3 (score 14)</h4>
@@ -4842,12 +4815,10 @@ Normally, I would search with <code>/</code> and jump through the matches with <
 <p>Lets say I have a header file <code>foo.hpp</code>:</p>
 <pre class="language-vim"><code>int bar();</code></pre>
 <p>and a source file <code>foo.cpp</code>:</p>
-<pre class="language-vim"><code>
-#include &quot;foo.hpp&quot;
+<pre class="language-vim"><code>#include &quot;foo.hpp&quot;
 int bar() { return 42; }</code></pre>
 <p>and a main file <code>main.cpp</code>:</p>
-<pre class="language-vim"><code>
-#include &quot;foo.hpp&quot;
+<pre class="language-vim"><code>#include &quot;foo.hpp&quot;
 int main() { bar(); return 0; }</code></pre>
 <p>Can vim find both the definition and declaration of the function <code>bar()</code> from the <code>main</code> function?</p>
 </section>
@@ -4863,7 +4834,7 @@ Exuberant ctags is the simplest way to achieve this. Under GNU/Linux (e.g. Ubun
 <p>This will scan your entire project and create a ./tags file which vim will automatically use to provide you with the ability to jump to functions at the press of a key. Namely:</p>
 <pre class="language-vim"><code>Ctrl + ]</code></pre>
 <p>
-with your cursor placed on the function you want to see the implementation for. There are other combinations and many command mode functions that let you navigate through your code by ctags as well (e.g. <kbd>Ctrl</kbd>+<kbd>t</kbd> to jump to older tag stack entry). See <code>:help 29.1</code> for an overview.
+with your cursor placed on the function you want to see the implementation for. There are other combinations and many command mode functions that let you navigate through your code by ctags as well (e.g. <kbd>Ctrl</kbd>+<kbd>t</kbd> to jump to older tag stack entry). See <code>:help 29.1</code> for an overview.
 </p>
 <p><strong>Note</strong> that you have to re-run ctags for each significant change in the code and let it re-index your project. You can either do that manually, or teach vim to do it on hotkey or on write.</p>
 <p><em>Hint:</em> if you make extensive use of ctags, maybe the vim-taglist (<a href="http://vim-taglist.sourceforge.net">http://vim-taglist.sourceforge.net</a>) plugin is worth a look as well. It gives you an IDE-style outline with a list of all functions for that class/file.</p>
@@ -4904,8 +4875,7 @@ It performs a recursive diff on two directories and generate a diff “window”
 <pre class="language-vim"><code>:DirDiff &lt;dir1&gt; &lt;dir2&gt;</code></pre>
 <p>For more information / help: <code>:help dirdiff</code></p>
 <p>See the screenshot:</p>
-<p><a href="https://github.com/will133/vim-dirdiff
-#vim-dirdiff" rel="noreferrer"><img src="https://i.stack.imgur.com/CM7U2.png" alt="wlee screenshot"></a></p>
+<p><a href="https://github.com/will133/vim-dirdiff#vim-dirdiff" rel="noreferrer"><img src="https://i.stack.imgur.com/CM7U2.png" alt="wlee screenshot"></a></p>
 <p>See also:</p>
 <ul>
 <li>
@@ -4931,8 +4901,7 @@ It should work in Python 2 and 3; but probably not in very old versions of Pytho
 Be aware that some checks (like the one for binary files, or if the files are the same) are not very fast (it reads the entire file); you could remove them if you want.
 </p>
 <p>It also doesn’t report if a is only present in one of the directories…</p>
-<pre class="language-vim"><code>
-#!/usr/bin/env python
+<pre class="language-vim"><code>#!/usr/bin/env python
 from __future__ import print_function
 import hashlib, os, subprocess, sys
 
@@ -4948,18 +4917,15 @@ for root, dirs, files in os.walk(dir1):
         f1 = &#39;{}/{}&#39;.format(root, f)
         f2 = f1.replace(dir1, dir2, 1)
 
-
-# Don&#39;t diff files over 1MiB
+        # Don&#39;t diff files over 1MiB
         if os.stat(f1).st_size &gt; 1048576 or os.stat(f2).st_size &gt; 1048576: continue
 
-
-# Check if files are the same; in which case a diff is useless
+        # Check if files are the same; in which case a diff is useless
         h1 = hashlib.sha256(open(f1, &#39;rb&#39;).read()).hexdigest()
         h2 = hashlib.sha256(open(f2, &#39;rb&#39;).read()).hexdigest()
         if h1 == h2: continue
 
-
-# Don&#39;t diff binary files
+        # Don&#39;t diff binary files
         if open(f1, &#39;rb&#39;).read().find(b&#39;\000&#39;) &gt;= 0: continue
 
         subprocess.call([&#39;vimdiff&#39;, f1, f2])</code></pre>
@@ -5008,8 +4974,7 @@ git config --global diff.tool vdwrap</code></pre>
 </section>
 <section id="answer-accepted-score-66-1" class="level4">
 <h4>Answer accepted (score 66)</h4>
-<p>This is controlled with the <code>formatoptions</code> setting; from <a href="http://vimhelp.appspot.com/change.txt.html
-#fo-table"><code>:help fo-table</code></a>:</p>
+<p>This is controlled with the <code>formatoptions</code> setting; from <a href="http://vimhelp.appspot.com/change.txt.html#fo-table"><code>:help fo-table</code></a>:</p>
 <blockquote>
 <p>
 You can use the <code>'formatoptions'</code> option to influence how Vim formats text. <code>'formatoptions'</code> is a string that can contain any of the letters below. The default setting is <code>tcq</code>. You can separate the option letters with commas for readability.
@@ -5071,7 +5036,7 @@ Included patches: 1-207, 209-355, 357-430</code></pre>
 <p>Vim doesn’t have a “minor version number” beyond <em>major.minor</em>; although I believe that some distributions may use the “patchlevel” as such.</p>
 <hr>
 <p>As shown above, not all patches may be included, so if you want to use this value you can’t just check if a number is higher than a certain version.</p>
-<p>Usually, the best way is to use <code>has("patch-7.4-399")</code>; this will return true if:</p>
+<p>Usually, the best way is to use <code>has(&quot;patch-7.4-399&quot;)</code>; this will return true if:</p>
 <ul>
 <li>
 We’re running Vim 7.4 with patch 399 included.
@@ -5083,8 +5048,7 @@ We’re running Vim 7.5 or later.
 <p>You can also use the form of <code>has('patch399')</code>, which is typically used like:</p>
 <pre class="language-vim"><code>if v:version == 704 &amp;&amp; has(&#39;patch399&#39;)</code></pre>
 <p>But be aware; this will be <em>false</em> for Vim 7.5; use this only in very specific cases.</p>
-<p>See <a href="http://vimhelp.appspot.com/eval.txt.html
-#feature-list"><code>:help feature-list</code></a> for some more information.</p>
+<p>See <a href="http://vimhelp.appspot.com/eval.txt.html#feature-list"><code>:help feature-list</code></a> for some more information.</p>
 <hr>
 <p>I can’t find a way to list all the included patches, other than redirecting <code>:version</code> and parsing that … I’m also not sure how this would be useful anyway, as <code>has()</code> should be enough :-)</p>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
@@ -5196,7 +5160,7 @@ You now have a minimal vimrc with just this single plugin.
 </ol>
 <hr>
 <p><strong>Footnotes</strong></p>
-<p><sup>1</sup> For example: on 64 bit Windows, the shortcut would look something like this: <code>"C:\Program Files (x86)\Vim\vim74\vim.exe" -u NONE -U NONE -N</code>. To create it, right click in File Explorer where you want the shortcut, then select New -&gt; Shortcut and paste the shortcut text. You may need to change the Vim path if your Vim is installed in another location.</p>
+<p><sup>1</sup> For example: on 64 bit Windows, the shortcut would look something like this: <code>&quot;C:\Program Files (x86)\Vim\vim74\vim.exe&quot; -u NONE -U NONE -N</code>. To create it, right click in File Explorer where you want the shortcut, then select New -&gt; Shortcut and paste the shortcut text. You may need to change the Vim path if your Vim is installed in another location.</p>
 </section>
 <section id="answer-2-score-31-1" class="level4">
 <h4>Answer 2 (score 31)</h4>
@@ -5213,8 +5177,7 @@ You now have a minimal vimrc with just this single plugin.
 <a href="http://vim.wikia.com/wiki/Debug_unexpected_option_settings">Debug unexpected option settings</a> at Vim tips wiki
 </li>
 <li>
-<a href="http://vimhelp.appspot.com/repeat.txt.html
-#debug-scripts"><code>:help debug-scripts</code></a>
+<a href="http://vimhelp.appspot.com/repeat.txt.html#debug-scripts"><code>:help debug-scripts</code></a>
 </li>
 </ul>
 </section>
@@ -5242,8 +5205,7 @@ You now have a minimal vimrc with just this single plugin.
 <p>A lot of people (<em>including Vim’s doc as <span class="citation" data-cites="B">@B</span> Layer’s answer shows</em>) argue that you shall not use arrow keys because it makes your hands move from the home row (the second line of your keyboard where you have <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd>) and that make you less efficient.</p>
 <p>This is (IMO at least) a bad result from vim “purists” circle jerk: new users follow this blindly, some even disable the arrow keys and then they complain that they are not as efficient as before.</p>
 <p>The only real rule to use vim is to use it efficiently: if you feel more comfortable using <kbd>Left</kbd> and <kbd>Right</kbd> than <kbd>h</kbd> and <kbd>l</kbd> be it, use the arrow keys. Vim even has <code>set mouse=a</code> option if you want to use a mouse!</p>
-<p>Once you get used to vim and get better with the different available motions (<kbd>f</kbd>, <kbd>t</kbd>, <kbd>,</kbd>, <kbd>;</kbd>, <kbd>w</kbd>, <kbd>b</kbd>, <kbd>e</kbd>, <kbd>g</kbd><kbd>e</kbd>, and basically everything in <a href="http://vimhelp.appspot.com/quickref.txt.html
-#quickref" rel="noreferrer"><code>:h quickref</code></a>) you might realize that you don’t use arrow keys that much. And if you still use them, it’s not a problem, use what you are most efficient with.</p>
+<p>Once you get used to vim and get better with the different available motions (<kbd>f</kbd>, <kbd>t</kbd>, <kbd>,</kbd>, <kbd>;</kbd>, <kbd>w</kbd>, <kbd>b</kbd>, <kbd>e</kbd>, <kbd>g</kbd><kbd>e</kbd>, and basically everything in <a href="http://vimhelp.appspot.com/quickref.txt.html#quickref" rel="noreferrer"><code>:h quickref</code></a>) you might realize that you don’t use arrow keys that much. And if you still use them, it’s not a problem, use what you are most efficient with.</p>
 <p><strong>Note</strong> That the argument of don’t leave the home row for more efficiency is not that good in my opinion: If you take a look at <a href="https://vi.stackexchange.com/q/9313/1841">Why does vim use hjkl</a> you’ll see that these keys were chosen because there weren’t any arrow keys when Vi was written. One could argue that maybe if the keyboards were different at this time no one would consider not using the arrow keys a good practice.</p>
 </section>
 <section id="answer-2-score-40-1" class="level4">
@@ -5258,8 +5220,7 @@ In the old days, VT100 terminals had arrow keys, but pressing one transmitted an
 <section id="answer-3-score-28-1" class="level4">
 <h4>Answer 3 (score 28)</h4>
 <p>While I agree with <span class="citation" data-cites="statox">@statox</span> that no one should be chastised, shunned, excommunicated, or tarred-and-feathered if they choose to use the arrow keys…use your software however you see fit…I wouldn’t exude as much of a laissez-faire attitude if I were giving guidance to an open-minded new user. I’d pretty strongly recommend that they start with following best practices. They are “best practices” for a reason…they’ve been employed to good effect by lots of people who came before you and me.</p>
-<p>Heck, even <a href="http://vimhelp.appspot.com/usr_02.txt.html
-#hjkl" rel="noreferrer">Vim’s own help nudges you in that direction</a>, though not without hyperbole (“<em>greatly</em> slow down”)…</p>
+<p>Heck, even <a href="http://vimhelp.appspot.com/usr_02.txt.html#hjkl" rel="noreferrer">Vim’s own help nudges you in that direction</a>, though not without hyperbole (“<em>greatly</em> slow down”)…</p>
 <blockquote>
 <p>
 You can also move the cursor by using the arrow keys. If you do, however, you greatly slow down your editing because to press the arrow keys, you must move your hand from the text keys to the arrow keys. Considering that you might be doing it hundreds of times an hour, this can take a significant amount of time.
@@ -5331,13 +5292,13 @@ sudo make install</code></pre>
 <section id="answer-2-score-4-3" class="level4">
 <h4>Answer 2 (score 4)</h4>
 <p>
-<a href="https://github.com/davidhalter/jedi-vim" rel="nofollow">jedi-vim</a> works fine for me now with +python3 support in vim. In added the following option to my .vimrc: <code>let g:jedi #force_py_version = 3</code>.
+<a href="https://github.com/davidhalter/jedi-vim" rel="nofollow">jedi-vim</a> works fine for me now with +python3 support in vim. In added the following option to my .vimrc: <code>let g:jedi#force_py_version = 3</code>.
 </p>
 </section>
 <section id="answer-3-score-4-7" class="level4">
 <h4>Answer 3 (score 4)</h4>
 <p>
-<a href="https://github.com/davidhalter/jedi-vim" rel="nofollow">jedi-vim</a> works fine for me now with +python3 support in vim. In added the following option to my .vimrc: <code>let g:jedi #force_py_version = 3</code>.
+<a href="https://github.com/davidhalter/jedi-vim" rel="nofollow">jedi-vim</a> works fine for me now with +python3 support in vim. In added the following option to my .vimrc: <code>let g:jedi#force_py_version = 3</code>.
 </p>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
@@ -5389,8 +5350,7 @@ In addition to the snippets provided by vim-snippets, the user can define it’s
 To expand the snippets Ultisnips provides a variable <code>g:UltiSnipsExpandTrigger</code> which defines the mapping which will trigger the expansion (I choose <kbd>**</kbd> which is pretty convenient for me). Note that an integration should be possible but I didn’t tested it by myself).
 </p>
 <p>
-For power users, Ultisnips also provides some function to customize the behavior of the expansion, or to trigger it differently. See <a href="https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
-#L271" rel="noreferrer"><code>:h UltiSnips-trigger-functions</code></a>
+For power users, Ultisnips also provides some function to customize the behavior of the expansion, or to trigger it differently. See <a href="https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#L271" rel="noreferrer"><code>:h UltiSnips-trigger-functions</code></a>
 </p>
 <hr>
 <p>
@@ -5439,8 +5399,7 @@ It has been abandoned since 2009.
 <h3>78: How can I install 64-bit Vim on Windows? (score <a href="https://stackoverflow.com/q/6097.html">14762</a> in 2017)</h3>
 <section id="question-77" class="level4">
 <h4>Question</h4>
-<p>Vim’s <a href="http://www.vim.org/download.php
-#pc">Downloads page</a> says the 64-bit version is discontinued:</p>
+<p>Vim’s <a href="http://www.vim.org/download.php#pc">Downloads page</a> says the 64-bit version is discontinued:</p>
 <blockquote>
 <h5>
 Win64
@@ -5452,8 +5411,7 @@ The 32-bit version of Vim runs fine on 64-bit windows. There was a 64-bit binary
 <p>Which is fine, I suppose, except that 32-bit Vim doesn’t pick up 64-bit Python. <code>has('python')</code>? <code>0</code>.</p>
 <p>What are my options for installing 64-bit Vim specifically (including GVim) on Windows, with as much plugin support as possible?</p>
 <hr>
-<p>The binary from Cream is also apparently 32-bit (see the <a href="http://sourceforge.net/projects/cream/files/Vim/7.4.1063/gvim-7-4-1063_version.txt/download"><code>version.txt</code></a>). As for Cygwin, I’m not sure about getting GVim running in it (<a href="http://cs.nyu.edu/~yap/prog/cygwin/FAQs.html
-#gvim">it apparently needs <code>DISPLAY</code> set</a>, which would indicate the need for X server, which is yet another complication over the complexity of Cygwin itself).</p>
+<p>The binary from Cream is also apparently 32-bit (see the <a href="http://sourceforge.net/projects/cream/files/Vim/7.4.1063/gvim-7-4-1063_version.txt/download"><code>version.txt</code></a>). As for Cygwin, I’m not sure about getting GVim running in it (<a href="http://cs.nyu.edu/~yap/prog/cygwin/FAQs.html#gvim">it apparently needs <code>DISPLAY</code> set</a>, which would indicate the need for X server, which is yet another complication over the complexity of Cygwin itself).</p>
 <p>I have <a href="http://www.mingw.org/">MinGW</a> installed (and it is rather outdated, admittedly), so I could make some attempt at compiling it myself.</p>
 <p>The Vim Wikia suggests <a href="https://tuxproject.de/projects/vim/x64/">https://tuxproject.de/projects/vim/x64/</a>, which has a rather ominous instruction:</p>
 <blockquote>
@@ -5566,8 +5524,7 @@ To do an upgrade by entering just one command
 vim -O foo bar baz</code></pre>
 <p>You can tell Vim the maximum number of windows to open by putting an integer after <code>o</code> or <code>O</code> options, the following example will open at most two windows no matter how many file matches, you will see the first two file specified on the command line, the rest will remain hidden:</p>
 <pre class="language-vim"><code>vim -o2 *.cpp</code></pre>
-<p>See <a href="http://vimhelp.appspot.com/starting.txt.html
-#-o" rel="noreferrer"><code>:help -o</code></a> for all the details.</p>
+<p>See <a href="http://vimhelp.appspot.com/starting.txt.html#-o" rel="noreferrer"><code>:help -o</code></a> for all the details.</p>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
 </section>
@@ -5613,11 +5570,9 @@ ln -s .config/nvim/init.vim .vimrc</code></pre>
 <pre class="language-vim"><code>mkdir -p ~/.local/share/nvim/site
 ln -s ~/.local/share/nvim/site ~/.vim 
 ln -s .config/nvim/init.vim .vimrc</code></pre>
-<p>To fix the colorscheme I <a href="https://stackoverflow.com/a/10778126/859591">had to set to</a> <a href="http://vim.wikia.com/wiki/256_colors_in_vim" rel="noreferrer">256 terminal color mode</a>, i.e. add this to your .vimrc (= init.vim) file, which <a href="https://github.com/neovim/neovim/wiki/FAQ
-#colors-arent-displayed-correctly" rel="noreferrer">will be ignored by nvim</a>:</p>
+<p>To fix the colorscheme I <a href="https://stackoverflow.com/a/10778126/859591">had to set to</a> <a href="http://vim.wikia.com/wiki/256_colors_in_vim" rel="noreferrer">256 terminal color mode</a>, i.e. add this to your .vimrc (= init.vim) file, which <a href="https://github.com/neovim/neovim/wiki/FAQ#colors-arent-displayed-correctly" rel="noreferrer">will be ignored by nvim</a>:</p>
 <pre class="language-vim"><code>set t_Co=256  &quot; Note: Neovim ignores t_Co and other terminal codes.</code></pre>
-<p>To get vim-airline I <a href="https://github.com/vim-airline/vim-airline/wiki/FAQ
-#vim-airline-doesnt-appear-until-i-create-a-new-split" rel="noreferrer">added the following snippet</a> to .vimrc:</p>
+<p>To get vim-airline I <a href="https://github.com/vim-airline/vim-airline/wiki/FAQ#vim-airline-doesnt-appear-until-i-create-a-new-split" rel="noreferrer">added the following snippet</a> to .vimrc:</p>
 <pre class="language-vim"><code>set laststatus=2</code></pre>
 <p>I don’t quite understand why this is necessary only in vim and not in Neovim, but I am not <a href="https://github.com/vim-airline/vim-airline/issues/130" rel="noreferrer">the</a> <a href="https://github.com/vim-airline/vim-airline/issues/334" rel="noreferrer">only</a> <a href="https://github.com/vim-airline/vim-airline/issues/20" rel="noreferrer">one</a> stumbling upon this thing.</p>
 </section>
@@ -5626,8 +5581,7 @@ ln -s .config/nvim/init.vim .vimrc</code></pre>
 <p>
 <strong>TL;DR</strong><br /> <br /> You can use your existing <code>~/.vimrc</code>, files, and plugins located within <code>~/.vim</code> without having to symlink the files.
 </p>
-<p>And this is now documented in NeoVim manual, see <a href="https://neovim.io/doc/user/nvim.html
-#nvim-from-vim" rel="noreferrer">Transitioning from Vim</a>.</p>
+<p>And this is now documented in NeoVim manual, see <a href="https://neovim.io/doc/user/nvim.html#nvim-from-vim" rel="noreferrer">Transitioning from Vim</a>.</p>
 <hr>
 <p>The below lines will add the existing paths and <code>~/.vimrc</code> file to your nvim setup.</p>
 <pre class="language-vim"><code>set runtimepath^=~/.vim runtimepath+=~/.vim/after
@@ -5776,8 +5730,7 @@ editor = {buz
 </section>
 <section id="answer-accepted-score-17-1" class="level4">
 <h4>Answer accepted (score 17)</h4>
-<p>The easiest way is to use <a href="http://vimhelp.appspot.com/cmdline.txt.html
-#c_CTRL-D"><code>:help c_Ctrl-d</code></a> after <code>:colorscheme</code>.</p>
+<p>The easiest way is to use <a href="http://vimhelp.appspot.com/cmdline.txt.html#c_CTRL-D"><code>:help c_Ctrl-d</code></a> after <code>:colorscheme</code>.</p>
 <p>So, <code>:colorscheme</code><kbd>Ctrl-d</kbd> will output the colorschemes you have available to you.</p>
 </section>
 <section id="answer-2-score-10-2" class="level4">
@@ -5786,8 +5739,7 @@ editor = {buz
 </section>
 <section id="answer-3-score-2-2" class="level4">
 <h4>Answer 3 (score 2)</h4>
-<p>If you want to do this in Vimscript, you can get a <a href="http://vimhelp.appspot.com/eval.txt.html
-#List" rel="nofollow noreferrer">List</a> of color schemes by using the getcompletion() function:</p>
+<p>If you want to do this in Vimscript, you can get a <a href="http://vimhelp.appspot.com/eval.txt.html#List" rel="nofollow noreferrer">List</a> of color schemes by using the getcompletion() function:</p>
 <pre class="language-vim"><code>let c = getcompletion(&#39;&#39;, &#39;color&#39;)
 echo c</code></pre>
 <p>This is a bit simpler than the existing Vimscript answer, which scans the filesystem.</p>
@@ -5930,8 +5882,7 @@ endfunction</code></pre>
 </section>
 <section id="answer-2-score-18-1" class="level4">
 <h4>Answer 2 (score 18)</h4>
-<p>If your version of vim is recent enough (v7.4.2011+), you can ask for known filetypes with the function we can now use to help define manual autocompletion: <a href="http://vimhelp.appspot.com/eval.txt.html
-#getcompletion%28%29" rel="noreferrer"><code>getcompletion()</code></a></p>
+<p>If your version of vim is recent enough (v7.4.2011+), you can ask for known filetypes with the function we can now use to help define manual autocompletion: <a href="http://vimhelp.appspot.com/eval.txt.html#getcompletion%28%29" rel="noreferrer"><code>getcompletion()</code></a></p>
 <pre class="language-vim"><code>:echo getcompletion(&#39;&#39;, &#39;filetype&#39;)</code></pre>
 <p>If you want to restrict the list to filetypes starting with a <code>'c'</code>, you’d call</p>
 <pre class="language-vim"><code>:echo getcompletion(&#39;c&#39;, &#39;filetype&#39;)</code></pre>
@@ -6062,22 +6013,19 @@ DESCRIPTION
     When you get bored looking at the highlighted matches, you can turn it
     off with |:nohlsearch|.  This does **not change the option value**, as
     soon as you use a search command, the highlighting comes back.</code></pre>
-<p>However, this solution isn’t perfect, since you still have to type out <code>:nohls</code> which is pain to do after every search. You can get around this with a mapping, e.g. </p>
+<p>However, this solution isn’t perfect, since you still have to type out <code>:nohls</code> which is pain to do after every search. You can get around this with a mapping, e.g.</p>
 <pre class="language-vim"><code>nnoremap &lt;esc&gt;&lt;esc&gt; :silent! nohls&lt;cr&gt;</code></pre>
 <p>But there is an even <em>better</em> solution! <a href="https://github.com/haya14busa/incsearch.vim">haya14busa/incsearch.vim</a>. This is, at least in my opinion, an <em>essential</em> vim plugin. The main feature is that <strong>all</strong> search matches are highlighted in real time, as you are typing out your regex. For example:</p>
 <p><a href="https://i.stack.imgur.com/UUHD4.gif"><img src="https://i.stack.imgur.com/UUHD4.gif" alt="enter image description here"></a></p>
 <p>However, a secondary feature that is also provided is the option to <em>immediately</em> toggle hlsearch on and off when you start/stop searching. To enable this feature, you will have to add</p>
 <pre class="language-vim"><code>set hlsearch
-let g:incsearch
-#auto_nohlsearch = 1
+let g:incsearch#auto_nohlsearch = 1
 map n  &lt;Plug&gt;(incsearch-nohl-n)
 map N  &lt;Plug&gt;(incsearch-nohl-N)
 map *  &lt;Plug&gt;(incsearch-nohl-*)
-map
-#  &lt;Plug&gt;(incsearch-nohl-#)
+map #  &lt;Plug&gt;(incsearch-nohl-#)
 map g* &lt;Plug&gt;(incsearch-nohl-g*)
-map g
-# &lt;Plug&gt;(incsearch-nohl-g#)</code></pre>
+map g# &lt;Plug&gt;(incsearch-nohl-g#)</code></pre>
 <p>to your <code>.vimrc</code>.</p>
 <p>If you have any other <code>n</code> mappings, you will have to turn these off. For example, I used to have</p>
 <pre class="language-vim"><code>nnoremap n nzz
@@ -6092,8 +6040,7 @@ nnoremap N Nzz</code></pre>
 Vim-cool disables search highlighting when you are done searching and re-enables it when you search again.
 </p>
 </blockquote>
-<p>It works <em>without remapping</em> by <a href="https://github.com/romainl/vim-cool/issues/9" rel="noreferrer">using</a> the <a href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html
-#CursorMoved" rel="noreferrer"><code>CursorMoved</code></a> and <a href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertEnter" rel="noreferrer"><code>InsertEnter</code></a> autocommands.</p>
+<p>It works <em>without remapping</em> by <a href="https://github.com/romainl/vim-cool/issues/9" rel="noreferrer">using</a> the <a href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#CursorMoved" rel="noreferrer"><code>CursorMoved</code></a> and <a href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertEnter" rel="noreferrer"><code>InsertEnter</code></a> autocommands.</p>
 <p></b> </em> </i> </small> </strong> </sub> </sup></p>
 </section>
 </section>
@@ -6146,8 +6093,7 @@ nnoremap &lt;silent&gt; ]&lt;space&gt;  :&lt;c-u&gt;put =repeat([&#39;&#39;],v:c
 </section>
 <section id="answer-accepted-score-17-2" class="level4">
 <h4>Answer accepted (score 17)</h4>
-<p>According to <a href="http://vimhelp.appspot.com/options.txt.html
-#%27cursorline%27"><code>:help cursorline</code></a>, the highlight label is <code>CursorLine</code>. So you can try:</p>
+<p>According to <a href="http://vimhelp.appspot.com/options.txt.html#%27cursorline%27"><code>:help cursorline</code></a>, the highlight label is <code>CursorLine</code>. So you can try:</p>
 <pre class="language-vim"><code>:highlight CursorLine ctermbg=LightBlue</code></pre>
 <p>See <code>:help highlight-cterm</code> for more options.</p>
 <p>Experiment with the colours to see which suits you.</p>
@@ -6168,8 +6114,7 @@ endif</code></pre>
 <section id="answer-accepted-score-30-1" class="level4">
 <h4>Answer accepted (score 30)</h4>
 <p>As <span class="citation" data-cites="lcd047">@lcd047</span> said in his comment, vimscript use C-like operators <code>&amp;&amp;</code> and <code>||</code>.</p>
-<p>You can find description of their usage on <a href="http://vimdoc.sourceforge.net/htmldoc/eval.html
-#expr2"><code>:h expr2</code></a>. Some important points mentioned by the doc are the following</p>
+<p>You can find description of their usage on <a href="http://vimdoc.sourceforge.net/htmldoc/eval.html#expr2"><code>:h expr2</code></a>. Some important points mentioned by the doc are the following</p>
 <p>You’ll find that the operators can be concatenated and <code>&amp;&amp;</code> takes precedence over <code>||</code>, so</p>
 <pre class="language-vim"><code>&amp;nu || &amp;list &amp;&amp; &amp;shell == &quot;csh&quot;</code></pre>
 <p>Is equivalent to</p>
@@ -6227,8 +6172,7 @@ In order to swap <code>window</code> positions, the effect is equivalent to swap
 <pre class="language-vim"><code>function! WinBufSwap()
   let thiswin = winnr()
   let thisbuf = bufnr(&quot;%&quot;)
-  let lastwin = winnr(&quot;
-#&quot;)
+  let lastwin = winnr(&quot;#&quot;)
   let lastbuf = winbufnr(lastwin)
 
   exec  lastwin . &quot; wincmd w&quot; .&quot;|&quot;.
@@ -6467,12 +6411,11 @@ nmap &lt;leader&gt;p :r !xsel -b &lt;CR&gt;</code></pre>
 <p><a href="http://vimcasts.org/episodes/formatting-text-with-par/">http://vimcasts.org/episodes/formatting-text-with-par/</a></p>
 <p>Basically, you need to install <code>par</code>:</p>
 <pre class="language-vim"><code>$ brew install par
-
 # or
 $ sudo apt-get install par</code></pre>
 <p>And then, since you want columns to be wrapped in 80 columns:</p>
 <pre class="language-vim"><code>:set formatprg=par\ -w80</code></pre>
-<p>Now you can use the <code>gq</code> operator, like in other answers (e.g. <code>gqip</code>), and it will use Par instead of Vim’s built-in formatter.</p>
+<p>Now you can use the <code>gq</code> operator, like in other answers (e.g. <code>gqip</code>), and it will use Par instead of Vim’s built-in formatter.</p>
 <p>Par is quite advanced, and it will format comments like this nicely:</p>
 <pre class="language-vim"><code>/* This is a long */
 /* multiline comment */</code></pre>
@@ -6564,8 +6507,7 @@ Huge version with GTK2-GNOME GUI.  Features included (+) or not (-):
 Compilation: gcc -c -I. -Iproto -DHAVE_CONFIG_H -DFEAT_GUI_GTK  -pthread -I/usr/include/gtk-2.0 -I/usr/lib/i386-linux-gnu/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/freetype2 -I/usr/include/glib-2.0 -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/harfbuzz   -pthread -DORBIT2=1 -D_REENTRANT -I/usr/include/libgnomeui-2.0 -I/usr/include/libart-2.0 -I/usr/include/gconf/2 -I/usr/include/gnome-keyring-1 -I/usr/include/libgnome-2.0 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gtk-2.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/i386-linux-gnu/gnome-vfs-2.0/include -I/usr/include/dbus-1.0 -I/usr/lib/i386-linux-gnu/dbus-1.0/include -I/usr/include/glib-2.0 -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/include/orbit-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/libxml2 -I/usr/include/pango-1.0 -I/usr/include/gail-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/atk-1.0 -I/usr/lib/i386-linux-gnu/gtk-2.0/include -I/usr/include/cairo -I/usr/include/gio-unix-2.0/ -I/usr/include/pixman-1 -I/usr/include/libpng12     -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1     -I/usr/include/tcl8.6  -D_REENTRANT=1  -D_THREAD_SAFE=1  -D_LARGEFILE64_SOURCE=1  
 Linking: gcc   -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -rdynamic -Wl,-export-dynamic -Wl,-E  -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,--as-needed -o vim   -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangoft2-1.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpango-1.0 -lfontconfig -lgobject-2.0 -lglib-2.0 -lfreetype     -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lgnomevfs-2 -lgnomecanvas-2 -lgnome-2 -lpopt -lbonobo-2 -lbonobo-activation -lORBit-2 -lart_lgpl_2 -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangoft2-1.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpango-1.0 -lfontconfig -lfreetype -lgconf-2 -lgthread-2.0 -lgmodule-2.0 -lgobject-2.0 -lglib-2.0   -lSM -lICE -lXpm -lXt -lX11 -lXdmcp -lSM -lICE  -lm -ltinfo -lnsl  -lselinux  -lacl -lattr -lgpm -ldl  -L/usr/lib -llua5.2 -Wl,-E  -fstack-protector -L/usr/local/lib  -L/usr/lib/perl/5.18/CORE -lperl -ldl -lm -lpthread -lcrypt -L/usr/lib/python2.7/config-i386-linux-gnu -lpython2.7 -lpthread -ldl -lutil -lm -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions  -L/usr/lib/i386-linux-gnu -ltcl8.6 -ldl -lz -lpthread -lieee -lm -lruby-1.9.1 -lpthread -lrt -ldl -lcrypt -lm  -L/usr/lib   </code></pre>
 <p>Output of <code>uname -a</code>:</p>
-<pre class="language-vim"><code>Linux nitish 3.13.0-45-generic
-#74-Ubuntu SMP Tue Jan 13 19:37:48 UTC 2015 i686 i686 i686 GNU/Linux</code></pre>
+<pre class="language-vim"><code>Linux nitish 3.13.0-45-generic #74-Ubuntu SMP Tue Jan 13 19:37:48 UTC 2015 i686 i686 i686 GNU/Linux</code></pre>
 <p>Based on comments by <span class="citation" data-cites="Carpetsmoker">@Carpetsmoker</span>, I found out that the problem is because of my <code>.vimrc</code> file. So I checked ran the problem causing command with some portions of the <code>.vimrc</code> file commented. Finally I found out that the problem is with the line</p>
 <pre class="language-vim"><code>set columns=1000</code></pre>
 <p>How can so innocent command cause this problem? <code>:help columns</code> didn’t give any useful information regarding this.</p>
@@ -6573,8 +6515,7 @@ Linking: gcc   -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -rdynamic -Wl,-export-d
 <section id="answer-2-score-6-2" class="level4">
 <h4>Answer 2 (score 6)</h4>
 <p>The SEGV signal, also known as a segfault, is almost always due to a bug in the program you’re running—in this case, vim. (Other causes are things like defective hardware, or once in a blue moon, kernel bugs).</p>
-<p>So, really, you need to report a bug. <a href="http://vimhelp.appspot.com/intro.txt.html
-#bug-reports"><code>:help bug-reports</code></a> provides instructions on how to report a bug. It sounds like you’ve already got a minimal set of steps to reproduce the problem, so that’s most of the work there. You should probably test a newer version of Vim first though, just to make sure it hasn’t already been fixed.</p>
+<p>So, really, you need to report a bug. <a href="http://vimhelp.appspot.com/intro.txt.html#bug-reports"><code>:help bug-reports</code></a> provides instructions on how to report a bug. It sounds like you’ve already got a minimal set of steps to reproduce the problem, so that’s most of the work there. You should probably test a newer version of Vim first though, just to make sure it hasn’t already been fixed.</p>
 </section>
 <section id="answer-3-score-3-6" class="level4">
 <h4>Answer 3 (score 3)</h4>
@@ -6604,7 +6545,7 @@ If you’ve complete backtrace, please check for similar issues or report a new 
 </li>
 </ol>
 </section>
-<script src="https://raw.githubusercontent.com/tinmarino/wiki_html/master/Css/js_prism_vim.js"></script>
+<script src="../Css/js_prism_vim.js"></script>
 </section>
 </section>
 </body>
